@@ -32,8 +32,8 @@ class Admin extends CI_Controller {
             $imagen             = $this->input->post('imagen');
             $last_units         = $this->input->post('last_units');
             $deal_number        = $this->input->post('deal_number');
-            $contact_sales      = $this->input->post('contact_sales');
-            $contact_bu         = $this->input->post('contact_bu');
+            /*$contact_sales      = $this->input->post('contact_sales');
+            $contact_bu         = $this->input->post('contact_bu');*/
             $arrayInsert = array('Tipo'               => $nombre_completo,
                                  'Codigo'             => $codigo,
                                  'Titulo'             => $titulo,
@@ -44,8 +44,8 @@ class Admin extends CI_Controller {
                                  'Imagen'             => $imagen,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number,
-                                 'Contactos_sales'    => $contact_sales,
-                                 'Contact_BU'         => $contact_bu);
+                                 /*'Contactos_sales'    => $contact_sales,
+                                 'Contact_BU'         => $contact_bu*/);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
             $session    = array('Tipo'               => $nombre_completo,
                                  'Codigo'             => $codigo,
@@ -57,9 +57,9 @@ class Admin extends CI_Controller {
                                  'Imagen'             => $imagen,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number,
-                                 'Contactos_sales'    => $contact_sales,
-                                 'Contact_BU'         => $contact_bu
-                                'id_card'          => $datoInsert['Id']);
+                                 /*'Contactos_sales'    => $contact_sales,
+                                 'Contact_BU'         => $contact_bu*/
+                                 'id_card'          => $datoInsert['Id']);
             $this->session->set_userdata($session);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];

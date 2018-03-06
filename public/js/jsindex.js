@@ -10,75 +10,65 @@ function solicitarEstimacion(){
 	var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
 	var deal_number		   = $('#deal_number').val();
-	var contact_sales	   = $('#contact_sales').val();
-	var contact_bu		   = $('#contact_bu').val();
+	/*var contact_sales	   = $('#contact_sales').val();
+	var contact_bu		   = $('#contact_bu').val();*/
 	if(tipo == '' && codigo == '' && titulo == '' && fecha == '' && objetivo_comercial == '' && noticia == '' && ciudades == '' && condiciones == '' 
-		&& imagen == '' && last_units == '' && deal_number == '' && contact_sales == '' && contact_bu == ''){
+		&& imagen == '' && last_units == '' && deal_number == ''){
 		validarCampos();
 	}
-	if(nombre_completo == null || nombre_completo == ''){
-		msj('error', 'Ingrese su nombre completo');
+	if(tipo == null || tipo == ''){
+		msj('error', 'Ingrese el tipo de producto');
 		return;
 	}
-	if(empresa == null || empresa == ''){
-		msj('error', 'Ingrese su empresa');
+	if(codigo == null || codigo == ''){
+		msj('error', 'Ingrese el código del producto');
 		return;
 	}
-	if(email == null || email == ''){
-		msj('error', 'Ingrese su email');
+	if(titulo == null || titulo == ''){
+		msj('error', 'Ingrese el título de la oferta');
 		return;
 	}
-	if (!validateEmail(email)){
-		$('#email').css('border-color','red');
+	if(fecha == null || fecha == ''){
+		msj('error', 'Ingrese la fecha de expiración del producto');
 		return;
 	}
-	if(pais == null || pais == ''){
-		msj('error', 'Ingrese su pa&iacute;s');
+	if(objetivo_comercial == null || objetivo_comercial == ''){
+		msj('error', 'Ingrese el objetivo comercial de la oferta');
 		return;
 	}
-	if(cargo == null || cargo == ''){
-		msj('error', 'Ingrese su cargo');
+	if(noticia == null || noticia == ''){
+		msj('error', 'Ingrese la notovedad que tiene');
 		return;
 	}
-	if(telefono == null || telefono == ''){
-		msj('error', 'Ingrese su tel&eacute;fono');
+	if(ciudades == null || ciudades == ''){
+		msj('error', 'Ingrese las ciudades a las que abarca');
 		return;
 	}
-	if(relacion == null || relacion == ''){
-		msj('error', 'Seleccione cu&aacute;l es su relaci&oacute;n con SAP');
+	if(condiciones == null || condiciones == ''){
+		msj('error', 'Ingrese las condiciones de la oferta');
 		return;
 	}
-	if(c_email == true){
-		contacto = 1;
-	}else if(c_telefono == true){
-		contacto = 2;
-	}else if(c_ambos == true){
-		contacto = 3;
+	if(imagen == null || imagen == ''){
+		msj('error', 'Seleccione una imagen');
+		return;
 	}
-	if(contacto == null || contacto == ''){
-		msj('error', 'Seleccione el medio por el que quiere ser contactado');
-		  return;
-	}
-	if(terminos == true){
-		term_cond = 1
-	}else{
-		term_cond = 0;
-	}
-	if(terminos == false){
-		msj('error', 'Acepte los t&eacute;rminos y condiciones');
+	if(deal_number == null || deal_number == ''){
+		msj('error', 'Ingrese el Deal number');
 		return;
 	}
 	$('.button-confirmar').prop("disabled", true);
 	$.ajax({
-		data : {nombre_completo : nombre_completo,
-				empresa 	    : empresa,
-				email 		  	: email,
-				pais 			: pais,
-				cargo 		  	: cargo,
-				telefono 		: telefono,
-				relacion 		: relacion,
-				contacto 		: contacto,
-				term_cond       : term_cond},
+		data : {tipo 			   : tipo,
+				codigo 	    	   : codigo,
+				titulo 		  	   : titulo,
+				fecha 			   : fecha,
+				objetivo_comercial : objetivo_comercial,
+				noticia 		   : noticia,
+				ciudades 		   : ciudades,
+				condiciones 	   : condiciones,
+				imagen       	   : imagen,
+				last_units         : last_units,
+				deal_number        : deal_number},
 		url  : 'admin/guardarDatos',
 		type : 'POST'
 	}).done(function(data){
@@ -87,7 +77,6 @@ function solicitarEstimacion(){
         	if(data.error == 0){
 				if(confirmar == 1){
 					limpiarCampos();
-					enviarGracias();
 				}
         	}else{
         		return;
@@ -125,4 +114,17 @@ function soloLetras(e){
 function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+}
+function limpiarCampos(){
+	$('#tipo').val(null); 
+	$('#codigo').val(null);
+	$('#titulo').val(null);
+	$('#fecha').val(null);
+	$('#objetivo_comercial').val(null);
+	$('#noticia').val(null);
+	$('#ciudades').val(null);
+	$('#condiciones').val(null);
+	$('#imagen').val(null);
+	$('#last_units').val(null);
+	$('#deal_number').val(null);
 }
