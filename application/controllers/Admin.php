@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Promo extends CI_Controller {
+class Admin extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -12,9 +12,8 @@ class Promo extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index()
-	{
+	public function index() {
 		$data['nombre'] = 'hola';
-		$this->load->view('v_promo', $data);
+		$this->load->view('v_admin', $data);
 	}
 }
