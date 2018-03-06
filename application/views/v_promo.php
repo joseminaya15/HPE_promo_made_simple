@@ -37,7 +37,17 @@
                 </div>
                 <div class="promociones">
                     <div class="mdl-card mdl-promocion">
-                        
+                        <div>
+                            
+                        </div>
+                        <div>
+                            <div class="contenido">
+                                
+                            </div>
+                            <div class="imagenes">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
