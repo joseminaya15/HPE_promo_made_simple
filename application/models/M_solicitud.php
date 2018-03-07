@@ -29,4 +29,12 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id_dato));
         return $result;
     }
+
+    function verificarUsuario($user) {
+        $sql = "SELECT *
+                  FROM users
+                 WHERE usuario LIKE '%".$user."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }
