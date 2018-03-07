@@ -32,7 +32,7 @@ class M_solicitud extends  CI_Model{
 
     function verificarUsuario($user) {
         $sql = "SELECT *
-                  FROM users
+                  FROM persons
                  WHERE usuario LIKE '%".$user."%'";
         $result = $this->db->query($sql);
         return $result->result();

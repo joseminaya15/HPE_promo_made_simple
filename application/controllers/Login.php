@@ -27,17 +27,17 @@ class Login extends CI_Controller {
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
             $username = $this->M_solicitud->verificarUsuario($usuario);
-            if($password == base64_decode($username[0]->pass)){
-                if(count($username) != 0){
-                    if(strtolower($username[0]->usuario) == strtolower($usuario)){
-                    $session = array('usuario'        => $usuario,
-                                     'Id_user'        => $username[0]->Id);
-                    $this->session->set_userdata($session);
-                    $data['error'] = EXIT_SUCCESS;
+            if(count($username) != 0){
+                if(strtolower($username[0]->usuario) == strtolower($usuario)){
+                    if($password == $username[0]->pass){
+                        $session = array('usuario'        => $usuario,
+                                         'Id_user'        => $username[0]->Id);
+                        $this->session->set_userdata($session);
+                        $data['error'] = EXIT_SUCCESS;
+                    }else {
+                        $data['pass'] = 'Contraseña incorrecta';
                     }
                 }
-            }else {
-                $data['pass'] = 'Contraseña incorrecta';
             }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();

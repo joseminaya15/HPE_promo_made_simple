@@ -1,15 +1,11 @@
 function ingresar(){
-	var usuario  = $('#correo').val();
+	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
-	if(usuario == null){
-    msj('error', 'Ingrese su correo');
+	if(usuario == null || usuario == ''){
+    msj('error', 'Ingrese su usuario');
     return;
   }
-  if (!validateEmail(usuario)){
-    msj('error', 'El correo ingresado no tiene el formato correcto');
-    return;
-  }
-	if(password == null){
+	if(password == null || password == ''){
     msj('error', 'Ingrese su contraseña');
 		return;
 	}
@@ -24,7 +20,7 @@ function ingresar(){
         if(data.error == 0){
         	$('#correo').val("");
         	$('#password').val("");
-          location.href = 'Menu';
+          location.href = 'Admin';
         }else {
           if(data.pass == null || data.pass == '') {
             msj('error', 'alguno de sus datos son incorrectos');

@@ -38,13 +38,13 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="password">
+                                <input class="mdl-textfield__input" type="password" id="password">
                                 <label class="mdl-textfield__label" for="password">Contrase&ntilde;a</label>
                             </div>
                         </div>
                     </div>
                     <div class="mdl-card__actions">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ingresar</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>
                     </div>
                 </div>
             </div>
@@ -56,6 +56,7 @@
         <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     </body>
 </html>
