@@ -1,4 +1,4 @@
-function solicitarEstimacion(){
+function crearNuevaPromocion(){
 	var tipo 			   = $('#tipo').val(); 
 	var codigo 	 		   = $('#codigo').val();
 	var titulo 	 		   = $('#titulo').val();
