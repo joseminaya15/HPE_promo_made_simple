@@ -10,8 +10,6 @@ function solicitarEstimacion(){
 	var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
 	var deal_number		   = $('#deal_number').val();
-	/*var contact_sales	   = $('#contact_sales').val();
-	var contact_bu		   = $('#contact_bu').val();*/
 	if(tipo == '' && codigo == '' && titulo == '' && fecha == '' && objetivo_comercial == '' && noticia == '' && ciudades == '' && condiciones == '' 
 		&& imagen == '' && last_units == '' && deal_number == ''){
 		validarCampos();
