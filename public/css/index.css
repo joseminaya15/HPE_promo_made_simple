@@ -9,6 +9,78 @@ body{
 	position: relative;
 	padding: 20px;
 }
+.center-login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: 360px;
+	margin: auto;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	-webkit-transition: transform .2s linear;
+	   -moz-transition: transform .2s linear;
+	    -ms-transition: transform .2s linear;
+	     -o-transition: transform .2s linear;
+	        transition: transform .2s linear;
+}
+/*LOGIN*/
+.mdl-card-login{
+	width: 100%;
+	max-width: 360px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+.mdl-card-login .mdl-card__title{
+	background-color: #00B48E;
+	padding: 50px 50px 100px 50px;
+}
+.mdl-card-login .mdl-card__title img{
+	margin: auto;
+	max-width: 200px;
+}
+.mdl-card-login .mdl-card__supporting-text{
+    margin: -70px auto 0;
+    background-color: #fff;
+    padding: 40px 16px 50px 16px;
+    max-width: 300px;
+    width: 100%;
+    z-index: 2;
+    border-radius: 2px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+.mdl-card-login .mdl-card__actions{
+    text-align: center;
+    margin-top: -25px;
+    padding-bottom: 0;
+    z-index: 3;
+    margin-bottom: 50px;
+}
+.mdl-card-login .mdl-card__actions button{
+    background-color: #D1D3D4;
+    width: 100%;
+    max-width: 180px;
+    color: #FFFFFF;
+    font-family: 'RobotoMedium';
+    border-radius: 20px;
+}
+/*HEADER*/
+.mdl-textfield__label{
+	font-weight: 100;
+}
+.mdl-textfield__label:after{
+	background-color: #00B48E;
+	bottom: 15px;
+}
+.mdl-textfield__input{
+	color: #1E1E1E;
+	font-family: 'RobotoRegular';
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+	color: #00B48E;
+}
 .header{
 	border-bottom: 10px solid #00B48E;
 	padding: 10px 0;
