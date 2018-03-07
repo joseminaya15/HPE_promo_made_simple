@@ -10,10 +10,6 @@ function solicitarEstimacion(){
 	var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
 	var deal_number		   = $('#deal_number').val();
-	if(tipo == '' && codigo == '' && titulo == '' && fecha == '' && objetivo_comercial == '' && noticia == '' && ciudades == '' && condiciones == '' 
-		&& imagen == '' && last_units == '' && deal_number == ''){
-		validarCampos();
-	}
 	if(tipo == null || tipo == ''){
 		msj('error', 'Ingrese el tipo de producto');
 		return;
