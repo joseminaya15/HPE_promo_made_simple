@@ -73,9 +73,7 @@ function solicitarEstimacion(){
 		try{
         	data = JSON.parse(data);
         	if(data.error == 0){
-				if(confirmar == 1){
-					limpiarCampos();
-				}
+				limpiarCampos();
         	}else{
         		return;
         	}
