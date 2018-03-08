@@ -122,7 +122,7 @@ function limpiarCampos(){
 }
 function cerrarCesion(){
 	$.ajax({
-		url  : 'Admin/cerrarCesion',
+		url  : 'Formulario/cerrarCesion',
 		type : 'POST'
 	}).done(function(data){
 		try{
