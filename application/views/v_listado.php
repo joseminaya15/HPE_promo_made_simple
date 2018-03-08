@@ -57,6 +57,7 @@
                                         <th>Fecha Vencimiento</th>
                                         <th>T. Distribuidor</th>
                                         <th>T. Producto</th>
+                                        <th>Pa&iacute;s</th>
                                         <th class="text-center">Acci&oacute;n</th>
                                     </tr>
                                 </thead>
@@ -66,6 +67,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
@@ -76,6 +78,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
@@ -86,6 +89,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
@@ -96,6 +100,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
@@ -106,6 +111,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
@@ -116,6 +122,7 @@
                                         <td>24/03/2018</td>
                                         <td>resellers</td>
                                         <td>valor</td>
+                                        <th>Per&uacute;</th>
                                         <td class="text-center">
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
                                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
