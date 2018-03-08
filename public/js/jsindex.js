@@ -137,3 +137,18 @@ function cerrarCesion(){
       }
 	});
 }
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+        var name_file = input.files[0].name;
+        $('#nombre_img').val(name_file);
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#imgInp").change(function(){
+    readURL(this);
+});

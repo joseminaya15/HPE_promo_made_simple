@@ -62,72 +62,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <th>Per&uacute;</th>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
+                                    <?php echo $promociones ?>
                                 </tbody>
                             </table>
                         </div>

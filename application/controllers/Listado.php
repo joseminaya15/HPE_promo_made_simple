@@ -18,7 +18,21 @@ class Listado extends CI_Controller {
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromociones();
-        $data['promociones'] = '';
+        $html = '';
+        foreach ($promociones as $key) {
+            $html .= '<tr>
+                        <td>'.$key->Titulo.'</td>
+                        <td>'.$key->fecha_vencimiento.'</td>
+                        <td>'.$key->Tipo_distribuidor.'</td>
+                        <td>'.$key->Tipo.'</td>
+                        <th>'.$key->Pais.'</th>
+                        <td class="text-center">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
+                        </td>
+                    </tr>';
+        }
+        $data['promociones'] = $html;
 		$this->load->view('v_listado', $data);
 	}
 }
