@@ -87,7 +87,7 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-select">
-                                <select class="selectpicker" title="Tipo de Oferta">
+                                <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta">
                                     <option>Resellers</option>
                                     <option>Distis</option>
                                 </select>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="mdl-card__actions">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Guardar</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
                     </div>
                 </div>
             </div>
@@ -134,10 +134,10 @@
                         </div>
                         <div class="mdl-card__supporting-text text-left">
                             <div class="col-md-12 mdl-input-group">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sales">
                                     <input class="mdl-textfield__input" type="text" id="sale">
                                     <label class="mdl-textfield__label" for="sale">Sales</label>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-add"></i>
+                                    <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarSale();"><i class="mdi mdi-add"></i>
                                 </div>
                             </div>
                             <div class="col-md-12 mdl-input-group">
@@ -170,6 +170,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsindex.js?v=<?php echo time();?>"></script>
     </body>
 </html>

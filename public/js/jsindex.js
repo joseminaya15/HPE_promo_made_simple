@@ -1,23 +1,24 @@
 function crearNuevaPromocion(){
-	var tipo 			   = $('#tipo').val(); 
-	var codigo 	 		   = $('#codigo').val();
+	//var tipo 			   = $('#tipo').val(); 
+	//var codigo 	 		   = $('#codigo').val();
 	var titulo 	 		   = $('#titulo').val();
 	var fecha 	 		   = $('#fecha').val();
 	var objetivo_comercial = $('#objetivo_comercial').val();
+	var tipo_oferta		   = $('#tipo_oferta').val();
 	var noticia			   = $('#noticia').val();
 	var ciudades		   = $('#ciudades').val();
 	var condiciones		   = $('#condiciones').val();
-	var imagen			   = $('#imagen').val();
+	//var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
 	var deal_number		   = $('#deal_number').val();
-	if(tipo == null || tipo == ''){
+	/*if(tipo == null || tipo == ''){
 		msj('error', 'Ingrese el tipo de producto');
 		return;
 	}
 	if(codigo == null || codigo == ''){
 		msj('error', 'Ingrese el código del producto');
 		return;
-	}
+	}*/
 	if(titulo == null || titulo == ''){
 		msj('error', 'Ingrese el título de la oferta');
 		return;
@@ -28,6 +29,10 @@ function crearNuevaPromocion(){
 	}
 	if(objetivo_comercial == null || objetivo_comercial == ''){
 		msj('error', 'Ingrese el objetivo comercial de la oferta');
+		return;
+	}
+	if(tipo_oferta == null || tipo_oferta == ''){
+		msj('error', 'Ingrese el tipo de oferta');
 		return;
 	}
 	if(noticia == null || noticia == ''){
@@ -50,20 +55,21 @@ function crearNuevaPromocion(){
 		msj('error', 'Ingrese el Deal number');
 		return;
 	}
-	$('.button-confirmar').prop("disabled", true);
+	$('.button-guardar').prop("disabled", true);
 	$.ajax({
-		data : {tipo 			   : tipo,
-				codigo 	    	   : codigo,
+		data : {/*tipo 			   : tipo,
+				codigo 	    	   : codigo,*/
 				titulo 		  	   : titulo,
 				fecha 			   : fecha,
 				objetivo_comercial : objetivo_comercial,
+				tipo_oferta		   : tipo_oferta,
 				noticia 		   : noticia,
 				ciudades 		   : ciudades,
 				condiciones 	   : condiciones,
-				imagen       	   : imagen,
+				//imagen       	   : imagen,
 				last_units         : last_units,
 				deal_number        : deal_number},
-		url  : 'admin/guardarDatos',
+		url  : 'Formulario/guardarDatos',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -152,3 +158,7 @@ function readURL(input) {
 $("#imgInp").change(function(){
     readURL(this);
 });
+function agregarSale(){
+	$(".sales").append('<input class="mdl-textfield__input" type="text" id="sale2">'+
+                       '<label class="mdl-textfield__label" for="sale2">Sales</label>');
+}
