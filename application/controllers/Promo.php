@@ -22,6 +22,7 @@ class Promo extends CI_Controller {
         $exp = 1;
         $datos_sales = "";
         $datos_bu = "";
+        $dato_noti = null;
         foreach (explode(",", $promociones[0]->Contactos_sales) as $val) {
             $datos_sales .= '<p>'.$val.'</p>';
         }
@@ -29,6 +30,8 @@ class Promo extends CI_Controller {
             $datos_bu .= '<p>'.$dat.'</p>';
         }
         foreach ($promociones as $key) {
+            //print_r($key->Noticia == '' ? 'si' : 'no');
+            $dato_noti = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
             $html .= '<div class="mdl-card mdl-card-promocion">
                         <div class="mdl-header">
                             <h2>'.$key->Titulo.'</h2>
@@ -41,8 +44,7 @@ class Promo extends CI_Controller {
                                     <p>'.$key->Objetivo_comercial.'</p>
                                 </div>
                                 <div class="promocion">
-                                    <h2 class="title">What’s New!</h2>
-                                    <p>'.$key->Noticia.'</p>
+                                    <p>'.$dato_noti.'</p>
                                 </div>
                                 <div class="promocion">
                                     <h2 class="title">Countries that apply</h2>
