@@ -19,6 +19,7 @@ class Listado extends CI_Controller {
         }
         $promociones = $this->M_solicitud->getPromociones();
         $html = '';
+        $cont = 1;
         foreach ($promociones as $key) {
             $html .= '<tr>
                         <td>'.$key->Titulo.'</td>
@@ -27,10 +28,11 @@ class Listado extends CI_Controller {
                         <td>'.$key->Tipo.'</td>
                         <th>'.$key->Pais.'</th>
                         <td class="text-center">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'"><i class="mdi mdi-edit"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'"><i class="mdi mdi-delete"></i></button>
                         </td>
                     </tr>';
+            $cont++;
         }
         $data['promociones'] = $html;
 		$this->load->view('v_listado', $data);
