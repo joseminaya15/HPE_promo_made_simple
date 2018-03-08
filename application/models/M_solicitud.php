@@ -38,7 +38,7 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
-    function getPromociones($user){
+    function getPromociones(){
         $sql = "SELECT *
                   FROM cards";
         $result = $this->db->query($sql);
