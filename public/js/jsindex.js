@@ -170,3 +170,15 @@ function agregarBU(){
                      	'<label class="mdl-textfield__label" for="bu2">BU</label>'+
                      '</div>');
 }
+function guardarAceptar(){
+	var sales = $('#sale').val();
+	var bu 	  = $('#bu').val();
+}
+function mostrarCampo(){
+	var tipo_oferta	= $('#tipo_oferta').val();
+	if(tipo_oferta == 'Distis'){
+		$('.deal_number').removeClass("hidden");
+	}else {
+		$('.deal_number').addClass("hidden");
+	}
+}

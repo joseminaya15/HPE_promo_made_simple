@@ -87,13 +87,13 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-select">
-                                <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta">
-                                    <option>Resellers</option>
-                                    <option>Distis</option>
+                                <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
+                                    <option value="Resellers">Resellers</option>
+                                    <option value="Distis">Distis</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                        <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="deal_number">
@@ -149,7 +149,7 @@
                             </div>
                         </div> 
                         <div class="mdl-card__actions text-right">                            
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">Aceptar</button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="guardarAceptar();">Aceptar</button>
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
