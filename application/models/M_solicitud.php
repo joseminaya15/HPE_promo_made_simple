@@ -30,10 +30,17 @@ class M_solicitud extends  CI_Model{
         return $result;
     }
 
-    function verificarUsuario($user) {
+    function verificarUsuario($user){
         $sql = "SELECT *
                   FROM persons
                  WHERE usuario LIKE '%".$user."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function getPromociones($user){
+        $sql = "SELECT *
+                  FROM cards";
         $result = $this->db->query($sql);
         return $result->result();
     }
