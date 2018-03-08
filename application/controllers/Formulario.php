@@ -35,14 +35,14 @@ class Formulario extends CI_Controller {
             //$imagen             = $this->input->post('imagen');
             $last_units         = $this->input->post('last_units');
             $deal_number        = $this->input->post('deal_number');
-            $type=$_FILES['img_up']['type'];
+            /*$type=$_FILES['img_up']['type'];
             $tmp_name = $_FILES['img_up']["tmp_name"];
             $name = $_FILES['img_up']["name"];
 
-            /*$nuevo_path= "../../../public/img/promo/".$name;
+            $nuevo_path= "../../public/img/promo/".$name;
             move_uploaded_file($tmp_name,$nuevo_path);
+            //print_r(move_uploaded_file($tmp_name,$nuevo_path));
             $array=explode('.',$nuevo_path);
-            $data['error']  = EXIT_SUCCESS;
             $ext= end($array);*/
             $arrayInsert = array('Tipo'               => $tipo,
                                  'Codigo'             => $codigo,
