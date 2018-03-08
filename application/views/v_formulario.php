@@ -141,10 +141,10 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mdl-input-group">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">
                                     <input class="mdl-textfield__input" type="text" id="bu">
                                     <label class="mdl-textfield__label" for="bu">BU</label>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-add"></i>
+                                    <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarBU();"><i class="mdi mdi-add"></i>
                                 </div>
                             </div>
                         </div> 

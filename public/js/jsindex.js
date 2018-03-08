@@ -159,6 +159,14 @@ $("#imgInp").change(function(){
     readURL(this);
 });
 function agregarSale(){
-	$(".sales").append('<input class="mdl-textfield__input" type="text" id="sale2">'+
-                       '<label class="mdl-textfield__label" for="sale2">Sales</label>');
+	$(".sales").append('<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">'+
+					       '<input class="mdl-textfield__input" type="text" id="sale2">'+
+                           '<label class="mdl-textfield__label" for="sale2">Sales</label>'+
+                       '</div>');
+}
+function agregarBU(){
+	$(".bu").append('<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">'+
+					 	'<input class="mdl-textfield__input" type="text" id="bu2">'+
+                     	'<label class="mdl-textfield__label" for="bu2">BU</label>'+
+                     '</div>');
 }
