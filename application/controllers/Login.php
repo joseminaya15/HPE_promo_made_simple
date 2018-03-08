@@ -16,7 +16,7 @@ class Login extends CI_Controller {
 	public function index(){
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('Id_user');
-		$this->load->view('v_login', $data);
+		$this->load->view('v_login');
 	}
 
     function ingresar(){
