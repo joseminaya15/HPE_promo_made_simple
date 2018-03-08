@@ -23,6 +23,7 @@ class Promo extends CI_Controller {
         $datos_sales = "";
         $datos_bu = "";
         $dato_noti = null;
+        $mes = null;
         foreach (explode(",", $promociones[0]->Contactos_sales) as $val) {
             $datos_sales .= '<p>'.$val.'</p>';
         }
@@ -30,12 +31,13 @@ class Promo extends CI_Controller {
             $datos_bu .= '<p>'.$dat.'</p>';
         }
         foreach ($promociones as $key) {
-            //print_r($key->Noticia == '' ? 'si' : 'no');
+            $date = date_create($key->fecha_vencimiento);
+            $mes = date_format($date,"F");
             $dato_noti = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
             $html .= '<div class="mdl-card mdl-card-promocion">
                         <div class="mdl-header">
                             <h2>'.$key->Titulo.'</h2>
-                            <p>Valid until April 30</p>
+                            <p>Valid until '.$mes.' '.substr($key->fecha_vencimiento, 8, 10).'</p>
                         </div>
                         <div class="mdl-contenido">
                             <div class="contenido">

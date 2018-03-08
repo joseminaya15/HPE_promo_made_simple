@@ -40,7 +40,7 @@ class M_solicitud extends  CI_Model{
 
     function getPromociones(){
         $sql = "SELECT *,
-                       DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento 
+                       DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c";
         $result = $this->db->query($sql);
         return $result->result();
