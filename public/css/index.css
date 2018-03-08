@@ -203,6 +203,21 @@ body{
 .table button i{
 	font-size: 18px;
 }
+/*MDL-INPUT*/
+.mdl-input-group{
+	display: flex;
+	align-items: center;    
+	height: 68px;
+}
+.mdl-input-group .mdl-icon{
+    margin-right: 10px;
+    width: 100%;
+    max-width: 30px;
+    text-align: center;
+}
+.mdl-input-group .mdl-textfield{
+
+}
 @media( max-width: 860px ){
 	.mdl-card-promocion{
 		width: 100%;

@@ -50,8 +50,19 @@
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script> -->
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <!-- <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script> -->
         <!-- <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script> -->
+        <script type="text/javascript">
+            html2canvas(document.body, {
+              onrendered (canvas) {
+                var link = document.getElementById('download');;
+                var image = canvas.toDataURL();
+                link.href = image;
+                link.download = 'screenshot.png';
+              }
+             });
+        </script>
     </body>
 </html>
