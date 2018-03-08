@@ -13,6 +13,9 @@ class Admin extends CI_Controller {
     }
 
 	public function index() {
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }
 		$data['nombre'] = 'hola';
 		$this->load->view('v_admin', $data);
 	}
@@ -43,18 +46,18 @@ class Admin extends CI_Controller {
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
-            $session    = array('Tipo'               => $nombre_completo,
+            $session    = array('Tipo'                => $nombre_completo,
                                  'Codigo'             => $codigo,
                                  'Titulo'             => $titulo,
-                                 'fecha'              => $fecha,
+                                 'fecha_caducidad'    => $fecha,
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
                                  'Imagen'             => $imagen,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number,
-                                 'id_card'          => $datoInsert['Id']);
-            $this->session->set_userdata($session);
+                                 'id_card'            => $datoInsert['Id']);
+          $this->session->set_userdata($session);
           $data['msj']  = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
