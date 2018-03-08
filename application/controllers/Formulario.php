@@ -17,7 +17,7 @@ class Formulario extends CI_Controller {
             header("location: Login");
         }
 		$data['nombre'] = 'hola';
-		$this->load->view('v_admin', $data);
+		$this->load->view('v_formulario', $data);
 	}
 
     function guardarDatos(){
@@ -58,7 +58,7 @@ class Formulario extends CI_Controller {
                                  'Deal_number'        => $deal_number,
                                  'id_card'            => $datoInsert['Id']);
           $this->session->set_userdata($session);
-          $data['msj']  = $datoInsert['msj'];
+          $data['msj']   = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
