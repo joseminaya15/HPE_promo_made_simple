@@ -46,90 +46,67 @@
             <div class="mdl-container">
                 <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title">
-                        <h2>Listado</h2>
+                        <h2>Formulario</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre Promoci&oacute;n</th>
-                                        <th>Fecha Vencimiento</th>
-                                        <th>T. Distribuidor</th>
-                                        <th>T. Producto</th>
-                                        <th class="text-center">Acci&oacute;n</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Flex Attach Promo</td>
-                                        <td>24/03/2018</td>
-                                        <td>resellers</td>
-                                        <td>valor</td>
-                                        <td class="text-center">
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="mdi mdi-edit"></i></button>
-                                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar"><i class="mdi mdi-delete"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="titulo">
+                                <label class="mdl-textfield__label" for="titulo">Titulo</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="fecha">
+                                <label class="mdl-textfield__label" for="fecha">Date</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="objetivo_comercial"></textarea>
+                                <label class="mdl-textfield__label" for="objetivo_comercial">Commercial Objetive</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="ciudades"></textarea>
+                                <label class="mdl-textfield__label" for="ciudades">Countries that apply</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                            <div class="mdl-select">
+                                <select class="selectpicker" title="Tipo de Oferta">
+                                    <option>Resellers</option>
+                                    <option>Distis</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="deal_number"></textarea>
+                                <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <!-- <div class="mdl-icon"><i class="mdi mdi-people"></i></div> -->
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Contacts</button>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="condiciones"></textarea>
+                                <label class="mdl-textfield__label" for="condiciones">Conditions</label>
+                            </div>
                         </div>
                     </div>
                     <div class="mdl-card__actions">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Guardar</button>
-                    </div>
-                    <div class="mdl-card__menu">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-add"></i><label>Nueva Promoci&oacute;n</label></button>
                     </div>
                 </div>
             </div>
