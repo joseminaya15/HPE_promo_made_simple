@@ -66,14 +66,14 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="objetivo_comercial"></textarea>
+                                <input class="mdl-textfield__input" type="text" id="objetivo_comercial">
                                 <label class="mdl-textfield__label" for="objetivo_comercial">Commercial Objetive</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="ciudades"></textarea>
+                                <input class="mdl-textfield__input" type="text" id="ciudades">
                                 <label class="mdl-textfield__label" for="ciudades">Countries that apply</label>
                             </div>
                         </div>
@@ -89,18 +89,18 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="deal_number"></textarea>
+                                <input class="mdl-textfield__input" type="text" id="deal_number">
                                 <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <!-- <div class="mdl-icon"><i class="mdi mdi-people"></i></div> -->
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Contacts</button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button-contact" data-toggle="modal" data-target="#ModalSale">Contacts</button>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="condiciones"></textarea>
+                                <input class="mdl-textfield__input" type="text" id="condiciones">
                                 <label class="mdl-textfield__label" for="condiciones">Conditions</label>
                             </div>
                         </div>
@@ -111,6 +111,40 @@
                 </div>
             </div>
         </section>
+        <!--MODAL-->
+        <div class="modal fade" id="ModalSale" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm text-center">
+                <div class="modal-content">
+                    <div class="mdl-card" >
+                        <div class="mdl-card__title">
+                            <h2>Contacts</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text text-left">
+                            <div class="col-md-12 mdl-input-group">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sale">
+                                    <label class="mdl-textfield__label" for="sale">Sales</label>
+                                    <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-add"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mdl-input-group">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="bu">
+                                    <label class="mdl-textfield__label" for="bu">BU</label>
+                                    <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-add"></i>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="mdl-card__actions text-right">                            
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">Aceptar</button>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
