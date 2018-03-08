@@ -55,10 +55,6 @@ function crearNuevaPromocion(){
 		msj('error', 'Seleccione una imagen');
 		return;
 	}
-	if(deal_number == null || deal_number == ''){
-		msj('error', 'Ingrese el Deal number');
-		return;
-	}
 	$('.button-guardar').prop("disabled", true);
 	$.ajax({
 		data : {/*tipo 			   : tipo,
