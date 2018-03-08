@@ -71,6 +71,13 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="noticia">
+                                <label class="mdl-textfield__label" for="noticia">What's New</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="ciudades">
@@ -103,6 +110,12 @@
                                 <input class="mdl-textfield__input" type="text" id="condiciones">
                                 <label class="mdl-textfield__label" for="condiciones">Conditions</label>
                             </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mdl-input-group">
+                            <form enctype="multipart/form-data" method="post" action="subir.php">
+                                <input type="file" name="img_up">
+                                <input value="Subir" type="submit">
+                            </form>
                         </div>
                     </div>
                     <div class="mdl-card__actions">
