@@ -32,17 +32,26 @@ class Formulario extends CI_Controller {
             $noticia            = $this->input->post('noticia');
             $ciudades           = $this->input->post('ciudades');
             $condiciones        = $this->input->post('condiciones');
-            $imagen             = $this->input->post('imagen');
+            //$imagen             = $this->input->post('imagen');
             $last_units         = $this->input->post('last_units');
             $deal_number        = $this->input->post('deal_number');
-            $arrayInsert = array('Tipo'               => $nombre_completo,
+            $type=$_FILES['img_up']['type'];
+            $tmp_name = $_FILES['img_up']["tmp_name"];
+            $name = $_FILES['img_up']["name"];
+
+            /*$nuevo_path= "../../../public/img/promo/".$name;
+            move_uploaded_file($tmp_name,$nuevo_path);
+            $array=explode('.',$nuevo_path);
+            $data['error']  = EXIT_SUCCESS;
+            $ext= end($array);*/
+            $arrayInsert = array('Tipo'               => $tipo,
                                  'Codigo'             => $codigo,
                                  'Titulo'             => $titulo,
                                  'fecha'              => $fecha,
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
-                                 'Imagen'             => $imagen,
+                                 'Imagen'             => $tmp_name,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
@@ -53,7 +62,7 @@ class Formulario extends CI_Controller {
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
-                                 'Imagen'             => $imagen,
+                                 'Imagen'             => $tmp_name,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number,
                                  'id_card'            => $datoInsert['Id']);

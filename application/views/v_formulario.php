@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
-                            <form enctype="multipart/form-data" method="post" action="subir.php">
+                            <form enctype="multipart/form-data" method="post" action="Formulario/guardarDatos">
                                 <input type="file" name="img_up">
                                 <input value="Subir" type="submit">
                             </form>
