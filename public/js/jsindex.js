@@ -10,7 +10,11 @@ function crearNuevaPromocion(){
 	var condiciones		   = $('#condiciones').val();
 	//var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
-	var deal_number		   = $('#deal_number').val();
+	if(tipo_oferta == 'Distis'){
+		var deal_number	= $('#deal_number').val();
+	}else {
+		var deal_number = '';
+	}
 	/*if(tipo == null || tipo == ''){
 		msj('error', 'Ingrese el tipo de producto');
 		return;
