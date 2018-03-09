@@ -21,19 +21,19 @@ class Formulario extends CI_Controller {
         $datos_promo = null;
         $datos_promo = $this->M_solicitud->getPromocionesById($id_promo);
         if(count($datos_promo) == 0){
-            $data['titulo'] = '';
-            $data['fecha']  = '';
+            $data['titulo']      = '';
+            $data['fecha']       = '';
             $data['objetivo_comercial'] = '';
             $data['noticia']     = '';
             $data['ciudades']    = '';
             $data['condiciones'] = '';
         }else {
-            $data['titulo'] = $datos_promo[0]->Titulo == '' ? '' : $datos_promo[0]->Titulo;
-            $data['fecha']  = date_format(date_create($datos_promo[0]->Fecha),"d/m/Y") == '' ? '' : date_format(date_create($datos_promo[0]->Fecha),"d/m/Y");
+            $data['titulo']             = $datos_promo[0]->Titulo == '' ? '' : $datos_promo[0]->Titulo;
+            $data['fecha']              = date_format(date_create($datos_promo[0]->Fecha),"d/m/Y") == '' ? '' : date_format(date_create($datos_promo[0]->Fecha),"d/m/Y");
             $data['objetivo_comercial'] = $datos_promo[0]->Objetivo_comercial == '' ? '' : $datos_promo[0]->Objetivo_comercial;
-            $data['noticia']     = $datos_promo[0]->Noticia == '' ? '' : $datos_promo[0]->Noticia;
-            $data['ciudades']    = $datos_promo[0]->Ciudades == '' ? '' : $datos_promo[0]->Ciudades;
-            $data['condiciones'] = $datos_promo[0]->Condiciones == '' ? '' : $datos_promo[0]->Condiciones;
+            $data['noticia']            = $datos_promo[0]->Noticia == '' ? '' : $datos_promo[0]->Noticia;
+            $data['ciudades']           = $datos_promo[0]->Ciudades == '' ? '' : $datos_promo[0]->Ciudades;
+            $data['condiciones']        = $datos_promo[0]->Condiciones == '' ? '' : $datos_promo[0]->Condiciones;
         }  
 		$this->load->view('v_formulario', $data);
 	}
