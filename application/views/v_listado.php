@@ -67,9 +67,6 @@
                             </table>
                         </div>
                     </div>
-                    <div class="mdl-card__actions">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Guardar</button>
-                    </div>
                     <div class="mdl-card__menu">
                         <a href="Formulario" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-add"></i><label>Nueva Promoci&oacute;n</label></a>
                     </div>
