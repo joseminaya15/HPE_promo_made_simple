@@ -27,6 +27,8 @@ class Formulario extends CI_Controller {
             $data['noticia']     = '';
             $data['ciudades']    = '';
             $data['condiciones'] = '';
+            $data['tipo_distribuidor'] = '';
+            $data['deal_number'] = '';
         }else {
             $data['titulo']             = $datos_promo[0]->Titulo == '' ? '' : $datos_promo[0]->Titulo;
             $data['fecha']              = date_format(date_create($datos_promo[0]->Fecha),"d/m/Y") == '' ? '' : date_format(date_create($datos_promo[0]->Fecha),"d/m/Y");
@@ -34,6 +36,8 @@ class Formulario extends CI_Controller {
             $data['noticia']            = $datos_promo[0]->Noticia == '' ? '' : $datos_promo[0]->Noticia;
             $data['ciudades']           = $datos_promo[0]->Ciudades == '' ? '' : $datos_promo[0]->Ciudades;
             $data['condiciones']        = $datos_promo[0]->Condiciones == '' ? '' : $datos_promo[0]->Condiciones;
+            $data['tipo_distribuidor']  = $datos_promo[0]->Tipo_distribuidor == '' ? '' : $datos_promo[0]->Tipo_distribuidor;
+            $data['deal_number']        = $datos_promo[0]->Deal_number == '' ? '' : $datos_promo[0]->Deal_number;
         }  
 		$this->load->view('v_formulario', $data);
 	}

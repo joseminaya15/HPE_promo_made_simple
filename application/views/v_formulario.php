@@ -87,12 +87,20 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-select">
+                                <?php if($tipo_distribuidor == 'Resellers') { ?>
                                 <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
                                     <option value="Resellers">Resellers</option>
                                     <option value="Distis">Distis</option>
                                 </select>
+                                <?php } else { ?>
+                                <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
+                                    <option value="Distis" selected="selected">Distis</option>
+                                    <option value="Resellers">Resellers</option>
+                                </select>
+                                <?php } ?>
                             </div>
                         </div>
+                        <?php if($tipo_distribuidor == 'Resellers') { ?>
                         <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -100,6 +108,15 @@
                                 <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
                             </div>
                         </div>
+                        <?php } else { ?>
+                        <div class="col-md-4 col-sm-6 mdl-input-group deal_number">
+                            <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="deal_number" value="<?php echo $deal_number ?>">
+                                <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
+                            </div>
+                        </div>
+                        <?php } ?>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <!-- <div class="mdl-icon"><i class="mdi mdi-people"></i></div> -->
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect button-contact" data-toggle="modal" data-target="#ModalSale">Contacts</button>
