@@ -260,6 +260,7 @@ function actualizarPromocion(){
         	data = JSON.parse(data);
         	if(data.error == 0){
 				limpiarCampos();
+				msj('error', 'Su promoción se actualizó correctamente');
         	}else{
         		return;
         	}
