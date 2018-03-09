@@ -52,35 +52,35 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="titulo">
+                                <input class="mdl-textfield__input" type="text" id="titulo" value="<?php echo $titulo == '' ? '' : $titulo; ?>">
                                 <label class="mdl-textfield__label" for="titulo">Titulo</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="fecha">
+                                <input class="mdl-textfield__input" type="text" id="fecha" value="<?php echo $fecha == '' ? '' : $fecha; ?>">
                                 <label class="mdl-textfield__label" for="fecha">Date</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="objetivo_comercial">
+                                <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="<?php echo $objetivo_comercial == '' ? '' : $objetivo_comercial; ?>">
                                 <label class="mdl-textfield__label" for="objetivo_comercial">Commercial Objetive</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="noticia">
+                                <input class="mdl-textfield__input" type="text" id="noticia" value="<?php echo $noticia == '' ? '' : $noticia; ?>">
                                 <label class="mdl-textfield__label" for="noticia">What's New</label>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="ciudades">
+                                <input class="mdl-textfield__input" type="text" id="ciudades" value="<?php echo $ciudades == '' ? '' : $ciudades; ?>">
                                 <label class="mdl-textfield__label" for="ciudades">Countries that apply</label>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="condiciones">
+                                <input class="mdl-textfield__input" type="text" id="condiciones" value="<?php echo $condiciones == '' ? '' : $condiciones; ?>">
                                 <label class="mdl-textfield__label" for="condiciones">Conditions</label>
                             </div>
                         </div>

@@ -22,14 +22,14 @@ class Listado extends CI_Controller {
         $cont = 1;
         foreach ($promociones as $key) {
             $html .= '<tr>
-                        <td>'.$key->Titulo.'</td>
-                        <td>'.$key->fecha_vencimiento.'</td>
+                        <td class="titulo_promo">'.$key->Titulo.'</td>
+                        <td>'.date_format(date_create($key->fecha_vencimiento),"d/m/Y").'</td>
                         <td>'.$key->Tipo_distribuidor.'</td>
                         <td>'.$key->Tipo.'</td>
                         <th>'.$key->Pais.'</th>
                         <td class="text-center">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'"><i class="mdi mdi-edit"></i></button>
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'"><i class="mdi mdi-delete"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
                         </td>
                     </tr>';
             $cont++;
@@ -37,4 +37,48 @@ class Listado extends CI_Controller {
         $data['promociones'] = $html;
 		$this->load->view('v_listado', $data);
 	}
+
+    function editarPromocion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_promo = $this->input->post('Id_promo');
+            $this->session->set_userdata(array('id_promo' => $id_promo));
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function eliminarPromo(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_promo = $this->input->post('Id_promo');
+            $this->M_solicitud->deleteDatos($id_promo);
+            $promociones = $this->M_solicitud->getPromociones();
+            $html = '';
+            $cont = 1;
+            foreach ($promociones as $key) {
+                $html .= '<tr>
+                            <td class="titulo_promo">'.$key->Titulo.'</td>
+                            <td>'.$key->fecha_vencimiento.'</td>
+                            <td>'.$key->Tipo_distribuidor.'</td>
+                            <td>'.$key->Tipo.'</td>
+                            <th>'.$key->Pais.'</th>
+                            <td class="text-center">
+                                <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
+                            </td>
+                        </tr>';
+                $cont++;
+            }
+            $data['promociones'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

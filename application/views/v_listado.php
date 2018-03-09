@@ -61,7 +61,7 @@
                                         <th class="text-center">Acci&oacute;n</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tabla_promociones">
                                     <?php echo $promociones ?>
                                 </tbody>
                             </table>
@@ -75,6 +75,22 @@
                     </div>
                 </div>
             </div>
+        <!--MODAL-->
+        <div class="modal fade" id="ModalBorrarOferta" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm text-center">
+                <div class="modal-content">
+                    <div class="mdl-card" >
+                        <div class="mdl-card__title">
+                            <p id="titulo">&iquest;Est&aacute; seguro que desea eliminar esta promoci&oacute;n?</p>
+                        </div>
+                        <div class="mdl-card__actions text-right">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" data-dismiss="modal">Cancelar</button>                       
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="eliminarPromo();">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
@@ -88,6 +104,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jslistado.js?v=<?php echo time();?>"></script>
     </body>
 </html>

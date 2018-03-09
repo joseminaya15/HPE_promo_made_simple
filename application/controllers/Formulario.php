@@ -6,6 +6,7 @@ class Formulario extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
+        $this->load->model('M_solicitud');
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
@@ -15,6 +16,17 @@ class Formulario extends CI_Controller {
 	public function index(){
         if($this->session->userdata('usuario') == null){
             header("location: Login");
+        }
+        $id_promo = $this->session->userdata('id_promo') == null ? '' : $this->session->userdata('id_promo');
+        $datos_promo = null;
+        if($id_promo != ''){
+            $datos_promo = $this->M_solicitud->getPromocionesById($id_promo);
+            $data['titulo'] = $datos_promo[0]->Titulo;
+            $data['fecha']  = date_format(date_create($datos_promo[0]->Fecha),"d/m/Y");
+            $data['objetivo_comercial'] = $datos_promo[0]->Objetivo_comercial;
+            $data['noticia']     = $datos_promo[0]->Noticia;
+            $data['ciudades']    = $datos_promo[0]->Ciudades;
+            $data['condiciones'] = $datos_promo[0]->Condiciones;
         }
 		$data['nombre'] = 'hola';
 		$this->load->view('v_formulario', $data);
