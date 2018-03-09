@@ -119,7 +119,11 @@
                         </div>
                     </div>
                     <div class="mdl-card__actions">
+                        <?php if($titulo == ''){ ?>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
+                        <?php } else { ?>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="actualizarPromocion()">Actualizar</button>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

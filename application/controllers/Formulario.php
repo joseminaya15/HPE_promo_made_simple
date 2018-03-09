@@ -53,11 +53,11 @@ class Formulario extends CI_Controller {
             //$imagen             = $this->input->post('imagen');
             $last_units         = $this->input->post('last_units');
             $deal_number        = $this->input->post('deal_number');
-            /*$type=$_FILES['img_up']['type'];
+            $type=$_FILES['img_up']['type'];
             $tmp_name = $_FILES['img_up']["tmp_name"];
             $name = $_FILES['img_up']["name"];
 
-            $nuevo_path= "../../public/img/promo/".$name;
+            /*$nuevo_path= "../../public/img/promo/".$name;
             move_uploaded_file($tmp_name,$nuevo_path);
             //print_r(move_uploaded_file($tmp_name,$nuevo_path));
             $array=explode('.',$nuevo_path);
@@ -72,7 +72,7 @@ class Formulario extends CI_Controller {
                                  'Imagen'             => $tmp_name,
                                  'Last_units'         => $last_units,
                                  'Deal_number'        => $deal_number);
-            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'usuario');
+            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'cards');
             $session    = array('Tipo'                => $nombre_completo,
                                  'Codigo'             => $codigo,
                                  'Titulo'             => $titulo,
@@ -101,6 +101,59 @@ class Formulario extends CI_Controller {
             $this->session->unset_userdata('Id_user');
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function actualizarPromocion(){
+        $data['error']  = EXIT_ERROR;
+        $data['msj']    = null;
+        try {
+            $tipo               = $this->input->post('tipo');
+            $codigo             = $this->input->post('codigo');
+            $titulo             = $this->input->post('titulo');
+            $fecha              = $this->input->post('fecha');
+            $objetivo_comercial = $this->input->post('objetivo_comercial');
+            $noticia            = $this->input->post('noticia');
+            $ciudades           = $this->input->post('ciudades');
+            $condiciones        = $this->input->post('condiciones');
+            //$imagen             = $this->input->post('imagen');
+            $last_units         = $this->input->post('last_units');
+            $deal_number        = $this->input->post('deal_number');
+            $type=$_FILES['img_up']['type'];
+            $tmp_name = $_FILES['img_up']["tmp_name"];
+            $name = $_FILES['img_up']["name"];
+
+            /*$nuevo_path= "../../public/img/promo/".$name;
+            move_uploaded_file($tmp_name,$nuevo_path);
+            //print_r(move_uploaded_file($tmp_name,$nuevo_path));
+            $array=explode('.',$nuevo_path);
+            $ext= end($array);*/
+            $arrayUpdate = array('Tipo'               => $tipo,
+                                 'Codigo'             => $codigo,
+                                 'Titulo'             => $titulo,
+                                 'fecha'              => $fecha,
+                                 'objetivo_comercial' => $objetivo_comercial,
+                                 'Noticia'            => $noticia,
+                                 'Condiciones'        => $condiciones,
+                                 'Imagen'             => $tmp_name,
+                                 'Last_units'         => $last_units,
+                                 'Deal_number'        => $deal_number);
+            $datoUpdate = $this->M_solicitud->updateDatos($arrayUpdate, $this->session->userdata('id_promo') , 'cards');
+            $session    = array('Tipo'                => $nombre_completo,
+                                 'Codigo'             => $codigo,
+                                 'Titulo'             => $titulo,
+                                 'fecha_caducidad'    => $fecha,
+                                 'objetivo_comercial' => $objetivo_comercial,
+                                 'Noticia'            => $noticia,
+                                 'Condiciones'        => $condiciones,
+                                 'Imagen'             => $tmp_name,
+                                 'Last_units'         => $last_units,
+                                 'Deal_number'        => $deal_number);
+          $this->session->set_userdata($session);
+          $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
