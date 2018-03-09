@@ -52,7 +52,7 @@
                         <div class="col-md-4 col-sm-6 mdl-input-group">
                             <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="titulo" value="<?php echo $titulo == '' ? '' : $titulo; ?>">
+                                <input class="mdl-textfield__input" type="text" id="titulo" value="<?php echo $titulo ?>">
                                 <label class="mdl-textfield__label" for="titulo">Titulo</label>
                             </div>
                         </div>

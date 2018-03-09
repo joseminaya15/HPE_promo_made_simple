@@ -35,6 +35,7 @@ class Listado extends CI_Controller {
             $cont++;
         }
         $data['promociones'] = $html;
+        $this->session->unset_userdata('id_promo');
 		$this->load->view('v_listado', $data);
 	}
 
