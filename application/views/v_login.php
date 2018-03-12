@@ -24,9 +24,9 @@
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <section>
+        <section class>
             <div class="header">
-                <div class="container">
+                <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
                             <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
