@@ -25,12 +25,16 @@
     </head>
     <body>
         <section>
-            <div class="col-xs-12 header">
-                <div class="col-xs-6 text-left p-0">
-                    <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                </div>
-                <div class="col-xs-6 text-right p-0">
-                    <p>Promos Made Simple</p>
+            <div class="header">
+                <div class="mdl-container row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 text-left p-0">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                        </div>
+                        <div class="col-xs-6 text-right p-0">
+                            <p>Promos Made Simple</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="center-login">
