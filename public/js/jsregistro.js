@@ -8,7 +8,7 @@ function registrar() {
 		return;
 	}
 	if(nombre == null || nombre == undefined || nombre == ''){
-		msj('error', 'Ingrese el nombre del capitán');
+		msj('error', 'Ingrese su nombre');
 		return;
 	}
 	if(correo == ''){
@@ -47,7 +47,7 @@ function registrar() {
 				location.href = "Login";
 			}, 1500);
         }else {
-			msj('error', 'Su usuario o contraseña son incorrectas');
+			msj('error', 'Su usuario o contraseña son incorrectos');
         	return;
         }
       }catch(err){
