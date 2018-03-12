@@ -82,7 +82,7 @@ class Formulario extends CI_Controller {
                                  'Contactos_sales'    => $sales,
                                  'Contactos_BU'       => $bu,
                                  'Deal_number'        => $deal_number,
-                                 'id_promo'            => $datoInsert['Id']);
+                                 'id_promo'           => $datoInsert['Id']);
           $this->session->set_userdata($session);
           $data['msj']   = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
