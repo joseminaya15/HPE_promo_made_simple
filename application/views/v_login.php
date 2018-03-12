@@ -11,7 +11,7 @@
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
     	<title>HPE promo made simple</title>
-    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
+    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
@@ -26,7 +26,7 @@
     <body>
         <section>
             <div class="header">
-                <div class="mdl-container row">
+                <div class="container">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
                             <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
@@ -57,6 +57,14 @@
                     </div>
                     <div class="mdl-card__actions p-0">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
+                    </div>
+                    <div class="col-xs-12 mdl-create">
+                        <div class="col-xs-6">
+                            <a href="">Forgot password</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="Registro">Create an account</a>
+                        </div>
                     </div>
                 </div>
             </div>
