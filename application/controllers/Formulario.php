@@ -78,7 +78,7 @@ class Formulario extends CI_Controller {
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
-                                 'Imagen'             => $tmp_name,
+                                 'Imagen'             => $imagen,
                                  'Contactos_sales'    => $sales,
                                  'Contactos_BU'       => $bu,
                                  'Deal_number'        => $deal_number,
@@ -119,11 +119,8 @@ class Formulario extends CI_Controller {
             $bu                 = $this->input->post('bu');
             $ciudades           = $this->input->post('ciudades');
             $condiciones        = $this->input->post('condiciones');
-            //$imagen             = $this->input->post('imagen');
+            $imagen             = $this->input->post('imagen');
             $deal_number        = $this->input->post('deal_number');
-            $type=$_FILES['img_up']['type'];
-            $tmp_name = $_FILES['img_up']["tmp_name"];
-            $name = $_FILES['img_up']["name"];
 
             $arrayUpdate = array('Tipo'               => $tipo,
                                  /*'Codigo'             => $codigo,*/
@@ -132,7 +129,7 @@ class Formulario extends CI_Controller {
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
-                                 'Imagen'             => $tmp_name,
+                                 'Imagen'             => $imagen,
                                  'Contactos_sales'    => $sales,
                                  'Contactos_BU'       => $bu,
                                  'Deal_number'        => $deal_number);
@@ -144,7 +141,7 @@ class Formulario extends CI_Controller {
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
-                                 'Imagen'             => $tmp_name,
+                                 'Imagen'             => $imagen,
                                  'Contactos_sales'    => $sales,
                                  'Contactos_BU'       => $bu,
                                  'Deal_number'        => $deal_number);
