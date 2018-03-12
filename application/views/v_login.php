@@ -40,17 +40,13 @@
             <div class="center-login">
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
-                        <div class="col-xs-12">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="usuario" onkeyup="verificarDatos(event);">
-                                <label class="mdl-textfield__label" for="usuario">Usuario</label>
-                            </div>
+                        <div class="col-xs-12 form-group mdl-input">
+                            <label for="usuario">Username</label>
+                            <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                         </div>
-                        <div class="col-xs-12">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="password" id="password" onkeyup="verificarDatos(event);">
-                                <label class="mdl-textfield__label" for="password">Contrase&ntilde;a</label>
-                            </div>
+                        <div class="col-xs-12 form-group mdl-input">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" onkeyup="verificarDatos(event);">
                         </div>
                     </div>
                     <div class="mdl-card__actions">
