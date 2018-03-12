@@ -34,7 +34,6 @@ function registrar() {
 	}*/
 	$.ajax({
 		data : {nombre 	 : nombre,
-				/*canal 	 : canal,*/
 				usuario  : correo,
 				password : password,
 				pais 	 : pais},

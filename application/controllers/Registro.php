@@ -23,18 +23,15 @@ class Registro extends CI_Controller {
         $data['msj']   = null;
          try {
             $nombre   = $this->input->post('nombre');
-            $canal    = $this->input->post('canal');
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
             $pais     = $this->input->post('pais');
-            $arrayInsert = array('Nombre_capitan' => $nombre,
-                                 'Nombre_canal'   => $canal,
-                                 'usuario'        => $usuario,
-                                 'pass'           => base64_encode($password),
-                                 'Pais'           => $pais);
-            $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'Users');
-            $session    = array('nombre_capitan' => $nombre,
-                                'canal'          => $canal,
+            $arrayInsert = array('Nombre' => $nombre,
+                                 'Email'  => $usuario,
+                                 'pass'   => base64_encode($password),
+                                 'Pais'   => $pais);
+            $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'users');
+            $session    = array('nombre' => $nombre,
                                 'usuario'        => $usuario,
                                 'pais'           => $pais,
                                 'id_capitan'     => $datoInsert['Id']);
