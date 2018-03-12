@@ -78,3 +78,13 @@ function verificarDatos(e){
 		ingresar();
     }
 }
+
+$('.mdl-input').find('input').focus(function(){
+    $('.mdl-input').removeClass('input-focused');
+    var input = $(this).parent();
+    input.addClass('input-focused');
+});
+
+// $('body').click(function(){
+//     $('.mdl-input').removeClass('input-focused');
+// })

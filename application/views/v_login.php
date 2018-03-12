@@ -48,6 +48,12 @@
                             <label for="password">Password</label>
                             <input type="text" id="password" onkeyup="verificarDatos(event);">
                         </div>
+                        <div class="col-xs-12">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">Checkbox</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="mdl-card__actions">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>

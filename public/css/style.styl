@@ -72,6 +72,7 @@ body
 .mdl-input
 	padding 7px 20px
 	margin 0
+	border 1px solid #000000
 	label
 		font-family $light
 		font-weight 100
@@ -81,7 +82,11 @@ body
 		display block
 		height 36px
 		width 100%
-
+		border none
+		&:focus
+			outline 0
+	&.input-focused
+		border 1px solid #01A982		
 .mdl-card-login
 	width 100%
 	max-width 360px
