@@ -160,6 +160,8 @@ $("#imgInp").change(function(){
 });
 var cont_s = 1;
 var cont_b = 1;
+var arr_sales = [];
+var arr_bu 	  = [];
 function agregarSale(){
 	$(".sales").append('<div class="col-md-12 mdl-input-group">'+
 							'<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">'+
@@ -167,6 +169,8 @@ function agregarSale(){
 	                           '<label class="mdl-textfield__label" for="sale'+cont_s+'">Sales</label>'+
                        		'</div>'+
                        '</div>');
+	/*arr_sales.push($('#sale'+cont_s+'').val());
+	console.log(cont_s);*/
 	cont_s++;
 	componentHandler.upgradeAllRegistered();
 }
@@ -177,12 +181,33 @@ function agregarBU(){
                      		'<label class="mdl-textfield__label" for="bu'+cont_b+'">BU</label>'+
                      	'</div>'+
                      '</div>');
+	/*arr_bu.push($('#bu'+cont_b+'').val());*/
 	cont_b++;
 	componentHandler.upgradeAllRegistered();
 }
-function guardarAceptar(){
-	var sales = $('#sale').val();
-	var bu 	  = $('#bu').val();
+var array_sales = [];
+var array_bu 	= [];
+function guardarContactos(){
+	$(".sales").find('input:text')
+	.each(function() {
+	    if($(this).val() == '' || $(this).val() == null){
+	    	$(this).css('border-color','red');
+	    }else {
+	    	array_sales.push($(this).val());
+	    	$(this).val("");
+	    }
+	});
+	$(".bu").find('input:text')
+	.each(function() {
+	    if($(this).val() == '' || $(this).val() == null){
+	    	$(this).css('border-color','red');
+	    }else {
+	    	array_bu.push($(this).val());
+	    	$(this).val("");
+	    }
+	});
+	console.log(array_sales);
+	console.log(array_bu);
 }
 function mostrarCampo(){
 	var tipo_oferta	= $('#tipo_oferta').val();

@@ -174,7 +174,7 @@
                             </div>
                         </div> 
                         <div class="mdl-card__actions text-right">                            
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="guardarAceptar();">Aceptar</button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="guardarContactos();">Aceptar</button>
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
