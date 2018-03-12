@@ -66,6 +66,8 @@ function crearNuevaPromocion(){
 				noticia 		   : noticia,
 				ciudades 		   : ciudades,
 				condiciones 	   : condiciones,
+				sales		   	   : array_sales.toString(),
+				bu		   	   	   : array_bu.toString(),
 				//imagen       	   : imagen,
 				last_units         : last_units,
 				deal_number        : deal_number},
