@@ -43,9 +43,9 @@ function registrar() {
 			$('#correo').val("");
 			$('#pais').val("");
 			msj('error', 'Se registró correctamente');
-			setTimeout(function(){ 
+			/*setTimeout(function(){ 
 				location.href = "Login";
-			}, 1500);
+			}, 1500);*/
         }else {
 			msj('error', 'Su usuario o contraseña son incorrectos');
         	return;
@@ -55,7 +55,6 @@ function registrar() {
       }
 	});
 }
-
 function soloLetras(e){
     key 	     = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
