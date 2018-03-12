@@ -158,17 +158,27 @@ function readURL(input) {
 $("#imgInp").change(function(){
     readURL(this);
 });
+var cont_s = 1;
+var cont_b = 1;
 function agregarSale(){
-	$(".sales").append('<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">'+
-					       '<input class="mdl-textfield__input" type="text" id="sale2">'+
-                           '<label class="mdl-textfield__label" for="sale2">Sales</label>'+
+	$(".sales").append('<div class="col-md-12 mdl-input-group">'+
+							'<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">'+
+						       '<input class="mdl-textfield__input" type="text" id="sale'+cont_s+'">'+
+	                           '<label class="mdl-textfield__label" for="sale'+cont_s+'">Sales</label>'+
+                       		'</div>'+
                        '</div>');
+	cont_s++;
+	componentHandler.upgradeAllRegistered();
 }
 function agregarBU(){
-	$(".bu").append('<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">'+
-					 	'<input class="mdl-textfield__input" type="text" id="bu2">'+
-                     	'<label class="mdl-textfield__label" for="bu2">BU</label>'+
+	$(".bu").append('<div class="col-md-12 mdl-input-group">'+
+					 	'<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">'+
+					 		'<input class="mdl-textfield__input" type="text" id="bu'+cont_b+'">'+
+                     		'<label class="mdl-textfield__label" for="bu'+cont_b+'">BU</label>'+
+                     	'</div>'+
                      '</div>');
+	cont_b++;
+	componentHandler.upgradeAllRegistered();
 }
 function guardarAceptar(){
 	var sales = $('#sale').val();

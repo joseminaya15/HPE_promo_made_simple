@@ -154,18 +154,22 @@
                             <h2>Contacts</h2>
                         </div>
                         <div class="mdl-card__supporting-text text-left">
-                            <div class="col-md-12 mdl-input-group">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sales">
-                                    <input class="mdl-textfield__input" type="text" id="sale">
-                                    <label class="mdl-textfield__label" for="sale">Sales</label>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarSale();"><i class="mdi mdi-add"></i>
+                            <div class="sales">
+                                <div class="col-md-12 mdl-input-group">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sale">
+                                        <label class="mdl-textfield__label" for="sale">Sales</label>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarSale();"><i class="mdi mdi-add"></i>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 mdl-input-group">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label bu">
-                                    <input class="mdl-textfield__input" type="text" id="bu">
-                                    <label class="mdl-textfield__label" for="bu">BU</label>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarBU();"><i class="mdi mdi-add"></i>
+                            <div class="bu">
+                                <div class="col-md-12 mdl-input-group">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="bu">
+                                        <label class="mdl-textfield__label" for="bu">BU</label>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon" onclick="agregarBU();"><i class="mdi mdi-add"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
