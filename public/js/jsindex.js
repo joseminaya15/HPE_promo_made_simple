@@ -160,8 +160,6 @@ $("#imgInp").change(function(){
 });
 var cont_s = 1;
 var cont_b = 1;
-var arr_sales = [];
-var arr_bu 	  = [];
 function agregarSale(){
 	$(".sales").append('<div class="col-md-12 mdl-input-group">'+
 							'<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">'+
@@ -169,8 +167,6 @@ function agregarSale(){
 	                           '<label class="mdl-textfield__label" for="sale'+cont_s+'">Sales</label>'+
                        		'</div>'+
                        '</div>');
-	/*arr_sales.push($('#sale'+cont_s+'').val());
-	console.log(cont_s);*/
 	cont_s++;
 	componentHandler.upgradeAllRegistered();
 }
@@ -181,7 +177,6 @@ function agregarBU(){
                      		'<label class="mdl-textfield__label" for="bu'+cont_b+'">BU</label>'+
                      	'</div>'+
                      '</div>');
-	/*arr_bu.push($('#bu'+cont_b+'').val());*/
 	cont_b++;
 	componentHandler.upgradeAllRegistered();
 }
@@ -206,8 +201,8 @@ function guardarContactos(){
 	    	$(this).val("");
 	    }
 	});
-	console.log(array_sales);
-	console.log(array_bu);
+	/*console.log(array_sales);
+	console.log(array_bu);*/
 }
 function mostrarCampo(){
 	var tipo_oferta	= $('#tipo_oferta').val();
