@@ -46,7 +46,7 @@
                         </div>
                         <div class="col-xs-12 form-group mdl-input">
                             <label for="password">Password</label>
-                            <input type="text" id="password" onkeyup="verificarDatos(event);">
+                            <input type="password" id="password" onkeyup="verificarDatos(event);">
                         </div>
                         <div class="col-xs-12 mdl-label">
                             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
