@@ -43,6 +43,8 @@ body
 	overflow hidden
 	overflow-y scroll
 	font-family $regular
+label
+	font-weight 100
 
 .section
 	position relative
@@ -75,7 +77,6 @@ body
 	border 1px solid #000000
 	label
 		font-family $light
-		font-weight 100
 		color #000000
 		cursor pointer
 	input
@@ -86,10 +87,25 @@ body
 		&:focus
 			outline 0
 	&.input-focused
-		border 1px solid #01A982		
+		border 1px solid #01A982	
+		
+.mdl-label
+	padding 20px 10px
+
 .mdl-card-login
 	width 100%
 	max-width 360px
+	.mdl-card__actions
+		button
+			width 100%
+			background-color $default
+			color #FFFFFF
+			font-family $bold
+			text-transform initial
+			height: 42px
+			box-shadow: none
+			border-radius: 0
+			font-size 16px
 
 .mdl-card__supporting-text
 	width 100%
