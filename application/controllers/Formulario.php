@@ -27,7 +27,7 @@ class Formulario extends CI_Controller {
             $data['noticia']     = '';
             $data['ciudades']    = '';
             $data['condiciones'] = '';
-            $data['tipo_distribuidor'] = '';
+            $data['tipo_distribuidor'] = 'Resellers';
             $data['deal_number'] = '';
         }else {
             $data['titulo']             = $datos_promo[0]->Titulo == '' ? '' : $datos_promo[0]->Titulo;

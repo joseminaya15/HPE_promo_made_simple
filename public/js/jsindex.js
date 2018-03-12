@@ -1,6 +1,6 @@
 function crearNuevaPromocion(){
 	//var tipo 			   = $('#tipo').val(); 
-	//var codigo 	 		   = $('#codigo').val();
+	//var codigo 	 	   = $('#codigo').val();
 	var titulo 	 		   = $('#titulo').val();
 	var fecha 	 		   = $('#fecha').val();
 	var objetivo_comercial = $('#objetivo_comercial').val();
