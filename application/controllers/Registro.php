@@ -17,4 +17,32 @@ class Registro extends CI_Controller {
         $this->session->unset_userdata('Id_user'); 
 		$this->load->view('v_registro');
 	}
+
+    function registrar(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+         try {
+            $nombre   = $this->input->post('nombre');
+            $canal    = $this->input->post('canal');
+            $usuario  = $this->input->post('usuario');
+            $password = $this->input->post('password');
+            $pais     = $this->input->post('pais');
+            $arrayInsert = array('Nombre_capitan' => $nombre,
+                                 'Nombre_canal'   => $canal,
+                                 'usuario'        => $usuario,
+                                 'pass'           => base64_encode($password),
+                                 'Pais'           => $pais);
+            $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'Users');
+            $session    = array('nombre_capitan' => $nombre,
+                                'canal'          => $canal,
+                                'usuario'        => $usuario,
+                                'pais'           => $pais,
+                                'id_capitan'     => $datoInsert['Id']);
+            $this->session->set_userdata($session);
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e) {
+           $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
