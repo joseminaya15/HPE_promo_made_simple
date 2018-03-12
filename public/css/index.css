@@ -33,24 +33,6 @@ body{
 	max-width: 360px;
 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
-.mdl-card-login .mdl-card__title{
-	background-color: #00B48E;
-	padding: 50px 50px 100px 50px;
-}
-.mdl-card-login .mdl-card__title img{
-	margin: auto;
-	max-width: 200px;
-}
-.mdl-card-login .mdl-card__supporting-text{
-    margin: -70px auto 0;
-    background-color: #fff;
-    padding: 40px 16px 50px 16px;
-    max-width: 300px;
-    width: 100%;
-    z-index: 2;
-    border-radius: 2px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
-}
 .mdl-card-login .mdl-card__actions{
     text-align: center;
     margin-top: -25px;
