@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
@@ -20,25 +20,50 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <section id="promo" class="section">
-            <div class="mdl-container">
-                <div class="col-xs-12 header">
-                    <div class="col-xs-6 text-left p-0">
-                        <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                    </div>
-                    <div class="col-xs-6 text-right p-0">
-                        <p>Promos Made Simple</p>
+        <section>
+            <div class="header">
+                <div class="mdl-container row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 text-left p-0">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                        </div>
+                        <div class="col-xs-6 text-right p-0">
+                            <p>Promos Made Simple</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mdl-card mdl-card-registro">
-                    <div class="mdl-card__title">
-                        <h2>Register</h2>
-                    </div>
+            </div>
+            <div class="center-login">
+                <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
-                         
+                        <div class="col-xs-12 form-group mdl-input">
+                            <label for="usuario">Username</label>
+                            <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                        </div>
+                        <div class="col-xs-12 form-group mdl-input">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" onkeyup="verificarDatos(event);">
+                        </div>
+                        <div class="col-xs-12 mdl-label">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
+                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">Remember me</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mdl-card__actions p-0">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
+                    </div>
+                    <div class="col-xs-12 mdl-create">
+                        <div class="col-xs-6">
+                            <a href="">Forgot password</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="Registro">Create an account</a>
+                        </div>
                     </div>
                 </div>
             </div>
