@@ -35,9 +35,9 @@ class Login extends CI_Controller {
                         if($username[0]->tipo_user == 0){
                             $data['redirect'] = 'Listado';
                         }else if($username[0]->tipo_user == 1){
-                           $data['redirect'] = 'Promo'; 
+                           $data['redirect'] = 'Resellers'; 
                         }else if($username[0]->tipo_user == 2){
-                            $data['redirect'] = 'Promo'; 
+                            $data['redirect'] = 'Distis'; 
                         }
                         $data['error'] = EXIT_SUCCESS;
                     }else {
