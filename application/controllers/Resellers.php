@@ -28,11 +28,6 @@ class Resellers extends CI_Controller {
         $mes         = null;
         $deal_number = null;
         $color       = null;
-        if($promociones[0]->Tipo == 'Valor'){
-            $color = '#F69779';
-        }else if($promociones[0]->Tipo == 'Volumen'){
-            $color = '#624967';
-        }
         $data['codigo'] = '<h2><strong>'.substr($promociones[0]->Codigo, 0, 2).'</strong>'.substr($promociones[0]->Codigo, 2, 6).'</h2>';
         foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
             $datos_sales .= '<p>'.$val.'</p>';
@@ -41,6 +36,11 @@ class Resellers extends CI_Controller {
             $datos_bu .= '<p>'.$dat.'</p>';
         }
         foreach ($promociones as $key){
+            if($key->Tipo == 'Valor'){
+                $color = '#F69779';
+            }else if($key->Tipo == 'Volumen'){
+                $color = '#624967';
+            }
             $date = date_create($key->fecha_vencimiento);
             $mes = date_format($date,"F");
             $dato_noti = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
