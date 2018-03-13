@@ -15,6 +15,7 @@ class Login extends CI_Controller {
 
 	public function index(){
         $this->session->unset_userdata('user');
+        $this->session->unset_userdata('tipo_user');
         $this->session->unset_userdata('Id_user');
 		$this->load->view('v_login');
 	}
@@ -30,6 +31,7 @@ class Login extends CI_Controller {
                 if(strtolower($username[0]->Email) == strtolower($usuario)){
                     if($password == $username[0]->pass){
                         $session = array('usuario'        => $usuario,
+                                         'tipo_user'      => $username[0]->tipo_user,
                                          'Id_user'        => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0){

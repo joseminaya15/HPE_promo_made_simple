@@ -14,6 +14,9 @@ class Distis extends CI_Controller {
     }
 
 	public function index(){
+        if($this->session->userdata('tipo_user') != 2){
+            header("location: Login");
+        }
         $promociones = $this->M_solicitud->getPromociones();
         $html        = '';
         $cont        = 1;

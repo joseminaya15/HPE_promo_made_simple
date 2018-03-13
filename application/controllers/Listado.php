@@ -14,7 +14,7 @@ class Listado extends CI_Controller {
     }
 
 	public function index(){
-        if($this->session->userdata('usuario') == null){
+        if($this->session->userdata('tipo_user') != 0){
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromociones();
