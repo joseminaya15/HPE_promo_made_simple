@@ -38,10 +38,20 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
-    function getPromociones(){
+    function getPromocionesSellers(){
         $sql = "SELECT *,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
-                  FROM cards c";
+                  FROM cards c
+                 WHERE Tipo_distribuidor = 'Resellers'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function getPromocionesDistis(){
+        $sql = "SELECT *,
+                       DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+                  FROM cards c
+                 WHERE Tipo_distribuidor = 'Distis'";
         $result = $this->db->query($sql);
         return $result->result();
     }

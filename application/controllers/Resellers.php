@@ -17,7 +17,7 @@ class Resellers extends CI_Controller {
         if($this->session->userdata('tipo_user') != 1){
             header("location: Login");
         }
-        $promociones = $this->M_solicitud->getPromociones();
+        $promociones = $this->M_solicitud->getPromocionesSellers();
         $html        = '';
         $cont        = 1;
         $exp         = 1;

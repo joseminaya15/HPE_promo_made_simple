@@ -17,7 +17,7 @@ class Distis extends CI_Controller {
         if($this->session->userdata('tipo_user') != 2){
             header("location: Login");
         }
-        $promociones = $this->M_solicitud->getPromociones();
+        $promociones = $this->M_solicitud->getPromocionesDistis();
         $html        = '';
         $cont        = 1;
         $exp         = 1;
@@ -53,7 +53,7 @@ class Distis extends CI_Controller {
                                     <p>'.$dato_noti.'</p>
                                 </div>
                                 <div class="promocion">
-                                    <p></p>
+                                    <p>'.$deal_number.'</p>
                                 </div>
                                 <div class="promocion">
                                     <h2 class="title">Countries that apply</h2>
