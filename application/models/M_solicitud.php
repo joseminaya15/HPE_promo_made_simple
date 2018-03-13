@@ -38,6 +38,15 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
+    function getPromociones(){
+        $sql = "SELECT *,
+                       DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+                  FROM cards c
+              ORDER BY c.Last_units, c.Tipo DESC";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
     function getPromocionesSellers(){
         $sql = "SELECT *,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
