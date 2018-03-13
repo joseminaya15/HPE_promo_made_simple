@@ -1,1 +1,168 @@
--moz-transform $translate,-ms-transform $translate{-o-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%)}body{margin:0;padding:0;overflow:hidden;overflow-y:scroll;font-family:'RobotoRegular'}label{font-weight:100}.section{position:relative;padding:20px}.center-login{position:absolute;top:50%;left:50%;width:100%;margin:auto;-webkit-transform:translate(-50%,-50%);-webkit-transition:transform .2s linear;-moz-transition:transform .2s linear;-ms-transition:transform .2s linear;-o-transition:transform .2s linear;transition:transform .2s linear}.header{background-color:#415564;padding:20px 0;}.header img{width:100%;max-width:175px}.header p{font-size:32px;color:#fff;font-family:'RobotoBold';margin-top:25px}.mdl-container{max-width:1200px;margin:auto;-webkit-transition:max-width .2s linear;-moz-transition:max-width .2s linear;-ms-transition:max-width .2s linear;-o-transition:max-width .2s linear;transition:max-width .2s linear}.mdl-input{padding:7px 20px;height:75px;margin:0;border:1px solid #000;}.mdl-input label{font-family:'RobotoLight';color:#000;cursor:pointer}.mdl-input input{display:block;height:36px;width:100%;border:none;}.mdl-input input:focus{outline:0}.mdl-input.input-focused{border:1px solid #01a982}.mdl-input .bootstrap-select{width:100% !important;}.mdl-input .bootstrap-select .dropdown-toggle{border:none !important;padding:6px 0;background-color:transparent !important;box-shadow:none !important;outline:0 !important;}.mdl-input .bootstrap-select .dropdown-toggle:focus{outline:0 !important}.mdl-label{padding:20px 10px}.mdl-create{padding:20px 0;}.mdl-create .col-xs-6{text-align:center;}.mdl-create .col-xs-6:nth-child(1){border-right:1px solid #4fc0a6}.mdl-card-login{width:100%;max-width:400px;margin:auto;border:none;padding:10px;}.mdl-card-login .mdl-card__actions button{width:100%;background-color:#4fc0a6;color:#fff;font-family:'RobotoBold';text-transform:initial;height:42px;box-shadow:none;border-radius:0;font-size:16px}.mdl-card-login .mdl-card__actions .button-user{width:49%;display:inline-block;}.mdl-card-login .mdl-card__actions .button-user button{border:1px solid #4fc0a6;background-color:transparent;color:#000;}.mdl-card-login .mdl-card__actions .button-user button:hover{background-color:#4fc0a6;color:#fff}.mdl-card-login .mdl-card__actions .button-register{max-width:180px;margin-top:38px;}.mdl-card-login .mdl-card__actions .button-register i{vertical-align:middle;color:#fff;margin-right:20px}.mdl-card-login .mdl-card__actions p{color:#000;margin-top:10px;margin-bottom:5px}.mdl-card-login a{color:#000;text-decoration:underline;text-decoration-color:#4fc0a6;font-family:'RobotoMedium'}.mdl-card-register{max-width:800px;}.mdl-card-register .mdl-input{margin:10px 0}.userActive{background-color:#4fc0a6 !important;color:#fff !important}.mdl-card__supporting-text{width:100%;padding:0}
+-moz-transform $translate,
+-ms-transform $translate {
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-family: 'RobotoRegular';
+}
+label {
+  font-weight: 100;
+}
+.section {
+  position: relative;
+  padding: 20px;
+}
+.center-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transition: transform 0.2s linear;
+  -moz-transition: transform 0.2s linear;
+  -ms-transition: transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+.header {
+  background-color: #415564;
+  padding: 20px 0;
+}
+.header img {
+  width: 100%;
+  max-width: 175px;
+}
+.header p {
+  font-size: 32px;
+  color: #fff;
+  font-family: 'RobotoBold';
+  margin-top: 25px;
+}
+.mdl-container {
+  max-width: 1200px;
+  margin: auto;
+  -webkit-transition: max-width 0.2s linear;
+  -moz-transition: max-width 0.2s linear;
+  -ms-transition: max-width 0.2s linear;
+  -o-transition: max-width 0.2s linear;
+  transition: max-width 0.2s linear;
+}
+.mdl-input {
+  padding: 7px 20px;
+  height: 75px;
+  margin: 0;
+  border: 1px solid #000;
+}
+.mdl-input label {
+  font-family: 'RobotoLight';
+  color: #000;
+  cursor: pointer;
+}
+.mdl-input input {
+  display: block;
+  height: 36px;
+  width: 100%;
+  border: none;
+}
+.mdl-input input:focus {
+  outline: 0;
+}
+.mdl-input.input-focused {
+  border: 1px solid #01a982;
+}
+.mdl-input .bootstrap-select {
+  width: 100% !important;
+}
+.mdl-input .bootstrap-select .dropdown-toggle {
+  border: none !important;
+  padding: 6px 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+.mdl-input .bootstrap-select .dropdown-toggle:focus {
+  outline: 0 !important;
+}
+.mdl-label {
+  padding: 20px 10px;
+}
+.mdl-create {
+  padding: 20px 0;
+}
+.mdl-create .col-xs-6 {
+  text-align: center;
+}
+.mdl-create .col-xs-6:nth-child(1) {
+  border-right: 1px solid #4fc0a6;
+}
+.mdl-card-login {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border: none;
+  padding: 10px;
+}
+.mdl-card-login .mdl-card__actions button {
+  width: 100%;
+  background-color: #4fc0a6;
+  color: #fff;
+  font-family: 'RobotoBold';
+  text-transform: initial;
+  height: 42px;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 16px;
+}
+.mdl-card-login .mdl-card__actions .button-user {
+  width: 49%;
+  display: inline-block;
+}
+.mdl-card-login .mdl-card__actions .button-user button {
+  border: 1px solid #4fc0a6;
+  background-color: transparent;
+  color: #000;
+}
+.mdl-card-login .mdl-card__actions .button-user button:hover {
+  background-color: #4fc0a6;
+  color: #fff;
+}
+.mdl-card-login .mdl-card__actions .button-register {
+  max-width: 180px;
+  margin-top: 38px;
+}
+.mdl-card-login .mdl-card__actions .button-register i {
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 20px;
+}
+.mdl-card-login .mdl-card__actions p {
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.mdl-card-login a {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #4fc0a6;
+  font-family: 'RobotoMedium';
+}
+.mdl-card-register {
+  max-width: 800px;
+}
+.mdl-card-register .mdl-input {
+  margin: 10px 0;
+}
+.userActive {
+  background-color: #4fc0a6 !important;
+  color: #fff !important;
+}
+.mdl-card__supporting-text {
+  width: 100%;
+  padding: 0;
+}
