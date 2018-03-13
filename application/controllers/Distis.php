@@ -57,10 +57,6 @@ class Distis extends CI_Controller {
                                     <p>'.$deal_number.'</p>
                                 </div>
                                 <div class="promocion">
-                                    <h2 class="title">Countries that apply</h2>
-                                    <p>'.$key->Ciudades.'</p>
-                                </div>
-                                <div class="promocion">
                                     <h2 class="title">Contacts</h2>
                                     <p>Sales</p>
                                     '.$datos_sales.'
