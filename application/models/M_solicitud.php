@@ -75,4 +75,17 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
+
+    function buscarPromocion($texto){
+      $sql = "SELECT *,
+                       DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+                  FROM cards c
+                 WHERE CASE
+                          WHEN c.Titulo IS NOT NULL THEN "The quantity is greater than 30"
+                          WHEN Quantity = 30 THEN "The quantity is 30"
+                          ELSE "The quantity is something else"
+                      END";
+        $result = $this->db->query($sql, array($id));
+        return $result->result();
+    }
 }
