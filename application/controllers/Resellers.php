@@ -19,15 +19,15 @@ class Resellers extends CI_Controller {
         }
         $promociones = $this->M_solicitud->getPromocionesSellers();
         $data['nombre'] = $this->session->userdata('nombre');
-        $html        = '';
-        $cont        = 1;
-        $exp         = 1;
-        $datos_sales = "";
-        $datos_bu    = "";
-        $dato_noti   = null;
-        $mes         = null;
-        $deal_number = null;
-        $color       = null;
+        $html           = '';
+        $cont           = 1;
+        $exp            = 1;
+        $datos_sales    = "";
+        $datos_bu       = "";
+        $dato_noti      = null;
+        $mes            = null;
+        $deal_number    = null;
+        $color          = null;
         $data['codigo'] = '<h2><strong>'.substr($promociones[0]->Codigo, 0, 2).'</strong>'.substr($promociones[0]->Codigo, 2, 6).'</h2>';
         foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
             $datos_sales .= '<p>'.$val.'</p>';
@@ -42,8 +42,8 @@ class Resellers extends CI_Controller {
                 $color = '#624967';
             }
             $date = date_create($key->fecha_vencimiento);
-            $mes = date_format($date,"F");
-            $dato_noti = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
+            $mes  = date_format($date,"F");
+            $dato_noti   = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
             $deal_number = $key->Tipo_distribuidor == '' ? '' : '<div class="promocion"><h2 class="title">Deal Number</h2><p>'.$key->Deal_number.'</p></div>';
             $html .= '<div class="mdl-card mdl-card-promocion">
                         <div class="mdl-header" style="background-color: '.$color.' !important">
