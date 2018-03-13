@@ -76,7 +76,7 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
-    function buscarPromocionResellers($texto){
+    /*function buscarPromocionResellers($texto){
       $sql = "SELECT * 
                 FROM cards c 
                WHERE if(c.Titulo LIKE '%".$texto."%', c.Titulo LIKE '%"$texto"%', c.Tipo LIKE '%".$texto."%')
@@ -92,5 +92,5 @@ class M_solicitud extends  CI_Model{
                  AND c.Tipo_distribuidor = 'Distis'";
         $result = $this->db->query($sql, array($id));
         return $result->result();
-    }
+    }*/
 }
