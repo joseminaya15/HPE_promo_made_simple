@@ -84,6 +84,20 @@
             } else {
                 $('select').selectpicker();
             }
+            $(document).ready(function(){
+            let CHECK = sessionStorage.getItem('CHECK');
+            let USERNAME = sessionStorage.getItem('USERNAME');
+            let PASS = sessionStorage.getItem('PASS');
+           if(CHECK == 1) {
+                $('#checkbox-2').prop('checked', true);
+                $('#usuario').val(USERNAME);
+                $('#password').val(PASS);
+           }else {
+                $('#checkbox-2').prop('checked', false);
+                $('#usuario').val('');
+                $('#password').val('');
+           }
+        });
         </script>
     </body>
 </html>
