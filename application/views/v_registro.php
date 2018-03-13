@@ -71,8 +71,8 @@
                                 <label for="password">Password</label>
                                 <input type="text" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                             </div>
-                            <div class="col-xs-12 p-0 mdl-card__actions">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-arrow_forward"></i>Register</button>
+                            <div class="col-xs-12 p-0 mdl-card__actions text-right">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-register"><i class="mdi mdi-arrow_forward"></i>Register</button>
                             </div>
                         </div>
                     </div>
