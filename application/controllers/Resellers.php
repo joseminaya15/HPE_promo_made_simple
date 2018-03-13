@@ -178,7 +178,7 @@ class Resellers extends CI_Controller {
                 $cont++;
             }
             $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
+            $data['error']       = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }

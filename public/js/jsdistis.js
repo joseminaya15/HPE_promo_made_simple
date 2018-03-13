@@ -2,7 +2,7 @@ function buscarPromo(){
 	var texto = $('#buscador').val();
 	$.ajax({
 		data : {texto : texto},
-		url  : 'Resellers/buscarPromocion',
+		url  : 'Distis/buscarPromocion',
 		type : 'POST'
 	}).done(function(data){
 		try{
