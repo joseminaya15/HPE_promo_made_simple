@@ -32,8 +32,8 @@ class M_solicitud extends  CI_Model{
 
     function verificarUsuario($user){
         $sql = "SELECT *
-                  FROM persons
-                 WHERE usuario LIKE '%".$user."%'";
+                  FROM users
+                 WHERE Email LIKE '%".$user."%'";
         $result = $this->db->query($sql);
         return $result->result();
     }

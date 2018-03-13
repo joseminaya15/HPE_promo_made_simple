@@ -20,7 +20,7 @@ function ingresar(){
         if(data.error == 0){
         	$('#usuario').val("");
         	$('#password').val("");
-          location.href = 'Listado';
+          location.href = data.redirect;
         }else {
           if(data.pass == null || data.pass == '') {
             msj('error', 'alguno de sus datos son incorrectos');

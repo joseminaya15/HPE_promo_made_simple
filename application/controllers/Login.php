@@ -27,11 +27,18 @@ class Login extends CI_Controller {
             $password = $this->input->post('password');
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if(count($username) != 0){
-                if(strtolower($username[0]->usuario) == strtolower($usuario)){
+                if(strtolower($username[0]->Email) == strtolower($usuario)){
                     if($password == $username[0]->pass){
                         $session = array('usuario'        => $usuario,
                                          'Id_user'        => $username[0]->Id);
                         $this->session->set_userdata($session);
+                        if($username[0]->tipo_user == 0){
+                            $data['redirect'] = 'Listado';
+                        }else if($username[0]->tipo_user == 1){
+                           $data['redirect'] = 'Promo'; 
+                        }else if($username[0]->tipo_user == 2){
+                            $data['redirect'] = 'Promo'; 
+                        }
                         $data['error'] = EXIT_SUCCESS;
                     }else {
                         $data['pass'] = 'Contraseña incorrecta';
