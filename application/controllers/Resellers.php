@@ -18,6 +18,7 @@ class Resellers extends CI_Controller {
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromocionesSellers();
+        $data['nombre'] = $this->session->userdata('nombre');
         $html        = '';
         $cont        = 1;
         $exp         = 1;

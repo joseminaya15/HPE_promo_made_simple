@@ -31,7 +31,7 @@
                         <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
                     </div>
                     <div class="col-xs-6 text-right p-0">
-                        <p>Promos Made Simple</p>
+                        <p><?php echo $nombre ?></p>
                         <?php echo $codigo ?>
                     </div>
                 </div>

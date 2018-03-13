@@ -18,6 +18,7 @@ class Distis extends CI_Controller {
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromocionesDistis();
+        $data['nombre'] = $this->session->userdata('nombre');
         $html        = '';
         $cont        = 1;
         $exp         = 1;
