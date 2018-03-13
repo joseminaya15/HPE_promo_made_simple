@@ -77,19 +77,27 @@ class M_solicitud extends  CI_Model{
     }
 
     /*function buscarPromocionResellers($texto){
-      $sql = "SELECT * 
+      $sql = "SELECT c.* 
                 FROM cards c 
-               WHERE if(c.Titulo LIKE '%".$texto."%', c.Titulo LIKE '%"$texto"%', c.Tipo LIKE '%".$texto."%')
-                 AND c.Tipo_distribuidor = 'Resellers'";
+               WHERE ((c.Titulo LIKE '%".$texto."%') OR
+                       (c.Tipo LIKE '%".$texto."%') OR
+                       (c.Objetivo_comercial LIKE '%".$texto."%') OR
+                       (c.Noticia LIKE '%".$texto."%') OR
+                       (c.Deal_number LIKE '%".$texto."%'))
+                 AND c.Tipo_distribuidor = 'Resellers';";
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
 
     function buscarPromocionDistis($texto){
-      $sql = "SELECT * 
+      $sql = "SELECT c.* 
                 FROM cards c 
-               WHERE if(c.Titulo LIKE '%".$texto."%', c.Titulo LIKE '%"$texto"%', c.Tipo LIKE '%".$texto."%')
-                 AND c.Tipo_distribuidor = 'Distis'";
+               WHERE ((c.Titulo LIKE '%".$texto."%') OR
+                       (c.Tipo LIKE '%".$texto."%') OR
+                       (c.Objetivo_comercial LIKE '%".$texto."%') OR
+                       (c.Noticia LIKE '%".$texto."%') OR
+                       (c.Deal_number LIKE '%".$texto."%'))
+                 AND c.Tipo_distribuidor = 'Distis';";
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }*/
