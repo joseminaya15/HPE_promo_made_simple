@@ -87,6 +87,17 @@ label
 			outline 0
 	&.input-focused
 		border 1px solid #01A982	
+	.bootstrap-select
+		width 100% !important
+		.dropdown-toggle
+			border: none !important
+			padding: 6px 0
+			background-color: transparent !important
+			box-shadow: none !important
+			outline: 0 !important
+			&:focus
+				outline: 0 !important
+			
 		
 .mdl-label
 	padding 20px 10px
@@ -112,13 +123,27 @@ label
 			box-shadow: none
 			border-radius: 0
 			font-size 16px
+		.button-user
+			width 49%
+			display inline-block
+			button
+				border 1px solid $default
+				background-color transparent
+				color #000000
+				&:hover
+					background-color $default
+					color #FFFFFF
+		p
+			color #000000
+			margin-top 10px
+			margin-bottom 5px
 	a 
 		color #000000
 		text-decoration underline
 		text-decoration-color $default
 		font-family $medium
     &.mdl-card-register
-		max-width 900px
+		max-width 800px
 		.mdl-input
 			margin 10px 0
 

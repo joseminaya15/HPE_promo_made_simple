@@ -48,18 +48,31 @@
                                 <label for="correo">Email</label>
                                 <input type="text" id="correo" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                             </div>
-                            <div class="col-xs-12">
-                                
+                            <div class="col-xs-12 p-0 mdl-card__actions">
+                                <p>Type of user</p>
+                                <div class="button-user">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Distris</button>
+                                </div>
+                                <div class="button-user">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Resellers</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6">
                             <div class="col-xs-12 form-group mdl-input">
-                                <label for="pais">Full Name</label>
-                                <input type="text" id="nombre" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                <label>Country</label>
+                                <select class="selectpicker">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
                             </div>
                             <div class="col-xs-12 form-group mdl-input">
                                 <label for="password">Password</label>
                                 <input type="text" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            </div>
+                            <div class="col-xs-12 p-0 mdl-card__actions">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-arrow_forward"></i>Register</button>
                             </div>
                         </div>
                     </div>
