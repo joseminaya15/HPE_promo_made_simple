@@ -29,7 +29,7 @@ class Login extends CI_Controller {
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if(count($username) != 0){
                 if(strtolower($username[0]->Email) == strtolower($usuario)){
-                    if($password == $username[0]->pass){
+                    if($password == base64_decode($username[0]->pass)){
                         $session = array('usuario'   => $usuario,
                                          'tipo_user' => $username[0]->tipo_user,
                                          'nombre'    => $username[0]->Nombre,   

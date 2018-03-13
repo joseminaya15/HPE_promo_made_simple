@@ -69,10 +69,10 @@
                             </div>
                             <div class="col-xs-12 form-group mdl-input">
                                 <label for="password">Password</label>
-                                <input type="text" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                <input type="password" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="col-xs-12 p-0 mdl-card__actions text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-register"><i class="mdi mdi-arrow_forward"></i>Register</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-register" onclick="registrar()"><i class="mdi mdi-arrow_forward"></i>Register</button>
                             </div>
                         </div>
                     </div>
@@ -87,6 +87,7 @@
         <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsregistro.js?v=<?php echo time();?>"></script>
     </body>
 </html>
