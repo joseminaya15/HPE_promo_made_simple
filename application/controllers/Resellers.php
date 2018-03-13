@@ -99,4 +99,17 @@ class Resellers extends CI_Controller {
         $data['promociones'] = $html;
 		$this->load->view('v_resellers', $data);
 	}
+
+    function buscarPromocion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try{
+            $texto = $this->input->post('texto');
+            $data  = $this->model->M_solicitud->buscarPromocion($texto);
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
