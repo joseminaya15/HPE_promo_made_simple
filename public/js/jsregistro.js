@@ -1,7 +1,7 @@
 function registrar() {
 	var nombre 	 = $('#nombre').val();
-	var password = $('#password').val();
 	var correo   = $('#correo').val();
+	var password = $('#password').val();
 	var pais 	 = $('#pais').val();
 	if(nombre == '' && canal == '' && canal == '' && correo == '' && pais == ''){
 		msj('error', 'Ingrese sus datos');
@@ -41,7 +41,8 @@ function registrar() {
         	$('#nombre').val("");
 			$('#password').val("");
 			$('#correo').val("");
-			$('#pais').val("");
+			$('#pais').val("0");
+			$('.selectpicker').selectpicker('refresh');
 			msj('error', 'Se registró correctamente');
 			setTimeout(function(){ 
 				location.href = "Login";

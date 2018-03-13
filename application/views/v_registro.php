@@ -61,10 +61,10 @@
                         <div class="col-md-5 col-sm-6">
                             <div class="col-xs-12 form-group mdl-input">
                                 <label>Country</label>
-                                <select class="selectpicker">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
+                                <select class="selectpicker" id="pais">
+                                    <option value="Mustard">Mustard</option>
+                                    <option value="Ketchup">Ketchup</option>
+                                    <option value="Relish">Relish</option>
                                 </select>
                             </div>
                             <div class="col-xs-12 form-group mdl-input">
