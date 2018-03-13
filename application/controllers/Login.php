@@ -30,10 +30,10 @@ class Login extends CI_Controller {
             if(count($username) != 0){
                 if(strtolower($username[0]->Email) == strtolower($usuario)){
                     if($password == $username[0]->pass){
-                        $session = array('usuario'        => $usuario,
-                                         'tipo_user'      => $username[0]->tipo_user,
-                                         'nombre'      => $username[0]->Nombre,   
-                                         'Id_user'        => $username[0]->Id);
+                        $session = array('usuario'   => $usuario,
+                                         'tipo_user' => $username[0]->tipo_user,
+                                         'nombre'    => $username[0]->Nombre,   
+                                         'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0){
                             $data['redirect'] = 'Listado';
