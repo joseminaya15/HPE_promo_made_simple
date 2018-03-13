@@ -52,7 +52,6 @@ label
 	
 .center-login
 	center()
-	max-width: 400px
 	
 .header
 	background-color #415564
@@ -101,6 +100,7 @@ label
 .mdl-card-login
 	width 100%
 	max-width 400px
+	margin auto
 	.mdl-card__actions
 		button
 			width 100%
@@ -117,6 +117,11 @@ label
 		text-decoration underline
 		text-decoration-color $default
 		font-family $medium
+    &.mdl-card-register
+		max-width 900px
+		.mdl-input
+			margin 10px 0
+
 
 .mdl-card__supporting-text
 	width 100%

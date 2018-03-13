@@ -37,32 +37,30 @@
                 </div>
             </div>
             <div class="center-login">
-                <div class="mdl-card mdl-card-login">
+                <div class="mdl-card mdl-card-login mdl-card-register">
                     <div class="mdl-card__supporting-text">
-                        <div class="col-xs-12 form-group mdl-input">
-                            <label for="usuario">Username</label>
-                            <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                        <div class="col-md-7 col-sm-6">
+                            <div class="col-xs-12 form-group mdl-input">
+                                <label for="nombre">Full Name</label>
+                                <input type="text" id="nombre" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            </div>
+                            <div class="col-xs-12 form-group mdl-input">
+                                <label for="correo">Email</label>
+                                <input type="text" id="correo" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            </div>
+                            <div class="col-xs-12">
+                                
+                            </div>
                         </div>
-                        <div class="col-xs-12 form-group mdl-input">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" onkeyup="verificarDatos(event);">
-                        </div>
-                        <div class="col-xs-12 mdl-label">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Remember me</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mdl-card__actions p-0">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
-                    </div>
-                    <div class="col-xs-12 mdl-create">
-                        <div class="col-xs-6">
-                            <a href="">Forgot password</a>
-                        </div>
-                        <div class="col-xs-6">
-                            <a href="Registro">Create an account</a>
+                        <div class="col-md-5 col-sm-6">
+                            <div class="col-xs-12 form-group mdl-input">
+                                <label for="pais">Full Name</label>
+                                <input type="text" id="nombre" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            </div>
+                            <div class="col-xs-12 form-group mdl-input">
+                                <label for="password">Password</label>
+                                <input type="text" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            </div>
                         </div>
                     </div>
                 </div>
