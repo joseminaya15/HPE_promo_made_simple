@@ -27,6 +27,12 @@ class Resellers extends CI_Controller {
         $dato_noti   = null;
         $mes         = null;
         $deal_number = null;
+        $color       = null;
+        if($promociones[0]->Tipo == 'Valor'){
+            $color = '#F69779';
+        }else if($promociones[0]->Tipo == 'Volumen'){
+            $color = '#624967';
+        }
         $data['codigo'] = '<h2><strong>'.substr($promociones[0]->Codigo, 0, 2).'</strong>'.substr($promociones[0]->Codigo, 2, 6).'</h2>';
         foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
             $datos_sales .= '<p>'.$val.'</p>';
@@ -40,7 +46,7 @@ class Resellers extends CI_Controller {
             $dato_noti = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
             $deal_number = $key->Tipo_distribuidor == '' ? '' : '<div class="promocion"><h2 class="title">Deal Number</h2><p>'.$key->Deal_number.'</p></div>';
             $html .= '<div class="mdl-card mdl-card-promocion">
-                        <div class="mdl-header">
+                        <div class="mdl-header" style="background-color: '.$color.' !important">
                             <h2>'.$key->Titulo.'</h2>
                             <p>Valid until '.$mes.' '.substr($key->fecha_vencimiento, 8, 10).'</p>
                         </div>
