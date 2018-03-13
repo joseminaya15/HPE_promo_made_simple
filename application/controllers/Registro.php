@@ -22,19 +22,21 @@ class Registro extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
-            $nombre   = $this->input->post('nombre');
-            $usuario  = $this->input->post('usuario');
-            $password = $this->input->post('password');
-            $pais     = $this->input->post('pais');
-            $arrayInsert = array('Nombre' => $nombre,
-                                 'Email'  => $usuario,
-                                 'pass'   => base64_encode($password),
-                                 'Pais'   => $pais);
+            $nombre    = $this->input->post('nombre');
+            $usuario   = $this->input->post('usuario');
+            $password  = $this->input->post('password');
+            $pais      = $this->input->post('pais');
+            $tipo_user = $this->input->post('tipo_user');
+            $arrayInsert = array('Nombre'    => $nombre,
+                                 'Email'     => $usuario,
+                                 'pass'      => base64_encode($password),
+                                 'Pais'      => $pais,
+                                 'Tipo_user' => $tipo_user);
             $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'users');
-            $session    = array('nombre' => $nombre,
-                                'usuario'        => $usuario,
-                                'pais'           => $pais,
-                                'id_capitan'     => $datoInsert['Id']);
+            $session    = array('nombre'     => $nombre,
+                                'usuario'    => $usuario,
+                                'pais'       => $pais,
+                                'id_capitan' => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
