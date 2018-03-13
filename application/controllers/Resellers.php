@@ -90,6 +90,6 @@ class Resellers extends CI_Controller {
             $cont++;
         }
         $data['promociones'] = $html;
-		$this->load->view('v_promo', $data);
+		$this->load->view('v_resellers', $data);
 	}
 }
