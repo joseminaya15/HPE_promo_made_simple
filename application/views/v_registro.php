@@ -51,10 +51,10 @@
                             <div class="col-xs-12 p-0 mdl-card__actions">
                                 <p>Type of user</p>
                                 <div class="button-user">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Distris</button>
+                                    <button id="distris" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="selectUser(this.id)">Distris</button>
                                 </div>
                                 <div class="button-user">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Resellers</button>
+                                    <button id="resellers" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="selectUser(this.id)">Resellers</button>
                                 </div>
                             </div>
                         </div>
