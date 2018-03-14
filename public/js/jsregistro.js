@@ -28,7 +28,7 @@ function registrar() {
 		msj('error', 'Ingrese su contraseña');
 		return;
 	}
-	if(textUser == 'Reseller'){
+	if(textUser == 'Resellers'){
 		tipo_user = 1;
 	}else if(textUser == 'Distris'){
 		tipo_user = 2;

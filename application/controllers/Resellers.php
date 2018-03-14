@@ -105,7 +105,7 @@ class Resellers extends CI_Controller {
         $data['msj']   = null;
         try{
             $texto       = $this->input->post('texto');
-            $promociones = $this->model->M_solicitud->buscarPromocionResellers($texto);
+            $promociones = $this->M_solicitud->buscarPromocionResellers($texto);
             if(count($promociones) == 0){
                 return;
             }
@@ -269,6 +269,19 @@ class Resellers extends CI_Controller {
             $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function cerrarCesion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $this->session->unset_userdata('usuario');
+            $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
