@@ -101,7 +101,10 @@ class Distis extends CI_Controller {
         $data['msj']   = null;
         try{
             $texto       = $this->input->post('texto');
-            $promociones = $this->M_solicitud->buscarPromocionResellers($texto);
+            $promociones = $this->M_solicitud->buscarPromocionDistis($texto);
+            if(count($promociones) == 0){
+                return;
+            }
             $html        = '';
             $cont        = 1;
             $datos_sales = "";
