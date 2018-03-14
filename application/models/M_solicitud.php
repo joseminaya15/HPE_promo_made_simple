@@ -84,7 +84,8 @@ class M_solicitud extends  CI_Model{
                        (c.Objetivo_comercial LIKE '%".$texto."%') OR
                        (c.Noticia LIKE '%".$texto."%') OR
                        (c.Deal_number LIKE '%".$texto."%'))
-                 AND c.Tipo_distribuidor = 'Resellers';";
+                 AND c.Tipo_distribuidor = 'Resellers'
+            ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
@@ -97,7 +98,8 @@ class M_solicitud extends  CI_Model{
                        (c.Objetivo_comercial LIKE '%".$texto."%') OR
                        (c.Noticia LIKE '%".$texto."%') OR
                        (c.Deal_number LIKE '%".$texto."%'))
-                 AND c.Tipo_distribuidor = 'Distis';";
+                 AND c.Tipo_distribuidor = 'Distis'
+            ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }*/
