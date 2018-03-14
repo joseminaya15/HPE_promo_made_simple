@@ -5,15 +5,14 @@ function buscarPromo(){
 	}
 	$.ajax({
 		data : {texto : texto},
-		url  : 'Resellers/buscarPromocion',
+		url  : 'Resellers/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
 		try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	$('#buscador').val("");
-	    	$('.promociones').html('');
-	    	$('.promociones').append(data.promociones);
+	    	$('.cards').html('');
+	    	$('.cards').append(data.promociones);
 	    }else {
 	    	return;
 	    }
@@ -41,8 +40,8 @@ function filtroPromociones(){
 		try{
 		    data = JSON.parse(data);
 		    if(data.error == 0){
-		    	$('.promociones').html('');
-		    	$('.promociones').append(data.promociones);
+		    	$('.cards').html('');
+		    	$('.cards').append(data.promociones);
 		    }else {
 		    	return;
 		    }
