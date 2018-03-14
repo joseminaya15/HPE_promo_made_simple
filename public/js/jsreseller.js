@@ -1,8 +1,5 @@
 function buscarPromo(){
 	var texto = $('#buscador').val();
-	if(texto == null || texto == ''){
-		return;
-	}
 	$.ajax({
 		data : {texto : texto},
 		url  : 'Resellers/buscarPromo',
@@ -48,5 +45,22 @@ function filtroPromociones(){
 	  	}catch(err){
 	    	msj('error',err.message);
 	  	}
+	});
+}
+function cerrarCesion(){
+	$.ajax({
+		url  : 'Resellers/cerrarCesion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'Login';
+        }else {
+        	return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
 	});
 }

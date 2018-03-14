@@ -18,6 +18,9 @@ class Resellers extends CI_Controller {
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromocionesSellers();
+        if(count($promociones) == 0){
+            return;
+        }
         $data['nombre'] = $this->session->userdata('nombre');
         $html           = '';
         $cont           = 1;
@@ -105,7 +108,7 @@ class Resellers extends CI_Controller {
         $data['msj']   = null;
         try{
             $texto       = $this->input->post('texto');
-            $promociones = $this->model->M_solicitud->buscarPromocionResellers($texto);
+            $promociones = $this->M_solicitud->buscarPromocionResellers($texto);
             if(count($promociones) == 0){
                 return;
             }
@@ -114,91 +117,6 @@ class Resellers extends CI_Controller {
             $datos_sales = "";
             $datos_bu    = "";
             $color       = null;
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
-                $datos_sales .= '<p>'.$val.'</p>';
-            }
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $dat){
-                $datos_bu .= '<p>'.$dat.'</p>';
-            }
-            foreach ($promociones as $key){
-                if($key->Tipo == 'Valor'){
-                    $color = '#F69779';
-                }else if($key->Tipo == 'Volumen'){
-                    $color = '#624967';
-                }
-                $date = date_create($key->fecha_vencimiento);
-                $mes  = date_format($date,"F");
-                $dato_noti   = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
-                $deal_number = $key->Tipo_distribuidor == '' ? '' : '<div class="promocion"><h2 class="title">Deal Number</h2><p>'.$key->Deal_number.'</p></div>';
-                $html .= '<div class="mdl-card mdl-card-promocion">
-                            <div class="mdl-header" style="background-color: '.$color.' !important">
-                                <h2>'.$key->Titulo.'</h2>
-                                <p>Valid until '.$mes.' '.substr($key->fecha_vencimiento, 8, 10).'</p>
-                            </div>
-                            <div class="mdl-contenido">
-                                <div class="contenido">
-                                    <div class="promocion">
-                                        <h2 class="title">Commercial Objective</h2>
-                                        <p>'.$key->Objetivo_comercial.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <p>'.$dato_noti.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <p></p>
-                                    </div>
-                                    <div class="promocion">
-                                        <h2 class="title">Countries that apply</h2>
-                                        <p>'.$key->Ciudades.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <h2 class="title">Contacts</h2>
-                                        <p>Sales</p>
-                                        '.$datos_sales.'
-                                        </br>
-                                        <p>BU:</p>
-                                        '.$datos_bu.'
-                                    </div>
-                                    <div class="promocion">
-                                        <h2 class="title">Conditions</h2>
-                                        <p>Includes special prices for Pointnext attach
-                                        services (local deal)
-                                        Some promotions do not apply to all Distributors.
-                                        Please review the terms and conditions of this
-                                        promotion in pComm.</p>
-                                    </div>
-                                </div>
-                                <div class="imagenes text-center">
-                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                    <div class="footer-promocion">
-                                        <img src="'.RUTA_IMG.'promo/sellers.png">
-                                        <img src="'.RUTA_IMG.'promo/iquote.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>';
-                $cont++;
-            }
-            $data['promociones'] = $html;
-            $data['error']       = EXIT_SUCCESS;
-        }catch (Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }
-
-    function filtroPromociones(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $filtro      = $this->input->post('filtro');
-            $promociones = $this->M_solicitud->getDatosFiltro($filtro, 'Resellers');
-            $html        = '';
-            $cont        = 1;
-            $datos_sales = "";
-            $datos_bu    = "";
             foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
                 $datos_sales .= '<p>'.$val.'</p>';
             }
@@ -267,8 +185,106 @@ class Resellers extends CI_Controller {
                 $cont++;
             }
             $data['promociones'] = $html;
+            $data['error']       = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function filtroPromociones(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $filtro      = $this->input->post('filtro');
+            $promociones = $this->M_solicitud->getDatosFiltro($filtro, 'Resellers');
+            if(count($promociones) == 0){
+                return;
+            }
+            $html        = '';
+            $cont        = 1;
+            $datos_sales = "";
+            $datos_bu    = "";
+            foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
+                $datos_sales .= '<p>'.$val.'</p>';
+            }
+            foreach (explode(",", $promociones[0]->Contactos_sales) as $dat){
+                $datos_bu .= '<p>'.$dat.'</p>';
+            }
+            foreach ($promociones as $key){
+                if($key->Tipo == 'Valor'){
+                    $color = '#F69779';
+                }else if($key->Tipo == 'Volumen'){
+                    $color = '#624967';
+                }
+                $date        = date_create($key->fecha_vencimiento);
+                $mes         = date_format($date,"F");
+                $dato_noti   = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
+                $deal_number = $key->Tipo_distribuidor == '' ? '' : '<div class="promocion"><h2 class="title">Deal Number</h2><p>'.$key->Deal_number.'</p></div>';
+                $html .= '<div class="mdl-card mdl-card-promocion">
+                            <div class="mdl-header" style="background-color: '.$color.' !important">
+                                <h2>'.$key->Titulo.'</h2>
+                                <p>Valid until '.$mes.' '.substr($key->fecha_vencimiento, 8, 10).'</p>
+                            </div>
+                            <div class="mdl-contenido">
+                                <div class="contenido">
+                                    <div class="promocion">
+                                        <h2 class="title">Commercial Objective</h2>
+                                        <p>'.$key->Objetivo_comercial.'</p>
+                                    </div>
+                                    <div class="promocion">
+                                        <p>'.$dato_noti.'</p>
+                                    </div>
+                                    <div class="promocion">
+                                        <h2 class="title">Countries that apply</h2>
+                                        <p>'.$key->Ciudades.'</p>
+                                    </div>
+                                    <div class="promocion">
+                                        <h2 class="title">Contacts</h2>
+                                        <p>Sales</p>
+                                        '.$datos_sales.'
+                                        </br>
+                                        <p>BU:</p>
+                                        '.$datos_bu.'
+                                    </div>
+                                    <div class="promocion">
+                                        <h2 class="title">Conditions</h2>
+                                        <p>Includes special prices for Pointnext attach
+                                        services (local deal)
+                                        Some promotions do not apply to all Distributors.
+                                        Please review the terms and conditions of this
+                                        promotion in pComm.</p>
+                                    </div>
+                                </div>
+                                <div class="imagenes text-center">
+                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
+                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
+                                    <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
+                                    <div class="footer-promocion">
+                                        <img src="'.RUTA_IMG.'promo/sellers.png">
+                                        <img src="'.RUTA_IMG.'promo/iquote.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                $cont++;
+            }
+            $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function cerrarCesion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $this->session->unset_userdata('usuario');
+            $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
