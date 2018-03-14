@@ -99,7 +99,8 @@ class M_solicitud extends  CI_Model{
                        (c.Tipo LIKE '%".$texto."%') OR
                        (c.Objetivo_comercial LIKE '%".$texto."%') OR
                        (c.Noticia LIKE '%".$texto."%') OR
-                       (c.Deal_number LIKE '%".$texto."%'))
+                       (c.Deal_number LIKE '%".$texto."%') OR
+                       (CASE WHEN '' = '".$texto."' THEN 1 = 1 ELSE FALSE END))
                  AND c.Tipo_distribuidor = 'Distis'
             ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql);
