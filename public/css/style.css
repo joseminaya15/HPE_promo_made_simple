@@ -61,6 +61,20 @@ label {
 .mdl-container .promociones {
   margin-top: 120px;
 }
+.mdl-container .promociones .search {
+  max-width: calc(100% - 55px);
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+.mdl-container .promociones .button-search {
+  max-width: 45px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
 .mdl-input {
   padding: 7px 20px;
   height: 75px;
