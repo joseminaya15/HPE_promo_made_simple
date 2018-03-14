@@ -86,7 +86,7 @@ class M_solicitud extends  CI_Model{
                        (c.Deal_number LIKE '%".$texto."%'))
                  AND c.Tipo_distribuidor = 'Resellers'
             ORDER BY c.Last_units, c.Tipo DESC";
-        $result = $this->db->query($sql, array($id));
+        $result = $this->db->query($sql);
         return $result->result();
     }
 
@@ -100,7 +100,29 @@ class M_solicitud extends  CI_Model{
                        (c.Deal_number LIKE '%".$texto."%'))
                  AND c.Tipo_distribuidor = 'Distis'
             ORDER BY c.Last_units, c.Tipo DESC";
-        $result = $this->db->query($sql, array($id));
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function getDatosFiltro($filtro, $tipo){
+      $sql = "SELECT c.* 
+                FROM cards c 
+               WHERE CASE
+                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      ELSE TRUE
+                     END
+               AND c.Tipo_distribuidor = $tipo
+               ORDER BY c.Last_units, c.Tipo DESC;";
+        $result = $this->db->query($sql);
         return $result->result();
     }
 }
