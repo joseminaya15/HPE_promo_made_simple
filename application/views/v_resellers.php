@@ -35,7 +35,7 @@
                         <?php echo $codigo ?>
                     </div>
                 </div>
-                <div class="col-xs-12 p-0 promociones">
+                <div class="col-xs-12 p-0 cards">
                     <?php echo $promociones ?>
                 </div>
             </div>
