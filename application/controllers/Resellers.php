@@ -18,6 +18,9 @@ class Resellers extends CI_Controller {
             header("location: Login");
         }
         $promociones = $this->M_solicitud->getPromocionesSellers();
+        if(count($promociones) == 0){
+            return;
+        }
         $data['nombre'] = $this->session->userdata('nombre');
         $html           = '';
         $cont           = 1;
@@ -195,6 +198,9 @@ class Resellers extends CI_Controller {
         try {
             $filtro      = $this->input->post('filtro');
             $promociones = $this->M_solicitud->getDatosFiltro($filtro, 'Resellers');
+            if(count($promociones) == 0){
+                return;
+            }
             $html        = '';
             $cont        = 1;
             $datos_sales = "";
@@ -228,9 +234,6 @@ class Resellers extends CI_Controller {
                                     </div>
                                     <div class="promocion">
                                         <p>'.$dato_noti.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <p></p>
                                     </div>
                                     <div class="promocion">
                                         <h2 class="title">Countries that apply</h2>
