@@ -47,6 +47,18 @@
                             <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
                         </div>
                     </div>
+                    <div class="col-xs-12 filtro">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">Only For Limited Time</li>
+                        </ol>
+                        <div class="mdl-select">
+                            <select class="selectpicker">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-xs-12 p-0 cards">
                         <?php echo $promociones ?>
                     </div>

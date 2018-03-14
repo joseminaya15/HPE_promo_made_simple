@@ -27,6 +27,11 @@ widthTransition()
 	-ms-transition max-width .2s linear
 	-o-transition max-width .2s linear
 	transition max-width .2s linear
+
+selectTransparent()
+	outline 0 !important
+	box-shadow none !important
+	background-color transparent !important
 	
 center()
 	position: absolute
@@ -94,6 +99,32 @@ label
 				display inline-block
 				vertical-align middle
 				text-align center
+		.filtro
+			margin 20px 0
+			padding 0
+			.breadcrumb
+				width 100%
+				max-width calc(100% - 245px)
+				display inline-block
+				vertical-align middle
+				margin 0
+				margin-right 20px
+				border 1px solid #000000
+				border-radius 0
+				background-color transparent
+			.mdl-select
+				width 100%
+				max-width 220px
+				display inline-block
+				vertical-align middle
+				.bootstrap-select
+					width 100%
+					button
+						selectTransparent()
+						border-color #000000
+						border-radius 0
+						height 42px
+					
 
 .mdl-input
 	padding 7px 20px
@@ -116,11 +147,9 @@ label
 	.bootstrap-select
 		width 100% !important
 		.dropdown-toggle
-			border: none !important
-			padding: 6px 0
-			background-color: transparent !important
-			box-shadow: none !important
-			outline: 0 !important
+			border none !important
+			padding 6px 0
+			selectTransparent()
 			&:focus
 				outline: 0 !important
 				

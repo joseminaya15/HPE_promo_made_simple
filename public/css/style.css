@@ -83,6 +83,38 @@ label {
   vertical-align: middle;
   text-align: center;
 }
+.mdl-container .promociones .filtro {
+  margin: 20px 0;
+  padding: 0;
+}
+.mdl-container .promociones .filtro .breadcrumb {
+  width: 100%;
+  max-width: calc(100% - 245px);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  margin-right: 20px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background-color: transparent;
+}
+.mdl-container .promociones .filtro .mdl-select {
+  width: 100%;
+  max-width: 220px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mdl-container .promociones .filtro .mdl-select .bootstrap-select {
+  width: 100%;
+}
+.mdl-container .promociones .filtro .mdl-select .bootstrap-select button {
+  outline: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border-color: #000;
+  border-radius: 0;
+  height: 42px;
+}
 .mdl-input {
   padding: 7px 20px;
   height: 75px;
@@ -112,9 +144,9 @@ label {
 .mdl-input .bootstrap-select .dropdown-toggle {
   border: none !important;
   padding: 6px 0;
-  background-color: transparent !important;
-  box-shadow: none !important;
   outline: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 .mdl-input .bootstrap-select .dropdown-toggle:focus {
   outline: 0 !important;
