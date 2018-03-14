@@ -96,16 +96,17 @@ class Distis extends CI_Controller {
 		$this->load->view('v_distis', $data);
 	}
 
-    function buscarPromocion(){
+    function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try{
             $texto       = $this->input->post('texto');
-            $promociones = $this->model->M_solicitud->buscarPromocionResellers($texto);
+            $promociones = $this->M_solicitud->buscarPromocionResellers($texto);
             $html        = '';
             $cont        = 1;
             $datos_sales = "";
             $datos_bu    = "";
+            $color       = null;
             foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
                 $datos_sales .= '<p>'.$val.'</p>';
             }
@@ -191,6 +192,7 @@ class Distis extends CI_Controller {
             $cont        = 1;
             $datos_sales = "";
             $datos_bu    = "";
+            $color       = null;
             foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
                 $datos_sales .= '<p>'.$val.'</p>';
             }

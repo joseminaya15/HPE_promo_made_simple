@@ -41,13 +41,13 @@
                 <div class="promociones">
                     <div class="col-xs-12 p-0">
                         <div class="form-group search">
-                            <input type="email" class="form-control" id="search" placeholder="Search">
+                            <input type="email" class="form-control" id="buscador" placeholder="Search" onkeyup="buscarPromocion(event);">
                         </div>
                         <div class="button-search">
-                            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-search"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
                         </div>
                     </div>
-                    <div class="col-xs-12 p-0">
+                    <div class="col-xs-12 p-0 cards">
                         <?php echo $promociones ?>
                     </div>
                 </div>
@@ -64,8 +64,8 @@
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script> -->
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
-        <!-- <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script> -->
-        <!-- <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script> -->
+        <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsdistis.js?v=<?php echo time();?>"></script>
     </body>
 </html>

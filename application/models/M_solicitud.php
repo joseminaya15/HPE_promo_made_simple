@@ -77,7 +77,8 @@ class M_solicitud extends  CI_Model{
     }
 
     function buscarPromocionResellers($texto){
-      $sql = "SELECT c.* 
+      $sql = "SELECT c.*,
+                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                 FROM cards c 
                WHERE ((c.Titulo LIKE '%".$texto."%') OR
                        (c.Tipo LIKE '%".$texto."%') OR
@@ -91,7 +92,8 @@ class M_solicitud extends  CI_Model{
     }
 
     function buscarPromocionDistis($texto){
-      $sql = "SELECT c.* 
+      $sql = "SELECT c.*,
+                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                 FROM cards c 
                WHERE ((c.Titulo LIKE '%".$texto."%') OR
                        (c.Tipo LIKE '%".$texto."%') OR
@@ -105,7 +107,8 @@ class M_solicitud extends  CI_Model{
     }
 
     function getDatosFiltro($filtro, $tipo){
-      $sql = "SELECT c.* 
+      $sql = "SELECT c.*,
+                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                 FROM cards c 
                WHERE CASE
                       WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
