@@ -61,14 +61,22 @@ label {
 .mdl-container .promociones {
   margin-top: 120px;
 }
-.mdl-container .promociones .search {
+.mdl-container .promociones .buscador {
+  border: 1px solid #000;
+  padding: 5px;
+}
+.mdl-container .promociones .buscador .search {
   max-width: calc(100% - 55px);
   width: 100%;
   display: inline-block;
   vertical-align: middle;
   margin: 0;
 }
-.mdl-container .promociones .button-search {
+.mdl-container .promociones .buscador .search input {
+  box-shadow: none;
+  border: none;
+}
+.mdl-container .promociones .buscador .button-search {
   max-width: 45px;
   width: 100%;
   display: inline-block;
