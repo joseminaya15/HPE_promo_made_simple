@@ -28,3 +28,26 @@ function buscarPromocion(e){
 		buscarPromo();
     }
 }
+function filtroPromociones(){
+	var filtro = $('#filtro').val();
+	if(filtro == null || filtro == ''){
+		return;
+	}
+	$.ajax({
+		data : {filtro : filtro},
+		url  : 'Distis/buscarPromocion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	    data = JSON.parse(data);
+	    if(data.error == 0){
+	    	$('.promociones').html('');
+	    	$('.promociones').append(data.promociones);
+	    }else {
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}

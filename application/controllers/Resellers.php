@@ -189,8 +189,8 @@ class Resellers extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $filtro     = $this->input->post('filtro');
-            $promociones = $this->M_solicitud->getDatosFiltro($filtro, 'Distis');
+            $filtro      = $this->input->post('filtro');
+            $promociones = $this->M_solicitud->getDatosFiltro($filtro, 'Resellers');
             $html        = '';
             $cont        = 1;
             $datos_sales = "";
