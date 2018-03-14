@@ -39,7 +39,7 @@ class M_solicitud extends  CI_Model{
     }
 
     function getPromociones(){
-        $sql = "SELECT *,
+        $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
               ORDER BY c.Last_units, c.Tipo DESC";
@@ -48,30 +48,30 @@ class M_solicitud extends  CI_Model{
     }
 
     function getPromocionesSellers(){
-        $sql = "SELECT *,
+        $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
-                 WHERE Tipo_distribuidor = 'Resellers'
+                 WHERE c.Tipo_distribuidor = 'Resellers'
               ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql);
         return $result->result();
     }
 
     function getPromocionesDistis(){
-        $sql = "SELECT *,
+        $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
-                 WHERE Tipo_distribuidor = 'Distis'
+                 WHERE c.Tipo_distribuidor = 'Distis'
               ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql);
         return $result->result();
     }
 
     function getPromocionesById($id){
-        $sql = "SELECT *,
+        $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
-                 WHERE Id = ?
+                 WHERE c.Id = ?
                 ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql, array($id));
         return $result->result();
