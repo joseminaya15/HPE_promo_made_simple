@@ -39,15 +39,15 @@ function filtroPromociones(){
 		type : 'POST'
 	}).done(function(data){
 		try{
-	    data = JSON.parse(data);
-	    if(data.error == 0){
-	    	$('.promociones').html('');
-	    	$('.promociones').append(data.promociones);
-	    }else {
-	    	return;
-	    }
-	  }catch(err){
-	    msj('error',err.message);
-	  }
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	$('.promociones').html('');
+		    	$('.promociones').append(data.promociones);
+		    }else {
+		    	return;
+		    }
+	  	}catch(err){
+	    	msj('error',err.message);
+	  	}
 	});
 }
