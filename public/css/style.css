@@ -306,6 +306,22 @@ label {
   max-width: 180px;
   padding: 5px;
 }
+.mdl-card-promocion .mdl-contenido .imagenes .sale {
+  position: absolute;
+  background-color: #4fc0a6;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .sale h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  line-height: 22px;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .sale p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+}
 .mdl-card-promocion .mdl-contenido .imagenes .footer-promocion {
   padding: 5px 15px;
 }

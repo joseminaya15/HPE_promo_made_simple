@@ -80,6 +80,10 @@ class Distis extends CI_Controller {
                                 </div>
                             </div>
                             <div class="imagenes text-center">
+                                <div class="sale">
+                                    <h2>FINAL SALE!</h2>
+                                    <p>LAST UNITS</p>
+                                </div>
                                 <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                 <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                 <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
