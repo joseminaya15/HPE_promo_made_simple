@@ -76,7 +76,7 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
-    /*function buscarPromocionResellers($texto){
+    function buscarPromocionResellers($texto){
       $sql = "SELECT c.* 
                 FROM cards c 
                WHERE ((c.Titulo LIKE '%".$texto."%') OR
@@ -102,5 +102,5 @@ class M_solicitud extends  CI_Model{
             ORDER BY c.Last_units, c.Tipo DESC";
         $result = $this->db->query($sql, array($id));
         return $result->result();
-    }*/
+    }
 }
