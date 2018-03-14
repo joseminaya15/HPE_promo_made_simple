@@ -33,6 +33,11 @@ label {
 .header {
   background-color: #415564;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 .header img {
   width: 100%;
@@ -52,6 +57,9 @@ label {
   -ms-transition: max-width 0.2s linear;
   -o-transition: max-width 0.2s linear;
   transition: max-width 0.2s linear;
+}
+.mdl-container .promociones {
+  margin-top: 120px;
 }
 .mdl-input {
   padding: 7px 20px;
@@ -165,4 +173,91 @@ label {
 .mdl-card__supporting-text {
   width: 100%;
   padding: 0;
+}
+.mdl-card-promocion {
+  width: 49%;
+  max-width: 590px;
+  display: inline-block;
+  margin: 15px 0;
+  float: left;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.mdl-card-promocion:nth-child(2n+1) {
+  margin-right: 8px;
+}
+.mdl-card-promocion:nth-child(2n) {
+  margin-left: 8px;
+}
+.mdl-card-promocion .mdl-header {
+  background-color: #624967;
+  padding: 0 5px;
+}
+.mdl-card-promocion .mdl-header h2 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: calc(100% - 135px);
+  width: 100%;
+  font-family: 'RobotoMedium';
+}
+.mdl-card-promocion .mdl-header p {
+  max-width: 120px;
+  color: #624967;
+  width: 100%;
+  padding: 0 20px 0 10px;
+  line-height: 16px;
+  font-size: 14px;
+  font-family: 'RobotoMedium';
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  margin: 0;
+}
+.mdl-card-promocion .mdl-contenido {
+  padding: 10px 0;
+  font-size: 0;
+}
+.mdl-card-promocion .mdl-contenido .contenido {
+  display: inline-block;
+  width: 55%;
+  vertical-align: top;
+}
+.mdl-card-promocion .mdl-contenido .contenido .promocion .title {
+  background-color: #d1d3d4;
+  color: #624967;
+  font-size: 16px;
+  margin: 0;
+  line-height: 20px;
+  font-family: 'RobotoMedium';
+  padding: 5px;
+}
+.mdl-card-promocion .mdl-contenido .contenido .promocion p {
+  margin: 0;
+  line-height: 20px;
+  padding: 5px;
+}
+.mdl-card-promocion .mdl-contenido .imagenes {
+  display: inline-block;
+  width: 43%;
+  border: 1px solid #000;
+  vertical-align: top;
+  float: right;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .imagen-promocion {
+  width: 100%;
+  max-width: 180px;
+  padding: 5px;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .footer-promocion {
+  padding: 5px 15px;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .footer-promocion img:nth-child(1) {
+  float: left;
+}
+.mdl-card-promocion .mdl-contenido .imagenes .footer-promocion img:nth-child(2) {
+  float: right;
 }

@@ -21,22 +21,32 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
         <section id="promo" class="section">
-            <div class="mdl-container">
-                <div class="col-xs-12 header">
-                    <div class="col-xs-6 text-left p-0">
-                        <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                    </div>
-                    <div class="col-xs-6 text-right p-0">
-                        <p><?php echo $nombre ?></p>
-                        <?php echo $codigo ?>
+            <div class="header">
+                <div class="mdl-container row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 text-left p-0">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                        </div>
+                        <div class="col-xs-6 text-right p-0">
+                            <p><?php echo $nombre ?></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-12 p-0 promociones">
-                    <?php echo $promociones ?>
+            </div>
+            <div class="mdl-container">
+                <div class="promociones">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="search" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 p-0">
+                        <?php echo $promociones ?>
+                    </div>
                 </div>
             </div>
         </section>

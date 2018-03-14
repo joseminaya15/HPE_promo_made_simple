@@ -3,8 +3,8 @@ $bold      = 'RobotoBold'
 $medium    = 'RobotoMedium'
 $light     = 'RobotoLight'
 $default   = #4FC0A6;
-$volumen   = #634A67;
-$valor     = #F69779;
+$volumen   = #624967;
+$valor     = #F79679;
 $translate = translate(-50%,-50%);
 
 transform()
@@ -56,6 +56,11 @@ label
 .header
 	background-color #415564
 	padding 20px 0
+	position fixed
+	top 0
+	left 0
+	right 0
+	z-index 10
 	img
 		width 100%
 		max-width 175px
@@ -69,6 +74,8 @@ label
 	max-width 1200px
 	margin auto
 	widthTransition()
+	.promociones
+		margin-top 120px
 
 .mdl-input
 	padding 7px 20px
@@ -98,8 +105,7 @@ label
 			outline: 0 !important
 			&:focus
 				outline: 0 !important
-			
-		
+				
 .mdl-label
 	padding 20px 10px
 
@@ -164,4 +170,79 @@ label
 .mdl-card__supporting-text
 	width 100%
 	padding 0
-		
+
+.mdl-card-promocion
+	width 49%
+	max-width 590px
+	display inline-block
+	margin 15px 0
+	float left
+	padding 10px
+	box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+	&:nth-child(2n+1)
+		margin-right 8px
+	&:nth-child(2n)
+		margin-left 8px
+	.mdl-header
+		background-color $volumen
+		padding 0 5px
+		h2
+			color #FFFFFF
+			font-size 16px
+			margin 0
+			line-height 20px
+			display inline-block
+			vertical-align middle
+			max-width calc(100% - 135px)
+			width 100%
+			font-family $medium
+		p
+			max-width 120px
+			color $volumen
+			width 100%
+			padding 0 20px 0 10px
+			line-height 16px
+			font-size 14px
+			font-family $medium
+			display inline-block
+			vertical-align middle
+			background-color #FFFFFF
+			margin 0
+	.mdl-contenido
+		padding 10px 0
+		font-size 0
+		.contenido
+			display inline-block
+			width 55%
+			vertical-align top
+			.promocion
+				.title
+					background-color #D1D3D4
+					color $volumen
+					font-size 16px
+					margin 0
+					line-height 20px
+					font-family $medium
+					padding 5px
+				p
+					margin 0
+					line-height 20px
+					padding 5px
+		.imagenes
+			display inline-block
+			width 43%
+			border 1px solid #000000
+			vertical-align top
+			float right
+			.imagen-promocion
+				width 100%
+				max-width 180px
+				padding 5px
+			.footer-promocion
+				padding 5px 15px
+				img
+					&:nth-child(1)
+						float left
+					&:nth-child(2)
+						float right
+							
