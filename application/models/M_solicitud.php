@@ -123,9 +123,10 @@ class M_solicitud extends  CI_Model{
                       WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
                       WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
                       WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN '' != '".$filtro."' THEN TRUE
                       ELSE TRUE
                      END
-               AND c.Tipo_distribuidor = $tipo
+               AND c.Tipo_distribuidor = '".$tipo."'
                ORDER BY c.Last_units, c.Tipo DESC;";
         $result = $this->db->query($sql);
         return $result->result();
