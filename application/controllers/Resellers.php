@@ -207,8 +207,8 @@ class Resellers extends CI_Controller {
                 }else if($key->Tipo == 'Volumen'){
                     $color = '#624967';
                 }
-                $date = date_create($key->fecha_vencimiento);
-                $mes  = date_format($date,"F");
+                $date        = date_create($key->fecha_vencimiento);
+                $mes         = date_format($date,"F");
                 $dato_noti   = $key->Noticia == '' ? '' : '<div class="promocion"><h2 class="title">What’s New!</h2><p>'.$key->Noticia.'</p></div>';
                 $deal_number = $key->Tipo_distribuidor == '' ? '' : '<div class="promocion"><h2 class="title">Deal Number</h2><p>'.$key->Deal_number.'</p></div>';
                 $html .= '<div class="mdl-card mdl-card-promocion">
