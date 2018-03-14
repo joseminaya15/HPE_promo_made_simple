@@ -39,9 +39,12 @@
             </div>
             <div class="mdl-container">
                 <div class="promociones">
-                    <div class="col-xs-12">
-                        <div class="form-group">
+                    <div class="col-xs-12 p-0">
+                        <div class="form-group search">
                             <input type="email" class="form-control" id="search" placeholder="Search">
+                        </div>
+                        <div class="button-search">
+                            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-search"></i></button>
                         </div>
                     </div>
                     <div class="col-xs-12 p-0">
