@@ -70,14 +70,6 @@ class Resellers extends CI_Controller {
                                     <p>'.$key->Ciudades.'</p>
                                 </div>
                                 <div class="promocion">
-                                    <h2 class="title">Contacts</h2>
-                                    <p>Sales</p>
-                                    '.$datos_sales.'
-                                    </br>
-                                    <p>BU:</p>
-                                    '.$datos_bu.'
-                                </div>
-                                <div class="promocion">
                                     <h2 class="title">Conditions</h2>
                                     <p>Includes special prices for Pointnext attach
                                     services (local deal)
@@ -155,14 +147,6 @@ class Resellers extends CI_Controller {
                                         <p>'.$key->Ciudades.'</p>
                                     </div>
                                     <div class="promocion">
-                                        <h2 class="title">Contacts</h2>
-                                        <p>Sales</p>
-                                        '.$datos_sales.'
-                                        </br>
-                                        <p>BU:</p>
-                                        '.$datos_bu.'
-                                    </div>
-                                    <div class="promocion">
                                         <h2 class="title">Conditions</h2>
                                         <p>Includes special prices for Pointnext attach
                                         services (local deal)
@@ -238,14 +222,6 @@ class Resellers extends CI_Controller {
                                     <div class="promocion">
                                         <h2 class="title">Countries that apply</h2>
                                         <p>'.$key->Ciudades.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <h2 class="title">Contacts</h2>
-                                        <p>Sales</p>
-                                        '.$datos_sales.'
-                                        </br>
-                                        <p>BU:</p>
-                                        '.$datos_bu.'
                                     </div>
                                     <div class="promocion">
                                         <h2 class="title">Conditions</h2>
