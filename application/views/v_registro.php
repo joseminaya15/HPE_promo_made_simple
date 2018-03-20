@@ -61,10 +61,36 @@
                         <div class="col-md-5 col-sm-6">
                             <div class="col-xs-12 form-group mdl-input">
                                 <label>Country</label>
-                                <select class="selectpicker" id="pais">
-                                    <option value="Mustard">Mustard</option>
-                                    <option value="Ketchup">Ketchup</option>
-                                    <option value="Relish">Relish</option>
+                                <select class="selectpicker" id="pais" title="Typically your Country">
+                                    <option value="Dominican Republic">Dominican Republic</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Haiti">Haiti</option>
+                                    <option value="Aruba">Aruba</option>
+                                    <option value="Curacao">Curacao</option>
+                                    <option value="Guyana">Guyana</option>
+                                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                    <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
+                                    <option value="St. Maarten">St. Maarten</option>
+                                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                    <option value="Suriname">Suriname</option>
+                                    <option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
+                                    <option value="Antigua & Bermuda">Antigua & Bermuda</option>
+                                    <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                    <option value="Belize">Belize</option>
+                                    <option value="Turks & Caicos">Turks & Caicos</option>
+                                    <option value="Dominica">Dominica</option>
+                                    <option value="St Lucia">St Lucia</option>
+                                    <option value="Bonaire">Bonaire</option>
+                                    <option value="Martinique">Martinique</option>
+                                    <option value="St Barthelem">St Barthelem</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Cayman">Cayman</option>
+                                    <option value="Jamaica">Jamaica</option>
+                                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                    <option value="Bermuda">Bermuda</option>
                                 </select>
                             </div>
                             <div class="col-xs-12 form-group mdl-input">
