@@ -11,6 +11,7 @@ function buscarPromo(){
 	    	$('.cards').html('');
 	    	$('.cards').append(data.promociones);
 	    }else {
+	    	msj('error', data.msj);
 	    	return;
 	    }
 	  }catch(err){
