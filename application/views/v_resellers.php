@@ -53,6 +53,23 @@
                 </div>
             </div>
         </section>
+        <footer class="section col-xs-12">
+            <div class="container">
+                <div class="col-xs-12 p-0">
+                    <img src="<?php echo RUTA_IMG?>logo/logo-footer.png">
+                </div>
+                <div class="col-xs-6 p-0 left">
+                    <p>&copy;Copyright 2018 Hewlett Packard Enterprise Development, L.P.</p>
+                </div>
+                <div class="col-xs-6 p-0 right">
+                    <ul>
+                        <li>Terms of use</li>
+                        <li>Privacy</li>
+                        <li>Report Bug</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>

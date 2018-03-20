@@ -62,9 +62,55 @@
                     <div class="col-xs-12 p-0 cards">
                         <?php echo $promociones ?>
                     </div>
+                    <div class="footer-promocion">
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Review the list of Best Seller products available for FY18. Take advantage of immediate availability at your local retailer and earn more E&G points</p>
+                                <a href="">Download here</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>The best automated online platform to support the development and growth of companies that distribute and sell HPE products</p>
+                                <a href="" target="_blank">www.hpeeangageandgrow.com</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Most of our Best Seller product promotions are available through iQuote. Visit the portal of your trusted local Distributor</p>
+                                <a href="" target="_blank">www.iquote.hpe.com</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <footer class="section col-xs-12">
+            <div class="container">
+                <div class="col-xs-12 p-0">
+                    <img src="<?php echo RUTA_IMG?>logo/logo-footer.png">
+                </div>
+                <div class="col-xs-6 p-0 left">
+                    <p>&copy;Copyright 2018 Hewlett Packard Enterprise Development, L.P.</p>
+                </div>
+                <div class="col-xs-6 p-0 right">
+                    <ul>
+                        <li>Terms of use</li>
+                        <li>Privacy</li>
+                        <li>Report Bug</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
