@@ -91,6 +91,21 @@
                                 <a href="" target="_blank">www.iquote.hpe.com</a>
                             </div>
                         </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="inline"></div>
+                                    <div>HIT Volume Promo</div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="inline"></div>
+                                    <div>HIT Volume Promo</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
