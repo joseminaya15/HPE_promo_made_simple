@@ -33,7 +33,8 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p><?php echo $nombre ?></p>
-                            <a onclick="cerrarCesion()">Logout</a>
+                            <h5>Distis</h5>
+                            <a onclick="cerrarCesion()" class="logout">Logout</a>
                         </div>
                     </div>
                 </div>
