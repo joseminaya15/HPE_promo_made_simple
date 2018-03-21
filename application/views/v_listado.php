@@ -22,56 +22,174 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Brand</a>
+    <div class="header">
+        <div class="mdl-container row">
+            <div class="col-xs-12">
+                <div class="col-xs-6 text-left p-0">
+                    <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="Promo" target="_blank">Promociones</a></li>
-                                <li><a href="#">Cerrar Sesi&oacute;n</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="col-xs-6 text-right p-0">
+                    <p>Manager</p>
+                    <h5></h5>
+                    <a onclick="cerrarCesion()" class="logout">Logout</a>
                 </div>
             </div>
-        </nav>
-        <section class="section">
-            <div class="mdl-container">
-                <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title">
-                        <h2>Listado</h2>
+        </div>
+    </div>
+    <div class="container listado">
+        <div class="tab-content">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Lista de Promociones</a></li>
+                <li><a data-toggle="tab" href="#menu1">Carga data</a></li>
+            </ul>
+            <div id="home" class="tab-pane fade in active">
+              <section class="section table">
+                <div class="col-xs-12 p-0 cards">
+                    <div class="title_table">
+                        <h1>Promo Made Simple</h1>
+                        <h4>Q3 FY18</h4>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre Promoci&oacute;n</th>
-                                        <th>Fecha Vencimiento</th>
-                                        <th>T. Distribuidor</th>
-                                        <th>T. Producto</th>
-                                        <th>Pa&iacute;s</th>
-                                        <th class="text-center">Acci&oacute;n</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla_promociones">
-                                    <?php echo $promociones ?>
-                                </tbody>
-                            </table>
+                </div>
+                <div class="mdl-container">
+                    <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2>Listado</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Promoci&oacute;n</th>
+                                            <th>Fecha Vencimiento</th>
+                                            <th>T. Distribuidor</th>
+                                            <th>T. Producto</th>
+                                            <th>Pa&iacute;s</th>
+                                            <th class="text-center">Acci&oacute;n</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla_promociones">
+                                        <?php echo $promociones ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <a href="Formulario" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-add"></i><label>Nueva Promoci&oacute;n</label></a>
                         </div>
                     </div>
-                    <div class="mdl-card__menu">
-                        <a href="Formulario" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-add"></i><label>Nueva Promoci&oacute;n</label></a>
-                    </div>
                 </div>
             </div>
+            <div id="menu1" class="tab-pane fade">
+              <section class="section">
+                <div class="mdl-container">
+                    <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2>Formulario</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="titulo" value="">
+                                    <label class="mdl-textfield__label" for="titulo">Titulo</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="fecha" value="">
+                                    <label class="mdl-textfield__label" for="fecha">Date</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
+                                    <label class="mdl-textfield__label" for="objetivo_comercial">Commercial Objetive</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="noticia" value="">
+                                    <label class="mdl-textfield__label" for="noticia">What's New</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="ciudades" value="">
+                                    <label class="mdl-textfield__label" for="ciudades">Countries that apply</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                <div class="mdl-select">
+                                    <!--<?php if($tipo_distribuidor == 'Resellers') { ?>-->
+                                    <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
+                                        <option value="Resellers">Resellers</option>
+                                        <option value="Distis">Distis</option>
+                                    </select>
+                                    <!--<?php } else { ?>
+                                    <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
+                                        <option value="Distis" selected="selected">Distis</option>
+                                        <option value="Resellers">Resellers</option>
+                                    </select>
+                                    <?php } ?>-->
+                                </div>
+                            </div>
+                            <!--<?php if($tipo_distribuidor == 'Resellers') { ?>-->
+                            <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
+                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="deal_number">
+                                    <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
+                                </div>
+                            </div>
+                            <!--<?php } else { ?>
+                            <div class="col-md-4 col-sm-6 mdl-input-group deal_number">
+                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="deal_number" value="<?php echo $deal_number ?>">
+                                    <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
+                                </div>
+                            </div>
+                            <?php } ?>-->
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <!-- <div class="mdl-icon"><i class="mdi mdi-people"></i></div> -->
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect button-contact" data-toggle="modal" data-target="#ModalSale">Contacts</button>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="condiciones" value="">
+                                    <label class="mdl-textfield__label" for="condiciones">Conditions</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <form enctype="multipart/form-data" method="post" action="Formulario/guardarDatos">
+                                    <input type="file" name="img_up">
+                                    <input value="Subir" type="submit">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mdl-card__actions">
+                            <!--<?php if($titulo == ''){ ?>-->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
+                           <!-- <?php } else { ?>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="actualizarPromocion()">Actualizar</button>
+                            <?php } ?>-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
         <!--MODAL-->
         <div class="modal fade" id="ModalBorrarOferta" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm text-center">

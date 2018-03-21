@@ -371,6 +371,17 @@ footer ul li {
 .title {
   border-bottom: 9px solid #4FC0A6;
 }
+.title_table h1{
+  font-weight: bold;
+}
+.title_table h4{
+  margin-top: -27px;
+  font-size: 30px;
+  color: #4FC0A6;
+}
+.title_table h3{
+  margin-top: -20px;
+}
 .footer-promocion .col-md-4{
   border-top:  1px solid;
 }
@@ -416,4 +427,7 @@ footer ul li {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
+}
+.container.listado{
+  margin-top: 200px;
 }

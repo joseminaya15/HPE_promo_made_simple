@@ -42,7 +42,7 @@ class M_solicitud extends  CI_Model{
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
-              ORDER BY c.Last_units, c.Tipo DESC";
+              ORDER BY c.Tipo_distribuidor, c.Last_units, c.Tipo, c.Fecha DESC";
         $result = $this->db->query($sql);
         return $result->result();
     }
