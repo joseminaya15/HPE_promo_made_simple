@@ -42,14 +42,15 @@ class Distis extends CI_Controller {
                 }else if($key->Tipo == 'Volumen'){
                     $color = '#624967';
                 }
-                print_r($key->Last_units);
-                if($key->Last_units == 1){
+                if($key->Last_units == 0){
                     $last_units = '<div class="sale">
                                         <h2>FINAL SALE!</h2>
                                         <p>LAST UNITS</p>
                                     </div>';
+                    $data['titulo'] = 'Only For Limited Time';
                 }else {
                     $last_units = "";
+                    $data['titulo'] = 'HIT Volumen Promo';
                 }
                 $date        = date_create($key->fecha_vencimiento);
                 $mes         = date_format($date,"F");

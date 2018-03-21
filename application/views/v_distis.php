@@ -114,7 +114,7 @@
                                         <div class="inline_valor"></div>
                                     </div>
                                     <div class="col-xs-3 letra">
-                                        <div>HIT Valor Promo</div>
+                                        <div>HIT Value & Growth Promo</div>
                                     </div>
                                 </div>
                             </div>

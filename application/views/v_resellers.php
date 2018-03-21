@@ -33,7 +33,8 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p><?php echo $nombre ?></p>
-                            <a onclick="cerrarCesion()">Logout</a>
+                            <h5>Resellers</h5>
+                            <a onclick="cerrarCesion()" class="logout">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -48,8 +49,79 @@
                             <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
                         </div>
                     </div>
+                    <div class="col-xs-12 filtro">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">Only For Limited Time</li>
+                        </ol>
+                        <div class="mdl-select">
+                            <select class="selectpicker">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-xs-12 p-0 cards">
-                        <?php echo $promociones ?>
+                        <div class="title">
+                            <h1>Promo Made Simple</h1>
+                            <h4>Q3 FY18</h4>
+                            <h3><?php echo $titulo ?></h3>
+                        </div>
+                        <div class="line">
+                            <?php echo $promociones ?>
+                        </div>
+                    </div>
+                    <div class="footer-promocion">
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="<?php echo RUTA_IMG?>promo/sellers.png">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Review the list of Best Seller products available for FY18. Take advantage of immediate availability at your local retailer and earn more E&G points</p>
+                                <a href="">Download here</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>The best automated online platform to support the development and growth of companies that distribute and sell HPE products</p>
+                                <a href="" target="_blank" style="margin-left: -94px;">www.hpeeangageandgrow.com</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-xs-4">
+                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Most of our Best Seller product promotions are available through iQuote. Visit the portal of your trusted local Distributor</p>
+                                <a href="" target="_blank">www.iquote.hpe.com</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 linea">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="col-xs-3">
+                                        <div class="inline_volumen"></div>
+                                    </div>
+                                    <div class="col-xs-3 letra">
+                                        <div>HIT Volumen Promo</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="col-xs-3">
+                                        <div class="inline_valor"></div>
+                                    </div>
+                                    <div class="col-xs-3 letra">
+                                        <div>HIT Value & Growth Promo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-xs-6">
+                                
+                            </div>-->
+                        </div>
                     </div>
                 </div>
             </div>
