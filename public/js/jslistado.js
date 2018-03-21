@@ -61,3 +61,6 @@ function cerrarCesion(){
       }
     });
 }
+function abrirGaleria(){
+    modal('ModalGaleria');
+}

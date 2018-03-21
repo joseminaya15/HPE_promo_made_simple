@@ -171,10 +171,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <form enctype="multipart/form-data" method="post" action="Formulario/guardarDatos">
-                                    <input type="file" name="img_up">
-                                    <input value="Subir" type="submit">
-                                </form>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
                             </div>
                         </div>
                         <div class="mdl-card__actions">
@@ -201,6 +198,25 @@
                         <div class="mdl-card__actions text-right">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" data-dismiss="modal">Cancelar</button>                       
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="eliminarPromo();">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ModalGaleria" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm text-center">
+                <div class="modal-content">
+                    <div class="mdl-card" >
+                        <div class="mdl-card__title">
+                            <p id="titulo">Seleccione una imagen</p>
+                        </div>
+                        <div class="galeria">
+                            <img src="<?php echo RUTA_IMG?>promo/sellers.png">
+                            <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                        </div>
+                        <div class="mdl-card__actions text-right">                   
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="insetarImagen();">Aceptar</button>
                         </div>
                     </div>
                 </div>
