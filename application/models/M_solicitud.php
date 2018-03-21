@@ -62,7 +62,7 @@ class M_solicitud extends  CI_Model{
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                   FROM cards c
                  WHERE c.Tipo_distribuidor = 'Distis'
-              ORDER BY c.Last_units, c.Tipo DESC";
+              ORDER BY c.Last_units DESC";
         $result = $this->db->query($sql);
         return $result->result();
     }
