@@ -32,6 +32,7 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p>Promos Made Simple</p>
+                            <a href="Login">Login</a>
                         </div>
                     </div>
                 </div>

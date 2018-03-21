@@ -33,38 +33,25 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p>Promos Made Simple</p>
+                            <a href="Login">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="center-login">
                 <div class="mdl-card mdl-card-login">
+                    <div class="title">
+                        <h3>Recover your password</h3>
+                    </div>
                     <div class="mdl-card__supporting-text">
                         <div class="col-xs-12 form-group mdl-input">
                             <label for="usuario">Username</label>
                             <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                         </div>
-                        <div class="col-xs-12 form-group mdl-input">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" onkeyup="verificarDatos(event);">
-                        </div>
-                        <div class="col-xs-12 mdl-label">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Remember me</span>
-                            </label>
-                        </div>
                     </div>
+                </br>
                     <div class="mdl-card__actions p-0">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
-                    </div>
-                    <div class="col-xs-12 mdl-create">
-                        <div class="col-xs-6">
-                            <a href="RecuperarPass">Forgot password</a>
-                        </div>
-                        <div class="col-xs-6">
-                            <a href="Registro">Create an account</a>
-                        </div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recover()">Recover</button>
                     </div>
                 </div>
             </div>
@@ -77,27 +64,13 @@
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>recuperar.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
             } else {
                 $('select').selectpicker();
             }
-            $(document).ready(function(){
-            let CHECK = sessionStorage.getItem('CHECK');
-            let USERNAME = sessionStorage.getItem('USERNAME');
-            let PASS = sessionStorage.getItem('PASS');
-           if(CHECK == 1) {
-                $('#checkbox-2').prop('checked', true);
-                $('#usuario').val(USERNAME);
-                $('#password').val(PASS);
-           }else {
-                $('#checkbox-2').prop('checked', false);
-                $('#usuario').val('');
-                $('#password').val('');
-           }
-        });
         </script>
     </body>
 </html>

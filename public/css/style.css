@@ -307,8 +307,12 @@ label {
   padding: 5px;
 }
 .mdl-card-promocion .mdl-contenido .imagenes .sale {
-  position: absolute;
-  background-color: #4fc0a6;
+    position: absolute;
+    top: 100px;
+    background-color: #4fc0a6;
+    transform: rotate(-30deg) skew(-29deg);
+    width: 185px;
+    margin-left: -12px;
 }
 .mdl-card-promocion .mdl-contenido .imagenes .sale h2 {
   color: #fff;
@@ -351,4 +355,53 @@ footer ul li {
 }
 .right {
   text-align: right;
+}
+.title h1{
+  font-weight: bold;
+}
+.title h4{
+  margin-top: -27px;
+  font-size: 30px;
+  color: #4FC0A6;
+}
+.title h3{
+  margin-top: -20px;
+}
+.title {
+  border-bottom: 9px solid #4FC0A6;
+}
+.footer-promocion .col-md-4{
+  border-top:  1px solid;
+}
+.footer-promocion .col-xs-8{
+  border-right:  1px solid;
+}
+.footer-promocion .col-xs-8 p{
+  margin: 24px 0px;
+  color: black;
+  font-size: 20px;
+}
+.footer-promocion .col-xs-8 a{
+  color: #215E9E;
+  font-weight: bold;
+  font-size: 22px;
+}
+.inline_valor {
+    border: 20px solid #F79679;
+}
+.inline_volumen {
+    border: 20px solid #624967;
+}
+.footer-promocion .col-xs-12 .col-xs-12.linea{
+  border-top: 4px solid;
+}
+.footer-promocion .col-xs-12 .linea .col-sm-6.col-xs-12{
+  margin-top: 18px;
+}
+.section.col-xs-12{
+      margin-top: 15px;
+}
+.col-xs-3.letra{
+    color: black;
+    font-size: 18px;
 }

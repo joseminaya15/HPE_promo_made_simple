@@ -61,12 +61,19 @@
                         </div>
                     </div>
                     <div class="col-xs-12 p-0 cards">
-                        <?php echo $promociones ?>
+                        <div class="title">
+                            <h1>Promo Made Simple</h1>
+                            <h4>Q3 FY18</h4>
+                            <h3>Only For Limited Time</h3>
+                        </div>
+                        <div class="line">
+                            <?php echo $promociones ?>
+                        </div>
                     </div>
                     <div class="footer-promocion">
                         <div class="col-md-4">
                             <div class="col-xs-4">
-                                <img src="">
+                                <img src="<?php echo RUTA_IMG?>promo/sellers.png">
                             </div>
                             <div class="col-xs-8">
                                 <p>Review the list of Best Seller products available for FY18. Take advantage of immediate availability at your local retailer and earn more E&G points</p>
@@ -75,16 +82,16 @@
                         </div>
                         <div class="col-md-4">
                             <div class="col-xs-4">
-                                <img src="">
+                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
                             </div>
                             <div class="col-xs-8">
                                 <p>The best automated online platform to support the development and growth of companies that distribute and sell HPE products</p>
-                                <a href="" target="_blank">www.hpeeangageandgrow.com</a>
+                                <a href="" target="_blank" style="margin-left: -94px;">www.hpeeangageandgrow.com</a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="col-xs-4">
-                                <img src="">
+                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
                             </div>
                             <div class="col-xs-8">
                                 <p>Most of our Best Seller product promotions are available through iQuote. Visit the portal of your trusted local Distributor</p>
@@ -92,19 +99,27 @@
                             </div>
                         </div>
                         <div class="col-xs-12">
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 linea">
                                 <div class="col-sm-6 col-xs-12">
-                                    <div class="inline"></div>
-                                    <div>HIT Volume Promo</div>
+                                    <div class="col-xs-3">
+                                        <div class="inline_volumen"></div>
+                                    </div>
+                                    <div class="col-xs-3 letra">
+                                        <div>HIT Volumen Promo</div>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
-                                    <div class="inline"></div>
-                                    <div>HIT Volume Promo</div>
+                                    <div class="col-xs-3">
+                                        <div class="inline_valor"></div>
+                                    </div>
+                                    <div class="col-xs-3 letra">
+                                        <div>HIT Valor Promo</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6">
+                            <!--<div class="col-xs-6">
                                 
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
