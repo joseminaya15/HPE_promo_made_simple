@@ -39,6 +39,12 @@
             </div>
         </div>
     </div>
+    <div class="col-xs-12 col-md-offset-2 cards">
+        <div class="title_table">
+            <h1>Promo Made Simple</h1>
+            <h4>Q3 FY18</h4>
+        </div>
+    </div>
     <div class="container listado">
         <div class="tab-content">
             <ul class="nav nav-tabs">
@@ -47,12 +53,6 @@
             </ul>
             <div id="home" class="tab-pane fade in active">
               <section class="section table">
-                <div class="col-xs-12 p-0 cards">
-                    <div class="title_table">
-                        <h1>Promo Made Simple</h1>
-                        <h4>Q3 FY18</h4>
-                    </div>
-                </div>
                 <div class="mdl-container">
                     <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title">
