@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p><?php echo $nombre ?></p>
-                            <h5>Distis</h5>
+                            <p class="tipo-user">Distis</p>
                             <a onclick="cerrarCesion()" class="logout">Logout</a>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                         </div>
                     </div>
                     <div class="col-xs-12 p-0 cards">
-                        <div class="title">
-                            <h1>Promo Made Simple</h1>
-                            <h4>Q3 FY18</h4>
-                            <h3>Only For Limited Time</h3>
+                        <div class="cabecera">
+                            <h2 class="titulo">Promo Made Simple</h2>
+                            <h3 class="codigo">Q3 FY18</h3>
+                            <p class="subtitle"><?php echo $titulo ?></p>
                         </div>
                         <div class="line">
                             <?php echo $promociones ?>
