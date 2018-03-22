@@ -95,4 +95,52 @@ class Listado extends CI_Controller {
         }
         echo json_encode($data);
     }
+
+    function guardarDatos(){
+        $data['error']  = EXIT_ERROR;
+        $data['msj']    = null;
+        try {
+            $pais               = $this->input->post('pais');
+            $usuario            = $this->input->post('usuario');
+            $oferta             = $this->input->post('oferta');
+            $titulo             = $this->input->post('titulo');
+            $fecha              = $this->input->post('fecha');
+            $objetivo_comercial = $this->input->post('objetivo_comercial');
+            $noticia            = $this->input->post('noticia');
+            $condiciones        = $this->input->post('condiciones');
+            $last_units         = $this->input->post('last_units');
+            $deal_number        = $this->input->post('deal_number');
+
+            $arrayInsert = array('Tipo'               => $oferta,
+                                 'Codigo'             => 'Q3 FY18',
+                                 'Titulo'             => $titulo,
+                                 'fecha'              => $fecha,
+                                 'objetivo_comercial' => $objetivo_comercial,
+                                 'Noticia'            => $noticia,
+                                 'Condiciones'        => $condiciones,
+                                 'Last_units'         => $last_units,
+                                 'Deal_number'        => $deal_number,
+                                 'Pais'               => $pais,
+                                 'Tipo_distribuidor'  => $usuario);
+            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'cards');
+            $session    = array('Tipo'               => $oferta,
+                                 'Codigo'             => 'Q3 FY18',
+                                 'Titulo'             => $titulo,
+                                 'fecha'              => $fecha,
+                                 'objetivo_comercial' => $objetivo_comercial,
+                                 'Noticia'            => $noticia,
+                                 'Condiciones'        => $condiciones,
+                                 'Last_units'         => $last_units,
+                                 'Deal_number'        => $deal_number,
+                                 'Pais'               => $pais,
+                                 'Tipo_distribuidor'  => $usuario,
+                                 'id_promo'           => $datoInsert['Id']);
+          $this->session->set_userdata($session);
+          $data['msj']   = $datoInsert['msj'];
+          $data['error'] = $datoInsert['error'];
+        } catch (Exception $e) {
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

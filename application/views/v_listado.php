@@ -77,9 +77,6 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="mdl-card__menu">
-                            <a href="Formulario" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="mdi mdi-add"></i><label>Nueva Promoci&oacute;n</label></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +96,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <select class="selectpicker" id="usuario" title="Tipo de usuario">
+                                <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
                                     <option value="Distis">Distis</option>
                                     <option value="Resellers">Resellers</option>
                                 </select>
@@ -108,8 +105,20 @@
                                 <select class="selectpicker" id="oferta" title="Tipo de oferta">
                                     <option value="Valor">Value</option>
                                     <option value="Volumen">Volumen</option>
-                                    <option value="0">Only For Limited Time</option>
                                 </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="col-sm-6">
+                                    <p>Only For Limited Time</p>
+                                </div>
+                                <form>
+                                    <div class="radio">
+                                      <label><input type="radio" name="optradio" value="si">Sí</label>
+                                    </div>
+                                    <div class="radio">
+                                      <label><input type="radio" name="optradio" value="no">No</label>
+                                    </div>
+                                </form>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
                                 <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
