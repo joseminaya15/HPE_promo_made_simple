@@ -91,9 +91,13 @@ class Resellers extends CI_Controller {
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                    <div class="footer-promocion">
-                                        <img src="'.RUTA_IMG.'promo/sellers.png">
-                                        <img src="'.RUTA_IMG.'promo/iquote.png">
+                                    <div class="footer-promocion col-xs-12">
+                                        <div class="col-xs-6">
+                                            <img src="'.RUTA_IMG.'promo/sellers.png">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <img src="'.RUTA_IMG.'promo/iquote.png">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -170,9 +174,13 @@ class Resellers extends CI_Controller {
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                        <div class="footer-promocion">
-                                            <img src="'.RUTA_IMG.'promo/sellers.png">
-                                            <img src="'.RUTA_IMG.'promo/iquote.png">
+                                        <div class="footer-promocion col-xs-12">
+                                            <div class="col-xs-6">
+                                                <img src="'.RUTA_IMG.'promo/sellers.png">
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <img src="'.RUTA_IMG.'promo/iquote.png">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -248,9 +256,13 @@ class Resellers extends CI_Controller {
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
-                                    <div class="footer-promocion">
-                                        <img src="'.RUTA_IMG.'promo/sellers.png">
-                                        <img src="'.RUTA_IMG.'promo/iquote.png">
+                                    <div class="footer-promocion col-xs-12">
+                                        <div class="col-xs-6">
+                                            <img src="'.RUTA_IMG.'promo/sellers.png">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <img src="'.RUTA_IMG.'promo/iquote.png">
+                                        </div>
                                     </div>
                                 </div>
                             </div>

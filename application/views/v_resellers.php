@@ -71,27 +71,27 @@
                             <?php echo $promociones ?>
                         </div>
                     </div>
-                    <div class="footer-promocion">
-                        <div class="col-md-4">
-                            <div class="col-xs-4">
+                    <div class="footer col-xs-12">
+                        <div class="col-md-3">
+                            <div class="col-xs-3 p-0">
                                 <img src="<?php echo RUTA_IMG?>promo/sellers.png">
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-xs-9">
                                 <p>Review the list of Best Seller products available for FY18. Take advantage of immediate availability at your local retailer and earn more E&G points</p>
                                 <a href="">Download here</a>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="col-xs-4">
-                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                        <div class="col-md-5">
+                            <div class="col-xs-4 p-0">
+                                <img src="<?php echo RUTA_IMG?>promo/engage.png">
                             </div>
                             <div class="col-xs-8">
                                 <p>The best automated online platform to support the development and growth of companies that distribute and sell HPE products</p>
-                                <a href="" target="_blank" style="margin-left: -94px;">www.hpeeangageandgrow.com</a>
+                                <a href="" target="_blank">www.hpeeangageandgrow.com</a>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="col-xs-4">
+                            <div class="col-xs-4 p-0">
                                 <img src="<?php echo RUTA_IMG?>promo/iquote.png">
                             </div>
                             <div class="col-xs-8">
@@ -99,28 +99,20 @@
                                 <a href="" target="_blank">www.iquote.hpe.com</a>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="col-xs-12 linea">
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="col-xs-3">
-                                        <div class="inline_volumen"></div>
-                                    </div>
-                                    <div class="col-xs-3 letra">
-                                        <div>HIT Volumen Promo</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="col-xs-3">
-                                        <div class="inline_valor"></div>
-                                    </div>
-                                    <div class="col-xs-3 letra">
-                                        <div>HIT Value & Growth Promo</div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-xs-12 descripcion-promo">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="col-xs-6">
+                                <div class="fondo-color volumen"></div>
+                                <p>HIT Volumen Promo</p>
                             </div>
-                            <!--<div class="col-xs-6">
-                                
-                            </div>-->
+                            <div class="col-xs-6">
+                                <div class="fondo-color valor"></div>
+                                <p>HIT Value & Growth Promo</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <h2>MCA DISTRIBUTORS</h2>
                         </div>
                     </div>
                 </div>
