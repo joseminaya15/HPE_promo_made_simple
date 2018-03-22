@@ -98,7 +98,7 @@ class Distis extends CI_Controller {
             }
             $data['promociones'] = $html;
         }
-        $data['nombre'] = $this->session->userdata('nombre');
+        $data['nombre'] = ucwords($this->session->userdata('nombre'));
 		$this->load->view('v_distis', $data);
 	}
 
