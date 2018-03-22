@@ -94,6 +94,26 @@
                             <div class="col-md-4 col-sm-6 mdl-input-group">
                                 <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="pais" value="">
+                                    <label class="mdl-textfield__label" for="pais">País</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <select class="selectpicker" id="usuario" title="Tipo de usuario">
+                                    <option value="Distis">Distis</option>
+                                    <option value="Resellers">Resellers</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <select class="selectpicker" id="oferta" title="Tipo de oferta">
+                                    <option value="Valor">Value</option>
+                                    <option value="Volumen">Volumen</option>
+                                    <option value="0">Only For Limited Time</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mdl-input-group">
+                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="titulo" value="">
                                     <label class="mdl-textfield__label" for="titulo">Titulo</label>
                                 </div>
@@ -102,14 +122,14 @@
                                 <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="fecha" value="">
-                                    <label class="mdl-textfield__label" for="fecha">Date</label>
+                                    <label class="mdl-textfield__label" for="fecha">Caducidad</label>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
                                 <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
-                                    <label class="mdl-textfield__label" for="objetivo_comercial">Commercial Objetive</label>
+                                    <label class="mdl-textfield__label" for="objetivo_comercial">Objetivo comercial</label>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
@@ -119,49 +139,12 @@
                                     <label class="mdl-textfield__label" for="noticia">What's New</label>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-language"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="ciudades" value="">
-                                    <label class="mdl-textfield__label" for="ciudades">Countries that apply</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                <div class="mdl-select">
-                                    <!--<?php if($tipo_distribuidor == 'Resellers') { ?>-->
-                                    <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
-                                        <option value="Resellers">Resellers</option>
-                                        <option value="Distis">Distis</option>
-                                    </select>
-                                    <!--<?php } else { ?>
-                                    <select class="selectpicker" title="Tipo de Oferta" id="tipo_oferta" onchange="mostrarCampo();">
-                                        <option value="Distis" selected="selected">Distis</option>
-                                        <option value="Resellers">Resellers</option>
-                                    </select>
-                                    <?php } ?>-->
-                                </div>
-                            </div>
-                            <!--<?php if($tipo_distribuidor == 'Resellers') { ?>-->
                             <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
                                 <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="deal_number">
                                     <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
                                 </div>
-                            </div>
-                            <!--<?php } else { ?>
-                            <div class="col-md-4 col-sm-6 mdl-input-group deal_number">
-                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="deal_number" value="<?php echo $deal_number ?>">
-                                    <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
-                                </div>
-                            </div>
-                            <?php } ?>-->
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <!-- <div class="mdl-icon"><i class="mdi mdi-people"></i></div> -->
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect button-contact" data-toggle="modal" data-target="#ModalSale">Contacts</button>
                             </div>
                             <div class="col-md-4 col-sm-6 mdl-input-group">
                                 <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
@@ -212,7 +195,7 @@
                             <p id="titulo">Seleccione una imagen</p>
                         </div>
                         <div class="galeria">
-                            <img src="<?php echo RUTA_IMG?>promo/sellers.png">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" style="height: 80px;"><img src="<?php echo RUTA_IMG?>promo/sellers.png"></button>
                             <img src="<?php echo RUTA_IMG?>promo/iquote.png">
                         </div>
                         <div class="mdl-card__actions text-right">                   
