@@ -24,7 +24,8 @@
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <section class>
+        <section>
+            <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="mdl-container row">
                     <div class="col-xs-12">
@@ -57,14 +58,15 @@
                     </div>
                     <div class="mdl-card__actions p-0">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
-                    </div>
-                    <div class="col-xs-12 mdl-create">
-                        <div class="col-xs-6">
-                            <a href="RecuperarPass">Forgot password</a>
+                        <div class="col-xs-12 mdl-create">
+                            <div class="col-xs-6">
+                                <a href="RecuperarPass">Forgot password</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="Registro">Create an account</a>
+                            </div>
                         </div>
-                        <div class="col-xs-6">
-                            <a href="Registro">Create an account</a>
-                        </div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-create">Create Account</button>
                     </div>
                 </div>
             </div>
