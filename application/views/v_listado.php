@@ -25,40 +25,34 @@
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-    <div class="header">
-        <div class="mdl-container row">
-            <div class="col-xs-12">
-                <div class="col-xs-6 text-left p-0">
-                    <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                </div>
-                <div class="col-xs-6 text-right p-0">
-                    <p>Manager</p>
-                    <h5></h5>
-                    <a onclick="cerrarCesion()" class="logout">Logout</a>
+        <section class="section">
+            <div class="header">
+                <div class="mdl-container row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 text-left p-0">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                        </div>
+                        <div class="col-xs-6 text-right p-0">
+                            <p>Manager</p>
+                            <a onclick="cerrarCesion()" class="logout">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="col-xs-12 col-md-offset-2 cards">
-        <div class="title_table">
-            <h1>Promo Made Simple</h1>
-            <h4>Q3 FY18</h4>
-        </div>
-    </div>
-    <div class="container listado">
-        <div class="tab-content">
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Lista de Promociones</a></li>
-                <li><a data-toggle="tab" href="#menu1">Carga data</a></li>
-            </ul>
-            <div id="home" class="tab-pane fade in active">
-              <section class="section table">
-                <div class="mdl-container">
-                    <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title">
-                            <h2>Listado</h2>
+            <div class="mdl-container">
+                <div class="promociones">
+                    <div class="col-xs-12 p-0 cards">
+                        <div class="cabecera">
+                            <h2 class="titulo">Promo Made Simple</h2>
+                            <h3 class="codigo">Q3 FY18</h3>
                         </div>
-                        <div class="mdl-card__supporting-text">
+                    </div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
+                        <li role="presentation"><a href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -77,108 +71,100 @@
                                 </table>
                             </div>
                         </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Carga">
+                            <div class="mdl-card mdl-card-listado">
+                                <div class="mdl-card__supporting-text">
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="pais" value="">
+                                            <label class="mdl-textfield__label" for="pais">País</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
+                                            <option value="Distis">Distis</option>
+                                            <option value="Resellers">Resellers</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <select class="selectpicker" id="oferta" title="Tipo de oferta">
+                                            <option value="Valor">Value</option>
+                                            <option value="Volumen">Volumen</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="col-sm-6">
+                                            <p>Only For Limited Time</p>
+                                        </div>
+                                        <form>
+                                            <div class="radio">
+                                              <label><input type="radio" name="optradio" value="si">Sí</label>
+                                            </div>
+                                            <div class="radio">
+                                              <label><input type="radio" name="optradio" value="no">No</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="titulo" value="">
+                                            <label class="mdl-textfield__label" for="titulo">Titulo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="fecha" value="">
+                                            <label class="mdl-textfield__label" for="fecha">Caducidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
+                                            <label class="mdl-textfield__label" for="objetivo_comercial">Objetivo comercial</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="noticia" value="">
+                                            <label class="mdl-textfield__label" for="noticia">What's New</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
+                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="deal_number">
+                                            <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="condiciones" value="">
+                                            <label class="mdl-textfield__label" for="condiciones">Conditions</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
+                                    </div>
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <!--<?php if($titulo == ''){ ?>-->
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
+                                   <!-- <?php } else { ?>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="actualizarPromocion()">Actualizar</button>
+                                    <?php } ?>-->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="menu1" class="tab-pane fade">
-              <section class="section">
-                <div class="mdl-container">
-                    <div class="mdl-card mdl-card-listado mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title">
-                            <h2>Formulario</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="pais" value="">
-                                    <label class="mdl-textfield__label" for="pais">País</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
-                                    <option value="Distis">Distis</option>
-                                    <option value="Resellers">Resellers</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <select class="selectpicker" id="oferta" title="Tipo de oferta">
-                                    <option value="Valor">Value</option>
-                                    <option value="Volumen">Volumen</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="col-sm-6">
-                                    <p>Only For Limited Time</p>
-                                </div>
-                                <form>
-                                    <div class="radio">
-                                      <label><input type="radio" name="optradio" value="si">Sí</label>
-                                    </div>
-                                    <div class="radio">
-                                      <label><input type="radio" name="optradio" value="no">No</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="titulo" value="">
-                                    <label class="mdl-textfield__label" for="titulo">Titulo</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="fecha" value="">
-                                    <label class="mdl-textfield__label" for="fecha">Caducidad</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
-                                    <label class="mdl-textfield__label" for="objetivo_comercial">Objetivo comercial</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="noticia" value="">
-                                    <label class="mdl-textfield__label" for="noticia">What's New</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
-                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="deal_number">
-                                    <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="condiciones" value="">
-                                    <label class="mdl-textfield__label" for="condiciones">Conditions</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mdl-input-group">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
-                            </div>
-                        </div>
-                        <div class="mdl-card__actions">
-                            <!--<?php if($titulo == ''){ ?>-->
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
-                           <!-- <?php } else { ?>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="actualizarPromocion()">Actualizar</button>
-                            <?php } ?>-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            </div>
-        </div>
-    </div>
+        </section>
         <!--MODAL-->
         <div class="modal fade" id="ModalBorrarOferta" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm text-center">
