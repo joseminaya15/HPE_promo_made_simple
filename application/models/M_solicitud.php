@@ -110,25 +110,47 @@ class M_solicitud extends  CI_Model{
     }
 
     function getDatosFiltro($filtro, $tipo){
-      $sql = "SELECT c.*,
+        if($tipo == 'Distis'){
+          $sql = "SELECT c.*,
                      DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
                 FROM cards c 
                WHERE CASE
-                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
-                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Promo Base (Includes Virtual Licenses)', 'Flex Attach Promo')
+                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup Media')
+                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Virtual Licenses')
+                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Server & Storage Base Promo')
+                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('HPE Pointnext')
+                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('Gen10 Accelerate')
+                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage Accelerate')
+                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('Simplivity (Value)')
+                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('DCN TOR (Value)')
+                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Synergy (Value)')
+                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Server & Storage Flex Attach')
+                      WHEN '' != '".$filtro."' THEN TRUE
+                      ELSE TRUE
+                     END
+               AND c.Tipo_distribuidor = 'Distis'
+               ORDER BY c.Last_units, c.Tipo DESC;";
+        }else {
+          $sql = "SELECT c.*,
+                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+                FROM cards c 
+               WHERE CASE
+                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
+                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
+                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
+                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('3PAR Avalanche')
+                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('DCN ToR')
+                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
+                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
                       WHEN '' != '".$filtro."' THEN TRUE
                       ELSE TRUE
                      END
                AND c.Tipo_distribuidor = '".$tipo."'
                ORDER BY c.Last_units, c.Tipo DESC;";
+        }
         $result = $this->db->query($sql);
         return $result->result();
     }

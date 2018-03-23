@@ -29,7 +29,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                            <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.png"></a>
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p><?php echo $nombre ?></p>
@@ -54,10 +54,18 @@
                             <li class="breadcrumb-item active">Only For Limited Time</li>
                         </ol>
                         <div class="mdl-select">
-                            <select class="selectpicker">
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
+                            <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
+                                <option value="">Filtrar</option>
+                                <option value="Instasale - Firesale">Instasale - Firesale</option>
+                                <option value="Valor - Switches TOR">Valor - Switches TOR</option>
+                                <option value="Valor - Blades">Valor - Blades</option>
+                                <option value="Valor - Avalanche">Valor - Avalanche</option>
+                                <option value="Volumen - Flex Servers">Volumen - Flex Servers</option>
+                                <option value="Volumen - Storage">Volumen - Storage</option>
+                                <option value="Networking - Aruba Mobility Flex">Networking - Aruba Mobility Flex</option>
+                                <option value="Networking - Aruba Central">Networking - Aruba Central</option>
+                                <option value="Networking - Switching Flex">Networking - Switching Flex</option>
+                                <option value="Carepacks - Tablero de control">Carepacks - Tablero de control</option>
                             </select>
                         </div>
                     </div>
@@ -78,7 +86,7 @@
                             </div>
                             <div class="col-xs-9">
                                 <p>Review the list of Best Seller products available for FY18. Take advantage of immediate availability at your local retailer and earn more E&G points</p>
-                                <a href="">Download here</a>
+                                <a href="http://www.marketinghpe.com/eblast/promosQ/launch/distis/Best_Seller_Consolidation_FY18.xlsx" target="_blank">Download here</a>
                             </div>
                         </div>
                         <div class="col-md-5">
@@ -87,7 +95,7 @@
                             </div>
                             <div class="col-xs-8">
                                 <p>The best automated online platform to support the development and growth of companies that distribute and sell HPE products</p>
-                                <a href="" target="_blank">www.hpeeangageandgrow.com</a>
+                                <a href="http://www.hpeeangageandgrow.com/" target="_blank">www.hpeeangageandgrow.com</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -96,7 +104,7 @@
                             </div>
                             <div class="col-xs-8">
                                 <p>Most of our Best Seller product promotions are available through iQuote. Visit the portal of your trusted local Distributor</p>
-                                <a href="" target="_blank">www.iquote.hpe.com</a>
+                                <a href="http://www.iquote.hpe.com/" target="_blank">www.iquote.hpe.com</a>
                             </div>
                         </div>
                     </div>

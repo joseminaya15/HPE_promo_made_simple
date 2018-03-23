@@ -29,7 +29,7 @@ class Registro extends CI_Controller {
                                  'Email'     => $usuario,
                                  'pass'      => base64_encode($password),
                                  'Pais'      => $pais,
-                                 'Tipo_user' => $tipo_user);
+                                 'tipo_user' => $tipo_user);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
             $session    = array('nombre'     => $nombre,
                                 'usuario'    => $usuario,

@@ -124,6 +124,7 @@ class Resellers extends CI_Controller {
                 $datos_sales = "";
                 $datos_bu    = "";
                 $color       = null;
+                $last_units     = "";
                 foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
                     $datos_sales .= '<p>'.$val.'</p>';
                 }
@@ -135,6 +136,16 @@ class Resellers extends CI_Controller {
                         $color = '#F69779';
                     }else if($key->Tipo == 'Volumen'){
                         $color = '#624967';
+                    }
+                    if($key->Last_units == 0){
+                        $last_units = '<div class="sale">
+                                            <h2>FINAL SALE!</h2>
+                                            <p>LAST UNITS</p>
+                                        </div>';
+                        $data['titulo'] = 'Only For Limited Time';
+                    }else {
+                        $last_units = "";
+                        $data['titulo'] = 'HIT Volumen Promo';
                     }
                     $date        = date_create($key->fecha_vencimiento);
                     $mes         = date_format($date,"F");
@@ -171,6 +182,7 @@ class Resellers extends CI_Controller {
                                         </div>
                                     </div>
                                     <div class="imagenes text-center">
+                                        '.$last_units.'
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                         <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
@@ -209,6 +221,8 @@ class Resellers extends CI_Controller {
             $cont        = 1;
             $datos_sales = "";
             $datos_bu    = "";
+            $color       = null;
+            $last_units  = "";
             foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
                 $datos_sales .= '<p>'.$val.'</p>';
             }
@@ -220,6 +234,16 @@ class Resellers extends CI_Controller {
                     $color = '#F69779';
                 }else if($key->Tipo == 'Volumen'){
                     $color = '#624967';
+                }
+                if($key->Last_units == 0){
+                    $last_units = '<div class="sale">
+                                        <h2>FINAL SALE!</h2>
+                                        <p>LAST UNITS</p>
+                                    </div>';
+                    $data['titulo'] = 'Only For Limited Time';
+                }else {
+                    $last_units = "";
+                    $data['titulo'] = 'HIT Volumen Promo';
                 }
                 $date        = date_create($key->fecha_vencimiento);
                 $mes         = date_format($date,"F");
@@ -253,6 +277,7 @@ class Resellers extends CI_Controller {
                                     </div>
                                 </div>
                                 <div class="imagenes text-center">
+                                    '.$last_units.'
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">
                                     <img class="imagen-promocion" src="'.RUTA_IMG.'promo/promo1.png">

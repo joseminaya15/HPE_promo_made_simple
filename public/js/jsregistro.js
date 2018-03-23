@@ -30,7 +30,7 @@ function registrar() {
 	}
 	if(textUser == 'Resellers'){
 		tipo_user = 1;
-	}else if(textUser == 'Distris'){
+	}else if(textUser == 'Distis'){
 		tipo_user = 2;
 	}
 	$.ajax({

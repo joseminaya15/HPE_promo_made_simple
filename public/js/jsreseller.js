@@ -27,12 +27,9 @@ function buscarPromocion(e){
 }
 function filtroPromociones(){
 	var filtro = $('#filtro').val();
-	if(filtro == null || filtro == ''){
-		return;
-	}
 	$.ajax({
 		data : {filtro : filtro},
-		url  : 'Resellers/buscarPromocion',
+		url  : 'Resellers/filtroPromociones',
 		type : 'POST'
 	}).done(function(data){
 		try{

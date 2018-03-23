@@ -35,9 +35,13 @@ class Login extends CI_Controller {
                                          'nombre'    => $username[0]->Nombre,   
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
-                        if($username[0]->tipo_user == 0){
+                        if($username[0]->tipo_user == 0 && $usuario == 'admin'){
                             $data['redirect'] = 'Listado';
-                        }else if($username[0]->tipo_user == 1){
+                        }else {
+                            $data['pass'] = 'Contraseña incorrecta';
+                            $data['redirect'] = 'Login';
+                        }
+                        if($username[0]->tipo_user == 1){
                            $data['redirect'] = 'Resellers'; 
                         }else if($username[0]->tipo_user == 2){
                             $data['redirect'] = 'Distis'; 
