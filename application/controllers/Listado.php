@@ -26,7 +26,7 @@ class Listado extends CI_Controller {
                         <td>'.date_format(date_create($key->fecha_vencimiento),"d/m/Y").'</td>
                         <td>'.$key->Tipo_distribuidor.'</td>
                         <td>'.$key->Tipo.'</td>
-                        <th>'.$key->Pais.'</th>
+                        <td>'.$key->Pais.'</td>
                         <td class="text-center">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
@@ -67,7 +67,7 @@ class Listado extends CI_Controller {
                             <td>'.$key->fecha_vencimiento.'</td>
                             <td>'.$key->Tipo_distribuidor.'</td>
                             <td>'.$key->Tipo.'</td>
-                            <th>'.$key->Pais.'</th>
+                            <td>'.$key->Pais.'</td>
                             <td class="text-center">
                                 <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
                                 <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>

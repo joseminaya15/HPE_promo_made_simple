@@ -397,6 +397,8 @@ footer
 	text-align left
 .right
 	text-align right
+.border-none
+	border none !important
 .flex
 	display flex
 	align-items center
@@ -417,21 +419,32 @@ footer
 	button
 		i
 			font-size 18px
+	tbody
+		tr
+			td
+				border 1px solid #000000
+				vertical-align middle
+				padding 2px 8px
+	thead
+		tr
+			th
+				border 1px solid #000000 !important
+		
 .nav-tabs
 	border none
 	li
 		&.active
 			a
-				border none
-				border-bottom 2px solid #4FC0A6
+				border 3px solid transparent
+				border-bottom 3px solid #4FC0A6
 				&:focus
 				&:hover
-					border none
-					border-bottom 2px solid #4FC0A6
+					border 3px solid transparent
+					border-bottom 3px solid #4FC0A6
 		a
 			&:hover
 				background-color transparent
 				border-color transparent
 			color #000000
-			border 2px solid transparent
+			border 3px solid transparent
 		margin 0			

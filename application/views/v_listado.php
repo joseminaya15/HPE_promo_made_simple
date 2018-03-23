@@ -42,7 +42,7 @@
             <div class="mdl-container">
                 <div class="promociones">
                     <div class="col-xs-12 p-0 cards">
-                        <div class="cabecera">
+                        <div class="cabecera border-none m-b-15">
                             <h2 class="titulo">Promo Made Simple</h2>
                             <h3 class="codigo">Q3 FY18</h3>
                         </div>
@@ -51,7 +51,7 @@
                         <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
                         <li role="presentation"><a href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
                     </ul>
-                    <div class="tab-content">
+                    <div class="tab-content m-t-20">
                         <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                             <div class="table-responsive">
                                 <table class="table">
