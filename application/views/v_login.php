@@ -18,7 +18,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<!-- <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>"> -->
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
@@ -26,19 +26,7 @@
     <body>
         <section>
             <div class="fondo-imagen"></div>
-            <div class="header">
-                <div class="mdl-container row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                        </div>
-                        <div class="col-xs-6 text-right p-0">
-                            <p>Promos Made Simple</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-login">
+            <div class="center-login container">
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
                         <div class="col-xs-12 form-group mdl-input">
@@ -49,15 +37,6 @@
                             <label for="password">Password</label>
                             <input type="password" id="password" onkeyup="verificarDatos(event);">
                         </div>
-                        <div class="col-xs-12 mdl-label">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Remember me</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mdl-card__actions p-0">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                         <div class="col-xs-12 mdl-create">
                             <div class="col-xs-6">
                                 <a href="RecuperarPass">Forgot password</a>
@@ -66,6 +45,9 @@
                                 <a href="Registro">Create an account</a>
                             </div>
                         </div>
+                    </div>
+                    <div class="mdl-card__actions p-0">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-create">Create Account</button>
                     </div>
                 </div>

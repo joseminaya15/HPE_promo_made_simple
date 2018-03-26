@@ -1,19 +1,24 @@
-$regular   = 'RobotoRegular'
-$bold      = 'RobotoBold'
-$medium    = 'RobotoMedium'
-$light     = 'RobotoLight'
+$regular   = 'MetricRegular'
+$bold      = 'MetricBold'
+$medium    = 'MetricSemiBold'
+$light     = 'MetricLight'
 $default   = #4FC0A6
 $volumen   = #624967
 $valor     = #F79679
-$translate = translate(-50%,-50%)
-
-transform()
-	-webkit-transform $translate
-    -moz-transform $translate
-    -ms-transform $translate
-	-o-transform $translate
-	transform $translate
-	
+$transCen  = translate(-50%,-50%)
+$transIzq  = translate(0,-50%)
+transformCenter()
+	-webkit-transform $transCen
+    -moz-transform $transCen
+    -ms-transform $transCen
+	-o-transform $transCen
+	transform $transCen
+transformIzq()
+	-webkit-transform $transIzq
+    -moz-transform $transIzq
+    -ms-transform $transIzq
+	-o-transform $transIzq
+	transform $transIzq
 transformTransition()
 	-webkit-transition transform .2s linear
 	-moz-transition transform .2s linear
@@ -39,7 +44,7 @@ center()
 	left: 50%
 	width: 100%
 	margin: auto
-	transform()
+	transformCenter()
 	transformTransition()
 
 body
@@ -56,7 +61,8 @@ label
 	padding 20px
 	
 .center-login
-	center()
+	height 100vh
+	position relative
 .fondo-imagen
 	position absolute
 	top 0
@@ -78,30 +84,32 @@ label
 	z-index 10
 	img
 		width 100%
-		max-width 120px
+		max-width 125px
 	p 
-		font-size 20px
+		font-size 16px
 		color #FFFFFF
 		font-family $medium
-		margin-top 15px
-		margin-bottom 5px
+		margin 0
+		line-height 16px
 	a
 		color $default
 		font-family $bold
-		font-size 20px
+		font-size 16px
 		text-decoration none
 		cursor pointer
+		line-height 16px
 	.tipo-user
-		font-size 18px
+		font-size 14px
 		font-family $regular
 		margin 0
+		line-height 14px
 
 .mdl-container
 	max-width 1200px
 	margin auto
 	widthTransition()
 	.promociones
-		margin-top 120px
+		margin-top 100px
 		.buscador
 			border 1px solid #000000
 			padding 5px
@@ -150,15 +158,19 @@ label
 				border-bottom 10px solid $default
 				.titulo
 					font-family $bold
-					font-size 50px
+					font-size 32px
 					margin 0
+					line-height 36px
 				.codigo
 					color $default
 					margin 0
 					font-family $medium
+					font-size 24px
+					line-height 26px
 				.subtitle
-					font-size 30px
-					margin-top 20px
+					font-size 26px
+					margin 10px 0
+					line-height 24px
 		.footer
 			border-top 1px solid #000000
 			border-bottom 2px solid #000000
@@ -237,9 +249,11 @@ label
 	padding 20px 0
 	.col-xs-6
 		text-align center
-		&:nth-child(1)
-			border-right 1px solid $default
 .mdl-card-login
+	transformIzq()
+	position absolute
+	top 50%
+	left 0
 	width 100%
 	max-width 400px
 	margin auto
@@ -260,13 +274,14 @@ label
 		.button-create
 			background-color transparent
 			border 2px solid #FFFFFF
+			margin-top 50px
 		.button-user
 			width 49%
 			display inline-block
 			button
-				border 1px solid $default
+				border 1px solid #FFFFFF
 				background-color transparent
-				color #000000
+				color #FFFFFF
 				&:hover
 					background-color $default
 					color #FFFFFF
@@ -282,10 +297,10 @@ label
 			margin-top 10px
 			margin-bottom 5px
 	a 
-		color #000000
+		color #FFFFFF
 		text-decoration underline
-		text-decoration-color $default
-		font-family $medium
+		font-family $regular
+		font-size 16px
     &.mdl-card-register
 		max-width 800px
 		.mdl-input
@@ -354,7 +369,7 @@ label
 					padding 5px
 				p
 					margin 0
-					line-height 20px
+					line-height 18px
 					padding 5px
 		.imagenes
 			display inline-block
@@ -406,11 +421,13 @@ footer
 		margin-bottom 20px
 	p
 		font-family $medium
+		font-size 12px
 	ul
 		li
 			display inline-block
 			padding 0 10px
 			font-family $medium
+			font-size 12px
 .left
 	text-align left
 .right

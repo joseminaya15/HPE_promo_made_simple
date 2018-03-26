@@ -18,26 +18,14 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
         <section>
-            <div class="header">
-                <div class="mdl-container row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                        </div>
-                        <div class="col-xs-6 text-right p-0">
-                            <p>Promos Made Simple</p>
-                            <a href="Login">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-login">
+            <div class="fondo-imagen"></div>
+            <div class="center-login container">
                 <div class="mdl-card mdl-card-login mdl-card-register">
                     <div class="mdl-card__supporting-text">
                         <div class="col-md-7 col-sm-6">
