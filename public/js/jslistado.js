@@ -107,8 +107,8 @@ function editarPromocion(Id){
 var id_promo = null;
 function modalEliminar(row, id){
 	id_promo = id;
-	var titulo = $(row).parent().parent().find('.titulo_promo').html();
-	$('#titulo').text("¿Está seguro de que desea eliminar la promocion de "+titulo+"?");
+	var titulo = $(row).parent().parent().find('.titulo_promo').text();
+	$('#tituloOferta').text("¿Está seguro de que desea eliminar la promocion de "+titulo+"?");
 	modal('ModalBorrarOferta');
 }
 function eliminarPromo(){

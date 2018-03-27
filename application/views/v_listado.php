@@ -269,7 +269,7 @@
                 <div class="modal-content">
                     <div class="mdl-card" >
                         <div class="mdl-card__title">
-                            <p id="titulo">&iquest;Est&aacute; seguro que desea eliminar esta promoci&oacute;n?</p>
+                            <p id="tituloOferta">&iquest;Est&aacute; seguro que desea eliminar esta promoci&oacute;n?</p>
                         </div>
                         <div class="mdl-card__actions text-right">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" data-dismiss="modal">Cancelar</button>                       
