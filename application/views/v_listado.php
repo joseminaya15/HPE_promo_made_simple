@@ -171,6 +171,10 @@
                                         <input class="form-control" type="text" id="condiciones">
                                     </div>
                                 </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()" id="btnGuardar"><i></i>Guardar Informaci&oacute;n</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar hidden" onclick="actualizarPromocion()" id="btnActualizar">Actualizar</button>
+                                </div>
                             </div>
                             <!-- <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
@@ -253,10 +257,6 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
                                     </div>
                                 </div>-->
-                                <div class="mdl-card__actions">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()" id="btnGuardar">Guardar</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar hidden" onclick="actualizarPromocion()" id="btnActualizar">Actualizar</button>
-                                </div>
                             </div>
                         </div>
                     </div>
