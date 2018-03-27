@@ -11,6 +11,7 @@ function editarPromocion(Id){
         if(data.error == 0){
         	//location.href = 'Formulario';
             var combo = '';
+            var comboOfe = '';
             $('#pais').val(data.pais);
             if(data.tp_user == 'Resellers'){
                 combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
@@ -33,6 +34,33 @@ function editarPromocion(Id){
                 componentHandler.upgradeAllRegistered();
                 $("#divUser").html('');
                 $("#divUser").append(combo);
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                    $('select').selectpicker('mobile');
+                } else {
+                    $('select').selectpicker();
+                }
+            }
+            if(data.tipo == 'Value'){
+                comboOfe = '<select class="selectpicker" id="oferta" style="display: block !important">'+
+                            '<option value="Value">Value</option>'+
+                            '<option value="Volumen">Volumen</option>'+
+                        '</select>';
+                componentHandler.upgradeAllRegistered();
+                $("#divOferta").html('');
+                $("#divOferta").append(comboOfe);
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                    $('select').selectpicker('mobile');
+                } else {
+                    $('select').selectpicker();
+                }
+            }else {
+                comboOfe = '<select class="selectpicker" id="oferta" style="display: block !important">'+
+                            '<option value="Volumen">Volumen</option>'+
+                            '<option value="Value">Value</option>'+
+                        '</select>';
+                componentHandler.upgradeAllRegistered();
+                $("#divOferta").html('');
+                $("#divOferta").append(comboOfe);
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                     $('select').selectpicker('mobile');
                 } else {

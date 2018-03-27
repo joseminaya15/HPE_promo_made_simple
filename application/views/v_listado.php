@@ -168,7 +168,7 @@
                                             <option value="Resellers">Resellers</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
+                                    <div class="col-md-4 col-sm-6 mdl-input-group" id="divOferta">
                                         <select class="selectpicker" id="oferta" title="Tipo de oferta">
                                             <option value="Valor">Value</option>
                                             <option value="Volumen">Volumen</option>
