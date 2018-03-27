@@ -72,20 +72,20 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
-                            <!--<div class="mdl-card-listado">
+                            <!-- <div class="mdl-card-listado">
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Country</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Type of user</p>
                                     </div>
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-7 p-0">
                                         <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
                                             <option value="Distis">Distis</option>
                                             <option value="Resellers">Resellers</option>
@@ -93,10 +93,10 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Type of Oferta</p>
                                     </div>
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-7 p-0">
                                         <select class="selectpicker" id="oferta" title="Tipo de oferta">
                                             <option value="Valor">Value</option>
                                             <option value="Volumen">Volumen</option>
@@ -104,54 +104,54 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Only For Limited Time</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Title</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Caducidad</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Objetivo Comercial</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>What's New!</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-5 p-0">
                                         <p>Conditions</p>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="pais">
+                                    <div class="col-sm-7 p-0">
+                                        <input type="text" id="pais">
                                     </div>
                                 </div>
-                            </div>-->
+                            </div> -->
                             <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
                                     <div class="col-md-4 col-sm-6 mdl-input-group">
