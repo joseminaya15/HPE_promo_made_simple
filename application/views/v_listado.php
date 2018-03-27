@@ -178,7 +178,7 @@
                                         <div class="col-sm-6">
                                             <p>Only For Limited Time</p>
                                         </div>
-                                        <form>
+                                        <form id="chckRadio">
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" value="si">Sí</label>
                                             </div>

@@ -61,7 +61,6 @@ class Listado extends CI_Controller {
             $data['objetivo'] = $datos[0]->Objetivo_comercial;
             $data['new']      = $datos[0]->Noticia;
             $data['condi']    = $datos[0]->Condiciones;
-            /*$this->session->set_userdata(array('id_promo' => $id_promo));*/
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

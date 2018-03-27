@@ -12,6 +12,7 @@ function editarPromocion(Id){
         	//location.href = 'Formulario';
             var combo = '';
             var comboOfe = '';
+            var checked = '';
             $('#pais').val(data.pais);
             if(data.tp_user == 'Resellers'){
                 combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
@@ -66,6 +67,28 @@ function editarPromocion(Id){
                 } else {
                     $('select').selectpicker();
                 }
+            }
+            //radio
+            if(data.limit == 1){
+                checked = '<div class="radio">'+
+                                '<label><input type="radio" name="optradio" value="si">Sí</label>'+
+                            '</div>'+
+                            '<div class="radio">'+
+                                '<label><input type="radio" name="optradio" value="no" checked>No</label>'+
+                            '</div>';
+                componentHandler.upgradeAllRegistered();
+                $("#chckRadio").html('');
+                $("#chckRadio").append(checked);
+            }else {
+                checked = '<div class="radio">'+
+                                '<label><input type="radio" name="optradio" value="si" checked>Sí</label>'+
+                            '</div>'+
+                            '<div class="radio">'+
+                                '<label><input type="radio" name="optradio" value="no">No</label>'+
+                            '</div>';
+                componentHandler.upgradeAllRegistered();
+                $("#chckRadio").html('');
+                $("#chckRadio").append(checked);
             }
             $('#titulo').val(data.titulo);
             $('#fecha').val(data.fecha);
