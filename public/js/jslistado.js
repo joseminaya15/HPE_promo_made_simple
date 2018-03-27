@@ -68,7 +68,6 @@ function editarPromocion(Id){
                     $('select').selectpicker();
                 }
             }
-            //radio
             if(data.limit == 1){
                 checked = '<div class="radio">'+
                                 '<label><input type="radio" name="optradio" value="si">Sí</label>'+

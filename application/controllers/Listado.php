@@ -17,10 +17,10 @@ class Listado extends CI_Controller {
         if($this->session->userdata('tipo_user') != 0){
             header("location: Login");
         }
-        $promociones = $this->M_solicitud->getPromociones();
-        $html = '';
+        $promociones   = $this->M_solicitud->getPromociones();
+        $html          = '';
         $tipo_producto = '';
-        $cont = 1;
+        $cont          = 1;
         foreach ($promociones as $key) {
             if($key->Tipo == 'Volumen'){
                 $tipo_producto = 'volumen';
@@ -51,7 +51,7 @@ class Listado extends CI_Controller {
         $data['msj']   = null;
         try {
             $id_promo = $this->input->post('Id_promo');
-            $datos = $this->M_solicitud->getPromocionesById($id_promo);
+            $datos    = $this->M_solicitud->getPromocionesById($id_promo);
             $data['pais']     = $datos[0]->Pais;
             $data['tp_user']  = $datos[0]->Tipo_distribuidor;
             $data['tipo']     = $datos[0]->Tipo;
@@ -76,10 +76,10 @@ class Listado extends CI_Controller {
         try {
             $id_promo = $this->input->post('Id_promo');
             $this->M_solicitud->deleteDatos($id_promo);
-            $promociones = $this->M_solicitud->getPromociones();
-            $html = '';
+            $promociones   = $this->M_solicitud->getPromociones();
+            $html          = '';
             $tipo_producto = '';
-            $cont = 1;
+            $cont          = 1;
             foreach ($promociones as $key) {
                 if($key->Tipo == 'Volumen'){
                     $tipo_producto = 'volumen';
@@ -193,11 +193,11 @@ class Listado extends CI_Controller {
                                  'Deal_number'        => $deal_number,
                                  'Pais'               => $pais,
                                  'Tipo_distribuidor'  => $usuario);
-          $datoUpdt = $this->M_solicitud->updateDatos($arrayUpdt, $this->session->userdata('id_promo'), 'cards');
-          $promociones = $this->M_solicitud->getPromociones();
-          $html = '';
+          $datoUpdt      = $this->M_solicitud->updateDatos($arrayUpdt, $this->session->userdata('id_promo'), 'cards');
+          $promociones   = $this->M_solicitud->getPromociones();
+          $html          = '';
           $tipo_producto = '';
-          $cont = 1;
+          $cont          = 1;
           foreach ($promociones as $key) {
                 if($key->Tipo == 'Volumen'){
                     $tipo_producto = 'volumen';
@@ -219,8 +219,8 @@ class Listado extends CI_Controller {
                 $cont++;
           }
           $data['promociones'] = $html;
-          $data['msj']   = $datoUpdt['msj'];
-          $data['error'] = $datoUpdt['error'];
+          $data['msj']         = $datoUpdt['msj'];
+          $data['error']       = $datoUpdt['error'];
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
