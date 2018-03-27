@@ -61,6 +61,8 @@ class Listado extends CI_Controller {
             $data['objetivo'] = $datos[0]->Objetivo_comercial;
             $data['new']      = $datos[0]->Noticia;
             $data['condi']    = $datos[0]->Condiciones;
+            $session = array('id_promo' => $id_promo);
+            $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -166,18 +168,37 @@ class Listado extends CI_Controller {
         echo json_encode($data);
     }
 
-    function __buildComboUsuario($id){
-        $agencias = $this->M_solicitud->getUsuarios();
-        $datos    = $this->M_solicitud->getPromocionesById($id);
-        $opt      = null;
-        foreach($agencias as $age){
-            $agen = str_replace(')', '',str_replace('(', '', $age->Tipo));
-            /*if($datos[0]->Tipo_distribuidor == $agen){
-                $opt .= '<option value="'.$agen.'" selected="selected"> '.$agen.'</option>';
-            }else {
-                $opt .= '<option value="'.$agen.'"> '.$agen.'</option>';
-            }*/
+    function actualizarPromocion(){
+        $data['error']  = EXIT_ERROR;
+        $data['msj']    = null;
+        try {
+            $pais               = $this->input->post('pais');
+            $usuario            = $this->input->post('usuario');
+            $oferta             = $this->input->post('oferta');
+            $titulo             = $this->input->post('titulo');
+            $fecha              = $this->input->post('fecha');
+            $objetivo_comercial = $this->input->post('objetivo_comercial');
+            $noticia            = $this->input->post('noticia');
+            $condiciones        = $this->input->post('condiciones');
+            $last_units         = $this->input->post('last_units');
+            $deal_number        = $this->input->post('deal_number');
+            $arrayUpdt = array('Tipo'               => $oferta,
+                                 'Codigo'             => 'Q3 FY18',
+                                 'Titulo'             => $titulo,
+                                 'fecha'              => $fecha,
+                                 'objetivo_comercial' => $objetivo_comercial,
+                                 'Noticia'            => $noticia,
+                                 'Condiciones'        => $condiciones,
+                                 'Last_units'         => $last_units,
+                                 'Deal_number'        => $deal_number,
+                                 'Pais'               => $pais,
+                                 'Tipo_distribuidor'  => $usuario);
+          $datoUpdt = $this->M_solicitud->updateDatos($arrayUpdt, $this->session->userdata('id_promo'), 'cards');
+          $data['msj']   = $datoUpdt['msj'];
+          $data['error'] = $datoUpdt['error'];
+        } catch (Exception $e) {
+            $data['msj'] = $e->getMessage();
         }
-        return $opt;
+        echo json_encode($data);
     }
 }

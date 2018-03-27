@@ -282,5 +282,82 @@ function mostrarCampo(){
     }
 }
 function actualizarPromocion(){
-    
+    var pais               = $('#pais').val(); 
+    var usuario            = $('#usuario').val();
+    var oferta             = $('#oferta').val();
+    var titulo             = $('#titulo').val();
+    var fecha              = $('#fecha').val();
+    var objetivo_comercial = $('#objetivo_comercial').val();
+    var noticia            = $('#noticia').val();
+    var condiciones        = $('#condiciones').val();
+    var units              = $( "input:checked" ).val();
+    var last_units         = "";
+    if(usuario == 'Distis'){
+        var deal_number = $('#deal_number').val();
+    }else {
+        var deal_number = '';
+    }
+    if(pais == null || pais == ''){
+        msj('error', 'Ingrese su país');
+        return;
+    }
+    if(usuario == null || usuario == ''){
+        msj('error', 'Ingrese su tipo de usuario');
+        return;
+    }
+    if(oferta == null || oferta == ''){
+        msj('error', 'Ingrese el tipo de oferta');
+        return;
+    }
+    if(units == 'si'){
+        last_units = 0;
+    }else {
+        last_units = 1;
+    }
+    if(titulo == null || titulo == ''){
+        msj('error', 'Ingrese el título de la oferta');
+        return;
+    }
+    if(fecha == null || fecha == ''){
+        msj('error', 'Ingrese la fecha de expiración del producto');
+        return;
+    }
+    if(objetivo_comercial == null || objetivo_comercial == ''){
+        msj('error', 'Ingrese el objetivo comercial de la oferta');
+        return;
+    }
+    if(noticia == null || noticia == ''){
+        msj('error', 'Ingrese la notovedad que tiene');
+        return;
+    }
+    if(condiciones == null || condiciones == ''){
+        msj('error', 'Ingrese las condiciones de la oferta');
+        return;
+    }
+    $('.button-guardar').prop("disabled", true);
+    $.ajax({
+        data : {pais               : pais,
+                usuario            : usuario,
+                oferta             : oferta,
+                titulo             : titulo,
+                fecha              : fecha,
+                objetivo_comercial : objetivo_comercial,
+                noticia            : noticia,
+                condiciones        : condiciones,
+                last_units         : last_units,
+                deal_number        : deal_number},
+        url  : 'Listado/actualizarPromocion',
+        type : 'POST'
+    }).done(function(data){
+        try{
+            data = JSON.parse(data);
+            if(data.error == 0){
+                limpiarCampos();
+            }else{
+                return;
+            }
+      } catch (err){
+        msj('error',err.message);
+      }
+    });
 }
