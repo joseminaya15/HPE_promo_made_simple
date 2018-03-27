@@ -72,13 +72,13 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
-                            <!-- <div class="mdl-card-listado">
+                            <div class="mdl-card-listado">
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-5 p-0">
                                         <p>Country</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                        <input type="text" class="form-control" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -98,8 +98,8 @@
                                     </div>
                                     <div class="col-sm-7 p-0">
                                         <select class="selectpicker" id="oferta" title="Tipo de oferta">
-                                            <option value="Valor">Value</option>
-                                            <option value="Volumen">Volumen</option>
+                                            <option value="Valor"><div class="bg-tipo valor"></div>Value</option>
+                                            <option value="Volumen"><div class="bg-tipo volumen"></div>Volumen</option>
                                         </select>
                                     </div>
                                 </div>
@@ -107,8 +107,19 @@
                                     <div class="col-sm-5 p-0">
                                         <p>Only For Limited Time</p>
                                     </div>
-                                    <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                    <div class="col-sm-7 input-radio">
+                                        <div id="chckRadio" class="col-xs-6">
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                                                <input type="radio" id="option-1" class="mdl-radio__button" name="optradio" value="si" checked>
+                                                <span class="mdl-radio__label">S&iacute;</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                                <input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no">
+                                                <span class="mdl-radio__label">No</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -116,15 +127,16 @@
                                         <p>Title</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                        <input class="form-control" type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-5 p-0">
                                         <p>Caducidad</p>
                                     </div>
-                                    <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                    <div class="col-sm-7 p-0 input-group-fecha">
+                                        <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
+                                        <input class="form-control" type="text" id="fecha" value="">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -132,7 +144,7 @@
                                         <p>Objetivo Comercial</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                        <input class="form-control" type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -140,7 +152,7 @@
                                         <p>What's New!</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                        <input class="form-control" type="text" id="pais">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -148,11 +160,11 @@
                                         <p>Conditions</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" id="pais">
+                                        <input class="form-control" type="text" id="pais">
                                     </div>
                                 </div>
-                            </div> -->
-                            <div class="mdl-card mdl-card-listado">
+                            </div>
+                            <!-- <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
                                     <div class="col-md-4 col-sm-6 mdl-input-group">
                                         <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
@@ -232,7 +244,7 @@
                                     <div class="col-md-4 col-sm-6 mdl-input-group">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="mdl-card__actions">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()" id="btnGuardar">Guardar</button>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar hidden" onclick="actualizarPromocion()" id="btnActualizar">Actualizar</button>
