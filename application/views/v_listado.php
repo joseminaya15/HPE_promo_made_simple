@@ -107,8 +107,8 @@
                                     <div class="col-sm-5 p-0">
                                         <p>Only For Limited Time</p>
                                     </div>
-                                    <div class="col-sm-7 input-radio">
-                                        <div id="chckRadio" class="col-xs-6">
+                                    <div id="chckRadio"  class="col-sm-7 input-radio">
+                                        <div class="col-xs-6">
                                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
                                                 <input type="radio" id="option-1" class="mdl-radio__button" name="optradio" value="si" checked>
                                                 <span class="mdl-radio__label">S&iacute;</span>
@@ -127,7 +127,7 @@
                                         <p>Title</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input class="form-control" type="text" id="pais">
+                                        <input class="form-control" type="text" id="titulo">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -144,7 +144,7 @@
                                         <p>Objetivo Comercial</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input class="form-control" type="text" id="pais">
+                                        <input class="form-control" type="text" id="objetivo_comercial">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -152,7 +152,15 @@
                                         <p>What's New!</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input class="form-control" type="text" id="pais">
+                                        <input class="form-control" type="text" id="noticia">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-5 p-0">
+                                        <p>Deal Number</p>
+                                    </div>
+                                    <div class="col-sm-7 p-0">
+                                        <input class="form-control" type="text" id="deal_number">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
@@ -160,7 +168,7 @@
                                         <p>Conditions</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input class="form-control" type="text" id="pais">
+                                        <input class="form-control" type="text" id="condiciones">
                                     </div>
                                 </div>
                             </div>
