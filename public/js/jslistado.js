@@ -26,6 +26,7 @@ function editarPromocion(Id){
                 } else {
                     $('select').selectpicker();
                 }
+                $('#deal_number').prop("disabled", true);
             }else {
                 combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
                             '<option value="Distis">Distis</option>'+
