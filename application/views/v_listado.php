@@ -75,7 +75,7 @@
                             <div class="mdl-card-listado">
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
-                                        <p>Pa&iacute;s</p>
+                                        <p>Country</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" id="pais">
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
-                                        <p>Tipo de usuario</p>
+                                        <p>Type of user</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
-                                        <p>Tipo de Oferta</p>
+                                        <p>Type of Oferta</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <select class="selectpicker" id="oferta" title="Tipo de oferta">
@@ -105,7 +105,15 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
-                                        <p>T&iacute;tulo</p>
+                                        <p>Only For Limited Time</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Title</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" id="pais">
@@ -137,7 +145,7 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
-                                        <p>Condiciones</p>
+                                        <p>Conditions</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" id="pais">
@@ -171,10 +179,10 @@
                                         </div>
                                         <form>
                                             <div class="radio">
-                                              <label><input type="radio" name="optradio" value="si">Sí</label>
+                                                <label><input type="radio" name="optradio" value="si">Sí</label>
                                             </div>
                                             <div class="radio">
-                                              <label><input type="radio" name="optradio" value="no">No</label>
+                                                <label><input type="radio" name="optradio" value="no">No</label>
                                             </div>
                                         </form>
                                     </div>
