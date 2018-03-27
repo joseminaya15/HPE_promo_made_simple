@@ -9,7 +9,6 @@ function editarPromocion(Id){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	//location.href = 'Formulario';
             var combo = '';
             var comboOfe = '';
             var checked = '';

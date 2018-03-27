@@ -85,7 +85,7 @@
                                     <div class="col-sm-5 p-0">
                                         <p>Type of user</p>
                                     </div>
-                                    <div class="col-sm-7 p-0">
+                                    <div class="col-sm-7 p-0" id="divUser">
                                         <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
                                             <option value="Distis">Distis</option>
                                             <option value="Resellers">Resellers</option>
@@ -96,7 +96,7 @@
                                     <div class="col-sm-5 p-0">
                                         <p>Type of Oferta</p>
                                     </div>
-                                    <div class="col-sm-7 p-0">
+                                    <div class="col-sm-7 p-0" id="divOferta">
                                         <select class="selectpicker" id="oferta" title="Tipo de oferta">
                                             <option value="Valor"><div class="bg-tipo valor"></div>Value</option>
                                             <option value="Volumen"><div class="bg-tipo volumen"></div>Volumen</option>
