@@ -49,7 +49,7 @@
                     </div>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
-                        <li role="presentation"><a href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
+                        <li role="presentation"><a id="tabCarga" href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
                     </ul>
                     <div class="tab-content m-t-20">
                         <div role="tabpanel" class="tab-pane fade in active" id="Lista">

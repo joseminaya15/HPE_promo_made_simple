@@ -1,5 +1,5 @@
 function editarPromocion(Id){
-	$.ajax({
+	/*$.ajax({
 		data : {Id_promo : Id},
 		url  : 'Listado/editarPromocion',
 		type : 'POST'
@@ -14,7 +14,8 @@ function editarPromocion(Id){
       }catch(err){
         msj('error',err.message);
       }
-	});
+	});*/
+    $('#tabCarga').trigger('click');
 }
 var id_promo = null;
 function modalEliminar(row, id){
