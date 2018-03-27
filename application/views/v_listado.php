@@ -30,7 +30,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.svg">
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p>Manager</p>
@@ -72,6 +72,86 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
+                            <div class="mdl-card-listado">
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Country</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Type of user</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
+                                            <option value="Distis">Distis</option>
+                                            <option value="Resellers">Resellers</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Type of Oferta</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="selectpicker" id="oferta" title="Tipo de oferta">
+                                            <option value="Valor">Value</option>
+                                            <option value="Volumen">Volumen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Only For Limited Time</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Title</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Caducidad</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Objetivo Comercial</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>What's New!</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Conditions</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
                                     <div class="col-md-4 col-sm-6 mdl-input-group">
@@ -100,10 +180,10 @@
                                         </div>
                                         <form>
                                             <div class="radio">
-                                              <label><input type="radio" name="optradio" value="si">Sí</label>
+                                                <label><input type="radio" name="optradio" value="si">Sí</label>
                                             </div>
                                             <div class="radio">
-                                              <label><input type="radio" name="optradio" value="no">No</label>
+                                                <label><input type="radio" name="optradio" value="no">No</label>
                                             </div>
                                         </form>
                                     </div>
