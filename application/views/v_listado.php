@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
-                            <div class="mdl-card-listado">
+                            <!--<div class="mdl-card-listado">
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-6">
                                         <p>Country</p>
@@ -151,7 +151,7 @@
                                         <input type="text" class="form-control" id="pais">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
                                     <div class="col-md-4 col-sm-6 mdl-input-group">

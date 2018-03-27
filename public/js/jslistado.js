@@ -26,6 +26,18 @@ function editarPromocion(Id){
                     $('select').selectpicker();
                 }
             }else {
+                combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
+                            '<option value="Distis">Distis</option>'+
+                            '<option value="Resellers">Resellers</option>'+
+                        '</select>';
+                componentHandler.upgradeAllRegistered();
+                $("#divUser").html('');
+                $("#divUser").append(combo);
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                    $('select').selectpicker('mobile');
+                } else {
+                    $('select').selectpicker();
+                }
             }
             $('#titulo').val(data.titulo);
             $('#fecha').val(data.fecha);
