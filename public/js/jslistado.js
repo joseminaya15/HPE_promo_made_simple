@@ -95,6 +95,8 @@ function editarPromocion(Id){
             $('#objetivo_comercial').val(data.objetivo);
             $('#noticia').val(data.new);
             $('#condiciones').val(data.condi);
+            $('#btnGuardar').addClass('hidden');
+            $('#btnActualizar').removeClass('hidden');
         }else {
         	return;
         }
@@ -278,4 +280,7 @@ function mostrarCampo(){
     }else {
         $('.deal_number').addClass("hidden");
     }
+}
+function actualizarPromocion(){
+    
 }
