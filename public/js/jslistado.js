@@ -121,7 +121,6 @@ function eliminarPromo(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	//location.href = 'Formulario';
         	$('#tabla_promociones').html('');
         	$('#tabla_promociones').append(data.promociones);
         	modal('ModalBorrarOferta');
@@ -353,6 +352,8 @@ function actualizarPromocion(){
             data = JSON.parse(data);
             if(data.error == 0){
                 limpiarCampos();
+                $('#tabla_promociones').html('');
+                $('#tabla_promociones').append(data.promociones);
             }else{
                 return;
             }

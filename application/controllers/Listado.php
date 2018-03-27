@@ -194,6 +194,31 @@ class Listado extends CI_Controller {
                                  'Pais'               => $pais,
                                  'Tipo_distribuidor'  => $usuario);
           $datoUpdt = $this->M_solicitud->updateDatos($arrayUpdt, $this->session->userdata('id_promo'), 'cards');
+          $promociones = $this->M_solicitud->getPromociones();
+          $html = '';
+          $tipo_producto = '';
+          $cont = 1;
+          foreach ($promociones as $key) {
+                if($key->Tipo == 'Volumen'){
+                    $tipo_producto = 'volumen';
+                }
+                else if($key->Tipo == 'Valor'){
+                    $tipo_producto = 'valor';
+                }
+                $html .= '<tr>
+                            <td class="titulo_promo">'.$key->Titulo.'</td>
+                            <td>'.date_format(date_create($key->fecha_vencimiento),"d/m/Y").'</td>
+                            <td>'.$key->Tipo_distribuidor.'</td>
+                            <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
+                            <td>'.$key->Pais.'</td>
+                            <td class="text-center">
+                                <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
+                            </td>
+                        </tr>';
+                $cont++;
+          }
+          $data['promociones'] = $html;
           $data['msj']   = $datoUpdt['msj'];
           $data['error'] = $datoUpdt['error'];
         } catch (Exception $e) {
