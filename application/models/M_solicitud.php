@@ -154,4 +154,12 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+
+    function getUsuarios(){
+      $sql = "SELECT Tipo_distribuidor AS Tipo
+                FROM cards 
+              GROUP BY Tipo";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

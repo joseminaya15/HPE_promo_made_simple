@@ -44,7 +44,17 @@ class Listado extends CI_Controller {
         $data['msj']   = null;
         try {
             $id_promo = $this->input->post('Id_promo');
-            $this->session->set_userdata(array('id_promo' => $id_promo));
+            $datos = $this->M_solicitud->getPromocionesById($id_promo);
+            $data['pais']     = $datos[0]->Pais;
+            $data['tp_user']  = $datos[0]->Tipo_distribuidor;
+            $data['tipo']     = $datos[0]->Tipo;
+            $data['limit']    = $datos[0]->Last_units;
+            $data['titulo']   = $datos[0]->Titulo;
+            $data['fecha']    = $datos[0]->fecha_vencimiento;
+            $data['objetivo'] = $datos[0]->Objetivo_comercial;
+            $data['new']      = $datos[0]->Noticia;
+            $data['condi']    = $datos[0]->Condiciones;
+            /*$this->session->set_userdata(array('id_promo' => $id_promo));*/
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -141,5 +151,20 @@ class Listado extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
+    }
+
+    function __buildComboUsuario($id){
+        $agencias = $this->M_solicitud->getUsuarios();
+        $datos    = $this->M_solicitud->getPromocionesById($id);
+        $opt      = null;
+        foreach($agencias as $age){
+            $agen = str_replace(')', '',str_replace('(', '', $age->Tipo));
+            /*if($datos[0]->Tipo_distribuidor == $agen){
+                $opt .= '<option value="'.$agen.'" selected="selected"> '.$agen.'</option>';
+            }else {
+                $opt .= '<option value="'.$agen.'"> '.$agen.'</option>';
+            }*/
+        }
+        return $opt;
     }
 }

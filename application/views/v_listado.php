@@ -81,8 +81,9 @@
                                             <label class="mdl-textfield__label" for="pais">País</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
+                                    <div class="col-md-4 col-sm-6 mdl-input-group" id="divUser">
+                                        <select class="selectpicker" id="usuario" onchange="mostrarCampo()">
+                                            <option value="">Tipo de usuario</option>
                                             <option value="Distis">Distis</option>
                                             <option value="Resellers">Resellers</option>
                                         </select>
@@ -214,5 +215,12 @@
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslistado.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript">
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        </script>
     </body>
 </html>

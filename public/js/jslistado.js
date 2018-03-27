@@ -1,5 +1,7 @@
 function editarPromocion(Id){
-	/*$.ajax({
+    $('#tabCarga').trigger('click');
+    componentHandler.upgradeAllRegistered();
+	$.ajax({
 		data : {Id_promo : Id},
 		url  : 'Listado/editarPromocion',
 		type : 'POST'
@@ -7,15 +9,36 @@ function editarPromocion(Id){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'Formulario';
+        	//location.href = 'Formulario';
+            var combo = '';
+            $('#pais').val(data.pais);
+            if(data.tp_user == 'Resellers'){
+                combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
+                            '<option value="Resellers">Resellers</option>'+
+                            '<option value="Distis">Distis</option>'+
+                        '</select>';
+                componentHandler.upgradeAllRegistered();
+                $("#divUser").html('');
+                $("#divUser").append(combo);
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                    $('select').selectpicker('mobile');
+                } else {
+                    $('select').selectpicker();
+                }
+            }else {
+            }
+            $('#titulo').val(data.titulo);
+            $('#fecha').val(data.fecha);
+            $('#objetivo_comercial').val(data.objetivo);
+            $('#noticia').val(data.new);
+            $('#condiciones').val(data.condi);
         }else {
         	return;
         }
       }catch(err){
         msj('error',err.message);
       }
-	});*/
-    $('#tabCarga').trigger('click');
+	});
 }
 var id_promo = null;
 function modalEliminar(row, id){
