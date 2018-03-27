@@ -30,7 +30,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_header.svg">
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p>Manager</p>
