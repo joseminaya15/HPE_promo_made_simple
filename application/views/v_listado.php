@@ -72,6 +72,78 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
+                            <div class="mdl-card-listado">
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Pa&iacute;s</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Tipo de usuario</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
+                                            <option value="Distis">Distis</option>
+                                            <option value="Resellers">Resellers</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Tipo de Oferta</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="selectpicker" id="oferta" title="Tipo de oferta">
+                                            <option value="Valor">Value</option>
+                                            <option value="Volumen">Volumen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>T&iacute;tulo</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Caducidad</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Objetivo Comercial</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>What's New!</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-6">
+                                        <p>Condiciones</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="pais">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mdl-card mdl-card-listado">
                                 <div class="mdl-card__supporting-text">
                                     <div class="col-md-4 col-sm-6 mdl-input-group">
