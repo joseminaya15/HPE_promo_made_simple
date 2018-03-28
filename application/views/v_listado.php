@@ -200,21 +200,41 @@
             </div>
         </div>
 
-        <div class="modal fade" id="ModalGaleria" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal fade" id="ModalGaleria" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="      false" style="height: 500px;">
             <div class="modal-dialog modal-lg text-center">
                 <div class="modal-content">
                     <div class="mdl-card" >
                         <div class="mdl-card__title">
                             <p id="titulo">Seleccione una imagen</p>
                         </div>
-                        <div class="galeria">
-                            <a href=""><img src="<?php echo RUTA_IMG?>promo/sellers.png"></a>
-                            <a href=""><img src="<?php echo RUTA_IMG?>promo/iquote.png"></a>
-                            <a href=""><img src="<?php echo RUTA_IMG?>promo/promo1.png"></a>
-                            <a href=""><img src="<?php echo RUTA_IMG?>promo/engage.png"></a>
+                        <div class="galeria" class="col-sm-7 input-radio">
+                            <div class="col-xs-6">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                                    <input type="radio" id="option-1" class="mdl-radio__button" name="optradio" value="si" checked>
+                                    <span class="mdl-radio__label"><img src="<?php echo RUTA_IMG?>promo/sellers.png"></span>
+                                </label>
+                            </div>
+                            <div class="col-xs-6">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                    <input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no">
+                                    <span class="mdl-radio__label"><img src="<?php echo RUTA_IMG?>promo/iquote.png"></span>
+                                </label>
+                            </div>
+                            <div class="col-xs-6" style="margin-top: 130px;">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                    <input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no">
+                                    <span class="mdl-radio__label"><img src="<?php echo RUTA_IMG?>promo/promo1.png"></span>
+                                </label>
+                            </div>
+                            <div class="col-xs-6" style="margin-top: 130px;">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                    <input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no">
+                                    <span class="mdl-radio__label"><img src="<?php echo RUTA_IMG?>promo/engage.png"></span>
+                                </label>
+                            </div>
                         </div>
                         <div class="mdl-card__actions text-right">                   
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="insetarImagen();">Aceptar</button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="insetarImagen();" style="margin-top: 160px;">Aceptar</button>
                         </div>
                     </div>
                 </div>
