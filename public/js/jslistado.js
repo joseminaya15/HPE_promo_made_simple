@@ -361,3 +361,6 @@ function actualizarPromocion(){
       }
     });
 }
+function galeria(){
+    modal('ModalGaleria');
+}

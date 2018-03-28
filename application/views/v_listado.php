@@ -173,90 +173,10 @@
                                 </div>
                                 <div class="mdl-card__actions text-left col-xs-12">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()" id="btnGuardar"><i class="mdi mdi-save"></i>Guardar Informaci&oacute;n</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="galeria()"><i class="mdi mdi-save"></i>abrir Galería</button>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar hidden" onclick="actualizarPromocion()" id="btnActualizar">Actualizar</button>
                                 </div>
                             </div>
-                            <!-- <div class="mdl-card mdl-card-listado">
-                                <div class="mdl-card__supporting-text">
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="pais" value="">
-                                            <label class="mdl-textfield__label" for="pais">País</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group" id="divUser">
-                                        <select class="selectpicker" id="usuario" onchange="mostrarCampo()">
-                                            <option value="">Tipo de usuario</option>
-                                            <option value="Distis">Distis</option>
-                                            <option value="Resellers">Resellers</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group" id="divOferta">
-                                        <select class="selectpicker" id="oferta" title="Tipo de oferta">
-                                            <option value="Valor">Value</option>
-                                            <option value="Volumen">Volumen</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="col-sm-6">
-                                            <p>Only For Limited Time</p>
-                                        </div>
-                                        <form id="chckRadio">
-                                            <div class="radio">
-                                                <label><input type="radio" name="optradio" value="si">Sí</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input type="radio" name="optradio" value="no">No</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="titulo" value="">
-                                            <label class="mdl-textfield__label" for="titulo">Titulo</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="fecha" value="">
-                                            <label class="mdl-textfield__label" for="fecha">Caducidad</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
-                                            <label class="mdl-textfield__label" for="objetivo_comercial">Objetivo comercial</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="noticia" value="">
-                                            <label class="mdl-textfield__label" for="noticia">What's New</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
-                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="deal_number">
-                                            <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="condiciones" value="">
-                                            <label class="mdl-textfield__label" for="condiciones">Conditions</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
-                                    </div>
-                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -281,15 +201,17 @@
         </div>
 
         <div class="modal fade" id="ModalGaleria" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-sm text-center">
+            <div class="modal-dialog modal-lg text-center">
                 <div class="modal-content">
                     <div class="mdl-card" >
                         <div class="mdl-card__title">
                             <p id="titulo">Seleccione una imagen</p>
                         </div>
                         <div class="galeria">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" style="height: 80px;"><img src="<?php echo RUTA_IMG?>promo/sellers.png"></button>
-                            <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                            <a href=""><img src="<?php echo RUTA_IMG?>promo/sellers.png"></a>
+                            <a href=""><img src="<?php echo RUTA_IMG?>promo/iquote.png"></a>
+                            <a href=""><img src="<?php echo RUTA_IMG?>promo/promo1.png"></a>
+                            <a href=""><img src="<?php echo RUTA_IMG?>promo/engage.png"></a>
                         </div>
                         <div class="mdl-card__actions text-right">                   
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="insetarImagen();">Aceptar</button>
