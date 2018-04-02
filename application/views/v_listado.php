@@ -44,7 +44,13 @@
                     <div class="col-xs-12 p-0 cards">
                         <div class="cabecera border-none m-b-15">
                             <h2 class="titulo">Promo Made Simple</h2>
-                            <h3 class="codigo">Q3 FY18</h3>
+                            <!--<h3 class="codigo">Q3 FY18</h3>-->
+                            <div class="col-sm-7">
+                                <select class="selectpicker codigo">
+                                    <option value="Q3 FY18">Q3 FY18</option>
+                                    <option value="Q4 FY18">Q4 FY18</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <ul class="nav nav-tabs" role="tablist">

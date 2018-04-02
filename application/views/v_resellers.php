@@ -76,7 +76,7 @@
                         <div class="cabecera">
                             <div>
                                 <h2 class="titulo">Promo Made Simple</h2>
-                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="showFilter()"><i class="mdi mdi-filter_list"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="showFilter()"><i class="mdi mdi-search"></i></button>
                             </div>
                             <h3 class="codigo">Q3 FY18</h3>
                             <p class="subtitle"><?php echo $titulo ?></p>
