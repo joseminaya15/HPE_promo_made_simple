@@ -25,24 +25,10 @@
     </head>
     <body>
         <section class>
-            <div class="header">
-                <div class="mdl-container row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                        </div>
-                        <div class="col-xs-6 text-right p-0">
-                            <p>Promos Made Simple</p>
-                            <a href="Login">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-login">
+            <div class="fondo-imagen forget"></div>
+            <div class="center-login container">
                 <div class="mdl-card mdl-card-login">
-                    <div class="title">
-                        <h3>Recover your password</h3>
-                    </div>
+                    <h2>Recover your password</h2>
                     <div class="mdl-card__supporting-text">
                         <div class="col-xs-12 form-group mdl-input">
                             <label for="usuario">Username</label>
