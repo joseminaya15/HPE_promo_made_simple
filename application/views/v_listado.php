@@ -260,6 +260,7 @@
             } else {
                 $('select').selectpicker();
             }
+            initMaskInputs('fecha');
         </script>
     </body>
 </html>
