@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-xs-12 mdl-create">
                             <div class="col-xs-6">
-                                <a href="RecuperarPass">Forgot password</a>
+                                <a href="Recuperar">Forgot password</a>
                             </div>
                             <div class="col-xs-6">
                                 <a href="Registro">Create an account</a>
