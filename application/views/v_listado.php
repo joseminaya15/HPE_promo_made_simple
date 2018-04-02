@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="mdl-card__actions text-left col-xs-12">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()" id="btnGuardar"><i class="mdi mdi-save"></i>Guardar Informaci&oacute;n</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="galeria()"><i class="mdi mdi-save"></i>abrir Galería</button>
+                                    <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="galeria()"><i class="mdi mdi-save"></i>abrir Galería</button> -->
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar hidden" onclick="actualizarPromocion()" id="btnActualizar">Actualizar</button>
                                 </div>
                             </div>
