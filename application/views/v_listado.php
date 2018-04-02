@@ -261,6 +261,7 @@
                 $('select').selectpicker();
             }
             initMaskInputs('fecha');
+            initButtonCalendarDaysMinToday('fecha');
         </script>
     </body>
 </html>
