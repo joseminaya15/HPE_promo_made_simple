@@ -125,37 +125,22 @@ label
 	widthTransition()
 	.promociones
 		margin-top 100px
-		.buscador
-			border 1px solid #000000
-			padding 5px
-			.search
-				max-width calc(100% - 55px)
-				width 100%
-				display inline-block
-				vertical-align middle
-				margin 0
-				input
-					box-shadow none
-					border none
-			.button-search
-				max-width 45px
-				width 100%
-				display inline-block
-				vertical-align middle
-				text-align center
 		.filtro
 			margin 20px 0
 			padding 0
-			.breadcrumb
-				width 100%
-				max-width calc(100% - 245px)
-				display inline-block
-				vertical-align middle
-				margin 0
-				margin-right 20px
+			.buscador
 				border 1px solid #000000
-				border-radius 0
-				background-color transparent
+				max-width calc(100% - 245px)
+				padding 3px
+				margin-right 20px
+				.search
+					width 100%
+					display inline-block
+					vertical-align middle
+					margin 0
+					input
+						box-shadow none
+						border none
 			.mdl-select
 				width 100%
 				max-width 220px
@@ -193,7 +178,25 @@ label
 				button
 					max-width 50px
 					display inline-block
-					
+				&.title-header
+					h2
+						width 100%
+						max-width calc(100% - 115px)
+						display inline-block
+						vertical-align middle
+						font-family $regular
+						font-size 28px
+					.selectQ
+						width 100%
+						max-width 110px
+						button
+							color $default
+							border none
+							max-width 100%
+							font-size 20px
+							background-color transparent !important
+							.caret
+								margin-top -4px				
 		.footer
 			border-top 1px solid #000000
 			border-bottom 2px solid #000000
@@ -297,8 +300,9 @@ label
 	background-color transparent
 	.mdl-card__title
 		display block
+		padding-left 0
 		h2
-			font-size 44px
+			font-size 42px
 		p
 			color #FFFFFF
 			font-size 20px
@@ -624,6 +628,11 @@ footer
 	position absolute
 	top 50px
 	left 50px
-	z-index 5	
+	z-index 5
+.title-manager
+	h2
+		font-family $medium
+		font-size 40px
+		margin 0
 		
 				

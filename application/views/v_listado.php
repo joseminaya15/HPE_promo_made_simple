@@ -41,16 +41,16 @@
             </div>
             <div class="mdl-container">
                 <div class="promociones">
+                    <div class="title-manager">
+                        <h2>Content Management System</h2>
+                    </div>
                     <div class="col-xs-12 p-0 cards">
-                        <div class="cabecera border-none m-b-15">
-                            <h2 class="titulo">Promo Made Simple</h2>
-                            <!--<h3 class="codigo">Q3 FY18</h3>-->
-                            <div class="col-sm-7">
-                                <select class="selectpicker codigo">
-                                    <option value="Q3 FY18">Q3 FY18</option>
-                                    <option value="Q4 FY18">Q4 FY18</option>
-                                </select>
-                            </div>
+                        <div class="cabecera border-none m-b-15 title-header">
+                            <h2 class="titulo">Promos Made Simple</h2>
+                            <select class="selectpicker selectQ">
+                                <option value="Q3 FY18">Q3 FY18</option>
+                                <option value="Q4 FY18">Q4 FY18</option>
+                            </select>
                         </div>
                     </div>
                     <ul class="nav nav-tabs" role="tablist">

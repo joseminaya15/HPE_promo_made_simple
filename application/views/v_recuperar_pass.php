@@ -30,7 +30,7 @@
             <div class="center-login container">
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__title">
-                        <h2>Promo Made Simple</h2>
+                        <h2>Promos Made Simple</h2>
                         <p>Recover your password</p>
                     </div>
                     <div class="mdl-card__supporting-text">

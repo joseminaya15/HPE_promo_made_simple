@@ -42,18 +42,12 @@
             <div class="mdl-container">
                 <div class="promociones">
                     <div class="header-search">
-                        <div class="col-xs-12 buscador">
-                            <div class="form-group search">
-                                <input type="email" class="form-control" id="buscador" placeholder="Server keywords" onkeyup="buscarPromocion(event);">
-                            </div>
-                            <div class="button-search">
-                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
-                            </div>
-                        </div>
                         <div class="col-xs-12 filtro">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" id="title_filtro">Filter</li>
-                            </ol>
+                            <div class="col-xs-12 buscador">
+                                <div class="form-group search">
+                                    <input type="email" class="form-control" id="buscador" placeholder="Server keywords" onkeyup="buscarPromocion(event);">
+                                </div>
+                            </div>
                             <div class="mdl-select">
                                 <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
                                     <option value="">Server Type</option>
@@ -75,11 +69,11 @@
                     <div class="col-xs-12 p-0 cards">
                         <div class="cabecera">
                             <div>
-                                <h2 class="titulo">Promo Made Simple</h2>
+                                <h2 class="titulo">Promos Made Simple</h2>
                                 <button class="mdl-button mdl-js-button mdl-button--icon" onclick="showFilter()"><i class="mdi mdi-search"></i></button>
                             </div>
                             <h3 class="codigo">Q3 FY18</h3>
-                            <p class="subtitle"><?php echo $titulo ?></p>
+                            <!-- <p class="subtitle"><?php echo $titulo ?></p> -->
                         </div>
                         <div class="line">
                             <?php echo $promociones ?>
