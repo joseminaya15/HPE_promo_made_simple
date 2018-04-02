@@ -78,7 +78,38 @@
                                         <p>Country</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
-                                        <input type="text" class="form-control" id="pais">
+                                        <!--<input type="text" class="form-control" id="pais">-->
+                                        <select class="selectpicker" id="pais" title="País">
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Aruba">Aruba</option>
+                                            <option value="Curacao">Curacao</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                            <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
+                                            <option value="St. Maarten">St. Maarten</option>
+                                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
+                                            <option value="Antigua & Bermuda">Antigua & Bermuda</option>
+                                            <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Turks & Caicos">Turks & Caicos</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="St Lucia">St Lucia</option>
+                                            <option value="Bonaire">Bonaire</option>
+                                            <option value="Martinique">Martinique</option>
+                                            <option value="St Barthelem">St Barthelem</option>
+                                            <option value="Anguilla">Anguilla</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Cayman">Cayman</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
