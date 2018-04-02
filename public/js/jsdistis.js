@@ -8,8 +8,8 @@ function buscarPromo(){
 		try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	$('.cards').html('');
-	    	$('.cards').append(data.promociones);
+	    	$('.line').html('');
+	    	$('.line').append(data.promociones);
 	    }else {
 	    	msj('error', data.msj);
 	    	return;
@@ -27,6 +27,11 @@ function buscarPromocion(e){
 }
 function filtroPromociones(){
 	var filtro = $('#filtro').val();
+	if(filtro != ''){
+		$('#title_filtro').text(filtro);
+	}else {
+		$('#title_filtro').text('Filter');
+	}
 	$.ajax({
 		data : {filtro : filtro},
 		url  : 'Distis/filtroPromociones',
@@ -35,8 +40,8 @@ function filtroPromociones(){
 		try{
 		    data = JSON.parse(data);
 		    if(data.error == 0){
-		    	$('.cards').html('');
-		    	$('.cards').append(data.promociones);
+		    	$('.line').html('');
+		    	$('.line').append(data.promociones);
 		    }else {
 		    	return;
 		    }

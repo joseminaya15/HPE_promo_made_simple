@@ -52,7 +52,7 @@
                         </div>
                         <div class="col-xs-12 filtro">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active">Filter</li>
+                                <li class="breadcrumb-item active" id="title_filtro">Filter</li>
                             </ol>
                             <div class="mdl-select">
                                 <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
