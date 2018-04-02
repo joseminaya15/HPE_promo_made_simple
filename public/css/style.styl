@@ -540,29 +540,36 @@ footer
 	width 100%
 	.input-group-listado
 		&:nth-child(2n+1)
+			.col-sm-7
 			.col-sm-5
 				height 42px
-				background-color #C1C1C1;
+				background-color #C1C1C1
+			.col-sm-5
+				border-right 1px solid #000000
 		&:nth-child(2n)
 			.col-sm-5
+			.col-sm-7
 				height 42px
-				background-color #F2F2F3;
+				background-color #F2F2F3
+			.col-sm-5
+				border-right 1px solid #000000
 		p
 			margin 0
 			padding 14px 10px
 			line-height 14px
 		.form-control
 			border-radius 0
-			border 1px solid #000000
+			border none
 			width 100%
 			padding 10px
 			height 42px
+			background-color transparent
 		.bootstrap-select
 			width 100% !important
 			button
 				selectTransparent()
 				border-radius 0
-				border 1px solid #000000
+				border none
 				color #000000 !important
 				height 42px
 		.input-group-fecha
@@ -574,7 +581,7 @@ footer
 				padding-left 40px
 		.input-radio
 			padding 8px
-			border 1px solid #000000
+			border none
 	.mdl-card__actions
 		text-align left
 		button
