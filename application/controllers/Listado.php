@@ -30,7 +30,7 @@ class Listado extends CI_Controller {
             }
             $html .= '<tr>
                         <td class="titulo_promo">'.$key->Titulo.'</td>
-                        <td>'.date_format(date_create($key->fecha_vencimiento),"d/m/Y").'</td>
+                        <td>'.$key->fecha_vencimiento.'</td>
                         <td>'.$key->Tipo_distribuidor.'</td>
                         <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
                         <td>'.$key->Pais.'</td>
@@ -134,10 +134,11 @@ class Listado extends CI_Controller {
             $condiciones        = $this->input->post('condiciones');
             $last_units         = $this->input->post('last_units');
             $deal_number        = $this->input->post('deal_number');
+            $date = str_replace('/', '-', $fecha );
             $arrayInsert = array('Tipo'               => $oferta,
                                  'Codigo'             => 'Q3 FY18',
                                  'Titulo'             => $titulo,
-                                 'fecha'              => $fecha,
+                                 'fecha'              => date('Y-m-d', strtotime($date)),
                                  'objetivo_comercial' => $objetivo_comercial,
                                  'Noticia'            => $noticia,
                                  'Condiciones'        => $condiciones,
@@ -159,6 +160,31 @@ class Listado extends CI_Controller {
                                  'Tipo_distribuidor'  => $usuario,
                                  'id_promo'           => $datoInsert['Id']);
           $this->session->set_userdata($session);
+          $promociones   = $this->M_solicitud->getPromociones();
+          $html          = '';
+          $tipo_producto = '';
+          $cont          = 1;
+          foreach ($promociones as $key) {
+              if($key->Tipo == 'Volumen'){
+                  $tipo_producto = 'volumen';
+              }
+              else if($key->Tipo == 'Valor'){
+                  $tipo_producto = 'valor';
+              }
+              $html .= '<tr>
+                          <td class="titulo_promo">'.$key->Titulo.'</td>
+                          <td>'.$key->fecha_vencimiento.'</td>
+                          <td>'.$key->Tipo_distribuidor.'</td>
+                          <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
+                          <td>'.$key->Pais.'</td>
+                          <td class="text-center">
+                              <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
+                              <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
+                          </td>
+                      </tr>';
+              $cont++;
+          }
+          $data['promociones'] = $html;
           $data['msj']   = $datoInsert['msj'];
           $data['error'] = $datoInsert['error'];
         } catch (Exception $e) {
