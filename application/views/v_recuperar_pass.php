@@ -32,7 +32,7 @@
                     <div class="mdl-card__supporting-text">
                         <div class="col-xs-12 form-group mdl-input">
                             <label for="usuario">Username</label>
-                            <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                            <input type="text" id="usuario" placeholder="Typically an email address">
                         </div>
                     </div>
                 </br>
