@@ -60,7 +60,81 @@ class Cron extends CI_Controller {
        foreach ($tipo as $tip) {
            # code...
        }
-       $texto = '';
+       $texto = '<!DOCTYPE html>
+                <html>
+                    <body>
+                        <table width="500px" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
+                            <tr>
+                                <td>
+                                    <table width="500" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #415564;padding: 20px;">
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td><a href="#"><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.svg" width="125" alt="alternative text" border="0" style="display: block;"></a></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table cellspacing="0" cellpadding="0" border="0" align="right">
+                                                    <tr>
+                                                        <td><font style="font-family: arial;color: #FFFFFF;font-weight: 600;">Promo Made Simple</font></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
+                                        <tr>
+                                            <td style="text-align: center;padding: 0;margin: 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Promociones por vencer</font></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 20px 0;">
+                                                <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 20px;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Nombre</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Tipo</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Fecha de Caducidad</font></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Tape Backup media</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Volumen</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">3PAR Avalanche</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Valor</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Flex Attach Promo</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Volumen</font></td>
+                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;padding-bottom: 20px"><a href="http://test.brainblue.com/HPE_promo_made_simple/Login" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><font style="font-family: arial;color: #D3D3D3;font-size: 12px;">&copy;2018 Hewlett Packard Enterprise Development LP</font></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </body>
+                </html>';
        $this->email->message($texto);
        $this->email->send();
        $data['error'] = EXIT_SUCCESS;
