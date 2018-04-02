@@ -75,11 +75,7 @@ class Distis extends CI_Controller {
                                     </div>
                                     <div class="promocion">
                                         <h2 class="title">Conditions</h2>
-                                        <p>Includes special prices for Pointnext attach
-                                        services (local deal)
-                                        Some promotions do not apply to all Distributors.
-                                        Please review the terms and conditions of this
-                                        promotion in pComm.</p>
+                                        <p>'.$key->Condiciones.'</p>
                                     </div>
                                 </div>
                                 <div class="imagenes text-center">
@@ -170,11 +166,7 @@ class Distis extends CI_Controller {
                                         </div>
                                         <div class="promocion">
                                             <h2 class="title">Conditions</h2>
-                                            <p>Includes special prices for Pointnext attach
-                                            services (local deal)
-                                            Some promotions do not apply to all Distributors.
-                                            Please review the terms and conditions of this
-                                            promotion in pComm.</p>
+                                            <p>'.$key->Condiciones.'</p>
                                         </div>
                                     </div>
                                     <div class="imagenes text-center">
@@ -261,11 +253,7 @@ class Distis extends CI_Controller {
                                     </div>
                                     <div class="promocion">
                                         <h2 class="title">Conditions</h2>
-                                        <p>Includes special prices for Pointnext attach
-                                        services (local deal)
-                                        Some promotions do not apply to all Distributors.
-                                        Please review the terms and conditions of this
-                                        promotion in pComm.</p>
+                                        <p>'.$key->Condiciones.'</p>
                                     </div>
                                 </div>
                                 <div class="imagenes text-center">
