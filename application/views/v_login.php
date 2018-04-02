@@ -10,7 +10,7 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>HPE promo made simple</title>
+    	<title>HPE - PMS</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -25,9 +25,14 @@
     </head>
     <body>
         <section>
+            <div class="fixed-logo"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></div>
             <div class="fondo-imagen"></div>
             <div class="center-login container">
                 <div class="mdl-card mdl-card-login">
+                    <div class="mdl-card__title">
+                        <h2>Promo Made Simple</h2>
+                        <p>Un solo lugar para todas tus oportunidades</p>
+                    </div>
                     <div class="mdl-card__supporting-text">
                         <div class="col-xs-12 form-group mdl-input">
                             <label for="usuario">Username</label>
@@ -37,15 +42,12 @@
                             <label for="password">Password</label>
                             <input type="password" id="password" onkeyup="verificarDatos(event);">
                         </div>
-                        <div class="col-xs-12 mdl-create">
-                            <div class="col-xs-6">
-                                <a href="Recuperar">Forgot password</a>
-                            </div>
+                        <div class="col-xs-12 mdl-create text-center">
+                            <a href="Recuperar">Forgot password</a>
                         </div>
                     </div>
                     <div class="mdl-card__actions p-0">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
-                        <p class="text-account">Don’t have a HPE Passport account? Get one, it’s free!</p>
                         <a href="Registro" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-create">Create Account</a>
                     </div>
                 </div>

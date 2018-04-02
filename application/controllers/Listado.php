@@ -35,6 +35,7 @@ class Listado extends CI_Controller {
                         <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
                         <td>'.$key->Pais.'</td>
                         <td class="text-center">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Actualizar F. Vencimiento" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="fa fa-edit"></i></button>
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
                         </td>
