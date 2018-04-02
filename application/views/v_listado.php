@@ -188,12 +188,16 @@
             <div class="modal-dialog modal-sm text-center">
                 <div class="modal-content">
                     <div class="mdl-card" >
-                        <div class="mdl-card__title">
+                        <div class="mdl-card__title text-left">
                             <p id="tituloOferta">&iquest;Est&aacute; seguro que desea eliminar esta promoci&oacute;n?</p>
                         </div>
                         <div class="mdl-card__actions text-right">
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" data-dismiss="modal">Cancelar</button>                       
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" onclick="eliminarPromo();">Aceptar</button>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal">
+                                <i class="mdi mdi-close"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
