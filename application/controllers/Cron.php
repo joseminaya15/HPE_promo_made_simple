@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Distis extends CI_Controller {
+class Cron extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -14,37 +14,27 @@ class Distis extends CI_Controller {
     }
 
 	public function index(){
-		//$this->load->view('v_distis');
+        $timestamp = date('Y-m-d');
+        $dates     = $this->M_solicitud->getPromociones();
+        $resta     = '';
+        $arr_title = array();
+        $arr_fecha = array();
+        $arr_tipo  = array();
+        foreach ($dates as $key) {
+            $resta = substr($key->fecha_vencimiento, 8, 2) - substr($timestamp, 8, 2);
+            if($resta <= 15){
+                array_push($arr_title, $key->Titulo);
+                array_push($arr_fecha, $key->fecha_vencimiento);
+                array_push($arr_tipo, $key->Tipo);
+            }
+        }
+       if(count($arr_title) > 0){
+         $this->sendGmail($arr_title, $arr_fecha, $arr_tipo);
+       }
+	   //$this->load->view('v_distis');
 	}
 
-    function verificarFecha(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $timestamp = date('Y-m-d');
-            $dates     = $this->M_solicitud->getPromociones();
-            $resta     = '';
-            $arr_title = array();
-            $arr_fecha = array();
-            $arr_tipo  = array();
-            foreach ($dates as $key) {
-                $resta = substr($key->fecha_vencimiento, 8, 2) - substr($timestamp, 8, 2);
-                if($resta <= 15){
-                    array_push($arr_title, $key->Titulo);
-                    array_push($arr_fecha, $key->fecha_vencimiento);
-                    array_push($arr_tipo, $key->Tipo);
-                }
-            }
-           // print_r($arr_title);
-            echo $arr_title;
-            $data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e){
-
-        }
-        //return json_encode($data);
-    }
-
-    function sendGmail($email){
+    function sendGmail($titulo, $fecha, $tipo){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
@@ -60,7 +50,16 @@ class Distis extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
        $this->email->to('jhiberico@gmail.com');
-       $this->email->subject('Estoy interesado en SAP Business One para mi negocio.');
+       $this->email->subject('');
+       foreach ($titulo as $key) {
+           # code...
+       }
+       foreach ($fecha as $val) {
+           # code...
+       }
+       foreach ($tipo as $tip) {
+           # code...
+       }
        $texto = '';
        $this->email->message($texto);
        $this->email->send();
