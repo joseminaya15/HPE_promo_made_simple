@@ -50,8 +50,8 @@ class Cron extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhiberico@gmail.com');
-       $this->email->subject('');
+       $this->email->to('jhonatanibericom@gmail.com');
+       $this->email->subject('Promociones por vencer HPE promo made simple');
        $texto = '<!DOCTYPE html>
                 <html>
                     <body>

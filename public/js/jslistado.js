@@ -223,6 +223,9 @@ function crearNuevaPromocion(){
             data = JSON.parse(data);
             if(data.error == 0){
                 limpiarCampos();
+                msj('error', 'Se cargó correctamente la promoción');
+                $('#tabla_promociones').html('');
+                $('#tabla_promociones').append(data.promociones);
             }else{
                 return;
             }
@@ -274,9 +277,9 @@ function limpiarCampos(){
 function mostrarCampo(){
     var tipo_oferta = $('#usuario').val();
     if(tipo_oferta == 'Distis'){
-        $('.deal_number').removeClass("hidden");
+        $('#deal_number').prop("disabled", true);
     }else {
-        $('.deal_number').addClass("hidden");
+        $('#deal_number').prop("disabled", false);
     }
 }
 function actualizarPromocion(){
@@ -351,6 +354,7 @@ function actualizarPromocion(){
             data = JSON.parse(data);
             if(data.error == 0){
                 limpiarCampos();
+                msj('error', 'Se actualizó correctamente su promoción');
                 $('#tabla_promociones').html('');
                 $('#tabla_promociones').append(data.promociones);
             }else{
