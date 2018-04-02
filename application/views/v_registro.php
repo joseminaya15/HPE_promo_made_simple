@@ -24,9 +24,14 @@
     </head>
     <body>
         <section>
+            <div class="fixed-logo"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></div>
             <div class="fondo-imagen recuperar"></div>
             <div class="center-login container">
                 <div class="mdl-card mdl-card-login mdl-card-register">
+                    <div class="mdl-card__title">
+                        <h2>Promo Made Simple</h2>
+                        <p>Register</p>
+                    </div>
                     <div class="mdl-card__supporting-text">
                         <div class="col-md-7 col-sm-6">
                             <div class="col-xs-12 form-group mdl-input">
