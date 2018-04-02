@@ -41,15 +41,12 @@
                             <div class="col-xs-6">
                                 <a href="Recuperar">Forgot password</a>
                             </div>
-                            <div class="col-xs-6">
-                                <a href="Registro">Create an account</a>
-                            </div>
                         </div>
                     </div>
                     <div class="mdl-card__actions p-0">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                         <p class="text-account">Don’t have a HPE Passport account? Get one, it’s free!</p>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-create">Create Account</button>
+                        <a href="Registro" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-create">Create Account</a>
                     </div>
                 </div>
             </div>
