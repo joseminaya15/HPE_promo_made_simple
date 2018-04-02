@@ -56,7 +56,8 @@
                             </ol>
                             <div class="mdl-select">
                                 <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
-                                    <option value="">Filtrar</option>
+                                    <option value="">Filter</option>
+                                    <option value="Only For Limited Time">Only For Limited Time</option>
                                     <option value="Instasale - Firesale">Instasale - Firesale</option>
                                     <option value="Valor - Switches TOR">Valor - Switches TOR</option>
                                     <option value="Valor - Blades">Valor - Blades</option>

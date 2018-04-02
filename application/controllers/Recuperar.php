@@ -54,7 +54,9 @@ class Recuperar extends CI_Controller {
        $this->email->from('info@sap-latam.com');
        $this->email->to($email);
        $this->email->subject('');
+       //
        $texto = '';
+       
        $this->email->message($texto);
        $this->email->send();
        $data['error'] = EXIT_SUCCESS;
