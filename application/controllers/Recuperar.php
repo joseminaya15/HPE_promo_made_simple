@@ -26,7 +26,7 @@ class Recuperar extends CI_Controller {
             if(count($username) == 0){
                 $data['msj'] = 'No se encuentra registrado';
             }else {
-                //$this->sendGmail($usuario, base64_decode($username[0]->pass));
+                $this->sendGmail($usuario, base64_decode($username[0]->pass));
                 $data['msj'] = 'Se le envió un email con sus datos';
                 //enviar Email
                 $data['error'] = EXIT_SUCCESS;
