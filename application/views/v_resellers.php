@@ -44,7 +44,7 @@
                     <div class="header-search">
                         <div class="col-xs-12 buscador">
                             <div class="form-group search">
-                                <input type="email" class="form-control" id="buscador" placeholder="Search" onkeyup="buscarPromocion(event);">
+                                <input type="email" class="form-control" id="buscador" placeholder="Server keywords" onkeyup="buscarPromocion(event);">
                             </div>
                             <div class="button-search">
                                 <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
@@ -56,7 +56,7 @@
                             </ol>
                             <div class="mdl-select">
                                 <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
-                                    <option value="">Filter</option>
+                                    <option value="">Server Type</option>
                                     <option value="Only For Limited Time">Only For Limited Time</option>
                                     <option value="Instasale - Firesale">Instasale - Firesale</option>
                                     <option value="Valor - Switches TOR">Valor - Switches TOR</option>
