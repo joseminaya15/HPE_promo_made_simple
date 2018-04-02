@@ -17,24 +17,25 @@ class Cron extends CI_Controller {
         $timestamp = date('Y-m-d');
         $dates     = $this->M_solicitud->getPromociones();
         $resta     = '';
-        $arr_title = array();
-        $arr_fecha = array();
-        $arr_tipo  = array();
+        $arr_datos = array();
+        $html      = '';
         foreach ($dates as $key) {
             $resta = substr($key->fecha_vencimiento, 8, 2) - substr($timestamp, 8, 2);
             if($resta <= 15){
-                array_push($arr_title, $key->Titulo);
-                array_push($arr_fecha, $key->fecha_vencimiento);
-                array_push($arr_tipo, $key->Tipo);
+                $html .= '<tr>
+                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Titulo.'</font></td>
+                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Tipo.'</font></td>
+                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->fecha_vencimiento.'</font></td>
+                        </tr>';
             }
         }
-       if(count($arr_title) > 0){
-         $this->sendGmail($arr_title, $arr_fecha, $arr_tipo);
+        array_push($arr_datos, $html);
+       if(count($arr_datos) > 0){
+         $this->sendGmail($arr_datos);
        }
-	   //$this->load->view('v_distis');
 	}
 
-    function sendGmail($titulo, $fecha, $tipo){
+    function sendGmail($html){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
@@ -51,15 +52,6 @@ class Cron extends CI_Controller {
        $this->email->from('info@sap-latam.com');
        $this->email->to('jhiberico@gmail.com');
        $this->email->subject('');
-       foreach ($titulo as $key) {
-           # code...
-       }
-       foreach ($fecha as $val) {
-           # code...
-       }
-       foreach ($tipo as $tip) {
-           # code...
-       }
        $texto = '<!DOCTYPE html>
                 <html>
                     <body>
@@ -104,21 +96,7 @@ class Cron extends CI_Controller {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Tape Backup media</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Volumen</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">3PAR Avalanche</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Valor</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Flex Attach Promo</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">Volumen</font></td>
-                                                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">15/04/2018</font></td>
-                                                        </tr>
+                                                        '.$html[0].'
                                                     </tbody>
                                                 </table>
                                             </td>
