@@ -161,6 +161,10 @@ label
 					font-size 32px
 					margin 0
 					line-height 36px
+					width 100%
+					max-width calc( 100% - 55px)
+					display inline-block
+					vertical-align middle
 				.codigo
 					color $default
 					margin 0
@@ -171,6 +175,10 @@ label
 					font-size 26px
 					margin 10px 0
 					line-height 24px
+				button
+					max-width 50px
+					display inline-block
+					
 		.footer
 			border-top 1px solid #000000
 			border-bottom 2px solid #000000
@@ -213,6 +221,17 @@ label
 				text-align right
 				line-height 20px
 				font-family $medium
+		.header-search
+			height 0
+			overflow hidden
+			transition height .3s linear
+			-webkit-transition height .3s linear
+			-moz-transition height .3s linear
+			-ms-transition height .3s linear
+			-o-transition height.3s linear
+			&.showfilter
+				height auto
+				overflow inherit
 	    						
 .mdl-input
 	padding 7px 20px
@@ -418,7 +437,7 @@ label
 footer
 	background-color #D1D3D5
 	img
-		max-width 180px
+		max-width 125px
 		margin-bottom 20px
 	p
 		font-family $regular

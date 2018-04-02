@@ -41,37 +41,42 @@
             </div>
             <div class="mdl-container">
                 <div class="promociones">
-                    <div class="col-xs-12 buscador">
-                        <div class="form-group search">
-                            <input type="email" class="form-control" id="buscador" placeholder="Search" onkeyup="buscarPromocion(event);">
+                    <div>
+                        <div class="col-xs-12 buscador">
+                            <div class="form-group search">
+                                <input type="email" class="form-control" id="buscador" placeholder="Search" onkeyup="buscarPromocion(event);">
+                            </div>
+                            <div class="button-search">
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
+                            </div>
                         </div>
-                        <div class="button-search">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPromo()"><i class="mdi mdi-search"></i></button>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 filtro">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active">Only For Limited Time</li>
-                        </ol>
-                        <div class="mdl-select">
-                            <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
-                                <option value="">Filtrar</option>
-                                <option value="Instasale - Firesale">Instasale - Firesale</option>
-                                <option value="Valor - Switches TOR">Valor - Switches TOR</option>
-                                <option value="Valor - Blades">Valor - Blades</option>
-                                <option value="Valor - Avalanche">Valor - Avalanche</option>
-                                <option value="Volumen - Flex Servers">Volumen - Flex Servers</option>
-                                <option value="Volumen - Storage">Volumen - Storage</option>
-                                <option value="Networking - Aruba Mobility Flex">Networking - Aruba Mobility Flex</option>
-                                <option value="Networking - Aruba Central">Networking - Aruba Central</option>
-                                <option value="Networking - Switching Flex">Networking - Switching Flex</option>
-                                <option value="Carepacks - Tablero de control">Carepacks - Tablero de control</option>
-                            </select>
+                        <div class="col-xs-12 filtro">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active">Filter</li>
+                            </ol>
+                            <div class="mdl-select">
+                                <select class="selectpicker" onchange="filtroPromociones()" id="filtro">
+                                    <option value="">Filtrar</option>
+                                    <option value="Instasale - Firesale">Instasale - Firesale</option>
+                                    <option value="Valor - Switches TOR">Valor - Switches TOR</option>
+                                    <option value="Valor - Blades">Valor - Blades</option>
+                                    <option value="Valor - Avalanche">Valor - Avalanche</option>
+                                    <option value="Volumen - Flex Servers">Volumen - Flex Servers</option>
+                                    <option value="Volumen - Storage">Volumen - Storage</option>
+                                    <option value="Networking - Aruba Mobility Flex">Networking - Aruba Mobility Flex</option>
+                                    <option value="Networking - Aruba Central">Networking - Aruba Central</option>
+                                    <option value="Networking - Switching Flex">Networking - Switching Flex</option>
+                                    <option value="Carepacks - Tablero de control">Carepacks - Tablero de control</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 p-0 cards">
                         <div class="cabecera">
-                            <h2 class="titulo">Promo Made Simple</h2>
+                            <div>
+                                <h2 class="titulo">Promo Made Simple</h2>
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="showFilter()"><i class="mdi mdi-filter_list"></i></button>
+                            </div>
                             <h3 class="codigo">Q3 FY18</h3>
                             <p class="subtitle"><?php echo $titulo ?></p>
                         </div>
@@ -129,7 +134,7 @@
         <footer class="section col-xs-12">
             <div class="container">
                 <div class="col-xs-12 p-0">
-                    <img src="<?php echo RUTA_IMG?>logo/logo-footer.png">
+                    <img src="<?php echo RUTA_IMG?>logo/logo_footer.svg">
                 </div>
                 <div class="col-xs-6 p-0 left">
                     <p>&copy;Copyright 2018 Hewlett Packard Enterprise Development, L.P.</p>
