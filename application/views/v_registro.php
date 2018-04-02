@@ -24,7 +24,7 @@
     </head>
     <body>
         <section>
-            <div class="fondo-imagen"></div>
+            <div class="fondo-imagen recuperar"></div>
             <div class="center-login container">
                 <div class="mdl-card mdl-card-login mdl-card-register">
                     <div class="mdl-card__supporting-text">
