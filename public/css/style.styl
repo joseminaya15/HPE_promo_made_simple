@@ -39,11 +39,11 @@ selectTransparent()
 	background-color transparent !important
 	
 center()
-	position: absolute
-	top: 50%
-	left: 50%
-	width: 100%
-	margin: auto
+	position absolute
+	top 50%
+	left 50%
+	width 100%
+	margin auto
 	transformCenter()
 	transformTransition()
 
@@ -64,7 +64,7 @@ label
 	height 100vh
 	position relative
 .fondo-imagen
-	position absolute
+	position fixed
 	top 0
 	left 0
 	right 0
@@ -634,5 +634,28 @@ footer
 		font-family $medium
 		font-size 40px
 		margin 0
-		
+@media ( max-width 768px )
+	.mdl-card-login
+		transformCenter()
+		position absolute
+		top 50%
+		left 50%
+		padding 0 25px
+		.mdl-card__title
+			h2
+				font-size 34px
+				margin 5px 0
+			p
+				font-size 18px
+@media ( max-width 420px )
+	.fixed-logo
+		position relative
+		top 25px
+		left 25px
+	.mdl-card-register
+		margin 30px 0
+		.mdl-card__supporting-text
+			.col-md-7
+			.col-md-5
+				padding 0
 				
