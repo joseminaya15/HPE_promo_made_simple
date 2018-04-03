@@ -20,7 +20,7 @@ class Cron extends CI_Controller {
         $arr_datos = array();
         $html      = '';
         foreach ($dates as $key) {
-            $resta = substr($key->fecha_vencimiento, 8, 2) - substr($timestamp, 8, 2);
+            $resta = substr($key->fecha_vencimiento, 0, 2) - substr($timestamp, 8, 2);
             if($resta <= 15){
                 $html .= '<tr>
                             <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Titulo.'</font></td>
@@ -29,7 +29,7 @@ class Cron extends CI_Controller {
                         </tr>';
             }
         }
-        array_push($arr_datos, $html);
+       array_push($arr_datos, $html);
        if(count($arr_datos) > 0){
          $this->sendGmail($arr_datos);
        }
@@ -50,7 +50,7 @@ class Cron extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@gmail.com;jose.minayac15@gmail.com;claudia.maguina@merino.com.pe');
+       $this->email->to('jhonatanibericom@gmail.com,jose.minayac15@gmail.com,claudia.maguina@merino.com.pe');
        $this->email->subject('Promociones por vencer en HPE promo made simple');
        $texto = '<!DOCTYPE html>
                 <html>
