@@ -14,36 +14,45 @@ class Listado extends CI_Controller {
     }
 
 	public function index(){
-        if($this->session->userdata('tipo_user') != 0){
-            header("location: Login");
+    if($this->session->userdata('tipo_user') != 0){
+        header("location: Login");
+    }
+    $promociones   = $this->M_solicitud->getPromociones();
+    $html          = '';
+    $tipo_producto = '';
+    $cont          = 1;
+    $btnFecha      = '';
+    $timestamp     = date('Y-m-d');
+    $resta         = '';
+    foreach ($promociones as $key) {
+        if($key->Tipo == 'Volumen'){
+            $tipo_producto = 'volumen';
         }
-        $promociones   = $this->M_solicitud->getPromociones();
-        $html          = '';
-        $tipo_producto = '';
-        $cont          = 1;
-        foreach ($promociones as $key) {
-            if($key->Tipo == 'Volumen'){
-                $tipo_producto = 'volumen';
-            }
-            else if($key->Tipo == 'Valor'){
-                $tipo_producto = 'valor';
-            }
-            $html .= '<tr>
-                        <td class="titulo_promo">'.$key->Titulo.'</td>
-                        <td>'.$key->fecha_vencimiento.'</td>
-                        <td>'.$key->Tipo_distribuidor.'</td>
-                        <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
-                        <td>'.$key->Pais.'</td>
-                        <td class="text-center">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Actualizar F. Vencimiento" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="fa fa-edit"></i></button>
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
-                        </td>
-                    </tr>';
-            $cont++;
+        else if($key->Tipo == 'Valor'){
+            $tipo_producto = 'valor';
         }
-        $data['promociones'] = $html;
-        $this->session->unset_userdata('id_promo');
+        $resta = substr($key->fecha_vencimiento, 0, 2) - substr($timestamp, 8, 2);
+        if($resta <= 15){
+          $btnFecha = '<button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Actualizar F. Vencimiento" id="editarFec'.$cont.'"><i class="fa fa-edit"></i></button>';
+        }else {
+          $btnFecha = '';
+        }
+        $html .= '<tr>
+                    <td class="titulo_promo">'.$key->Titulo.'</td>
+                    <td>'.$key->fecha_vencimiento.'</td>
+                    <td>'.$key->Tipo_distribuidor.'</td>
+                    <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
+                    <td>'.$key->Pais.'</td>
+                    <td class="text-center">
+                        '.$btnFecha.'
+                        <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Editar" id="editar'.$cont.'" onclick="editarPromocion('.$key->Id.')"><i class="mdi mdi-edit"></i></button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Eliminar" id="eliminar'.$cont.'" onclick="modalEliminar(this, '.$key->Id.')"><i class="mdi mdi-delete"></i></button>
+                    </td>
+                </tr>';
+        $cont++;
+    }
+    $data['promociones'] = $html;
+    $this->session->unset_userdata('id_promo');
 		$this->load->view('v_listado', $data);
 	}
 
@@ -80,12 +89,21 @@ class Listado extends CI_Controller {
             $html          = '';
             $tipo_producto = '';
             $cont          = 1;
+            $btnFecha      = '';
+            $timestamp     = date('Y-m-d');
+            $resta         = '';
             foreach ($promociones as $key) {
                 if($key->Tipo == 'Volumen'){
                     $tipo_producto = 'volumen';
                 }
                 else if($key->Tipo == 'Valor'){
                     $tipo_producto = 'valor';
+                }
+                $resta = substr($key->fecha_vencimiento, 0, 2) - substr($timestamp, 8, 2);
+                if($resta <= 15){
+                  $btnFecha = '<button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Actualizar F. Vencimiento" id="editarFec'.$cont.'"><i class="fa fa-edit"></i></button>';
+                }else {
+                  $btnFecha = '';
                 }
                 $html .= '<tr>
                             <td class="titulo_promo">'.$key->Titulo.'</td>

@@ -65,7 +65,7 @@
                                         <tr>
                                             <th>Nombre Promoci&oacute;n</th>
                                             <th>Fecha Vencimiento</th>
-                                            <th>T. Distribuidor</th>
+                                            <th>Deal Lead</th>
                                             <th>T. Producto</th>
                                             <th>Pa&iacute;s</th>
                                             <th class="text-center">Acci&oacute;n</th>
