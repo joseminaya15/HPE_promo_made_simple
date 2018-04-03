@@ -64,6 +64,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nombre Promoci&oacute;n</th>
+                                            <th>Fecha de Inicio</th>
                                             <th>Fecha Vencimiento</th>
                                             <th>Deal Lead</th>
                                             <th>T. Producto</th>
