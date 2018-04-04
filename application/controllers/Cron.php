@@ -63,7 +63,7 @@ class Cron extends CI_Controller {
                                             <td>
                                                 <table>
                                                     <tr>
-                                                        <td><a href="#"><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.svg" width="125" alt="alternative text" border="0" style="display: block;"></a></td>
+                                                        <td><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.svg" width="125" alt="alternative text" border="0" style="display: block;"></td>
                                                         <td></td>
                                                     </tr>
                                                 </table>
