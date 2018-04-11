@@ -170,6 +170,15 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-5 p-0">
+                                        <p>Fecha de inicio</p>
+                                    </div>
+                                    <div class="col-sm-7 p-0 input-group-fecha">
+                                        <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
+                                        <input class="form-control" type="text" id="fecha_ini" value="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-5 p-0">
                                         <p>Caducidad</p>
                                     </div>
                                     <div class="col-sm-7 p-0 input-group-fecha">
@@ -304,6 +313,8 @@
             }
             initMaskInputs('fecha');
             initButtonCalendarDaysMinToday('fecha');
+            initMaskInputs('fecha_ini');
+            initButtonCalendarDaysMinToday('fecha_ini');
         </script>
     </body>
 </html>
