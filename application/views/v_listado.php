@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="col-sm-7 p-0">
                                         <!--<input type="text" class="form-control" id="pais">-->
-                                        <select class="selectpicker" id="pais" title="País">
+                                        <select class="selectpicker" id="pais" title="País" multiple>
                                             <option value="Dominican Republic">Dominican Republic</option>
                                             <option value="Puerto Rico">Puerto Rico</option>
                                             <option value="Haiti">Haiti</option>
