@@ -30,11 +30,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0">
-<<<<<<< Updated upstream
                             <img src="<?php echo RUTA_IMG?>logo/logo_header.svg">
-=======
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
->>>>>>> Stashed changes
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <p>Manager</p>
@@ -45,7 +41,6 @@
             </div>
             <div class="mdl-container">
                 <div class="promociones">
-<<<<<<< Updated upstream
                     <div class="title-manager">
                         <h2>Content Management System</h2>
                     </div>
@@ -56,25 +51,13 @@
                                 <option value="Q3 FY18">Q3 FY18</option>
                                 <option value="Q4 FY18">Q4 FY18</option>
                             </select>
-=======
-                    <div class="col-xs-12 p-0 cards">
-                        <div class="cabecera">
-                            <h2 class="titulo">Promo Made Simple</h2>
-                            <h3 class="codigo">Q3 FY18</h3>
->>>>>>> Stashed changes
                         </div>
                     </div>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
-<<<<<<< Updated upstream
                         <li role="presentation"><a id="tabCarga" href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
                     </ul>
                     <div class="tab-content m-t-20">
-=======
-                        <li role="presentation"><a href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
-                    </ul>
-                    <div class="tab-content">
->>>>>>> Stashed changes
                         <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                             <div class="table-responsive">
                                 <table class="table">
@@ -96,7 +79,6 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Carga">
-<<<<<<< Updated upstream
                             <div class="mdl-card-listado">
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-5 p-0">
@@ -234,96 +216,6 @@
                                 </div>
                             </div>
                             </div>
-=======
-                            <div class="mdl-card mdl-card-listado">
-                                <div class="mdl-card__supporting-text">
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-book"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="pais" value="">
-                                            <label class="mdl-textfield__label" for="pais">País</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <select class="selectpicker" id="usuario" title="Tipo de usuario" onchange="mostrarCampo()">
-                                            <option value="Distis">Distis</option>
-                                            <option value="Resellers">Resellers</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <select class="selectpicker" id="oferta" title="Tipo de oferta">
-                                            <option value="Valor">Value</option>
-                                            <option value="Volumen">Volumen</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="col-sm-6">
-                                            <p>Only For Limited Time</p>
-                                        </div>
-                                        <form>
-                                            <div class="radio">
-                                              <label><input type="radio" name="optradio" value="si">Sí</label>
-                                            </div>
-                                            <div class="radio">
-                                              <label><input type="radio" name="optradio" value="no">No</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="titulo" value="">
-                                            <label class="mdl-textfield__label" for="titulo">Titulo</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="fecha" value="">
-                                            <label class="mdl-textfield__label" for="fecha">Caducidad</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="objetivo_comercial" value="">
-                                            <label class="mdl-textfield__label" for="objetivo_comercial">Objetivo comercial</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-business_center"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="noticia" value="">
-                                            <label class="mdl-textfield__label" for="noticia">What's New</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group deal_number hidden">
-                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="deal_number">
-                                            <label class="mdl-textfield__label" for="deal_number">Deal Number</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <div class="mdl-icon"><i class="mdi mdi-grid_on"></i></div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="condiciones" value="">
-                                            <label class="mdl-textfield__label" for="condiciones">Conditions</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 mdl-input-group">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="abrirGaleria()">Abrir Galería</button>
-                                    </div>
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <!--<?php if($titulo == ''){ ?>-->
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="crearNuevaPromocion()">Guardar</button>
-                                   <!-- <?php } else { ?>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-guardar" onclick="actualizarPromocion()">Actualizar</button>
-                                    <?php } ?>-->
-                                </div>
-                            </div>
->>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>
