@@ -12,7 +12,6 @@ class Cron extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
         $timestamp = date('Y-m-d');
         $dates     = $this->M_solicitud->getPromociones();
@@ -34,7 +33,6 @@ class Cron extends CI_Controller {
          $this->sendGmail($arr_datos);
        }
 	}
-
     function sendGmail($html){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
