@@ -43,14 +43,14 @@ class Cron extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@gmail.com,jose.minayac15@gmail.com,claudia.maguina@merino.com.pe');
+       $this->email->from('info@marketinghpe.com');
+       $this->email->to('jhonatanibericom@gmail.com');
        $this->email->subject('Promociones por vencer en HPE promo made simple');
        $texto = '<!DOCTYPE html>
                 <html>
@@ -58,12 +58,12 @@ class Cron extends CI_Controller {
                         <table width="500px" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
                             <tr>
                                 <td>
-                                    <table width="500" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #415564;padding: 20px;">
+                                    <table width="500" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #415564;padding: 10px 20px;">
                                         <tr>
                                             <td>
                                                 <table>
                                                     <tr>
-                                                        <td><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.svg" width="125" alt="alternative text" border="0" style="display: block;"></td>
+                                                        <td><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.png" width="120" alt="alternative text" border="0" style="display: block;"></td>
                                                         <td></td>
                                                     </tr>
                                                 </table>
