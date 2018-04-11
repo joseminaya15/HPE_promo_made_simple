@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* DateTimePicker */
 .dtp-date-view{
 	padding: 10px 0;
@@ -227,4 +228,29 @@ header.dtp-header .dtp-actual-year {
 	    top: -16px !important;
 	    margin: auto !important;
 	}
+=======
+/*HEADER*/
+.mdl-textfield__label{
+	font-weight: 100;
+}
+.mdl-textfield__label:after{
+	background-color: #00B48E;
+	bottom: 15px;
+}
+.mdl-textfield__input{
+	color: #1E1E1E;
+	font-family: 'RobotoRegular';
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+	color: #00B48E;
+}
+/*MATERIAL DESIGN LITE*/
+.mdl-card,
+.mdl-card__supporting-text{
+	width: 100%;
+}
+.mdl-card__actions{
+	text-align: right;
+	padding: 20px;
+>>>>>>> Stashed changes
 }

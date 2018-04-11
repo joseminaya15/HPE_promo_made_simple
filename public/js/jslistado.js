@@ -69,25 +69,33 @@ function editarPromocion(Id){
                 }
             }
             if(data.limit == 1){
-                checked = '<div class="radio">'+
-                                '<label><input type="radio" name="optradio" value="si">Sí</label>'+
+                checked =   '<div class="col-xs-6">'+
+                                '<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">'+
+                                    '<input type="radio" id="option-1" class="mdl-radio__button" name="optradio" value="si">'+
+                                    '<span class="mdl-radio__label">S&iacute;</span>'+
                             '</div>'+
-                            '<div class="radio">'+
-                                '<label><input type="radio" name="optradio" value="no" checked>No</label>'+
+                            '<div class="col-xs-6">'+
+                                '<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">'+
+                                    '<input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no" checked>'+
+                                    '<span class="mdl-radio__label">No</span>'+
                             '</div>';
-                componentHandler.upgradeAllRegistered();
                 $("#chckRadio").html('');
                 $("#chckRadio").append(checked);
+                componentHandler.upgradeAllRegistered();
             }else {
-                checked = '<div class="radio">'+
-                                '<label><input type="radio" name="optradio" value="si" checked>Sí</label>'+
+                checked =   '<div class="col-xs-6">'+
+                                '<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">'+
+                                    '<input type="radio" id="option-1" class="mdl-radio__button" name="optradio" value="si" checked>'+
+                                    '<span class="mdl-radio__label">S&iacute;</span>'+
                             '</div>'+
-                            '<div class="radio">'+
-                                '<label><input type="radio" name="optradio" value="no">No</label>'+
+                            '<div class="col-xs-6">'+
+                                '<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">'+
+                                    '<input type="radio" id="option-2" class="mdl-radio__button" name="optradio" value="no">'+
+                                    '<span class="mdl-radio__label">No</span>'+
                             '</div>';
-                componentHandler.upgradeAllRegistered();
                 $("#chckRadio").html('');
                 $("#chckRadio").append(checked);
+                componentHandler.upgradeAllRegistered();
             }
             $('#titulo').val(data.titulo);
             $('#fecha').val(data.fecha);
