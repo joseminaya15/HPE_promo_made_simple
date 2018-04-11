@@ -56,6 +56,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
                         <li role="presentation"><a id="tabCarga" href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
+                        <li role="presentation"><a id="tabCarga" href="#Historico" role="tab" data-toggle="tab">Historico de Promociones</a></li>
                     </ul>
                     <div class="tab-content m-t-20">
                         <div role="tabpanel" class="tab-pane fade in active" id="Lista">
@@ -196,6 +197,14 @@
                                 </div>
                                 <div class="col-xs-12 input-group-listado">
                                     <div class="col-sm-5 p-0">
+                                        <p>Deal Lead</p>
+                                    </div>
+                                    <div class="col-sm-7 p-0">
+                                        <input class="form-control" type="text" id="deal_lead">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 input-group-listado">
+                                    <div class="col-sm-5 p-0">
                                         <p>What's New!</p>
                                     </div>
                                     <div class="col-sm-7 p-0">
@@ -225,6 +234,26 @@
                                 </div>
                             </div>
                             </div>
+                            <div role="tabpanel" class="tab-pane fade" id="Historico">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Promoci&oacute;n</th>
+                                            <th>Fecha de Inicio</th>
+                                            <th>Fecha Vencimiento</th>
+                                            <th>Deal Lead</th>
+                                            <th>T. Producto</th>
+                                            <th>Pa&iacute;s</th>
+                                            <th class="text-center" disabled>Acci&oacute;n</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla_promociones">
+                                        <?php echo $promociones ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
