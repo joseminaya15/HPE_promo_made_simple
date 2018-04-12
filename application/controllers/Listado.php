@@ -304,8 +304,6 @@ class Listado extends CI_Controller {
     $data['msj']    = null;
     try {
       $datosQ        = $this->input->post('valueQ');
-      /*$Q             = substr($datosQ, 1, 1);
-      $año           = substr($datosQ, 5, 2);*/
       $datosCodigo   = $this->M_solicitud->getAnioAndQ();
       $promociones   = $this->M_solicitud->getDatosHistorico($datosCodigo[0]->Q, $datosCodigo[0]->anio);
       $html          = '';
