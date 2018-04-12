@@ -38,14 +38,14 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
 
-    function getPromociones(){
+    function getPromociones($Q, $anio){
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento 
                   FROM cards c
-                  WHERE SUBSTRING(c.Codigo, 2, 1) = 3
-                    AND SUBSTRING(c.Codigo, 6, 2) = 18
+                  WHERE SUBSTRING(c.Codigo, 2, 1) = ?
+                    AND SUBSTRING(c.Codigo, 6, 2) = ?
               ORDER BY c.Fecha, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
-        $result = $this->db->query($sql);
+        $result = $this->db->query($sql, array($Q, $anio));
         return $result->result();
     }
 
@@ -171,11 +171,20 @@ class M_solicitud extends  CI_Model{
                      DATE_FORMAT(c.fecha_ini, '%d/%m/%Y') AS fecha_inicio
                 FROM cards c
                WHERE ((SUBSTRING(c.Codigo, 2, 1) < ?
-                      AND SUBSTRING(c.Codigo, 5, 2) <= ?) OR 
+                      AND SUBSTRING(c.Codigo, 6, 2) <= ?) OR 
                       (SUBSTRING(c.Codigo, 2, 1) > ?
-                      AND SUBSTRING(c.Codigo, 5, 2) < ?))
+                      AND SUBSTRING(c.Codigo, 6, 2) < ?))
             ORDER BY c.Fecha, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
         $result = $this->db->query($sql, array($Q, $año, $Q, $año));
+        return $result->result();
+    }
+
+    function getAnioAndQ(){
+      $sql = "SELECT SUBSTRING(MAX(C.Codigo), 6, 2) AS anio,
+                     SUBSTRING(MAX(C.Codigo), 2, 1) AS Q
+                FROM cards c
+               WHERE SUBSTRING(c.Codigo, 6, 2) = (SELECT substr(CURDATE(),3, 2))";
+        $result = $this->db->query($sql);
         return $result->result();
     }
 }

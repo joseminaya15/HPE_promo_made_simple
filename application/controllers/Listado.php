@@ -17,7 +17,8 @@ class Listado extends CI_Controller {
     if($this->session->userdata('tipo_user') != 0){
         header("location: Login");
     }
-    $promociones   = $this->M_solicitud->getPromociones();
+    $datosCodigo   = $this->M_solicitud->getAnioAndQ();
+    $promociones   = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
     $html          = '';
     $tipo_producto = '';
     $cont          = 1;
@@ -86,7 +87,8 @@ class Listado extends CI_Controller {
       try {
           $id_promo = $this->input->post('Id_promo');
           $this->M_solicitud->deleteDatos($id_promo);
-          $promociones   = $this->M_solicitud->getPromociones();
+          $datosCodigo   = $this->M_solicitud->getAnioAndQ();
+          $promociones   = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
           $html          = '';
           $tipo_producto = '';
           $cont          = 1;
@@ -182,7 +184,8 @@ class Listado extends CI_Controller {
                                'Tipo_distribuidor'  => $usuario,
                                'id_promo'           => $datoInsert['Id']);
         $this->session->set_userdata($session);
-        $promociones   = $this->M_solicitud->getPromociones();
+        $datosCodigo   = $this->M_solicitud->getAnioAndQ();
+        $promociones   = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
         $html          = '';
         $tipo_producto = '';
         $cont          = 1;
@@ -252,7 +255,8 @@ class Listado extends CI_Controller {
                              'Pais'               => $pais,
                              'Tipo_distribuidor'  => $usuario);
         $datoUpdt      = $this->M_solicitud->updateDatos($arrayUpdt, $this->session->userdata('id_promo'), 'cards');
-        $promociones   = $this->M_solicitud->getPromociones();
+        $datosCodigo   = $this->M_solicitud->getAnioAndQ();
+        $promociones   = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
         $html          = '';
         $tipo_producto = '';
         $cont          = 1;
@@ -300,9 +304,10 @@ class Listado extends CI_Controller {
     $data['msj']    = null;
     try {
       $datosQ        = $this->input->post('valueQ');
-      $Q             = substr($datosQ, 1, 1);
-      $año           = substr($datosQ, 5, 2);
-      $promociones   = $this->M_solicitud->getDatosHistorico(intval($Q), intval($año));
+      /*$Q             = substr($datosQ, 1, 1);
+      $año           = substr($datosQ, 5, 2);*/
+      $datosCodigo   = $this->M_solicitud->getAnioAndQ();
+      $promociones   = $this->M_solicitud->getDatosHistorico($datosCodigo[0]->Q, $datosCodigo[0]->anio);
       $html          = '';
       $tipo_producto = '';
       $cont          = 1;

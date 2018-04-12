@@ -14,7 +14,8 @@ class Cron extends CI_Controller {
     }
 	public function index(){
         $timestamp = date('Y-m-d');
-        $dates     = $this->M_solicitud->getPromociones();
+        $datosCodigo = $this->M_solicitud->getAnioAndQ();
+        $dates     = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
         $resta     = '';
         $arr_datos = array();
         $html      = '';
