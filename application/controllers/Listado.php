@@ -25,6 +25,7 @@ class Listado extends CI_Controller {
     $btnFecha      = '';
     $timestamp     = date('Y-m-d');
     $resta         = '';
+    $deal_lead     = '';
     foreach ($promociones as $key) {
         if($key->Tipo == 'Volumen'){
             $tipo_producto = 'volumen';
@@ -38,11 +39,12 @@ class Listado extends CI_Controller {
         }else {
           $btnFecha = '';
         }
+        $deal_lead = $key->deal_lead == null ? '-' : $key->deal_lead;
         $html .= '<tr>
                     <td class="titulo_promo">'.$key->Titulo.'</td>
+                    <td>'.$key->fecha_inicio.'</td>
                     <td>'.$key->fecha_vencimiento.'</td>
-                    <td>'.$key->fecha_vencimiento.'</td>
-                    <td>'.$key->Tipo_distribuidor.'</td>
+                    <td>'.$deal_lead.'</td>
                     <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
                     <td>'.$key->Pais.'</td>
                     <td class="text-center">
@@ -329,6 +331,7 @@ class Listado extends CI_Controller {
                       <td class="titulo_promo">'.$key->Titulo.'</td>
                       <td>'.$key->fecha_inicio.'</td>
                       <td>'.$key->fecha_vencimiento.'</td>
+                      <td>'.$key->Codigo.'</td>
                       <td>'.$key->Tipo_distribuidor.'</td>
                       <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
                       <td>'.$key->Pais.'</td>

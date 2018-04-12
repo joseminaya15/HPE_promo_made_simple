@@ -40,7 +40,8 @@ class M_solicitud extends  CI_Model{
 
     function getPromociones($Q, $anio){
         $sql = "SELECT c.*,
-                       DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento 
+                       DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
+                       DATE_FORMAT(c.fecha_ini, '%d/%m/%Y') AS fecha_inicio
                   FROM cards c
                   WHERE SUBSTRING(c.Codigo, 2, 1) = ?
                     AND SUBSTRING(c.Codigo, 6, 2) = ?
@@ -174,7 +175,7 @@ class M_solicitud extends  CI_Model{
                       AND SUBSTRING(c.Codigo, 6, 2) <= ?) OR 
                       (SUBSTRING(c.Codigo, 2, 1) > ?
                       AND SUBSTRING(c.Codigo, 6, 2) < ?))
-            ORDER BY c.Fecha, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
+            ORDER BY c.Fecha, c.Titulo, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
         $result = $this->db->query($sql, array($Q, $año, $Q, $año));
         return $result->result();
     }
