@@ -47,7 +47,7 @@
                     <div class="col-xs-12 p-0 cards">
                         <div class="cabecera border-none m-b-15 title-header">
                             <h2 class="titulo">Promos Made Simple</h2>
-                            <select class="selectpicker selectQ">
+                            <select class="selectpicker selectQ" id="idQ">
                                 <option value="Q3 FY18">Q3 FY18</option>
                                 <option value="Q4 FY18">Q4 FY18</option>
                             </select>
@@ -56,7 +56,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#Lista" role="tab" data-toggle="tab">Lista de Promociones</a></li>
                         <li role="presentation"><a id="tabCarga" href="#Carga" role="tab" data-toggle="tab">Carga de data</a></li>
-                        <li role="presentation"><a id="tabCarga" href="#Historico" role="tab" data-toggle="tab">Historico de Promociones</a></li>
+                        <li role="presentation"><a id="tabCarga" href="#Historico" role="tab" data-toggle="tab" onclick="getHistorico()">Historico de Promociones</a></li>
                     </ul>
                     <div class="tab-content m-t-20">
                         <div role="tabpanel" class="tab-pane fade in active" id="Lista">
@@ -244,10 +244,9 @@
                                             <th>Deal Lead</th>
                                             <th>T. Producto</th>
                                             <th>Pa&iacute;s</th>
-                                            <th class="text-center" disabled>Acci&oacute;n</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="tabla_promociones">
+                                    <tbody id="tabla_promociones_historico">
                                         <?php echo $promociones ?>
                                     </tbody>
                                 </table>

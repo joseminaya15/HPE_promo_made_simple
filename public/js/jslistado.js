@@ -376,3 +376,27 @@ function actualizarPromocion(){
 function galeria(){
     modal('ModalGaleria');
 }
+function getHistorico(){
+    var valueQ = $('#idQ').val();
+    if(valueQ == '' || valueQ == null) {
+        return;
+    }
+    $.ajax({
+        data : {valueQ : valueQ},
+        url  : 'Listado/getTablaHistorico',
+        type : 'POST'
+    }).done(function(data){
+        try{
+            data = JSON.parse(data);
+            console.log(data.historico);
+            if(data.error == 0){
+                $('#tabla_promociones_historico').html('');
+                $('#tabla_promociones_historico').append(data.historico);
+            }else{
+                return;
+            }
+      } catch (err){
+        msj('error',err.message);
+      }
+    });
+}

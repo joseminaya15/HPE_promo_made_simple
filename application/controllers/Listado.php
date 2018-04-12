@@ -61,8 +61,8 @@ class Listado extends CI_Controller {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {
-          $id_promo = $this->input->post('Id_promo');
-          $datos    = $this->M_solicitud->getPromocionesById($id_promo);
+          $id_promo         = $this->input->post('Id_promo');
+          $datos            = $this->M_solicitud->getPromocionesById($id_promo);
           $data['pais']     = $datos[0]->Pais;
           $data['tp_user']  = $datos[0]->Tipo_distribuidor;
           $data['tipo']     = $datos[0]->Tipo;
@@ -294,5 +294,49 @@ class Listado extends CI_Controller {
           $data['msj'] = $e->getMessage();
       }
       echo json_encode($data);
+  }
+  function getTablaHistorico(){
+    $data['error']  = EXIT_ERROR;
+    $data['msj']    = null;
+    try {
+      $datosQ        = $this->input->post('valueQ');
+      $Q             = substr($datosQ, 1, 1);
+      $año           = substr($datosQ, 5, 2);
+      $promociones   = $this->M_solicitud->getDatosHistorico(intval($Q), intval($año));
+      $html          = '';
+      $tipo_producto = '';
+      $cont          = 1;
+      $btnFecha      = '';
+      $timestamp     = date('Y-m-d');
+      $resta         = '';
+      foreach ($promociones as $key) {
+          if($key->Tipo == 'Volumen'){
+              $tipo_producto = 'volumen';
+          }
+          else if($key->Tipo == 'Valor'){
+              $tipo_producto = 'valor';
+          }
+          $resta = substr($key->fecha_vencimiento, 0, 2) - substr($timestamp, 8, 2);
+          if($resta <= 15){
+            $btnFecha = '<button class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Actualizar F. Vencimiento" id="editarFec'.$cont.'"><i class="fa fa-edit"></i></button>';
+          }else {
+            $btnFecha = '';
+          }
+          $html .= '<tr>
+                      <td class="titulo_promo">'.$key->Titulo.'</td>
+                      <td>'.$key->fecha_inicio.'</td>
+                      <td>'.$key->fecha_vencimiento.'</td>
+                      <td>'.$key->Tipo_distribuidor.'</td>
+                      <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
+                      <td>'.$key->Pais.'</td>
+                  </tr>';
+          $cont++;
+      }
+      $data['historico'] = $html;
+      $data['error'] = EXIT_SUCCESS;
+    }catch (Exception $e) {
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
 }

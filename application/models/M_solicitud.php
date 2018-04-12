@@ -162,4 +162,18 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+
+    function getDatosHistorico($Q, $año){
+      $sql = "SELECT c.*,
+                     DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
+                     DATE_FORMAT(c.fecha_ini, '%d/%m/%Y') AS fecha_inicio
+                FROM cards c
+               WHERE ((SUBSTRING(c.Codigo, 2, 1) < ?
+                      AND SUBSTRING(c.Codigo, 5, 2) <= ?) OR 
+                      (SUBSTRING(c.Codigo, 2, 1) > ?
+                      AND SUBSTRING(c.Codigo, 5, 2) < ?))
+            ORDER BY c.Fecha, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
+        $result = $this->db->query($sql, array($Q, $año, $Q, $año));
+        return $result->result();
+    }
 }
