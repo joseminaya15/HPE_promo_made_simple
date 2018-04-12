@@ -2,7 +2,7 @@ $regular   = 'MetricRegular'
 $bold      = 'MetricBold'
 $medium    = 'MetricSemiBold'
 $light     = 'MetricLight'
-$default   = #4FC0A6
+$default   = #00B58E
 $volumen   = #624967
 $valor     = #F79679
 $transCen  = translate(-50%,-50%)
@@ -90,7 +90,7 @@ label
 		z-index 0
 	
 .header
-	background-color #415564
+	background-color #314B5F
 	padding 20px 0
 	position fixed
 	top 0
@@ -641,6 +641,13 @@ footer
 		font-family $medium
 		font-size 40px
 		margin 0
+.mdl-radio__ripple-container
+	.mdl-ripple
+		background #314B5F
+.mdl-radio
+	&.is-checked
+		.mdl-radio__outer-circle
+			border 2px solid #314B5F
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
