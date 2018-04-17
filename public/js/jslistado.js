@@ -164,8 +164,10 @@ function crearNuevaPromocion(){
     var usuario            = $('#usuario').val();
     var oferta             = $('#oferta').val();
     var titulo             = $('#titulo').val();
+    var fecha_ini          = $('#fecha_ini').val();
     var fecha              = $('#fecha').val();
     var objetivo_comercial = $('#objetivo_comercial').val();
+    var deal_lead          = $('#deal_lead').val();
     var noticia            = $('#noticia').val();
     var condiciones        = $('#condiciones').val();
     var units              = $( "input:checked" ).val();
@@ -196,6 +198,10 @@ function crearNuevaPromocion(){
         msj('error', 'Ingrese el título de la oferta');
         return;
     }
+    if(fecha_ini == null || fecha_ini == ''){
+        msj('error', 'Ingrese la fecha de inicio');
+        return;
+    }
     if(fecha == null || fecha == ''){
         msj('error', 'Ingrese la fecha de expiración del producto');
         return;
@@ -214,12 +220,14 @@ function crearNuevaPromocion(){
     }
     $('.button-guardar').prop("disabled", true);
     $.ajax({
-        data : {pais               : pais,
+        data : {pais               : pais.toString(),
                 usuario            : usuario,
                 oferta             : oferta,
                 titulo             : titulo,
+                fecha_ini          : fecha_ini,
                 fecha              : fecha,
                 objetivo_comercial : objetivo_comercial,
+                deal_lead          : deal_lead,
                 noticia            : noticia,
                 condiciones        : condiciones,
                 last_units         : last_units,
@@ -276,11 +284,13 @@ function limpiarCampos(){
     $('#usuario').val(null);
     $('#oferta').val(null);
     $('#titulo').val(null);
+    $('#fecha_ini').val(null);
     $('#fecha').val(null);
     $('#objetivo_comercial').val(null);
     $('#noticia').val(null);
     $('#condiciones').val(null);
     $('#deal_number').val(null);
+    $('#deal_lead').val(null)
 }
 function mostrarCampo(){
     var tipo_oferta = $('#usuario').val();
@@ -295,8 +305,10 @@ function actualizarPromocion(){
     var usuario            = $('#usuario').val();
     var oferta             = $('#oferta').val();
     var titulo             = $('#titulo').val();
+    var fecha_ini          = $('#fecha_ini').val();
     var fecha              = $('#fecha').val();
     var objetivo_comercial = $('#objetivo_comercial').val();
+    var deal_lead          = $('#deal_lead').val();
     var noticia            = $('#noticia').val();
     var condiciones        = $('#condiciones').val();
     var units              = $( "input:checked" ).val();
@@ -327,6 +339,10 @@ function actualizarPromocion(){
         msj('error', 'Ingrese el título de la oferta');
         return;
     }
+    if(fecha_ini == null || fecha_ini == ''){
+        msj('error', 'Ingrese la fecha de inicio');
+        return;
+    }
     if(fecha == null || fecha == ''){
         msj('error', 'Ingrese la fecha de expiración del producto');
         return;
@@ -345,12 +361,14 @@ function actualizarPromocion(){
     }
     $('.button-guardar').prop("disabled", true);
     $.ajax({
-        data : {pais               : pais,
+        data : {pais               : pais.toString(),
                 usuario            : usuario,
                 oferta             : oferta,
                 titulo             : titulo,
+                fecha_ini          : fecha_ini,
                 fecha              : fecha,
                 objetivo_comercial : objetivo_comercial,
+                deal_lead          : deal_lead,
                 noticia            : noticia,
                 condiciones        : condiciones,
                 last_units         : last_units,

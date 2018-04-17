@@ -154,18 +154,23 @@ class Listado extends CI_Controller {
           $usuario            = $this->input->post('usuario');
           $oferta             = $this->input->post('oferta');
           $titulo             = $this->input->post('titulo');
+          $fecha_ini          = $this->input->post('fecha_ini');
           $fecha              = $this->input->post('fecha');
           $objetivo_comercial = $this->input->post('objetivo_comercial');
+          $deal_lead          = $this->input->post('deal_lead');
           $noticia            = $this->input->post('noticia');
           $condiciones        = $this->input->post('condiciones');
           $last_units         = $this->input->post('last_units');
           $deal_number        = $this->input->post('deal_number');
-          $date = str_replace('/', '-', $fecha );
+          $date_ini = str_replace('/', '-', $fecha_ini );
+          $date     = str_replace('/', '-', $fecha );
           $arrayInsert = array('Tipo'               => $oferta,
                                'Codigo'             => 'Q3 FY18',
                                'Titulo'             => $titulo,
+                               'fecha_ini'          => date('Y-m-d', strtotime($date_ini)),
                                'fecha'              => date('Y-m-d', strtotime($date)),
                                'objetivo_comercial' => $objetivo_comercial,
+                               'deal_lead'          => $deal_lead,
                                'Noticia'            => $noticia,
                                'Condiciones'        => $condiciones,
                                'Last_units'         => $last_units,
@@ -176,8 +181,10 @@ class Listado extends CI_Controller {
           $session    = array('Tipo'               => $oferta,
                                'Codigo'             => 'Q3 FY18',
                                'Titulo'             => $titulo,
+                               'fecha_ini'          => $fecha_ini,
                                'fecha'              => $fecha,
                                'objetivo_comercial' => $objetivo_comercial,
+                               'deal_lead'          => $deal_lead,
                                'Noticia'            => $noticia,
                                'Condiciones'        => $condiciones,
                                'Last_units'         => $last_units,
