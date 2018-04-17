@@ -68,9 +68,11 @@ class Listado extends CI_Controller {
           $datos            = $this->M_solicitud->getPromocionesById($id_promo);
           $data['pais']     = $datos[0]->Pais;
           $data['tp_user']  = $datos[0]->Tipo_distribuidor;
+          $data['deal_lead']= $datos[0]->deal_lead;
           $data['tipo']     = $datos[0]->Tipo;
           $data['limit']    = $datos[0]->Last_units;
           $data['titulo']   = $datos[0]->Titulo;
+          $data['fec_ini']  = $datos[0]->fecha_ini;
           $data['fecha']    = $datos[0]->fecha_vencimiento;
           $data['objetivo'] = $datos[0]->Objetivo_comercial;
           $data['new']      = $datos[0]->Noticia;
@@ -246,17 +248,23 @@ class Listado extends CI_Controller {
           $usuario            = $this->input->post('usuario');
           $oferta             = $this->input->post('oferta');
           $titulo             = $this->input->post('titulo');
+          $fecha_ini          = $this->input->post('fecha_ini');
           $fecha              = $this->input->post('fecha');
           $objetivo_comercial = $this->input->post('objetivo_comercial');
+          $deal_lead          = $this->input->post('deal_lead');
           $noticia            = $this->input->post('noticia');
           $condiciones        = $this->input->post('condiciones');
           $last_units         = $this->input->post('last_units');
           $deal_number        = $this->input->post('deal_number');
+          $date_ini           = str_replace('/', '-', $fecha_ini );
+          $date               = str_replace('/', '-', $fecha );
           $arrayUpdt = array('Tipo'               => $oferta,
                              'Codigo'             => 'Q3 FY18',
                              'Titulo'             => $titulo,
-                             'fecha'              => $fecha,
+                             'fecha_ini'          => date('Y-m-d', strtotime($date_ini)),
+                             'fecha'              => date('Y-m-d', strtotime($date)),
                              'objetivo_comercial' => $objetivo_comercial,
+                             'deal_lead'          => $deal_lead,
                              'Noticia'            => $noticia,
                              'Condiciones'        => $condiciones,
                              'Last_units'         => $last_units,

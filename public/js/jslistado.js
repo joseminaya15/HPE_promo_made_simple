@@ -99,7 +99,9 @@ function editarPromocion(Id){
             }
             $('#titulo').val(data.titulo);
             $('#fecha').val(data.fecha);
+            $('#fecha_ini').val(data.fec_ini);
             $('#objetivo_comercial').val(data.objetivo);
+            $('#deal_lead').val(data.deal_lead);
             $('#noticia').val(data.new);
             $('#condiciones').val(data.condi);
             $('#btnGuardar').addClass('hidden');

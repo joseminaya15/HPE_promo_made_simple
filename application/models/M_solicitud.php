@@ -72,7 +72,8 @@ class M_solicitud extends  CI_Model{
 
     function getPromocionesById($id){
         $sql = "SELECT c.*,
-                       DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento 
+                       DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
+                       DATE_FORMAT(c.fecha_ini, '%d/%m/%Y') AS fecha_ini 
                   FROM cards c
                  WHERE c.Id = ?
                 ORDER BY c.Last_units, c.Tipo DESC";
