@@ -103,56 +103,56 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
     function getDatosFiltro($filtro, $tipo){
-        if($tipo == 'Distis'){
-          $sql = "SELECT c.*,
-                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
-                FROM cards c 
-               WHERE CASE
-                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup Media')
-                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Virtual Licenses')
-                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Server & Storage Base Promo')
-                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('HPE Pointnext')
-                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('Gen10 Accelerate')
-                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage Accelerate')
-                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('Simplivity (Value)')
-                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('DCN TOR (Value)')
-                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Synergy (Value)')
-                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Server & Storage Flex Attach')
-                      WHEN '' != '".$filtro."' THEN TRUE
-                      ELSE TRUE
-                     END
-               AND c.Tipo_distribuidor = 'Distis'
-               ORDER BY c.Last_units, c.Tipo DESC;";
-        }else {
-          $sql = "SELECT c.*,
-                     DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
-                FROM cards c 
-               WHERE CASE
-                      WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
-                      WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
-                      WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
-                      WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
-                      WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('3PAR Avalanche')
-                      WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
-                      WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('DCN ToR')
-                      WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
-                      WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
-                      WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
-                      WHEN '' != '".$filtro."' THEN TRUE
-                      ELSE TRUE
-                     END
-               AND c.Tipo_distribuidor = '".$tipo."'
-               ORDER BY c.Last_units, c.Tipo DESC;";
-        }
-        $result = $this->db->query($sql);
-        return $result->result();
+      if($tipo == 'Distis'){
+        $sql = "SELECT c.*,
+                   DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+              FROM cards c 
+             WHERE CASE
+                    WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup Media')
+                    WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Virtual Licenses')
+                    WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Server & Storage Base Promo')
+                    WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('HPE Pointnext')
+                    WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('Gen10 Accelerate')
+                    WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage Accelerate')
+                    WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('Simplivity (Value)')
+                    WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('DCN TOR (Value)')
+                    WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Synergy (Value)')
+                    WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Server & Storage Flex Attach')
+                    WHEN '' != '".$filtro."' THEN TRUE
+                    ELSE TRUE
+                   END
+             AND c.Tipo_distribuidor = 'Distis'
+             ORDER BY c.Last_units, c.Tipo DESC;";
+      }else {
+        $sql = "SELECT c.*,
+                   DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
+              FROM cards c 
+             WHERE CASE
+                    WHEN 'Instasale - Firesale' = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
+                    WHEN 'Valor - Switches TOR' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
+                    WHEN 'Valor - Blades' = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
+                    WHEN 'Valor - Avalanche' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                    WHEN 'Volumen - Flex Servers' = '".$filtro."' THEN c.Titulo IN ('3PAR Avalanche')
+                    WHEN 'Volumen - Storage' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                    WHEN 'Networking - Aruba Mobility Flex' = '".$filtro."' THEN c.Titulo IN ('DCN ToR')
+                    WHEN 'Networking - Aruba Central'  = '".$filtro."' THEN c.Titulo IN ('Tape Backup media')
+                    WHEN 'Networking - Switching Flex' = '".$filtro."' THEN c.Titulo IN ('Storage - Crazy promo')
+                    WHEN 'Carepacks - Tablero de control'  = '".$filtro."' THEN c.Titulo IN ('Flex Attach Promo')
+                    WHEN '' != '".$filtro."' THEN TRUE
+                    ELSE TRUE
+                   END
+             AND c.Tipo_distribuidor = '".$tipo."'
+             ORDER BY c.Last_units, c.Tipo DESC;";
+      }
+      $result = $this->db->query($sql);
+      return $result->result();
     }
     function getUsuarios(){
       $sql = "SELECT Tipo_distribuidor AS Tipo
                 FROM cards 
               GROUP BY Tipo";
-        $result = $this->db->query($sql);
-        return $result->result();
+      $result = $this->db->query($sql);
+      return $result->result();
     }
     function getDatosHistorico($Q, $año){
       $sql = "SELECT c.*,
@@ -164,15 +164,15 @@ class M_solicitud extends  CI_Model{
                       (SUBSTRING(c.Codigo, 2, 1) > ?
                       AND SUBSTRING(c.Codigo, 6, 2) < ?))
             ORDER BY c.Fecha, c.Titulo, c.Tipo_distribuidor, c.Last_units, c.Tipo ASC";
-        $result = $this->db->query($sql, array($Q, $año, $Q, $año));
-        return $result->result();
+      $result = $this->db->query($sql, array($Q, $año, $Q, $año));
+      return $result->result();
     }
     function getAnioAndQ(){
       $sql = "SELECT SUBSTRING(MAX(C.Codigo), 6, 2) AS anio,
                      SUBSTRING(MAX(C.Codigo), 2, 1) AS Q
                 FROM cards c
                WHERE SUBSTRING(c.Codigo, 6, 2) = (SELECT substr(CURDATE(),3, 2))";
-        $result = $this->db->query($sql);
-        return $result->result();
+      $result = $this->db->query($sql);
+      return $result->result();
     }
 }
