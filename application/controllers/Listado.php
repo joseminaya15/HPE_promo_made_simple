@@ -354,24 +354,4 @@ class Listado extends CI_Controller {
     }
     echo json_encode($data);
   }
-  function insertDatos(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-      $html        = '';
-      $promocion   = $this->input->post('promocion');
-      $descripcion = $this->input->post('descripcion');
-      $arrayInsert = array('promocion'   => $promocion,
-                           'descripcion' => $descripcion);
-      $this->M_solicitud->insertDatos($arrayInsert, 'promocion');
-      $datos = $this->M_solicitud->getDatos();
-      foreach ($datos as $key) {
-        $html .= '<td>'.$key->promocion.'</td>';
-      }
-      $data['promociones'] = $html;
-    }catch(Exception $e){
-      $data['msj'] = $e->getMessage();
-    }
-    echo json_encode($data)
-  }
 }
