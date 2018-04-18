@@ -144,9 +144,6 @@ class Distis extends CI_Controller {
                                             <p>'.$dato_noti.'</p>
                                         </div>
                                         <div class="promocion">
-                                            <p></p>
-                                        </div>
-                                        <div class="promocion">
                                             <h2 class="title">Countries that apply</h2>
                                             <p>'.$key->Ciudades.'</p>
                                         </div>
