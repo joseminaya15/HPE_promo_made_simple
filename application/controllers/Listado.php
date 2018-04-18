@@ -341,7 +341,7 @@ class Listado extends CI_Controller {
                       <td>'.$key->fecha_inicio.'</td>
                       <td>'.$key->fecha_vencimiento.'</td>
                       <td>'.$key->Codigo.'</td>
-                      <td>'.$key->Tipo_distribuidor.'</td>
+                      <td>'.$key->deal_lead.'</td>
                       <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
                       <td>'.$key->Pais.'</td>
                   </tr>';
