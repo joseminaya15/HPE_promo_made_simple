@@ -264,16 +264,4 @@ class Resellers extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function crearDatos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = '';
-        try {
-            $texto = $this->M_solicitud->post('texto');
-            if($texto == null || $texto == ''){
-                throw new Exception("Error Processing Request", 1);
-            }
-        }catch(Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-    }
 }
