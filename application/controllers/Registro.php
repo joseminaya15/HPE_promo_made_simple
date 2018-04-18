@@ -15,7 +15,6 @@ class Registro extends CI_Controller {
 	public function index(){
 		$this->load->view('v_registro');
 	}
-
     function registrar(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;

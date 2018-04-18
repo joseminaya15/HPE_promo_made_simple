@@ -12,11 +12,9 @@ class Recuperar extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
 		$this->load->view('v_recuperar_pass');
 	}
-
     function recover(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -36,7 +34,6 @@ class Recuperar extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function sendGmail($email, $pass){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;

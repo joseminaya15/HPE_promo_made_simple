@@ -12,7 +12,6 @@ class Resellers extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
         if($this->session->userdata('tipo_user') != 1){
             header("location: Login");
@@ -99,7 +98,6 @@ class Resellers extends CI_Controller {
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
 		$this->load->view('v_resellers', $data);
 	}
-
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -187,7 +185,6 @@ class Resellers extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function filtroPromociones(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -271,7 +268,6 @@ class Resellers extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
