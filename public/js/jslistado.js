@@ -363,7 +363,7 @@ function actualizarPromocion(){
         return;
     }
     if(noticia == null || noticia == ''){
-        msj('error', 'Ingrese la notovedad que tiene');
+        msj('error', 'Ingrese la novedad que tiene');
         return;
     }
     if(condiciones == null || condiciones == ''){
