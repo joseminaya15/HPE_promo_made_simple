@@ -34,13 +34,13 @@ class Resellers extends CI_Controller {
                     $color = '#624967';
                 }
                 if($key->Last_units == 0){
-                    $last_units = '<div class="sale">
-                                        <h2>FINAL SALE!</h2>
-                                        <p>LAST UNITS</p>
-                                    </div>';
+                    $last_units     = '<div class="sale">
+                                            <h2>FINAL SALE!</h2>
+                                            <p>LAST UNITS</p>
+                                        </div>';
                     $data['titulo'] = 'Only For Limited Time';
                 }else {
-                    $last_units = "";
+                    $last_units     = "";
                     $data['titulo'] = 'HIT Volumen Promo';
                 }
                 $date        = date_create($key->fecha_vencimiento);
@@ -113,13 +113,13 @@ class Resellers extends CI_Controller {
                         $color = '#624967';
                     }
                     if($key->Last_units == 0){
-                        $last_units = '<div class="sale">
-                                            <h2>FINAL SALE!</h2>
-                                            <p>LAST UNITS</p>
-                                        </div>';
+                        $last_units     = '<div class="sale">
+                                               <h2>FINAL SALE!</h2>
+                                               <p>LAST UNITS</p>
+                                           </div>';
                         $data['titulo'] = 'Only For Limited Time';
                     }else {
-                        $last_units = "";
+                        $last_units     = "";
                         $data['titulo'] = 'HIT Volumen Promo';
                     }
                     $date        = date_create($key->fecha_vencimiento);
@@ -195,13 +195,13 @@ class Resellers extends CI_Controller {
                     $color = '#624967';
                 }
                 if($key->Last_units == 0){
-                    $last_units = '<div class="sale">
-                                        <h2>FINAL SALE!</h2>
-                                        <p>LAST UNITS</p>
-                                    </div>';
+                    $last_units     = '<div class="sale">
+                                            <h2>FINAL SALE!</h2>
+                                            <p>LAST UNITS</p>
+                                        </div>';
                     $data['titulo'] = 'Only For Limited Time';
                 }else {
-                    $last_units = "";
+                    $last_units     = "";
                     $data['titulo'] = 'HIT Volumen Promo';
                 }
                 $date        = date_create($key->fecha_vencimiento);
