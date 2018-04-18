@@ -105,7 +105,7 @@ class Resellers extends CI_Controller {
                 $html        = '';
                 $cont        = 1;
                 $color       = null;
-                $last_units     = "";
+                $last_units  = "";
                 foreach ($promociones as $key){
                     if($key->Tipo == 'Valor'){
                         $color = '#F69779';
