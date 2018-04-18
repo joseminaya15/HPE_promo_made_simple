@@ -205,7 +205,7 @@ function crearNuevaPromocion(){
     }else {
         last_units = 1;
     }
-    if(titulo == null || titulo == ''){
+    if(titulo == null || titulo == '') {
         msj('error', 'Ingrese el título de la oferta');
         return;
     }
