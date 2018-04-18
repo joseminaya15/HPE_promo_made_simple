@@ -4,7 +4,6 @@ class M_solicitud extends  CI_Model{
     function __construct(){
         parent::__construct();
     }
-
     function insertarDatos($arrayInsert, $tabla){
         $this->db->insert($tabla, $arrayInsert);
         $sol = $this->db->insert_id();
@@ -14,7 +13,6 @@ class M_solicitud extends  CI_Model{
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
-
     function updateDatos($arrayData, $id, $tabla){
         $this->db->where('Id'  , $id);
         $this->db->update($tabla, $arrayData);
@@ -23,13 +21,11 @@ class M_solicitud extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
-
     function deleteDatos($id_dato){
         $sql = "DELETE FROM cards WHERE Id = ?";
         $result = $this->db->query($sql, array($id_dato));
         return $result;
     }
-
     function verificarUsuario($user){
         $sql = "SELECT *
                   FROM users
@@ -37,7 +33,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getPromociones($Q, $anio){
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
@@ -49,7 +44,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($Q, $anio));
         return $result->result();
     }
-
     function getPromocionesSellers(){
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
@@ -59,7 +53,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getPromocionesDistis(){
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
@@ -69,7 +62,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getPromocionesById($id){
         $sql = "SELECT c.*,
                        DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
@@ -80,7 +72,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
-
     function buscarPromocionResellers($texto){
       $sql = "SELECT c.*,
                      DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
@@ -96,7 +87,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function buscarPromocionDistis($texto){
       $sql = "SELECT c.*,
                      DATE_FORMAT(c.Fecha, '%Y-%m-%d') AS fecha_vencimiento 
@@ -112,7 +102,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getDatosFiltro($filtro, $tipo){
         if($tipo == 'Distis'){
           $sql = "SELECT c.*,
@@ -158,7 +147,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getUsuarios(){
       $sql = "SELECT Tipo_distribuidor AS Tipo
                 FROM cards 
@@ -166,7 +154,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getDatosHistorico($Q, $año){
       $sql = "SELECT c.*,
                      DATE_FORMAT(c.Fecha, '%d/%m/%Y') AS fecha_vencimiento,
@@ -180,7 +167,6 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($Q, $año, $Q, $año));
         return $result->result();
     }
-
     function getAnioAndQ(){
       $sql = "SELECT SUBSTRING(MAX(C.Codigo), 6, 2) AS anio,
                      SUBSTRING(MAX(C.Codigo), 2, 1) AS Q
