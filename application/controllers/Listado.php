@@ -25,7 +25,7 @@ class Listado extends CI_Controller {
     $timestamp     = date('Y-m-d');
     $resta         = '';
     $deal_lead     = '';
-    foreach ($promociones as $key) {
+    foreach($promociones as $key){
         if($key->Tipo == 'Volumen'){
             $tipo_producto = 'volumen';
         }
@@ -96,7 +96,7 @@ class Listado extends CI_Controller {
         $btnFecha      = '';
         $timestamp     = date('Y-m-d');
         $resta         = '';
-        foreach ($promociones as $key) {
+        foreach($promociones as $key){
             if($key->Tipo == 'Volumen'){
                 $tipo_producto = 'volumen';
             }
@@ -198,7 +198,7 @@ class Listado extends CI_Controller {
       $btnFecha      = '';
       $timestamp     = date('Y-m-d');
       $resta         = '';
-      foreach ($promociones as $key) {
+      foreach($promociones as $key){
           if($key->Tipo == 'Volumen'){
               $tipo_producto = 'volumen';
           }
@@ -274,7 +274,7 @@ class Listado extends CI_Controller {
       $btnFecha      = '';
       $timestamp     = date('Y-m-d');
       $resta         = '';
-      foreach ($promociones as $key) {
+      foreach($promociones as $key){
         if($key->Tipo == 'Volumen'){
             $tipo_producto = 'volumen';
         }
