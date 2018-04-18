@@ -159,8 +159,8 @@ class Listado extends CI_Controller {
         $condiciones        = $this->input->post('condiciones');
         $last_units         = $this->input->post('last_units');
         $deal_number        = $this->input->post('deal_number');
-        $date_ini = str_replace('/', '-', $fecha_ini );
-        $date     = str_replace('/', '-', $fecha );
+        $date_ini           = str_replace('/', '-', $fecha_ini );
+        $date               = str_replace('/', '-', $fecha );
         $arrayInsert = array('Tipo'               => $oferta,
                              'Codigo'             => 'Q3 FY18',
                              'Titulo'             => $titulo,
