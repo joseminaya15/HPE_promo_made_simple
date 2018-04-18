@@ -26,7 +26,6 @@ class Recuperar extends CI_Controller {
             }else {
                 $this->sendGmail($usuario, base64_decode($username[0]->pass));
                 $data['msj'] = 'Se le envió un email con sus datos';
-                //enviar Email
                 $data['error'] = EXIT_SUCCESS;
             }
         }catch(Exception $e) {
@@ -42,16 +41,15 @@ class Recuperar extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
-       $this->email->from('info@sap-latam.com');
+       $this->email->from('info@marketinghpe.com');
        $this->email->to($email);
-       $this->email->subject('');
-       //
+       $this->email->subject('Su contraseña fue recuperada en HPE Promo Made Simple');
        $texto = '<!DOCTYPE html>
                     <html>
                         <body>
@@ -114,7 +112,6 @@ class Recuperar extends CI_Controller {
                             </table>
                         </body>
                     </html>';
-       
        $this->email->message($texto);
        $this->email->send();
        $data['error'] = EXIT_SUCCESS;
