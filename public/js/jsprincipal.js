@@ -11,5 +11,5 @@ $('#principal .owl-carousel').owlCarousel({
 	nav : false,
 	loop : true,
 	autoplay : true,
-	autoplayTimeout : 4000
+	autoplayTimeout : 5000
 });
