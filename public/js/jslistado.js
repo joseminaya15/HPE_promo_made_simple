@@ -24,7 +24,6 @@ function editarPromocion(Id){
                 //$("#pais option[value='"+ e +"']").prop("selected", true);
                 $("#pais").val(e).change();
             });
-            //$('#pais').val(data.pais);
             if(data.tp_user == 'Resellers'){
                 combo = '<select class="selectpicker" id="usuario" onchange="mostrarCampo()" style="display: block !important">'+
                             '<option value="Resellers">Resellers</option>'+

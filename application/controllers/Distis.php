@@ -95,7 +95,6 @@ class Distis extends CI_Controller {
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
 		$this->load->view('v_distis', $data);
 	}
-
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -183,7 +182,6 @@ class Distis extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function filtroPromociones(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -263,7 +261,6 @@ class Distis extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
