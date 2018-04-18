@@ -59,28 +59,28 @@ class Listado extends CI_Controller {
 		$this->load->view('v_listado', $data);
 	}
   function editarPromocion(){
-      $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {
-          $id_promo         = $this->input->post('Id_promo');
-          $datos            = $this->M_solicitud->getPromocionesById($id_promo);
-          $data['pais']     = $datos[0]->Pais;
-          $data['tp_user']  = $datos[0]->Tipo_distribuidor;
-          $data['deal_lead']= $datos[0]->deal_lead;
-          $data['tipo']     = $datos[0]->Tipo;
-          $data['limit']    = $datos[0]->Last_units;
-          $data['titulo']   = $datos[0]->Titulo;
-          $data['fec_ini']  = $datos[0]->fecha_ini;
-          $data['fecha']    = $datos[0]->fecha_vencimiento;
-          $data['objetivo'] = $datos[0]->Objetivo_comercial;
-          $data['new']      = $datos[0]->Noticia;
-          $data['condi']    = $datos[0]->Condiciones;
-          $this->session->set_userdata(array('id_promo' => $id_promo));
-          $data['error'] = EXIT_SUCCESS;
-      } catch (Exception $e){
-          $data['msj'] = $e->getMessage();
-      }
-      echo json_encode($data);
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+        $id_promo         = $this->input->post('Id_promo');
+        $datos            = $this->M_solicitud->getPromocionesById($id_promo);
+        $data['pais']     = $datos[0]->Pais;
+        $data['tp_user']  = $datos[0]->Tipo_distribuidor;
+        $data['deal_lead']= $datos[0]->deal_lead;
+        $data['tipo']     = $datos[0]->Tipo;
+        $data['limit']    = $datos[0]->Last_units;
+        $data['titulo']   = $datos[0]->Titulo;
+        $data['fec_ini']  = $datos[0]->fecha_ini;
+        $data['fecha']    = $datos[0]->fecha_vencimiento;
+        $data['objetivo'] = $datos[0]->Objetivo_comercial;
+        $data['new']      = $datos[0]->Noticia;
+        $data['condi']    = $datos[0]->Condiciones;
+        $this->session->set_userdata(array('id_promo' => $id_promo));
+        $data['error'] = EXIT_SUCCESS;
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
   function eliminarPromo(){
     $data['error'] = EXIT_ERROR;
@@ -132,16 +132,16 @@ class Listado extends CI_Controller {
     echo json_encode($data);
   }
   function cerrarCesion(){
-      $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {
-          $this->session->unset_userdata('usuario');
-          $this->session->unset_userdata('Id_user');
-          $data['error'] = EXIT_SUCCESS;
-      } catch (Exception $e){
-          $data['msj'] = $e->getMessage();
-      }
-      echo json_encode($data);
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+        $this->session->unset_userdata('usuario');
+        $this->session->unset_userdata('Id_user');
+        $data['error'] = EXIT_SUCCESS;
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
   function guardarDatos(){
     $data['error']  = EXIT_ERROR;
