@@ -91,7 +91,7 @@ label
 	
 .header
 	background-color #314B5F
-	padding 20px 0
+	padding 15px 0
 	position fixed
 	top 0
 	left 0
@@ -651,6 +651,140 @@ footer
 	&.is-checked
 		.mdl-radio__outer-circle
 			border 2px solid #314B5F
+#principal
+	height 550px
+	overflow hidden
+	padding 0
+	position relative
+#principal
+	.owl-carousel
+		position relative
+		bottom 0
+		top 0
+		left 0
+		right 0
+		width 100%
+		z-index 1
+		max-width 100%
+#principal
+	.owl-stage-outer
+	.owl-stage
+		height 550px
+	.owl-carousel
+		.owl-item
+			height 550px
+			.item
+				height 550px
+				img
+					height 550px 
+#principal
+	.owl-carousel
+		.owl-item
+			.item
+				&:AFTER
+					position absolute
+					content ''
+					top 0
+					right 0
+					left 0
+					opacity 0.3
+					z-index 2
+					background-color #000000
+					width 100%
+					height 100%
+				.imagen
+					position absolute
+					top 0
+					right 0
+					bottom 0
+					left 0
+					&.one
+						background url(../img/promociones/promocion1.png) no-repeat center center
+						background-size cover
+					&.two
+						background url(../img/promociones/promocion2.png) no-repeat center center
+						background-size cover
+					&.three
+						background url(../img/promociones/promocion3.jpg) no-repeat center center
+						background-size cover
+		&.owl-theme
+			.owl-dots
+				position absolute
+				bottom 70px
+				left 0
+				right 0
+				text-align center
+				.owl-dot
+					span
+						width 15px
+						height 15px
+						background transparent
+						border 2px solid #FFFFFF
+					&.hover
+					&.active
+						span
+							background #FFFFFF
+	.cont-carousel
+		z-index 10
+		max-width 1150px
+		center()
+		h2
+			color #FFFFFF
+			font-size 80px
+			line-height 70px
+			text-shadow 0px 3px 7px rgba(0, 0, 0, 0.35)
+			margin 10px 0
+			font-family $medium
+			max-width 650px
+.mdl-promociones
+	width 100%
+	max-width 320px
+	margin 20px
+	display inline-block
+	vertical-align top
+	box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+	.mdl-card__title
+		display block
+		height 200px
+		.promocion-imagen
+			background-size 450px !important
+			height 200px
+			position absolute
+			top 0
+			left 0
+			right 0
+			&.one
+				background url(../img/promociones/p1.jpg) no-repeat center center
+			&.two
+				background url(../img/promociones/p2.jpg) no-repeat center center
+			&.three
+				background url(../img/promociones/p3.jpg) no-repeat center center
+			&.four
+				background url(../img/promociones/p4.jpg) no-repeat center center
+			&.five
+				background url(../img/promociones/p1.jpg) no-repeat center center
+			&.six
+				background url(../img/promociones/p2.jpg) no-repeat center center
+	.mdl-card__supporting-text
+		padding 16px
+		text-align left
+		h2
+			font-size 22px
+			line-height 24px
+			color #000000
+			font-family $medium
+			margin 5px 0
+		p
+			font-size 16px
+			line-height 20px
+	.mdl-card__actions
+		button
+			box-shadow none
+			text-transform initial
+			background-color #FFFFFF
+.seccion-promociones
+	margin-top -60px
+	text-align center			
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
