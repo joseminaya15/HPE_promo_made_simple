@@ -21,8 +21,6 @@ class Resellers extends CI_Controller {
             $html           = '';
             $cont           = 1;
             $exp            = 1;
-            $datos_sales    = "";
-            $datos_bu       = "";
             $dato_noti      = null;
             $mes            = null;
             $deal_number    = null;
@@ -106,8 +104,6 @@ class Resellers extends CI_Controller {
             }else {
                 $html        = '';
                 $cont        = 1;
-                $datos_sales = "";
-                $datos_bu    = "";
                 $color       = null;
                 $last_units     = "";
                 foreach ($promociones as $key){
@@ -190,8 +186,6 @@ class Resellers extends CI_Controller {
             }
             $html        = '';
             $cont        = 1;
-            $datos_sales = "";
-            $datos_bu    = "";
             $color       = null;
             $last_units  = "";
             foreach ($promociones as $key){
