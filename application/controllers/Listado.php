@@ -551,8 +551,9 @@ class Listado extends CI_Controller {
                   <td>'.$key->deal_number.'</td>';
       }
       $data['promociones'] = $html;
-      $data['cantidad'] = $count;
-      $data['error'] = EXIT_SUCCESS;
+      $data['cantidad']    = $count;
+      $data['descripcion'] = $descripcion;
+      $data['error']       = EXIT_SUCCESS;
     }catch(Exception $e){
       $data['msj'] = $e->getMessage();
     }
