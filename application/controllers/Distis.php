@@ -30,12 +30,6 @@ class Distis extends CI_Controller {
             $color          = null;
             $last_units     = "";
             $data['codigo'] = '<h2><strong>'.substr($promociones[0]->Codigo, 0, 2).'</strong>'.substr($promociones[0]->Codigo, 2, 6).'</h2>';
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
-                $datos_sales .= '<p>'.$val.'</p>';
-            }
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $dat){
-                $datos_bu .= '<p>'.$dat.'</p>';
-            }
             foreach ($promociones as $key){
                 if($key->Tipo == 'Valor'){
                     $color = '#F69779';
@@ -117,12 +111,6 @@ class Distis extends CI_Controller {
                 $datos_bu    = "";
                 $color       = null;
                 $last_units  = "";
-                foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
-                    $datos_sales .= '<p>'.$val.'</p>';
-                }
-                foreach (explode(",", $promociones[0]->Contactos_sales) as $dat){
-                    $datos_bu .= '<p>'.$dat.'</p>';
-                }
                 foreach ($promociones as $key){
                     if($key->Tipo == 'Valor'){
                         $color = '#F69779';
@@ -211,12 +199,6 @@ class Distis extends CI_Controller {
             $datos_bu    = "";
             $color       = null;
             $last_units  = "";
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $val){
-                $datos_sales .= '<p>'.$val.'</p>';
-            }
-            foreach (explode(",", $promociones[0]->Contactos_sales) as $dat){
-                $datos_bu .= '<p>'.$dat.'</p>';
-            }
             foreach ($promociones as $key){
                 if($key->Tipo == 'Valor'){
                     $color = '#F69779';
