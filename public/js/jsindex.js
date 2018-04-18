@@ -115,8 +115,6 @@ function guardarContactos(){
 	    	$(this).val("");
 	    }
 	});
-	/*console.log(array_sales);
-	console.log(array_bu);*/
 }
 function actualizarPromocion(){
 	//var tipo 			   = $('#tipo').val(); 
