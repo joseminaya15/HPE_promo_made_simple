@@ -41,8 +41,8 @@ class Recuperar extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@marketinghpe.com',
-                            'smtp_pass' => 'hpeinfo18',
+                            'smtp_user' => 'info@sap-latam.com',
+                            'smtp_pass' => 'sapinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
@@ -120,13 +120,11 @@ class Recuperar extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-
     function mostrarDatos(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = '';
         try {
             $texto = $this->input->post('texto');
-            
             $data['msj'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();

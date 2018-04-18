@@ -42,8 +42,8 @@ class Cron extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@marketinghpe.com',
-                            'smtp_pass' => 'hpeinfo18',
+                            'smtp_user' => 'info@sap-latam.com',
+                            'smtp_pass' => 'sapinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
