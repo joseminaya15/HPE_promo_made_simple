@@ -264,28 +264,16 @@ class Resellers extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function cambiarDatos(){
+    function crearDatos(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = '';
         try {
-            $texto     = $this->input->post('texto');
-            $promocion = $this->input->post('promocion');
+            $texto = $this->M_solicitud->post('texto');
             if($texto == null || $texto == ''){
                 throw new Exception("Error Processing Request", 1);
             }
-            if($promocion == null || $promocion == ''){
-                throw new Exception("Error Processing Request", 1);
-            }
-            $datos = $this->M_solicitud->getDatosPromo();
-            $html  = '';
-            foreach ($datos as $key) {
-                $html .= '<td>'.$key->nombre.'</td>';
-            }
-            $data['html']  = $html;
-            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
-        echo json_encode($data);
     }
 }

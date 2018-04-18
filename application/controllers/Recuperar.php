@@ -120,14 +120,4 @@ class Recuperar extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-    function mostrarDatos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = '';
-        try {
-            $texto = $this->input->post('texto');
-            $data['msj'] = EXIT_SUCCESS;
-        }catch(Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-    }
 }
