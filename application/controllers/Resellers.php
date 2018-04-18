@@ -64,9 +64,6 @@ class Resellers extends CI_Controller {
                                         <p>'.$dato_noti.'</p>
                                     </div>
                                     <div class="promocion">
-                                        <p></p>
-                                    </div>
-                                    <div class="promocion">
                                         <h2 class="title">Countries that apply</h2>
                                         <p>'.$key->Ciudades.'</p>
                                     </div>
@@ -146,9 +143,6 @@ class Resellers extends CI_Controller {
                                         </div>
                                         <div class="promocion">
                                             <p>'.$dato_noti.'</p>
-                                        </div>
-                                        <div class="promocion">
-                                            <p></p>
                                         </div>
                                         <div class="promocion">
                                             <h2 class="title">Countries that apply</h2>
@@ -233,10 +227,6 @@ class Resellers extends CI_Controller {
                                     </div>
                                     <div class="promocion">
                                         <p>'.$dato_noti.'</p>
-                                    </div>
-                                    <div class="promocion">
-                                        <h2 class="title">Countries that apply</h2>
-                                        <p>'.$key->Ciudades.'</p>
                                     </div>
                                     <div class="promocion">
                                         <h2 class="title">Conditions</h2>
