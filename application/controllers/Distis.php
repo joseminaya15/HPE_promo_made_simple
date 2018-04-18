@@ -12,7 +12,6 @@ class Distis extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
         if($this->session->userdata('tipo_user') != 2){
             header("location: Login");
