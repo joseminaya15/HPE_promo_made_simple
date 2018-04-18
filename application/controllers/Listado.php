@@ -111,7 +111,7 @@ class Listado extends CI_Controller {
             }
             $html .= '<tr>
                         <td class="titulo_promo">'.$key->Titulo.'</td>
-                        <td>'.$key->fecha_vencimiento.'</td>
+                        <td>'.$key->fecha_inicio.'</td>
                         <td>'.$key->fecha_vencimiento.'</td>
                         <td>'.$key->Tipo_distribuidor.'</td>
                         <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
@@ -213,7 +213,7 @@ class Listado extends CI_Controller {
           }
           $html .= '<tr>
                       <td class="titulo_promo">'.$key->Titulo.'</td>
-                      <td>'.$key->fecha_vencimiento.'</td>
+                      <td>'.$key->fecha_inicio.'</td>
                       <td>'.$key->fecha_vencimiento.'</td>
                       <td>'.$key->Tipo_distribuidor.'</td>
                       <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
@@ -289,7 +289,7 @@ class Listado extends CI_Controller {
         }
         $html .= '<tr>
                     <td class="titulo_promo">'.$key->Titulo.'</td>
-                    <td>'.$key->fecha_vencimiento.'</td>
+                    <td>'.$key->fecha_inicio.'</td>
                     <td>'.$key->fecha_vencimiento.'</td>
                     <td>'.$key->Tipo_distribuidor.'</td>
                     <td><div class="bg-tipo '.$tipo_producto.'"></div>'.$key->Tipo.'</td>
