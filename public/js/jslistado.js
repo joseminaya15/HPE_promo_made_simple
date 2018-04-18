@@ -16,10 +16,8 @@ function editarPromocion(Id){
             /*options = Array.from(document.querySelectorAll('#pais option'));
 
             values.split(',').forEach(function(v) {
-                console.log(options.find(c => c.value == v).attr('selected', true));
               options.find(c => c.value == v).attr('selected', true);
             });*/
-           // $("#strings").val([paises]);
             $.each(values.split(","), function(i,e){
                 //$("#pais option[value='"+ e +"']").prop("selected", true);
                 $("#pais").val(e).change();

@@ -117,8 +117,6 @@ function guardarContactos(){
 	});
 }
 function actualizarPromocion(){
-	//var tipo 			   = $('#tipo').val(); 
-	//var codigo 	 		   = $('#codigo').val();
 	var titulo 	 		   = $('#titulo').val();
 	var fecha 	 		   = $('#fecha').val();
 	var objetivo_comercial = $('#objetivo_comercial').val();
@@ -126,21 +124,12 @@ function actualizarPromocion(){
 	var noticia			   = $('#noticia').val();
 	var ciudades		   = $('#ciudades').val();
 	var condiciones		   = $('#condiciones').val();
-	//var imagen			   = $('#imagen').val();
 	var last_units		   = $('#last_units').val();
 	if(tipo_oferta == 'Distis'){
 		var deal_number	= $('#deal_number').val();
 	}else {
 		var deal_number = '';
 	}
-	/*if(tipo == null || tipo == ''){
-		msj('error', 'Ingrese el tipo de producto');
-		return;
-	}
-	if(codigo == null || codigo == ''){
-		msj('error', 'Ingrese el código del producto');
-		return;
-	}*/
 	if(titulo == null || titulo == ''){
 		msj('error', 'Ingrese el título de la oferta');
 		return;
@@ -175,16 +164,13 @@ function actualizarPromocion(){
 	}
 	$('.button-guardar').prop("disabled", true);
 	$.ajax({
-		data : {/*tipo 			   : tipo,
-				codigo 	    	   : codigo,*/
-				titulo 		  	   : titulo,
+		data : {titulo 		  	   : titulo,
 				fecha 			   : fecha,
 				objetivo_comercial : objetivo_comercial,
 				tipo_oferta		   : tipo_oferta,
 				noticia 		   : noticia,
 				ciudades 		   : ciudades,
 				condiciones 	   : condiciones,
-				//imagen       	   : imagen,
 				last_units         : last_units,
 				deal_number        : deal_number},
 		url  : 'Formulario/actualizarPromocion',
