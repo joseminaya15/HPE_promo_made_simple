@@ -84,8 +84,8 @@ class M_solicitud extends  CI_Model{
                        (CASE WHEN '' = '".$texto."' THEN 1 = 1 ELSE FALSE END))
                  AND c.Tipo_distribuidor = 'Resellers'
             ORDER BY c.Last_units, c.Tipo DESC";
-        $result = $this->db->query($sql);
-        return $result->result();
+      $result = $this->db->query($sql);
+      return $result->result();
     }
     function buscarPromocionDistis($texto){
       $sql = "SELECT c.*,
@@ -99,8 +99,8 @@ class M_solicitud extends  CI_Model{
                        (CASE WHEN '' = '".$texto."' THEN 1 = 1 ELSE FALSE END))
                  AND c.Tipo_distribuidor = 'Distis'
             ORDER BY c.Last_units, c.Tipo DESC";
-        $result = $this->db->query($sql);
-        return $result->result();
+      $result = $this->db->query($sql);
+      return $result->result();
     }
     function getDatosFiltro($filtro, $tipo){
       if($tipo == 'Distis'){
