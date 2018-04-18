@@ -173,7 +173,7 @@ class Distis extends CI_Controller {
                 $data['promociones'] = $html;
                 $data['error']       = EXIT_SUCCESS;
             }
-        }catch (Exception $e){
+        }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
