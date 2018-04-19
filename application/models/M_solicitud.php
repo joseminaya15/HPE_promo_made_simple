@@ -179,7 +179,9 @@ class M_solicitud extends  CI_Model{
       $sql = "SELECT p.*,
                     s.name,
                     c.Nombre,
-                    c.deal_lead
+                    c.deal_lead,
+                    DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
                FROM productos p,
                     categorias c,
                     sub_categorias s

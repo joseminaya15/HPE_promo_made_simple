@@ -32,8 +32,8 @@ class Categorias extends CI_Controller {
                         <td>'.$key->addl_disc.'</td>
                         <td>'.$key->offerty_type.'</td>
                         <td>'.$key->quoted_currency.'</td>
-                        <td>'.$key->effective_date.'</td>
-                        <td>'.$key->end_date.'</td>
+                        <td>'.$key->effect_date.'</td>
+                        <td>'.$key->fecha_fin.'</td>
                     </tr>';
             $cont++;
         }
