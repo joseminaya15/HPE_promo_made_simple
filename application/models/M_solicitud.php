@@ -188,7 +188,14 @@ class M_solicitud extends  CI_Model{
                 AND C.id = ?
                 AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
                 AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';";
-      $result = $this->db->query($sql array($id_cate));
+      $result = $this->db->query($sql, array($id_cate));
       return $result->result();
+    }
+    function getDatosProducts($cate){
+      $sql = "SELECT c.Id
+                FROM categorias c
+               WHERE c.Nombre LIKE '%".$cate."%';";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
     }
 }

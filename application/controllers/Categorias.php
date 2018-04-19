@@ -14,10 +14,43 @@ class Categorias extends CI_Controller {
     }
 
 	public function index(){
-        $this->session->unset_userdata('user');
-        $this->session->unset_userdata('tipo_user');
-        $this->session->unset_userdata('Id_user');
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
         $this->load->view('v_categorias', $data);
 	}
+
+    function getCategorias(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html      = null;
+            $cont      = 1;
+            $categoria = $this->input->post('categoria');
+            $id_cate   = $this->M_solicitud->getDatosProducts($categoria);
+            $datos     = $this->M_solicitud->getDatosProducts($id_cate);
+            foreach ($datos as $key) {
+                $html .= '<tr>
+                            <td>'.$key->program_name.'</td>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->part_number.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->cp_description.'</td>
+                            <td>'.$key->product_line.'</td>
+                            <td>'.$key->modelo_hw.'</td>
+                            <td>'.$key->est_qty.'</td>
+                            <td>'.$key->net_price.'</td>
+                            <td>'.$key->addl_disc.'</td>
+                            <td>'.$key->offerty_type.'</td>
+                            <td>'.$key->quoted_currency.'</td>
+                            <td>'.$key->effective_date.'</td>
+                            <td>'.$key->end_date.'</td>
+                        </tr>';
+                $cont++;
+            }
+            $data['promociones'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
