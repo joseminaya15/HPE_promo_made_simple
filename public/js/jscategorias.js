@@ -22,7 +22,6 @@ function getTablaPromos(cate){
 	  }
 	});
 }
-var globalID = null;
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
 	var input  = document.getElementById('inputSearch');
@@ -49,6 +48,6 @@ function inputActive(id){
 	}
 }
 function clearInput(){
-
-
+	$('#inputSearch').val('');
+	$('#tableCategoria').find('tbody').find('tr').css('display','');
 }

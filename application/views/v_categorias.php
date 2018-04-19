@@ -46,10 +46,10 @@
                 <div class="search-categoria">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="mdi mdi-search"></i></button>
                     <div class="search-input">
-                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Server & Storage Flex Attach" onkeyup="inputActive(this.id)" onchange="getBuscarPromos()">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id)">
                     </div>
                     <div class="search-clear">
-                        <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
+                        <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
                     </div>
                     <div class="search-icon"><i class="fa fa-server"></i></div>
                 </div>
