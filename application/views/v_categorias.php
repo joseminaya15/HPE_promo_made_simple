@@ -42,11 +42,34 @@
         </section>
         <section id="categoria">
             <div class="header_categoria"></div>
+            <div class="search-filter">
+                <div class="search-categoria">
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="mdi mdi-search"></i></button>
+                    <div class="search-input">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Server & Storage Flex Attach" onkeyup="inputActive(this.id)">
+                    </div>
+                    <div class="search-clear">
+                        <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
+                    </div>
+                    <div class="search-icon"><i class="fa fa-server"></i></div>
+                </div>
+                <div class="filter-categoria">
+                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
+                        <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
+                        <option value="HPE Pointnext">HPE Pointnext</option>
+                        <option value="Storage Accelerate">Storage Accelerate</option>
+                        <option value="Aruba Market Take Over">Aruba Market Take Over</option>
+                        <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
+                        <option value="Aruba Mobility">Aruba Mobility</option>
+                    </select>
+                </div>
+            </div>
         </section>
         <section>
             <div class="mdl-container">
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
+<<<<<<< Updated upstream
                         <div id="combo">
                             <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
                                 <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
@@ -56,6 +79,26 @@
                                 <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
                                 <option value="Aruba Mobility">Aruba Mobility</option>
                             </select> 
+=======
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product number ID</th>
+                                            <th>Part Number</th>
+                                            <th>Product Description</th>
+                                            <th>Product Line</th>
+                                            <th>Net Price</th>
+                                            <th>Efective Date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="promociones">
+                                        <?php echo $promociones ?>
+                                    </tbody>
+                                </table>
+                            </div>
+>>>>>>> Stashed changes
                         </div>
                         <div class="table-responsive">
                             <table class="table">
@@ -89,7 +132,7 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsprincipal.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>categorias.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jscategorias.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');

@@ -19,3 +19,12 @@ function getTablaPromos(){
 	  }
 	});
 }
+function inputActive(id){
+	var lenghtInput = $('#'+id).val();
+	if(lenghtInput.length > 0){
+		$('#buttonClear').css('visibility','visible')
+	}else{
+		$('#buttonClear').css('visibility','hidden')
+	}
+	
+}

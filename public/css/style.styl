@@ -46,7 +46,11 @@ center()
 	margin auto
 	transformCenter()
 	transformTransition()
-
+flexCenter()
+	display flex
+	display -webkit-flex
+	align-items center
+	justify-content center
 body
 	margin 0
 	padding 0
@@ -813,13 +817,56 @@ footer
 	overflow hidden
 	padding 0
 	position relative
+	flexCenter()
 	.header_categoria
 		position absolute
 		top 0
 		right 0
 		bottom 0
 		left 0
-		background-size cover !important		
+		background-size cover !important
+.search-filter
+	flexCenter()
+	background-color #FFFFFF
+	width 100%
+	max-width 800px
+	z-index 1
+	.search-categoria
+		flexCenter()
+		width 100%
+		max-width 550px	
+		.search-input
+			width 100%
+			.form-control
+				font-size 18px
+				box-shadow none
+				border none
+		.search-clear
+			button
+				visibility hidden
+		button
+			box-shadow none
+			background-color transparent
+			i
+				font-size 30px
+	.filter-categoria
+		width 100%
+		max-width 250px
+		padding-left 15px
+		.bootstrap-select
+			width 100% !important
+			button
+				box-shadow none
+				border none
+				background-color transparent !important
+				outline 0 !important
+				font-size 18px
+				border-radius 0
+				border-left 1px solid #ccd3d3
+				text-align right
+				span
+					text-align center !important
+					color #757575
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
