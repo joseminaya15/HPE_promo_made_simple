@@ -13,3 +13,8 @@ $('#principal .owl-carousel').owlCarousel({
 	autoplay : true,
 	autoplayTimeout : 5000
 });
+
+function goToCategorias(id){
+	var idCategoria = id;
+	console.log(idCategoria); 
+}

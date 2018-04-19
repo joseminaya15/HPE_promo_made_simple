@@ -69,7 +69,7 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones">
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_1" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias()">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen one"></div>
                     </div>
@@ -77,7 +77,7 @@
                         <h2>Server & Storage Flex Attach</h2>
                     </div>
                 </a>
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_2" href="Categorias" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen two"></div>
                     </div>
@@ -85,7 +85,7 @@
                         <h2>HPE Pointnext</h2>
                     </div>
                 </a>
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_3" href="Categorias" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen three"></div>
                     </div>
@@ -93,7 +93,7 @@
                         <h2>Storage Accelerate</h2>
                     </div>
                 </a>
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_4" href="Categorias" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen four"></div>
                     </div>
@@ -101,7 +101,7 @@
                         <h2>Aruba Market Take Over</h2>
                     </div>
                 </a>
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_5" href="Categorias" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen five"></div>
                     </div>
@@ -109,7 +109,7 @@
                         <h2>Aruba 3x2 Switches</h2>
                     </div>
                 </a>
-                <a href="Categorias" target="_blank" class="mdl-card mdl-promociones">
+                <a id="Header_6" href="Categorias" target="_blank" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen six"></div>
                     </div>
