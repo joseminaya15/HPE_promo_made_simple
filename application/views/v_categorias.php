@@ -53,7 +53,7 @@
                     </div>
                     <div class="search-icon"><i class="fa fa-server"></i></div>
                 </div>
-                <div class="filter-categoria">
+                <div class="filter-categoria" id="combo">
                     <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
                         <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
                         <option value="HPE Pointnext">HPE Pointnext</option>
@@ -114,8 +114,8 @@
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
             });
             $( document ).ready(function() {
-                let categoria = sessionStorage.getItem('OPEN_CATEGORIA');
-                if('Server & Storage Flex Attach' == 'Server & Storage Flex Attach'){
+                let categoria = sessionStorage.getItem('NAME_CATEGORIA');
+                if(categoria == 'Server & Storage Flex Attach'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
                                             '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+

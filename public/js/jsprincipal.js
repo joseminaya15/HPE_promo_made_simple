@@ -16,9 +16,11 @@ $('#principal .owl-carousel').owlCarousel({
 
 function goToCategorias(id){
 	var idCategoria = $("#"+id);
+	var name_cate   = $("#"+id).find('h2').text();
 	idCategoria.attr({
 		href: 'Categorias',
 		target: '_blank'
 	});
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
+	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
 }
