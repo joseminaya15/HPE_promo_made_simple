@@ -22,30 +22,30 @@ function getTablaPromos(cate){
 	  }
 	});
 }
-// var globalID = null;
+var globalID = null;
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
 	var input  = document.getElementById('inputSearch');
 	var table  = document.getElementById('tableCategoria');
 	var filter = input.value.toUpperCase();
 	var tr     = table.getElementsByTagName("tr");
-	var th     = table.getElementsByTagName("th");
 	if(lenghtInput.length > 0){
 		$('#buttonClear').css('visibility','visible')
 	}else{
 		$('#buttonClear').css('visibility','hidden')
 	}
-	for(var j = 0; j < th.length; j++) {
-		for (var i = 0; i < tr.length; i++) {
-			td = tr[i].getElementsByTagName("td")[j];
-			if (td) {
-		  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			    	tr[i].style.display = "";
-			  	} else {
-			    	tr[i].style.display = "none";
-			  	}
-			}       
-		}
+	for (var i = 0; i < tr.length; i++) {
+		var td0 = tr[i].getElementsByTagName("td")[0];
+		var td2 = tr[i].getElementsByTagName("td")[2];
+		if (td0 || td2) {
+	  		if (td0.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		    	tr[i].style.display = "";
+		  	}else if (td2.innerHTML.toUpperCase().indexOf(filter) > -1){
+		  		tr[i].style.display = "";
+		  	}else {
+		    	tr[i].style.display = "none";
+		  	}
+		}       
 	}
 }
 function clearInput(){
