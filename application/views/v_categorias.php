@@ -47,7 +47,7 @@
             <div class="mdl-container">
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
-                            <select class="selectpicker" id="id_cate" title="Categorias" onchange="getTablaPromos()">
+                            <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
                                 <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
                                 <option value="HPE Pointnext">HPE Pointnext</option>
                                 <option value="Storage Accelerate">Storage Accelerate</option>
