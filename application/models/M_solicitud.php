@@ -175,4 +175,20 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->result();
     }
+    function getDatosProducts($id_cate){
+      $sql = "SELECT p.*,
+                    s.name,
+                    c.Nombre,
+                    c.deal_lead
+               FROM productos p,
+                    categorias c,
+                    sub_categorias s
+              WHERE p.id_sub_cate = s.Id
+                AND s.id_cate = c.Id
+                AND C.id = ?
+                AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
+                AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';";
+      $result = $this->db->query($sql array($id_cate));
+      return $result->result();
+    }
 }
