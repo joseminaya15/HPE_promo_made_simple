@@ -69,37 +69,6 @@
             <div class="mdl-container">
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
-<<<<<<< Updated upstream
-                        <div id="combo">
-                            <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
-                                <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
-                                <option value="HPE Pointnext">HPE Pointnext</option>
-                                <option value="Storage Accelerate">Storage Accelerate</option>
-                                <option value="Aruba Market Take Over">Aruba Market Take Over</option>
-                                <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
-                                <option value="Aruba Mobility">Aruba Mobility</option>
-                            </select> 
-=======
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product number ID</th>
-                                            <th>Part Number</th>
-                                            <th>Product Description</th>
-                                            <th>Product Line</th>
-                                            <th>Net Price</th>
-                                            <th>Efective Date</th>
-                                            <th>End Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="promociones">
-                                        <?php echo $promociones ?>
-                                    </tbody>
-                                </table>
-                            </div>
->>>>>>> Stashed changes
-                        </div>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
