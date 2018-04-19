@@ -47,6 +47,7 @@
             <div class="mdl-container">
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
+                        <div id="combo">
                             <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
                                 <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
                                 <option value="HPE Pointnext">HPE Pointnext</option>
@@ -54,26 +55,27 @@
                                 <option value="Aruba Market Take Over">Aruba Market Take Over</option>
                                 <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
                                 <option value="Aruba Mobility">Aruba Mobility</option>
-                            </select>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product number ID</th>
-                                            <th>Part Number</th>
-                                            <th>Product Description</th>
-                                            <th>Product Line</th>
-                                            <th>Net Price</th>
-                                            <th>Efective Date</th>
-                                            <th>End Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="promociones">
-                                        <?php echo $promociones ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                            </select> 
                         </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Product number ID</th>
+                                        <th>Part Number</th>
+                                        <th>Product Description</th>
+                                        <th>Product Line</th>
+                                        <th>Net Price</th>
+                                        <th>Efective Date</th>
+                                        <th>End Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="promociones">
+                                    <?php echo $promociones ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,9 +97,73 @@
                 $('select').selectpicker();
             }
             $(window).load(function() {
+                $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
-                //$("#id_cate").val('the value in session');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+            });
+            $( document ).ready(function() {
+                let categoria = sessionStorage.getItem('OPEN_CATEGORIA');
+                if('Server & Storage Flex Attach' == 'Server & Storage Flex Attach'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                         '</select>');
+                }else if(categoria == 'HPE Pointnext'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                         '</select>');
+                }else if(categoria == 'Storage Accelerate'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                         '</select>');
+                }else if(categoria == 'Aruba Market Take Over'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                         '</select>');
+                }else if(categoria == 'Aruba 3x2 Switches'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                         '</select>');
+                }else if(categoria == 'Aruba Mobility'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="Aruba Mobility">Aruba Mobility</option>'+
+                                            '<option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>'+
+                                            '<option value="HPE Pointnext">HPE Pointnext</option>'+
+                                            '<option value="Storage Accelerate">Storage Accelerate</option>'+
+                                            '<option value="Aruba Market Take Over">Aruba Market Take Over</option>'+
+                                            '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
+                                         '</select>');
+                }
             });
         </script>
     </body>
