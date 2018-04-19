@@ -16,7 +16,7 @@ $('#principal .owl-carousel').owlCarousel({
 
 function goToCategorias(id){
 	var idCategoria = $("#"+id);
-	var name_cate   = $("#"+id).find('h2').text();
+	var name_cate   = idCategoria.find('h2').text();
 	idCategoria.attr({
 		href: 'Categorias',
 		target: '_blank'
