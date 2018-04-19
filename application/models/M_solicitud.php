@@ -191,7 +191,7 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }
-    function getDatosProducts($cate){
+    function getIdCategoria($cate){
       $sql = "SELECT c.Id
                 FROM categorias c
                WHERE c.Nombre LIKE '%".$cate."%';";

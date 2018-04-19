@@ -8,8 +8,8 @@ function getTablaPromos(){
 		try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	$('.promociones').html('');
-	    	$('.promociones').append(data.promociones);
+	    	$('#promociones').html('');
+	    	$('#promociones').append(data.promociones);
 	    }else {
 	    	msj('error', data.msj);
 	    	return;

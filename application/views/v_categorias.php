@@ -43,6 +43,39 @@
         <section id="categoria">
             <div class="header_categoria"></div>
         </section>
+        <section>
+            <div class="mdl-container">
+                <div class="tab-content m-t-20">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Lista">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Program name</th>
+                                            <th>Product ID</th>
+                                            <th>Part Number</th>
+                                            <th>Product Description</th>
+                                            <th>CP Description</th>
+                                            <th>Product Line</th>
+                                            <th>Modelo de HW</th>
+                                            <th>Est. Qty</th>
+                                            <th>Net Price</th>
+                                            <th>Addl Disc</th>
+                                            <th>Offerty type</th>
+                                            <th>Quoted Currency</th>
+                                            <th>Efective Date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="promociones">
+                                        <?php echo $promociones ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
