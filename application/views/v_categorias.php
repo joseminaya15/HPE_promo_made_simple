@@ -54,7 +54,7 @@
                     <div class="search-icon"><i class="fa fa-server"></i></div>
                 </div>
                 <div class="filter-categoria" id="combo">
-                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
+                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos('')">
                         <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
                         <option value="HPE Pointnext">HPE Pointnext</option>
                         <option value="Storage Accelerate">Storage Accelerate</option>
@@ -176,6 +176,7 @@
                                             '<option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>'+
                                          '</select>');
                 }
+                getTablaPromos(categoria);
             });
         </script>
     </body>
