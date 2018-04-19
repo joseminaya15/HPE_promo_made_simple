@@ -29,20 +29,23 @@ function inputActive(id){
 	var table  = document.getElementById('tableCategoria');
 	var filter = input.value.toUpperCase();
 	var tr     = table.getElementsByTagName("tr");
+	var th     = table.getElementsByTagName("th");
 	if(lenghtInput.length > 0){
 		$('#buttonClear').css('visibility','visible')
 	}else{
 		$('#buttonClear').css('visibility','hidden')
 	}
-	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-	  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-		    	tr[i].style.display = "";
-		  	} else {
-		    	tr[i].style.display = "none";
-		  	}
-		}       
+	for(var j = 0; j < th.length; j++) {
+		for (var i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[j];
+			if (td) {
+		  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			    	tr[i].style.display = "";
+			  	} else {
+			    	tr[i].style.display = "none";
+			  	}
+			}       
+		}
 	}
 }
 function clearInput(){
