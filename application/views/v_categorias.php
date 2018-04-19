@@ -59,18 +59,11 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Program name</th>
-                                            <th>Product ID</th>
+                                            <th>Product number ID</th>
                                             <th>Part Number</th>
                                             <th>Product Description</th>
-                                            <th>CP Description</th>
                                             <th>Product Line</th>
-                                            <th>Modelo de HW</th>
-                                            <th>Est. Qty</th>
                                             <th>Net Price</th>
-                                            <th>Addl Disc</th>
-                                            <th>Offerty type</th>
-                                            <th>Quoted Currency</th>
                                             <th>Efective Date</th>
                                             <th>End Date</th>
                                         </tr>

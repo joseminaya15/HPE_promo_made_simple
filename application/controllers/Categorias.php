@@ -20,18 +20,11 @@ class Categorias extends CI_Controller {
         $datos     = $this->M_solicitud->getDatosProducts(1);
         foreach ($datos as $key) {
             $html .= '<tr>
-                        <td>'.$key->program_name.'</td>
                         <td>'.$key->product_id.'</td>
                         <td>'.$key->part_number.'</td>
                         <td>'.$key->product_desc.'</td>
-                        <td>'.$key->cp_description.'</td>
                         <td>'.$key->product_line.'</td>
-                        <td>'.$key->modelo_hw.'</td>
-                        <td>'.$key->est_qty.'</td>
                         <td>'.$key->net_price.'</td>
-                        <td>'.$key->addl_disc.'</td>
-                        <td>'.$key->offerty_type.'</td>
-                        <td>'.$key->quoted_currency.'</td>
                         <td>'.$key->effect_date.'</td>
                         <td>'.$key->fecha_fin.'</td>
                     </tr>';
@@ -59,29 +52,15 @@ class Categorias extends CI_Controller {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                         </tr>';
             }else {
                 foreach ($datos as $key) {
                 $html .= '<tr>
-                            <td>'.$key->program_name.'</td>
                             <td>'.$key->product_id.'</td>
                             <td>'.$key->part_number.'</td>
                             <td>'.$key->product_desc.'</td>
-                            <td>'.$key->cp_description.'</td>
                             <td>'.$key->product_line.'</td>
-                            <td>'.$key->modelo_hw.'</td>
-                            <td>'.$key->est_qty.'</td>
                             <td>'.$key->net_price.'</td>
-                            <td>'.$key->addl_disc.'</td>
-                            <td>'.$key->offerty_type.'</td>
-                            <td>'.$key->quoted_currency.'</td>
                             <td>'.$key->effect_date.'</td>
                             <td>'.$key->fecha_fin.'</td>
                         </tr>';
