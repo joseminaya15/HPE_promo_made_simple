@@ -74,4 +74,45 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
+
+    function searchElement(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html    = null;
+            $cont    = 1;
+            $texto   = $this->input->post('texto');
+            $id_cate = $this->input->post('id_cate');
+            $datos   = $this->M_solicitud->getSearchProducts($texto, $id_cate);
+            if(count($datos) == 0){
+                $html = '<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>';
+            }else {
+                foreach ($datos as $key) {
+                $html .= '<tr>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->part_number.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->product_line.'</td>
+                            <td>'.$key->net_price.'</td>
+                            <td>'.$key->effect_date.'</td>
+                            <td>'.$key->fecha_fin.'</td>
+                        </tr>';
+                $cont++;
+            }
+            }            
+            $data['promociones'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

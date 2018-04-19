@@ -31,3 +31,26 @@ function inputActive(id){
 	}
 	
 }
+function getBuscarPromos(){
+	var categoria = $('#id_cate').val();
+	var text      = $('#inputSearch').val();
+	$.ajax({
+		data : {id_cate : id_cate,
+				text    : text},
+		url  : 'categorias/searchElement',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	    data = JSON.parse(data);
+	    if(data.error == 0){
+	    	$('#promociones').html('');
+	    	$('#promociones').append(data.promociones);
+	    }else {
+	    	msj('error', data.msj);
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}
