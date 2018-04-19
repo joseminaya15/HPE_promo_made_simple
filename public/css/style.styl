@@ -753,6 +753,7 @@ footer
 	vertical-align top
 	box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 	text-decoration none !important
+	cursor pointer
 	&:hover
 		.mdl-card__title
 			.promocion-imagen
@@ -780,9 +781,9 @@ footer
 			&.four
 				background url(../img/promociones/p4.jpg) no-repeat center center
 			&.five
-				background url(../img/promociones/p1.jpg) no-repeat center center
+				background url(../img/promociones/p5.jpg) no-repeat center center
 			&.six
-				background url(../img/promociones/p2.jpg) no-repeat center center
+				background url(../img/promociones/p6.jpg) no-repeat center center
 	.mdl-card__supporting-text
 		padding 16px
 		padding-bottom 0
@@ -806,7 +807,19 @@ footer
 .seccion-promociones
 	margin-top -60px
 	text-align center
-	margin-bottom 60px			
+	margin-bottom 60px
+#categoria
+	height 450px
+	overflow hidden
+	padding 0
+	position relative
+	.header_categoria
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		background-size cover !important		
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()

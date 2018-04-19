@@ -40,6 +40,9 @@
                 </div>
             </div>
         </section>
+        <section id="categoria">
+            <div class="header_categoria"></div>
+        </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -56,6 +59,11 @@
             } else {
                 $('select').selectpicker();
             }
+            $(window).load(function() {
+                let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
+                console.log(openCategoria);
+                $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+            });
         </script>
     </body>
 </html>
