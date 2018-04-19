@@ -22,7 +22,7 @@ function getTablaPromos(cate){
 	  }
 	});
 }
-var globalID = null;
+// var globalID = null;
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
 	var input  = document.getElementById('inputSearch');

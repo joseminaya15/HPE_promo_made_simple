@@ -70,7 +70,7 @@
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table id="tableCategoria" class="table">
                                 <thead>
                                     <tr>
                                         <th>Product number ID</th>
