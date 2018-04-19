@@ -22,35 +22,30 @@ function getTablaPromos(cate){
 	  }
 	});
 }
+// var globalID = null;
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
+	var input  = document.getElementById('inputSearch');
+	var table  = document.getElementById('tableCategoria');
+	var filter = input.value.toUpperCase();
+	var tr     = table.getElementsByTagName("tr");
 	if(lenghtInput.length > 0){
 		$('#buttonClear').css('visibility','visible')
 	}else{
 		$('#buttonClear').css('visibility','hidden')
 	}
-	
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+	  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		    	tr[i].style.display = "";
+		  	} else {
+		    	tr[i].style.display = "none";
+		  	}
+		}       
+	}
 }
-function getBuscarPromos(){
-	var categoria = $('#id_cate').val();
-	var text      = $('#inputSearch').val();
-	$.ajax({
-		data : {id_cate : id_cate,
-				text    : text},
-		url  : 'categorias/searchElement',
-		type : 'POST'
-	}).done(function(data){
-		try{
-	    data = JSON.parse(data);
-	    if(data.error == 0){
-	    	$('#promociones').html('');
-	    	$('#promociones').append(data.promociones);
-	    }else {
-	    	msj('error', data.msj);
-	    	return;
-	    }
-	  }catch(err){
-	    msj('error',err.message);
-	  }
-	});
+function clearInput(){
+
+
 }

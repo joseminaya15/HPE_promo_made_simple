@@ -46,7 +46,7 @@
                 <div class="search-categoria">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="mdi mdi-search"></i></button>
                     <div class="search-input">
-                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Server & Storage Flex Attach" onkeyup="inputActive(this.id)">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Server & Storage Flex Attach" onkeyup="inputActive(this.id)" onchange="getBuscarPromos()">
                     </div>
                     <div class="search-clear">
                         <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
@@ -70,7 +70,7 @@
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table id="tableCategoria" class="table">
                                 <thead>
                                     <tr>
                                         <th>Product number ID</th>
@@ -111,10 +111,12 @@
             $(window).load(function() {
                 $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
+                console.log(openCategoria);
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
             });
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
+                console.log(categoria);
                 if(categoria == 'Server & Storage Flex Attach'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
