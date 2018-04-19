@@ -97,6 +97,7 @@
             $(window).load(function() {
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
                 console.log(openCategoria);
+                //$("#id_cate").val('the value in session');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
             });
         </script>
