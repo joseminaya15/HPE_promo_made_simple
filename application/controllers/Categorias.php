@@ -49,8 +49,26 @@ class Categorias extends CI_Controller {
             $cont      = 1;
             $categoria = $this->input->post('categoria');
             $id_cate   = $this->M_solicitud->getIdCategoria($categoria);
-            $datos     = $this->M_solicitud->getDatosProducts($id_cate);
-            foreach ($datos as $key) {
+            $datos     = $this->M_solicitud->getDatosProducts(intval($id_cate));
+            if(count($datos) == 0){
+                $html = '<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>';
+            }else {
+                foreach ($datos as $key) {
                 $html .= '<tr>
                             <td>'.$key->program_name.'</td>
                             <td>'.$key->product_id.'</td>
@@ -64,11 +82,12 @@ class Categorias extends CI_Controller {
                             <td>'.$key->addl_disc.'</td>
                             <td>'.$key->offerty_type.'</td>
                             <td>'.$key->quoted_currency.'</td>
-                            <td>'.$key->effective_date.'</td>
-                            <td>'.$key->end_date.'</td>
+                            <td>'.$key->effect_date.'</td>
+                            <td>'.$key->fecha_fin.'</td>
                         </tr>';
                 $cont++;
             }
+            }            
             $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){

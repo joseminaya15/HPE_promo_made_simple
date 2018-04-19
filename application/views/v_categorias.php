@@ -47,6 +47,14 @@
             <div class="mdl-container">
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
+                            <select class="selectpicker" id="id_cate" title="Categorias" onchange="getTablaPromos()">
+                                <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
+                                <option value="HPE Pointnext">HPE Pointnext</option>
+                                <option value="Storage Accelerate">Storage Accelerate</option>
+                                <option value="Aruba Market Take Over">Aruba Market Take Over</option>
+                                <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
+                                <option value="Aruba Mobility">Aruba Mobility</option>
+                            </select>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
