@@ -5,6 +5,7 @@ $light     = 'MetricLight'
 $default   = #00B58E
 $volumen   = #624967
 $valor     = #F79679
+$color     = #314B5F
 $transCen  = translate(-50%,-50%)
 $transIzq  = translate(0,-50%)
 transformCenter()
@@ -882,6 +883,16 @@ footer
 				span
 					text-align center !important
 					color #757575
+/*DATATABLE*/
+.pagination
+	&>li>a
+		color $color
+	&>.active
+		&>a
+		&>a:focus
+			background-color $color
+			border-color $color
+			outline 0
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
