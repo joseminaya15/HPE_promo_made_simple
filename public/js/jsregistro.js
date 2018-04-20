@@ -3,7 +3,7 @@ function registrar() {
 	var correo   = $('#correo').val();
 	var password = $('#password').val();
 	var pais 	 = $('#pais').val();
-	var tipo_user = null;
+	var tipo_user = 1;
 	if(nombre == '' && correo == '' && password == ''){
 		msj('error', 'Ingrese sus datos');
 		return;
@@ -28,11 +28,11 @@ function registrar() {
 		msj('error', 'Ingrese su contraseña');
 		return;
 	}
-	if(textUser == 'Resellers'){
+	/*if(textUser == 'Resellers'){
 		tipo_user = 1;
 	}else if(textUser == 'Distis'){
 		tipo_user = 2;
-	}
+	}*/
 	$.ajax({
 		data : {nombre 	  : nombre,
 				usuario   : correo,
