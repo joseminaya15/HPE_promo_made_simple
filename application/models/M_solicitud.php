@@ -191,6 +191,7 @@ class M_solicitud extends  CI_Model{
                 /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
                 AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
       $result = $this->db->query($sql, array($id_cate));
+      //print_r($this->db->last_query());
       return $result->result();
     }
     function getIdCategoria($cate){
@@ -213,9 +214,7 @@ class M_solicitud extends  CI_Model{
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
                 AND s.Id = ?
-                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '%".$texto."%');
-                /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
-                AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
+                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '".$texto."');";
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }

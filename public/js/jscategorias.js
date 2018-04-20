@@ -1,8 +1,5 @@
-function getTablaPromos(cate){
+function getTablaPromos(){
 	var categoria = $('#id_cate').val();
-	if(cate == null || cate == ''){
-		categoria = cate;
-	}
 	$.ajax({
 		data : {categoria : categoria},
 		url  : 'categorias/getCategorias',

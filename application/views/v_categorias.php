@@ -55,13 +55,8 @@
                     <div class="search-icon"><i class="fa fa-server"></i></div>
                 </div>
                 <div class="filter-categoria" id="combo">
-                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos('')">
-                        <option value="Server & Storage Flex Attach">Server & Storage Flex Attach</option>
-                        <option value="HPE Pointnext">HPE Pointnext</option>
-                        <option value="Storage Accelerate">Storage Accelerate</option>
-                        <option value="Aruba Market Take Over">Aruba Market Take Over</option>
-                        <option value="Aruba 3x2 Switches">Aruba 3x2 Switches</option>
-                        <option value="Aruba Mobility">Aruba Mobility</option>
+                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
+                        <option></option>
                     </select>
                 </div>
             </div>
@@ -132,8 +127,8 @@
                                             '<option value="Memoria">Memoria</option>'+
                                             '<option value="Discos">Discos</option>'+
                                             '<option value="Opciones">Opciones</option>'+
-                                            '<option value="Aruba Mobility">Storage</option>'+
-                                            '<option value="Aruba Mobility">Software/Licencias</option>'+
+                                            '<option value="Storage">Storage</option>'+
+                                            '<option value="Software/Licencias">Software/Licencias</option>'+
                                          '</select>');
                 }else if(categoria == 'HPE Pointnext'){
                     $('#combo').html('');
