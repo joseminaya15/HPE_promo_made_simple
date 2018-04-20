@@ -187,7 +187,7 @@ class M_solicitud extends  CI_Model{
                     sub_categorias s
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
-                AND C.id = ?
+                AND s.Id = ?
                 /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
                 AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
       $result = $this->db->query($sql, array($id_cate));
@@ -199,5 +199,24 @@ class M_solicitud extends  CI_Model{
                WHERE c.name LIKE '%".$cate."%';";
       $result = $this->db->query($sql);
       return $result->row()->Id;
+    }
+    function getDatosBuscadorProducts($id_cate, $texto){
+      $sql = "SELECT p.*,
+                    s.name,
+                    c.Nombre,
+                    c.deal_lead,
+                    DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+               FROM productos p,
+                    categorias c,
+                    sub_categorias s
+              WHERE p.id_sub_cate = s.Id
+                AND s.id_cate = c.Id
+                AND s.Id = ?
+                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '%".$texto."%');
+                /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
+                AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
+      $result = $this->db->query($sql, array($id_cate));
+      return $result->result();
     }
 }

@@ -38,3 +38,26 @@ function clearInput(){
 	$('#inputSearch').val('');
 	$('#tableCategoria').find('tbody').find('tr').css('display','');
 }
+function buscarPromo(){
+	var categoria = $('#id_cate').val();
+	var texto = $('#inputSearch').val();
+	$.ajax({
+		data : {texto 	 : texto,
+				sub_cate : categoria},
+		url  : 'categorias/buscarPromo',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	    data = JSON.parse(data);
+	    if(data.error == 0){
+	    	$('#promociones').html('');
+	    	$('#promociones').append(data.promociones);
+	    }else {
+	    	msj('error', data.msj);
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}

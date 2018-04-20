@@ -74,4 +74,20 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
+
+    function buscarPromo(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html      = null;
+            $cont      = 1;
+            $texto = $this->input->post('texto');
+            $sub_cate = $this->input->post('sub_cate');
+            $datos = $this->M_solicitud->getDatosBuscadorProducts($sub_cate, $texto);
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
