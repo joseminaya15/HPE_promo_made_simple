@@ -35,7 +35,7 @@ $('#inputSearch').on('keyup',function() {
 });
 function clearInput(){
 	$('#inputSearch').val('');
-	getTablaPromos();
+	buscarPromo();
 }
 function buscarPromo(){
 	var categoria = null;
