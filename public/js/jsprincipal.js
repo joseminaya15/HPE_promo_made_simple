@@ -1,3 +1,6 @@
+$(window).load(function() {
+    $("#ModalLogin").modal('show');
+});
 $('#principal .owl-carousel').owlCarousel({
 	lazyLoad : true,
 	animateOut: 'fadeOut',
