@@ -195,8 +195,8 @@ class M_solicitud extends  CI_Model{
     }
     function getIdCategoria($cate){
       $sql = "SELECT c.Id
-                FROM categorias c
-               WHERE c.Nombre LIKE '%".$cate."%';";
+                FROM sub_categorias c
+               WHERE c.name LIKE '%".$cate."%';";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
