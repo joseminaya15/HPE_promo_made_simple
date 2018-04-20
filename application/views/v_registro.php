@@ -42,7 +42,7 @@
                                 <label for="correo">Email</label>
                                 <input type="text" id="correo" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                             </div>
-                            <div class="col-xs-12 p-0 mdl-card__actions">
+                            <div class="col-xs-12 p-0 mdl-card__actions" style="display: none">
                                 <p>Type of user</p>
                                 <div class="button-user">
                                     <button id="distris" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="selectUser(this.id)">Distis</button>
