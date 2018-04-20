@@ -117,7 +117,9 @@
             $(window).load(function() {
                 $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
+                let nameCategoria = sessionStorage.getItem('NAME_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+                $('#namePromocion').text(nameCategoria);
             });
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
