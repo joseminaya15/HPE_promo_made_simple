@@ -13,7 +13,6 @@ $('#principal .owl-carousel').owlCarousel({
 	autoplay : true,
 	autoplayTimeout : 5000
 });
-
 function goToCategorias(id){
 	var idCategoria = $("#"+id);
 	var name_cate   = idCategoria.find('h2').text();
@@ -23,4 +22,21 @@ function goToCategorias(id){
 	});
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+}
+function cerrarCesion(){
+	$.ajax({
+		url  : 'Principal/cerrarCesion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'Login';
+        }else {
+        	return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+	});
 }

@@ -531,6 +531,10 @@ footer
 		tr
 			th
 				border 1px solid #DDDDDD !important
+				background-color $color
+				color #FFFFFF
+				&:after
+					opacity 1 !important
 .nav-tabs
 	border none
 	li
@@ -832,9 +836,9 @@ footer
 			top 0
 			right 0
 			left 0
-			opacity 0.5
+			opacity 0.6
 			z-index 2
-			background-color #000000
+			background-color $color
 			width 100%
 			height 100%
 .search-filter
@@ -891,6 +895,7 @@ footer
 	font-size 40px
 	line-height 42px
 	font-family $medium
+	text-align center
 /*DATATABLE*/
 .pagination
 	&>li>a
