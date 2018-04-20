@@ -1,5 +1,7 @@
+var flg = 1;
 function getTablaPromos(){
 	var categoria = $('#id_cate').val();
+	flg = 2;
 	$.ajax({
 		data : {categoria : categoria},
 		url  : 'categorias/getCategorias',
@@ -36,7 +38,12 @@ function clearInput(){
 	getTablaPromos();
 }
 function buscarPromo(){
-	var categoria = $('#id_cate').val();
+	var categoria = null;
+	if(flg == 1){
+		categoria = $('#combo').find('.dropdown-toggle').find('.filter-option').text();
+	}else {
+		categoria = $('#id_cate').val()
+	}
 	var texto = $('#inputSearch').val();
 	$.ajax({
 		data : {texto 	 : texto,

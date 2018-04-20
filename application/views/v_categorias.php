@@ -117,6 +117,7 @@
                 $('#namePromocion').text(nameCategoria);
             });
             $( document ).ready(function() {
+                //$('#combo').find('.dropdown-toggle').find('.filter-option').text();
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 if(categoria == 'Server & Storage Flex Attach'){
                     $('#combo').html('');
