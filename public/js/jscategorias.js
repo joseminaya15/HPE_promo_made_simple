@@ -33,7 +33,7 @@ $('#inputSearch').on('keyup',function() {
 });
 function clearInput(){
 	$('#inputSearch').val('');
-	$('#tableCategoria').find('tbody').find('tr').css('display','');
+	getTablaPromos();
 }
 function buscarPromo(){
 	var categoria = $('#id_cate').val();

@@ -84,7 +84,11 @@ class Categorias extends CI_Controller {
             $texto = $this->input->post('texto');
             $cate  = $this->input->post('sub_cate');
             $sub_cate = $this->M_solicitud->getIdCategoria($cate);
-            $datos = $this->M_solicitud->getDatosBuscadorProducts($sub_cate, $texto);
+            if($texto == null || $texto == ''){
+                $datos = $this->M_solicitud->getDatosProducts(intval($sub_cate));
+            }else {                
+                $datos = $this->M_solicitud->getDatosBuscadorProducts($sub_cate, $texto);
+            }
             if(count($datos) == 0){
                 $html = '<tr>
                             <td></td>

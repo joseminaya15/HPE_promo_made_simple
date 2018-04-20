@@ -124,7 +124,7 @@
                                             '<option value="Servidores">Servidores</option>'+
                                             '<option value="Procesadores">Procesadores</option>'+
                                             '<option value="Memoria">Memoria</option>'+
-                                            '<option value="Discos">Discos</option>'+
+                                            '<option value="DISCOS FLEX ATTACH">Discos</option>'+
                                             '<option value="Opciones">Opciones</option>'+
                                             '<option value="Storage">Storage</option>'+
                                             '<option value="Software/Licencias">Software/Licencias</option>'+

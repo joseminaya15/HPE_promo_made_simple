@@ -197,7 +197,7 @@ class M_solicitud extends  CI_Model{
     function getIdCategoria($cate){
       $sql = "SELECT c.Id
                 FROM sub_categorias c
-               WHERE c.name LIKE '%".$cate."%';";
+               WHERE c.name LIKE '".$cate."';";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
@@ -214,7 +214,7 @@ class M_solicitud extends  CI_Model{
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
                 AND s.Id = ?
-                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '".$texto."');";
+                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '%".$texto."%');";
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }
