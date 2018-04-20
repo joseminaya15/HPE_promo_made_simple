@@ -61,26 +61,28 @@
                 </div>
             </div>
         </section>
-        <section id="productos">
+        <section id="productos" class="col-xs-12">
             <div class="mdl-container">
-                <h2 id="namePromocion"></h2>
-                <div class="table-responsive">
-                    <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
-                        <thead>
-                            <tr class="tr-header-reporte">
-                                <th>Product number ID</th>
-                                <th>Part Number</th>
-                                <th>Product Description</th>
-                                <th>Product Line</th>
-                                <th>Net Price</th>
-                                <th>Efective Date</th>
-                                <th>End Date</th>
-                            </tr>
-                        </thead>
-                        <tbody id="promociones">
-                            <?php echo $promociones ?>
-                        </tbody>
-                    </table>
+                <div class="col-xs-12">
+                    <h2 id="namePromocion"></h2>
+                    <div class="table-responsive">
+                        <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
+                            <thead>
+                                <tr class="tr-header-reporte">
+                                    <th>Product number ID</th>
+                                    <th>Part Number</th>
+                                    <th>Product Description</th>
+                                    <th>Product Line</th>
+                                    <th>Net Price</th>
+                                    <th>Efective Date</th>
+                                    <th>End Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="promociones">
+                                <?php echo $promociones ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
