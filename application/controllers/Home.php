@@ -12,7 +12,6 @@ class Home extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
