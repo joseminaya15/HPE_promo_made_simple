@@ -74,7 +74,7 @@
                 <div class="tab-content m-t-20">
                     <div role="tabpanel" class="tab-pane fade in active" id="Lista">
                         <div class="table-responsive">
-                            <table id="tableCategoria" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                            <table id="tableCategoria" data-page-length="10" class="display nowrap table table-bordered table-hover dt-responsive" width="100%" data-order="[[ 1, &quot;asc&quot; ]]">
                                 <thead>
                                     <tr class="tr-header-reporte">
                                         <th>Product number ID</th>
@@ -127,12 +127,10 @@
             $(window).load(function() {
                 $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
-                console.log(openCategoria);
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
             });
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
-                console.log(categoria);
                 if(categoria == 'Server & Storage Flex Attach'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
