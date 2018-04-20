@@ -51,9 +51,9 @@ function registrar() {
 			$('#pais').val("0");
 			$('.selectpicker').selectpicker('refresh');
 			msj('error', 'Se registró correctamente');
-			setTimeout(function(){ 
+			/*setTimeout(function(){ 
 				location.href = "Login";
-			}, 1500);
+			}, 1500);*/
         }else {
 			msj('error', 'Su usuario o contraseña son incorrectos');
         	return;
