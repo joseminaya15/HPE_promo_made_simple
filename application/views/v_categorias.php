@@ -114,7 +114,7 @@
             }
             $(document).ready(function() {
                 $('#tableCategoria').DataTable({
-                    // searching: false
+                    searching: false
                 });
             });
             $(window).load(function() {
