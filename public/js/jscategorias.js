@@ -24,29 +24,16 @@ function getTablaPromos(cate){
 }
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
-	var input  = document.getElementById('inputSearch');
-	var table  = document.getElementById('tableCategoria');
-	var filter = input.value.toUpperCase();
-	var tr     = table.getElementsByTagName("tr");
 	if(lenghtInput.length > 0){
 		$('#buttonClear').css('visibility','visible')
 	}else{
 		$('#buttonClear').css('visibility','hidden')
 	}
-	for (var i = 0; i < tr.length; i++) {
-		var td0 = tr[i].getElementsByTagName("td")[0];
-		var td2 = tr[i].getElementsByTagName("td")[2];
-		if (td0 || td2) {
-	  		if (td0.innerHTML.toUpperCase().indexOf(filter) > -1) {
-		    	tr[i].style.display = "";
-		  	}else if (td2.innerHTML.toUpperCase().indexOf(filter) > -1){
-		  		tr[i].style.display = "";
-		  	}else {
-		    	tr[i].style.display = "none";
-		  	}
-		}       
-	}
 }
+$('#inputSearch').on('keyup',function() {
+	$('#tableCategoria_filter').find('label').find('input').addClass('name');
+	$('.name').trigger('keyup');
+});
 function clearInput(){
 	$('#inputSearch').val('');
 	$('#tableCategoria').find('tbody').find('tr').css('display','');
