@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <div class="menu_header">
-                                <p><?php echo $nombre ?></p>
+                                <p>Bienvenido(a) <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
                         </div>
@@ -224,11 +224,12 @@
                 let openModal = sessionStorage.getItem('OPEN_MODAL2');
                 if(openModal && openModal == '1') {
                     $("#ModalLogin").modal('hide');
-                    $('.menu_header').css('opacity','1');
+                    $('.menu_header').css('display','flex');
                 }
                 else{
                     $("#ModalLogin").modal('show');
                     sessionStorage.removeItem('OPEN_MODAL');
+                    $('.menu_header').css('display','none');
                 }
             });
         </script>

@@ -42,7 +42,7 @@ function cerrarCesion(){
 	        data = JSON.parse(data);
 	        if(data.error == 0){
 	        	location.href = 'Home';
-	        	$('.menu_header').css('opacity','0');
+	        	$('.menu_header').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');
 	        }else {
 	        	return;
@@ -81,10 +81,11 @@ function ingresar(){
         if(data.error == 0){
         	$('#usuario').val("");
         	$('#password').val("");
+        	$("#ModalLogin").modal('hide');
+        	location.href = 'Home';
         	sessionStorage.setItem('OPEN_MODAL2', '1');
         	sessionStorage.removeItem('OPEN_MODAL');
-        	$("#ModalLogin").modal('hide');
-        	$('.menu_header').css('opacity','1');
+			$('.menu_header').css('display','flex');
         }else {
           if(data.pass == null || data.pass == '') {
             msj('error', 'alguno de sus datos son incorrectos');

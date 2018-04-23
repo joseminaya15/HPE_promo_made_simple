@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <div class="menu_header">
-                                <p><?php echo $nombre ?></p>
+                                <p>Bienvenido(a) <?php echo $nombre ?></p>
                                 <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
                             </div>
                         </div>
@@ -66,6 +66,7 @@
         <section id="productos" class="col-xs-12">
             <div class="mdl-container">
                 <div class="col-xs-12">
+                    <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="table-responsive">
                         <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
@@ -115,7 +116,7 @@
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('#namePromocion').text(nameCategoria);
                 $('.selectpicker').val(1);
-                $('.menu_header').css('opacity','1');
+                $('.menu_header').css('display','flex');
             });
             $( document ).ready(function() {
                 $('#tableCategoria').DataTable({
