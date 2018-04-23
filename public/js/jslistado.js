@@ -158,7 +158,7 @@ function cerrarCesion(){
         try{
         data = JSON.parse(data);
         if(data.error == 0){
-            location.href = 'Login';
+            location.href = 'Home';
         }else {
             return;
         }

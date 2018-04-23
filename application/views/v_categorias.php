@@ -34,8 +34,10 @@
                             <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
                         <div class="col-xs-6 text-right p-0">
-                            <p><?php echo $nombre ?></p>
-                            <a onclick="cerrarCesion()" class="logout">Logout</a>
+                            <div class="menu_header">
+                                <p><?php echo $nombre ?></p>
+                                <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,24 +108,25 @@
             } else {
                 
             }
-            $(document).ready(function() {
-                $('#tableCategoria').DataTable({
-                    searching: false
-                });
-            });
             $(window).load(function() {
                 $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
                 let nameCategoria = sessionStorage.getItem('NAME_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('#namePromocion').text(nameCategoria);
+                $('.selectpicker').val(1);
+                $('.menu_header').css('opacity','1');
             });
             $( document ).ready(function() {
+                $('#tableCategoria').DataTable({
+                    searching: false
+                });
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
+                let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
                 if(categoria == 'Server & Storage Flex Attach'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Servidores">Servidores</option>'+
+                                            '<option value="Servidores" selected>Servidores</option>'+
                                             '<option value="Procesadores">Procesadores</option>'+
                                             '<option value="Memoria">Memoria</option>'+
                                             '<option value="DISCOS FLEX ATTACH">Discos</option>'+
@@ -131,6 +134,7 @@
                                             '<option value="Storage">Storage</option>'+
                                             '<option value="Software/Licencias">Software/Licencias</option>'+
                                          '</select>');
+                    getTablaPromos();
                 }else if(categoria == 'HPE Pointnext'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -138,6 +142,7 @@
                                             '<option value="HPN Attach Program">HPN Attach Program</option>'+
                                             '<option value="HPSD Attach Program">HPSD Attach Program</option>'+
                                          '</select>');
+                    getTablaPromos();
                 }else if(categoria == 'Storage Accelerate'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -147,6 +152,7 @@
                                             '<option value="Storage SAN">Storage SAN</option>'+
                                             '<option value="Discos">Discos</option>'+
                                          '</select>');
+                    getTablaPromos();
                 }else if(categoria == 'Aruba Market Take Over'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -154,6 +160,7 @@
                                             '<option value="Access Router">Access Router</option>'+
                                             '<option value="Access Points">Access Points</option>'+
                                          '</select>');
+                    getTablaPromos();
                 }else if(categoria == 'Aruba 3x2 Switches'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -167,6 +174,7 @@
                                             '<option value="Bridge Series">Bridge Series</option>'+
                                             '<option value="Access Router">Access Router</option>'+
                                          '</select>');
+                    getTablaPromos();
                 }
             });
         </script>

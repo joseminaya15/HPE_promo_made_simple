@@ -33,8 +33,10 @@
                             <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
                         <div class="col-xs-6 text-right p-0">
-                            <p><?php echo $nombre ?></p>
-                            <a onclick="cerrarCesion()" class="logout">Logout</a>
+                            <div class="menu_header">
+                                <p><?php echo $nombre ?></p>
+                                <a onclick="cerrarCesion()" class="logout">Logout</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,10 +122,10 @@
             </div>
         </section>
         <!-- Modal -->
-        <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card">
+                    <div class="mdl-card card-login">
                         <div class="mdl-card__supporting-text">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
@@ -138,6 +140,9 @@
                                     <div class="col-xs-12 form-group mdl-input">
                                         <label for="password">Password</label>
                                         <input type="password" id="password" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 mdl-card__actions text-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
@@ -184,14 +189,17 @@
                                         </select>
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="password">Password</label>
-                                        <input type="password" id="password" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                        <label for="passRegister">Password</label>
+                                        <input type="password" id="passRegister" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 mdl-card__actions text-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Register</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="closeModal()"><i class="mdi mdi-close"></i></button>
                         </div>
                     </div>
                 </div>
@@ -211,8 +219,18 @@
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
             } else {
-                $('select').selectpicker();
             }
+            $(window).load(function() {
+                let openModal = sessionStorage.getItem('OPEN_MODAL2');
+                if(openModal && openModal == '1') {
+                    $("#ModalLogin").modal('hide');
+                    $('.menu_header').css('opacity','1');
+                }
+                else{
+                    $("#ModalLogin").modal('show');
+                    sessionStorage.removeItem('OPEN_MODAL');
+                }
+            });
         </script>
     </body>
 </html>
