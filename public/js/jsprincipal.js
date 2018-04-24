@@ -22,6 +22,16 @@ function goToCategorias(id){
 	let openModal = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	if(openModal && openModal == '1') {
+        $("#ModalLogin").modal('show');
+    }
+    else{
+        $("#ModalLogin").modal('hide');
+        sessionStorage.removeItem('OPEN_MODAL');
+        idCategoria.attr({
+			href: 'Categorias'
+		});
+    }
     $.ajax({
 		data : {cate : name_cate},
 		url  : 'Home/goToCategorias',
@@ -30,16 +40,6 @@ function goToCategorias(id){
 		try{
 	        data = JSON.parse(data);
 	        if(data.error == 0){
-	        	if(openModal && openModal == '1') {
-			        $("#ModalLogin").modal('show');
-			    }
-			    else{
-			        $("#ModalLogin").modal('hide');
-			        sessionStorage.removeItem('OPEN_MODAL');
-			        idCategoria.attr({
-						href: 'Categorias'
-					});
-			    }
 	        }else {
 	        	return;
 	        }
