@@ -94,7 +94,6 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function goToCategorias(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;

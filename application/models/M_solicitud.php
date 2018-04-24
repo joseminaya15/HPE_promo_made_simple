@@ -237,9 +237,7 @@ class M_solicitud extends  CI_Model{
                     sub_categorias s
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
-                AND s.name LIKE ?
-                /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
-                AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
+                AND s.name LIKE ?";
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }
