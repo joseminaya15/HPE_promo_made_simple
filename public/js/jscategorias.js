@@ -2,6 +2,7 @@ var flg = 1;
 function getTablaPromos(){
 	var categoria = $('#id_cate').val();
 	// sessionStorage.setItem('SELECTCATEGORIA', categoria);
+	$('#inputSearch').val('');
 	$.ajax({
 		data : {categoria : categoria},
 		url  : 'categorias/getCategorias',
