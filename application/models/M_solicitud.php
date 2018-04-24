@@ -197,7 +197,7 @@ class M_solicitud extends  CI_Model{
     function getIdCategoria($cate){
       $sql = "SELECT c.Id
                 FROM sub_categorias c
-               WHERE c.name LIKE '".$cate."';";
+               WHERE (c.name LIKE '".$cate."')";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
@@ -213,8 +213,33 @@ class M_solicitud extends  CI_Model{
                     sub_categorias s
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
-                AND s.Id = ?
-                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '%".$texto."%');";
+                AND s.name LIKE ?
+                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '".$texto."');";
+      $result = $this->db->query($sql, array($id_cate));
+      return $result->result();
+    }
+    function getIdSubCategoria($id_cates){
+      $sql = "SELECT c.Id
+                FROM sub_categorias c
+               WHERE c.id_cate = ?";
+      $result = $this->db->query($sql, array($id_cates));
+      return $result->result();
+    }
+    function getDatosProductsByName($id_cate){
+      $sql = "SELECT p.*,
+                    s.name,
+                    c.Nombre,
+                    c.deal_lead,
+                    DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+               FROM productos p,
+                    categorias c,
+                    sub_categorias s
+              WHERE p.id_sub_cate = s.Id
+                AND s.id_cate = c.Id
+                AND s.name LIKE ?
+                /*AND p.effective_date BETWEEN '2018-02-01' AND '2018-04-30'
+                AND p.end_date BETWEEN '2018-02-01' AND '2018-04-30';*/";
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }

@@ -2,7 +2,6 @@ var flg = 1;
 function getTablaPromos(){
 	var categoria = $('#id_cate').val();
 	// sessionStorage.setItem('SELECTCATEGORIA', categoria);
-	flg = 2;
 	$.ajax({
 		data : {categoria : categoria},
 		url  : 'categorias/getCategorias',
@@ -13,6 +12,7 @@ function getTablaPromos(){
 	    if(data.error == 0){
 	    	$('#promociones').html('');
 	    	$('#promociones').append(data.promociones);
+	    	flg = 2;
 	    }else {
 	    	msj('error', data.msj);
 	    	return;
@@ -36,16 +36,11 @@ $('#inputSearch').on('keyup',function() {
 });
 function clearInput(){
 	$('#inputSearch').val('');
-	buscarPromo();
+	buscarPromo('inputSearch');
 }
-function buscarPromo(){
-	var categoria = null;
-	if(flg == 1){
-		categoria = $('#combo').find('.dropdown-toggle').find('.filter-option').text();
-	}else {
-		categoria = $('#id_cate').val()
-	}
-	var texto = $('#inputSearch').val();
+function buscarPromo(datos){
+	var categoria = $('#'+datos).parents().find('.filter-categoria').find('.filter-option').text();
+	var texto 	  = $('#inputSearch').val();
 	$.ajax({
 		data : {texto 	 : texto,
 				sub_cate : categoria},

@@ -94,4 +94,32 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+
+    function goToCategorias(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $cate    = $this->input->post('cate');
+            $id_cate = null;
+            if($cate == 'Server & Storage Flex Attach'){
+                $id_cate = 1;
+            }else if($cate == 'HPE Pointnext'){
+                $id_cate = 2;
+            }else if($cate == 'Storage Accelerate'){
+                $id_cate = 3;
+            }else if($cate == 'Aruba Market Take Over'){
+                $id_cate = 4;
+            }else if($cate == 'Aruba 3x2 Switches'){
+                $id_cate = 5;
+            }else if($cate == 'Aruba Mobility'){
+                $id_cate = 6;
+            }
+            $session = array('id_cates' => $id_cate);
+            $this->session->set_userdata($session);
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

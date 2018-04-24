@@ -14,10 +14,14 @@ class Categorias extends CI_Controller {
     }
 
 	public function index(){
+        $id_sub_cate = $this->M_solicitud->getIdSubCategoria($this->session->userdata('id_cates'));
+        if(count($id_sub_cate) == 0){
+            return;
+        }
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
         $html      = null;
         $cont      = 1;
-        $datos     = $this->M_solicitud->getDatosProducts(1);
+        $datos     = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id);
         foreach ($datos as $key) {
             $html .= '<tr>
                         <td>'.$key->product_id.'</td>
@@ -79,15 +83,14 @@ class Categorias extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $html      = null;
-            $cont      = 1;
+            $html  = null;
+            $cont  = 1;
             $texto = $this->input->post('texto');
             $cate  = $this->input->post('sub_cate');
-            $sub_cate = $this->M_solicitud->getIdCategoria($cate);
             if($texto == null || $texto == ''){
-                $datos = $this->M_solicitud->getDatosProducts(intval($sub_cate));
-            }else {                
-                $datos = $this->M_solicitud->getDatosBuscadorProducts($sub_cate, $texto);
+                $datos = $this->M_solicitud->getDatosProductsByName($cate);
+            }else {             
+                $datos = $this->M_solicitud->getDatosBuscadorProducts($cate, $texto);
             }
             if(count($datos) == 0){
                 $html = '<tr>

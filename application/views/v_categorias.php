@@ -49,7 +49,7 @@
                 <div class="search-categoria">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="mdi mdi-search"></i></button>
                     <div class="search-input">
-                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id)" onchange="buscarPromo()">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id)" onchange="buscarPromo(this.id)">
                     </div>
                     <div class="search-clear">
                         <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
@@ -135,7 +135,7 @@
                                             '<option value="Storage">Storage</option>'+
                                             '<option value="Software/Licencias">Software/Licencias</option>'+
                                          '</select>');
-                    getTablaPromos();
+                    //getTablaPromos();
                 }else if(categoria == 'HPE Pointnext'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -143,7 +143,7 @@
                                             '<option value="HPN Attach Program">HPN Attach Program</option>'+
                                             '<option value="HPSD Attach Program">HPSD Attach Program</option>'+
                                          '</select>');
-                    getTablaPromos();
+                    //getTablaPromos();
                 }else if(categoria == 'Storage Accelerate'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -153,7 +153,7 @@
                                             '<option value="Storage SAN">Storage SAN</option>'+
                                             '<option value="Discos">Discos</option>'+
                                          '</select>');
-                    getTablaPromos();
+                    //getTablaPromos();
                 }else if(categoria == 'Aruba Market Take Over'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -161,7 +161,7 @@
                                             '<option value="Access Router">Access Router</option>'+
                                             '<option value="Access Points">Access Points</option>'+
                                          '</select>');
-                    getTablaPromos();
+                    //getTablaPromos();
                 }else if(categoria == 'Aruba 3x2 Switches'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -175,7 +175,7 @@
                                             '<option value="Bridge Series">Bridge Series</option>'+
                                             '<option value="Access Router">Access Router</option>'+
                                          '</select>');
-                    getTablaPromos();
+                    //getTablaPromos();
                 }
             });
         </script>
