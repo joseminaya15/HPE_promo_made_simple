@@ -47,7 +47,7 @@
             <div class="header_categoria"></div>
             <div class="search-filter">
                 <div class="search-categoria">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="mdi mdi-search"></i></button>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
                     <div class="search-input">
                         <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="verificarDatos(event);">
                     </div>

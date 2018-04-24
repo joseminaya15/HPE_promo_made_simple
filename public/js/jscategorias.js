@@ -40,7 +40,11 @@ function clearInput(){
 	buscarPromo('inputSearch');
 }
 function buscarPromo(datos){
+	var promo 	  = $('#namePromocion').text();
 	var categoria = $('#'+datos).parents().find('.filter-categoria').find('.filter-option').text();
+	if(promo == 'Server & Storage Flex Attach' && categoria == 'Discos'){
+		categoria = 'DISCOS FLEX ATTACH';
+	}
 	var texto 	  = $('#inputSearch').val();
 	$.ajax({
 		data : {texto 	 : texto,
