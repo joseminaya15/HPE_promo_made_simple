@@ -135,7 +135,6 @@
                                             '<option value="Storage">Storage</option>'+
                                             '<option value="Software/Licencias">Software/Licencias</option>'+
                                          '</select>');
-                    //getTablaPromos();
                 }else if(categoria == 'HPE Pointnext'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -143,7 +142,6 @@
                                             '<option value="HPN Attach Program">HPN Attach Program</option>'+
                                             '<option value="HPSD Attach Program">HPSD Attach Program</option>'+
                                          '</select>');
-                    //getTablaPromos();
                 }else if(categoria == 'Storage Accelerate'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -153,7 +151,6 @@
                                             '<option value="Storage SAN">Storage SAN</option>'+
                                             '<option value="Discos">Discos</option>'+
                                          '</select>');
-                    //getTablaPromos();
                 }else if(categoria == 'Aruba Market Take Over'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -161,7 +158,6 @@
                                             '<option value="Access Router">Access Router</option>'+
                                             '<option value="Access Points">Access Points</option>'+
                                          '</select>');
-                    //getTablaPromos();
                 }else if(categoria == 'Aruba 3x2 Switches'){
                     $('#combo').html('');
                     $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
@@ -175,7 +171,6 @@
                                             '<option value="Bridge Series">Bridge Series</option>'+
                                             '<option value="Access Router">Access Router</option>'+
                                          '</select>');
-                    //getTablaPromos();
                 }
             });
         </script>

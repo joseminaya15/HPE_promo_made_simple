@@ -1,7 +1,5 @@
-var flg = 1;
 function getTablaPromos(){
 	var categoria = $('#id_cate').val();
-	// sessionStorage.setItem('SELECTCATEGORIA', categoria);
 	$('#inputSearch').val('');
 	$.ajax({
 		data : {categoria : categoria},
@@ -13,7 +11,6 @@ function getTablaPromos(){
 	    if(data.error == 0){
 	    	$('#promociones').html('');
 	    	$('#promociones').append(data.promociones);
-	    	flg = 2;
 	    }else {
 	    	msj('error', data.msj);
 	    	return;
@@ -45,7 +42,7 @@ function buscarPromo(datos){
 	if(promo == 'Server & Storage Flex Attach' && categoria == 'Discos'){
 		categoria = 'DISCOS FLEX ATTACH';
 	}
-	var texto 	  = $('#inputSearch').val();
+	var texto = $('#inputSearch').val();
 	$.ajax({
 		data : {texto 	 : texto,
 				sub_cate : categoria},
