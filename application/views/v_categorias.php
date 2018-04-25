@@ -80,7 +80,7 @@
                                     <th>Net Price</th>
                                     <th>Efective Date</th>
                                     <th>End Date</th>
-                                    <th>Categoría</th>
+                                    <th>Categorías</th>
                                     <?php } else { ?>
                                     <th>Product number ID</th>
                                     <th>Part Number</th>
