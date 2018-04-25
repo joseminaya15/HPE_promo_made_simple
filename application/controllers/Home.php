@@ -31,13 +31,13 @@ class Home extends CI_Controller {
                     if($password == base64_decode($username[0]->pass)){
                         $session = array('usuario'   => $usuario,
                                          'tipo_user' => $username[0]->tipo_user,
-                                         'nombre'    => $username[0]->Nombre,   
+                                         'nombre'    => $username[0]->Nombre,
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0 && $usuario == 'admin'){
                             $data['redirect'] = 'Listado';
                         }else {
-                            $data['pass'] = 'Contraseña incorrecta';
+                            $data['pass']     = 'Contraseña incorrecta';
                             $data['redirect'] = 'Home';
                         }
                         if($username[0]->tipo_user == 1){
@@ -157,6 +157,42 @@ class Home extends CI_Controller {
             }            
             $data['promociones'] = $html;
             $data['error']       = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function encontrarPromociones(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html     = '';
+            $texto    = $this->input->post('texto');
+            $sub_cate = $this->input->post('sub_cate');
+            if($texto == '' || $texto == null){
+                throw new Exception("Error Processing Request", 1);
+            }
+            if($sub_cate == null || $sub_cate == ''){
+                throw new Exception("Error Processing Request", 1);
+            }
+            $datos = $this->input->verificarUsuario($texto);
+            if(count($datos) == 0){
+                return;
+            }
+            foreach ($datos as $key) {
+                $html .= '<tr>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->part_number.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->product_line.'</td>
+                            <td>'.$key->net_price.'</td>
+                            <td>'.$key->effect_date.'</td>
+                            <td>'.$key->fecha_fin.'</td>
+                            <td>'.$key->name.'</td>
+                          </tr>';
+            }
+            $data['promociones'] = $html;
+            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
