@@ -66,10 +66,10 @@ class Home extends CI_Controller {
             $pais          = $this->input->post('pais');
             $tipo_user     = $this->input->post('tipo_user');
             $arrayInsert   = array('Nombre'    => $nombre,
-                                 'Email'     => $usuario,
-                                 'pass'      => base64_encode($passRegister),
-                                 'Pais'      => $pais,
-                                 'tipo_user' => 1);
+                                   'Email'     => $usuario,
+                                   'pass'      => base64_encode($passRegister),
+                                   'Pais'      => $pais,
+                                   'tipo_user' => 1);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
             $session    = array('nombre'     => $nombre,
                                 'usuario'    => $usuario,
@@ -112,6 +112,8 @@ class Home extends CI_Controller {
                 $id_cate = 5;
             }else if($cate == 'Aruba Mobility'){
                 $id_cate = 6;
+            }else if($cate == 'InstaSales'){
+                $id_cate = 7;
             }
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);

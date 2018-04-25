@@ -58,7 +58,7 @@
                 </div>
                 <div class="filter-categoria" id="combo">
                     <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
-                        <option></option>
+                        <?php echo $opcion ?>
                     </select>
                 </div>
             </div>
@@ -72,6 +72,7 @@
                         <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
                             <thead>
                                 <tr class="tr-header-reporte">
+                                    <?php if($sales == 7) { ?>
                                     <th>Product number ID</th>
                                     <th>Part Number</th>
                                     <th>Product Description</th>
@@ -79,6 +80,16 @@
                                     <th>Net Price</th>
                                     <th>Efective Date</th>
                                     <th>End Date</th>
+                                    <th>Categoría</th>
+                                    <?php } else { ?>
+                                    <th>Product number ID</th>
+                                    <th>Part Number</th>
+                                    <th>Product Description</th>
+                                    <th>Product Line</th>
+                                    <th>Net Price</th>
+                                    <th>Efective Date</th>
+                                    <th>End Date</th>
+                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody id="promociones">

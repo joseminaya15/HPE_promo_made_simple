@@ -13,23 +13,63 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $id_sub_cate = $this->M_solicitud->getIdSubCategoria($this->session->userdata('id_cates'));
-        if(count($id_sub_cate) == 0){
-            return;
-        }
+        $html           = null;
+        $opciones       = '<option><option>';
+        $data['sales']  = $this->session->userdata('id_cates');
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
-        $html      = null;
-        $datos     = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id);
+        if($this->session->userdata('id_cates') == 7){
+            $datos = $this->M_solicitud->getDatosInstaSales();
+            $opciones = '<option value="SERVIDORES">SERVIDORES</option>'.
+                        '<option value="PROCESADORES">PROCESADORES</option>'.
+                        '<option value="DISCOS FLEX ATTACH">DISCOS</option>'.
+                        '<option value="OPCIONES">OPCIONES</option>'.
+                        '<option value="STORAGE">STORAGE</option>'.
+                        '<option value="SOFTWARE/LICENCIAS">SOFTWARE/LICENCIAS</option>'.
+                        '<option value="ISS ATTACH PROGRAM">ISS ATTACH PROGRAM</option>'.
+                        '<option value="HPN ATTACH PROGRAM">HPN ATTACH PROGRAM</option>'.
+                        '<option value="HPSD ATTACH PROGRAM">HPSD ATTACH PROGRAM</option>'.
+                        '<option value="SERVICIOS">SERVICIOS</option>'.
+                        '<option value="BACKUP EN CINTA">BACKUP EN CINTA</option>'.
+                        '<option value="OPCIONES">OPCIONES</option>'.
+                        '<option value="STORAGE SAN">STORAGE SAN</option>'.
+                        '<option value="DISCOS">DISCOS</option>'.
+                        '<option value="SWITCH SERIES">SWITCH SERIES</option>'.
+                        '<option value="OFFICE CONNECT - SWITCH SERIES">OFFICE CONNECT - SWITCH SERIES</option>'.
+                        '<option value="ACCESS POINTS">ACCESS POINTS</option>'.
+                        '<option value="BRIDGE SERIES">BRIDGE SERIES</option>'.
+                        '<option value="ACCESS ROUTER">ACCESS ROUTER</option>';
+            $data['opcion'] = $opciones;
+        }else {
+            $id_sub_cate = $this->M_solicitud->getIdSubCategoria($this->session->userdata('id_cates'));
+            if(count($id_sub_cate) == 0){
+                return;
+            }
+            $datos = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id); 
+            $data['opcion'] = $opciones;
+        }
         foreach ($datos as $key) {
-            $html .= '<tr>
-                        <td>'.$key->product_id.'</td>
-                        <td>'.$key->part_number.'</td>
-                        <td>'.$key->product_desc.'</td>
-                        <td>'.$key->product_line.'</td>
-                        <td>'.$key->net_price.'</td>
-                        <td>'.$key->effect_date.'</td>
-                        <td>'.$key->fecha_fin.'</td>
-                    </tr>';
+            if($this->session->userdata('id_cates') == 7){
+                $html .= '<tr>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->part_number.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->product_line.'</td>
+                            <td>'.$key->net_price.'</td>
+                            <td>'.$key->effect_date.'</td>
+                            <td>'.$key->fecha_fin.'</td>
+                            <td>'.$key->name.'</td>
+                        </tr>';
+            }else {
+                $html .= '<tr>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->part_number.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->product_line.'</td>
+                            <td>'.$key->net_price.'</td>
+                            <td>'.$key->effect_date.'</td>
+                            <td>'.$key->fecha_fin.'</td>
+                        </tr>';
+            }
         }
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
