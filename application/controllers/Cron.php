@@ -13,21 +13,22 @@ class Cron extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $timestamp = date('Y-m-d');
-        $datosCodigo = $this->M_solicitud->getAnioAndQ();
-        $dates     = $this->M_solicitud->getPromociones($datosCodigo[0]->Q, $datosCodigo[0]->anio);
-        $resta     = '';
         $arr_datos = array();
         $html      = '';
+        $dates     = $this->M_solicitud->getDatosCron();
+        if(count($dates) == 0){
+            return;
+        }
         foreach ($dates as $key) {
-            $resta = substr($key->fecha_vencimiento, 0, 2) - substr($timestamp, 8, 2);
-            if($resta <= 15){
-                $html .= '<tr>
-                            <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Titulo.'</font></td>
-                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Tipo.'</font></td>
-                            <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->fecha_vencimiento.'</font></td>
-                        </tr>';
-            }
+            $html .= '<tr>
+                        <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->product_id.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->part_number.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->product_desc.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->product_line.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->net_price.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->effect_date.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->fecha_fin.'</font></td>
+                    </tr>';
         }
        array_push($arr_datos, $html);
        if(count($arr_datos) > 0){
@@ -42,14 +43,14 @@ class Cron extends CI_Controller {
        $configGmail = array('protocol'  => 'smtp',
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18',
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'hpeinfo18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@marketinghpe.com');
-       $this->email->to('jhonatanibericom@gmail.com');
+       $this->email->to('jhonatanibericom@gmail.com');//maria-alejandra.prieto@hpe.com
        $this->email->subject('Promociones por vencer en HPE promo made simple');
        $texto = '<!DOCTYPE html>
                 <html>
@@ -89,19 +90,23 @@ class Cron extends CI_Controller {
                                                 <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 20px;">
                                                     <thead>
                                                         <tr>
-                                                            <th style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Nombre</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Tipo</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Fecha de Caducidad</font></th>
+                                                            <th style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Number ID</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Part Number</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Description</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Line</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Net Price</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Efective Date</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">End Date</font></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        '.$html[0].'
+                                                       '.$html[0].'
                                                     </tbody>
                                                 </table>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: center;padding-bottom: 20px"><a href="http://test.brainblue.com/HPE_promo_made_simple/Login" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
+                                            <td style="text-align: center;padding-bottom: 20px"><a href="http://test.brainblue.com/HPE_promo_made_simple/Home" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: center;"><font style="font-family: arial;color: #D3D3D3;font-size: 12px;">&copy;2018 Hewlett Packard Enterprise Development LP</font></td>
@@ -114,6 +119,7 @@ class Cron extends CI_Controller {
                 </html>';
        $this->email->message($texto);
        $this->email->send();
+       echo print_r($this->email->send());
        $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();

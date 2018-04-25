@@ -214,7 +214,7 @@ class M_solicitud extends  CI_Model{
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
                 AND s.name LIKE ?
-                AND (p.product_id = '".$texto."' OR p.product_desc LIKE '".$texto."');";
+                AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
       $result = $this->db->query($sql, array($id_cate));
       return $result->result();
     }
@@ -239,6 +239,25 @@ class M_solicitud extends  CI_Model{
                 AND s.id_cate = c.Id
                 AND s.name LIKE ?";
       $result = $this->db->query($sql, array($id_cate));
+      return $result->result();
+    }
+    function getDatosCron(){
+      $sql = "SELECT p.*,
+                     s.name,
+                     c.Nombre,
+                     c.deal_number,
+                     DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+                FROM productos p,
+                     sub_categorias s,
+                     categorias c
+               WHERE p.id_sub_cate = s.Id
+                 AND c.Id = s.id_cate
+                 AND IF(CONVERT(SUBSTRING(p.end_date, 9, 2), SIGNED INTEGER) - CONVERT(SUBSTRING(CURDATE(), 9, 2), SIGNED INTEGER) <= 15, TRUE, FALSE)
+                 AND SUBSTRING(CURDATE(), 3, 2) = SUBSTRING(p.end_date, 3, 2)
+                 AND SUBSTRING(CURDATE(), 6, 2) = SUBSTRING(p.end_date, 6, 2)
+                 LIMIT 50";
+      $result = $this->db->query($sql);
       return $result->result();
     }
 }
