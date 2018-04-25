@@ -81,8 +81,35 @@ function cerrarCesion(){
 	});
 }
 function verificarDatos(e){
-	/*if(e.keyCode === 13){
-		e.preventDefault();*/
-		buscarPromo('inputSearch');
-    //}
+	buscarPromo('inputSearch');
+}
+function goToCategorias(id){
+	var idCategoria = $("#"+id);
+	var name_cate   = idCategoria.text();
+	let openModal = sessionStorage.getItem('OPEN_MODAL');
+	sessionStorage.setItem('OPEN_CATEGORIA', id);
+	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	if(openModal && openModal == '1') {
+        $("#ModalLogin").modal('show');
+    }
+    else{
+        $("#ModalLogin").modal('hide');
+        sessionStorage.removeItem('OPEN_MODAL');
+		location.href = 'Categorias';
+    }
+    $.ajax({
+		data : {cate : name_cate},
+		url  : 'Home/goToCategorias',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        }else {
+	        	return;
+	        }
+		}catch(err){
+			msj('error',err.message);
+		}
+	});
 }

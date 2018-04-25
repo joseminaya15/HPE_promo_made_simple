@@ -28,9 +28,6 @@ function goToCategorias(id){
     else{
         $("#ModalLogin").modal('hide');
         sessionStorage.removeItem('OPEN_MODAL');
-  //       idCategoria.attr({
-		// 	href: 'Categorias'
-		// });
 		location.href = 'Categorias';
     }
     $.ajax({
@@ -239,6 +236,5 @@ function buscarPromo(datos){
 	});
 }
 function triggerCategoria(id1){
-	var linkMenu = id1.substr(0,2);
-	goToCategorias(linkMenu);
+	goToCategorias(id1);
 }

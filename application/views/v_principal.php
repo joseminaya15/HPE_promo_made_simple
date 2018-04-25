@@ -42,13 +42,13 @@
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                                    <a id="p1Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Server & Storage Flex Attach</a>
-                                    <a id="p2Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">HPE Pointnext</a>
-                                    <a id="p3Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Storage Accelerate</a>
-                                    <a id="p4Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba Market Take Over</a>
-                                    <a id="p5Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba 3x2 Switches</a>
-                                    <a id="p6Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba Mobility</a>
-                                    <a id="p7Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">InstaSales</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Server & Storage Flex Attach</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p2')">HPE Pointnext</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Storage Accelerate</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p4')">Aruba Market Take Over</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p5')">Aruba 3x2 Switches</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Aruba Mobility</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p7')">InstaSales</a>
                                 </ul>
                             </div>
                         </div>
