@@ -162,40 +162,4 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function encontrarPromociones(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $html     = '';
-            $texto    = $this->input->post('texto');
-            $sub_cate = $this->input->post('sub_cate');
-            if($texto == '' || $texto == null){
-                throw new Exception("Error Processing Request", 1);
-            }
-            if($sub_cate == null || $sub_cate == ''){
-                throw new Exception("Error Processing Request", 1);
-            }
-            $datos = $this->input->verificarUsuario($texto);
-            if(count($datos) == 0){
-                return;
-            }
-            foreach ($datos as $key) {
-                $html .= '<tr>
-                            <td>'.$key->product_id.'</td>
-                            <td>'.$key->part_number.'</td>
-                            <td>'.$key->product_desc.'</td>
-                            <td>'.$key->product_line.'</td>
-                            <td>'.$key->net_price.'</td>
-                            <td>'.$key->effect_date.'</td>
-                            <td>'.$key->fecha_fin.'</td>
-                            <td>'.$key->name.'</td>
-                          </tr>';
-            }
-            $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }
 }
