@@ -43,13 +43,13 @@
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p1')" id="p1">Server & Storage Flex Attach</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p2')" id="p2">HPE Pointnext</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p3')" id="p3">Storage Accelerate</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p4')" id="p4">Aruba Market Take Over</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p5')" id="p5">Aruba 3x2 Switches</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p6')" id="p6">Aruba Mobility</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria('p7')" id="p7">InstaSales</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p1">Server & Storage Flex Attach</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p2">HPE Pointnext</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p3">Storage Accelerate</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p4">Aruba Market Take Over</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p5">Aruba 3x2 Switches</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p6">Aruba Mobility</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p7">InstaSales</a>
                                 </ul>
                             </div>
                         </div>
