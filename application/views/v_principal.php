@@ -37,6 +37,20 @@
                                 <p>Bienvenido(a) <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
+                            <div class="menu_desplegable col-xs-12 p-0">
+                                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                    <i class="mdi mdi-menu"></i>Menu
+                                </button>
+                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                                    <a id="p1Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Server & Storage Flex Attach</a>
+                                    <a id="p2Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">HPE Pointnext</a>
+                                    <a id="p3Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Storage Accelerate</a>
+                                    <a id="p4Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba Market Take Over</a>
+                                    <a id="p5Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba 3x2 Switches</a>
+                                    <a id="p6Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">Aruba Mobility</a>
+                                    <a id="p7Menu" class="mdl-menu__item" onclick="triggerCategoria(this.id)">InstaSales</a>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

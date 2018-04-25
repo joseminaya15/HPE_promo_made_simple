@@ -93,7 +93,7 @@ label
 		bottom 0
 		z-index 0
 .header
-	background-color #314B5F
+	background-color $color
 	padding 15px 0
 	position fixed
 	top 0
@@ -984,6 +984,25 @@ footer
 		vertical-align middle
 		color $default
 		margin-right 10px
+.menu_desplegable
+	button
+		margin-top 7px
+		background-color #FFFFFF !important
+		color $color
+		text-transform initial
+		height 30px
+		line-height 20px
+		border-radius 20px
+		font-family $medium
+		i
+			color $color
+			vertical-align middle
+			margin-right 5px
+			font-size 20px
+	.mdl-menu__item
+		height 40px
+		line-height 44px
+		text-decoration none
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
