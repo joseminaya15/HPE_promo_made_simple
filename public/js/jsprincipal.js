@@ -214,7 +214,7 @@ function buscarPromo(datos){
 		url  : 'Home/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
-		try{
+	  try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
 	    	$('#promociones').html('');
