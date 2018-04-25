@@ -216,3 +216,24 @@ function closeModal(){
 	$('#correo').val("");
 	$('#pais').val("0");
 }
+function buscarPromo(datos){
+	var texto = $('#inputSearch').val();
+	$.ajax({
+		data : {texto : texto},
+		url  : 'Home/buscarPromo',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	    data = JSON.parse(data);
+	    if(data.error == 0){
+	    	$('#promociones').html('');
+	    	$('#promociones').append(data.promociones);
+	    }else {
+	    	msj('error', data.msj);
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}
