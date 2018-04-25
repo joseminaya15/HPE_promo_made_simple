@@ -260,4 +260,20 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->result();
     }
+    function getDatosBuscadorProductsByCate($texto){
+      $sql = "SELECT p.*,
+                    s.name,
+                    c.Nombre,
+                    c.deal_lead,
+                    DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+               FROM productos p,
+                    categorias c,
+                    sub_categorias s
+              WHERE p.id_sub_cate = s.Id
+                AND s.id_cate = c.Id
+                AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
+      $result = $this->db->query($sql);
+      return $result->result();
+    }
 }

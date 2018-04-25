@@ -126,14 +126,8 @@ class Home extends CI_Controller {
         $data['msj']   = null;
         try {
             $html  = null;
-            $cont  = 1;
             $texto = $this->input->post('texto');
-            $cate  = $this->input->post('sub_cate');
-            if($texto == null || $texto == ''){
-                $datos = $this->M_solicitud->getDatosProductsByName($cate);
-            }else {             
-                $datos = $this->M_solicitud->getDatosBuscadorProducts($cate, $texto);
-            }
+            $datos = $this->M_solicitud->getDatosBuscadorProductsByCate($texto);
             if(count($datos) == 0){
                 $html = '<tr>
                             <td></td>
@@ -155,7 +149,6 @@ class Home extends CI_Controller {
                                 <td>'.$key->effect_date.'</td>
                                 <td>'.$key->fecha_fin.'</td>
                             </tr>';
-                    $cont++;
                 }
             }            
             $data['promociones'] = $html;

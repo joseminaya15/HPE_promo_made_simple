@@ -20,7 +20,6 @@ class Categorias extends CI_Controller {
         }
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
         $html      = null;
-        $cont      = 1;
         $datos     = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id);
         foreach ($datos as $key) {
             $html .= '<tr>
@@ -32,7 +31,6 @@ class Categorias extends CI_Controller {
                         <td>'.$key->effect_date.'</td>
                         <td>'.$key->fecha_fin.'</td>
                     </tr>';
-            $cont++;
         }
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
@@ -43,7 +41,6 @@ class Categorias extends CI_Controller {
         $data['msj']   = null;
         try {
             $html      = null;
-            $cont      = 1;
             $categoria = $this->input->post('categoria');
             $id_cate   = $this->M_solicitud->getIdCategoria($categoria);
             $datos     = $this->M_solicitud->getDatosProducts(intval($id_cate));
@@ -68,7 +65,6 @@ class Categorias extends CI_Controller {
                             <td>'.$key->effect_date.'</td>
                             <td>'.$key->fecha_fin.'</td>
                         </tr>';
-                $cont++;
             }
             }            
             $data['promociones'] = $html;
@@ -84,7 +80,6 @@ class Categorias extends CI_Controller {
         $data['msj']   = null;
         try {
             $html  = null;
-            $cont  = 1;
             $texto = $this->input->post('texto');
             $cate  = $this->input->post('sub_cate');
             if($texto == null || $texto == ''){
@@ -113,7 +108,6 @@ class Categorias extends CI_Controller {
                                 <td>'.$key->effect_date.'</td>
                                 <td>'.$key->fecha_fin.'</td>
                             </tr>';
-                    $cont++;
                 }
             }            
             $data['promociones'] = $html;
