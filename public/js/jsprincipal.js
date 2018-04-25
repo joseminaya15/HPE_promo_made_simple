@@ -222,7 +222,6 @@ function buscarPromo(datos){
 	  try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	console.log(data.promociones);
 	    	$('#cardsCates').css("display", "none");
 	    	$('#tablaCates').css("display", "block");
 	    	$('#promociones').html('');
