@@ -82,29 +82,57 @@ class Categorias extends CI_Controller {
             $categoria = $this->input->post('categoria');
             $id_cate   = $this->M_solicitud->getIdCategoria($categoria);
             $datos     = $this->M_solicitud->getDatosProducts(intval($id_cate));
-            if(count($datos) == 0){
-                $html = '<tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>';
-            }else {
-                foreach ($datos as $key) {
-                $html .= '<tr>
-                            <td>'.$key->product_id.'</td>
-                            <td>'.$key->part_number.'</td>
-                            <td>'.$key->product_desc.'</td>
-                            <td>'.$key->product_line.'</td>
-                            <td>'.$key->net_price.'</td>
-                            <td>'.$key->effect_date.'</td>
-                            <td>'.$key->fecha_fin.'</td>
-                        </tr>';
+            if($this->session->userdata('id_cates') == 7){
+                if(count($datos) == 0){
+                    $html = '<tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>';
+                }else {
+                    foreach ($datos as $key) {
+                    $html .= '<tr>
+                                <td>'.$key->product_id.'</td>
+                                <td>'.$key->part_number.'</td>
+                                <td>'.$key->product_desc.'</td>
+                                <td>'.$key->product_line.'</td>
+                                <td>'.$key->net_price.'</td>
+                                <td>'.$key->effect_date.'</td>
+                                <td>'.$key->fecha_fin.'</td>
+                                <td>'.$key->name.'</td>
+                            </tr>';
+                    }
                 }
-            }            
+            }else {
+                if(count($datos) == 0){
+                    $html = '<tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>';
+                }else {
+                    foreach ($datos as $key) {
+                    $html .= '<tr>
+                                <td>'.$key->product_id.'</td>
+                                <td>'.$key->part_number.'</td>
+                                <td>'.$key->product_desc.'</td>
+                                <td>'.$key->product_line.'</td>
+                                <td>'.$key->net_price.'</td>
+                                <td>'.$key->effect_date.'</td>
+                                <td>'.$key->fecha_fin.'</td>
+                            </tr>';
+                    }
+                }   
+            }         
             $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -124,29 +152,57 @@ class Categorias extends CI_Controller {
             }else {             
                 $datos = $this->M_solicitud->getDatosBuscadorProducts($cate, $texto);
             }
-            if(count($datos) == 0){
-                $html = '<tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>';
-            }else {
-                foreach ($datos as $key) {
-                    $html .= '<tr>
-                                <td>'.$key->product_id.'</td>
-                                <td>'.$key->part_number.'</td>
-                                <td>'.$key->product_desc.'</td>
-                                <td>'.$key->product_line.'</td>
-                                <td>'.$key->net_price.'</td>
-                                <td>'.$key->effect_date.'</td>
-                                <td>'.$key->fecha_fin.'</td>
+            if($this->session->userdata('id_cates') == 7){
+                if(count($datos) == 0){
+                    $html = '<tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>';
+                }else {
+                    foreach ($datos as $key) {
+                        $html .= '<tr>
+                                    <td>'.$key->product_id.'</td>
+                                    <td>'.$key->part_number.'</td>
+                                    <td>'.$key->product_desc.'</td>
+                                    <td>'.$key->product_line.'</td>
+                                    <td>'.$key->net_price.'</td>
+                                    <td>'.$key->effect_date.'</td>
+                                    <td>'.$key->fecha_fin.'</td>
+                                    <td>'.$key->name.'</td>
+                                </tr>';
+                    }
+                } 
+            }else {
+                if(count($datos) == 0){
+                    $html = '<tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>';
+                }else {
+                    foreach ($datos as $key) {
+                        $html .= '<tr>
+                                    <td>'.$key->product_id.'</td>
+                                    <td>'.$key->part_number.'</td>
+                                    <td>'.$key->product_desc.'</td>
+                                    <td>'.$key->product_line.'</td>
+                                    <td>'.$key->net_price.'</td>
+                                    <td>'.$key->effect_date.'</td>
+                                    <td>'.$key->fecha_fin.'</td>
+                                </tr>';
+                    }
                 }
-            }            
+            }
             $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
