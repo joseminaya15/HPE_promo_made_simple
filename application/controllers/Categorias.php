@@ -63,7 +63,7 @@ class Categorias extends CI_Controller {
                             <td>'.$key->effect_date.'</td>
                             <td>'.$key->fecha_fin.'</td>
                         </tr>';
-            }
+                }
             }            
             $data['promociones'] = $html;
             $data['error'] = EXIT_SUCCESS;
