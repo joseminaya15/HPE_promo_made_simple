@@ -12,7 +12,6 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
         $id_sub_cate = $this->M_solicitud->getIdSubCategoria($this->session->userdata('id_cates'));
         if(count($id_sub_cate) == 0){
@@ -35,7 +34,6 @@ class Categorias extends CI_Controller {
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
 	}
-
     function getCategorias(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -74,7 +72,6 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
