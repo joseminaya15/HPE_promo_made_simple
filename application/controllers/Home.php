@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
+        $this->load->helper("url");
         $this->load->model('M_solicitud');
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -47,7 +47,7 @@ class Home extends CI_Controller {
                         }
                         $data['error'] = EXIT_SUCCESS;
                     }else {
-                        $data['pass'] = 'Contraseña incorrecta';
+                        $data['pass']  = 'Contraseña incorrecta';
                     }
                 }
             }
@@ -156,7 +156,7 @@ class Home extends CI_Controller {
                 }
             }            
             $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
+            $data['error']       = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
