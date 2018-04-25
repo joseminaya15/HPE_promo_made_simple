@@ -120,7 +120,8 @@
             });
             $( document ).ready(function() {
                 $('#tableCategoria').DataTable({
-                    searching: false
+                    searching: false,
+                    "pageLength": 10
                 });
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');

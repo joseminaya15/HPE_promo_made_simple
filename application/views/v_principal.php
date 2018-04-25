@@ -76,7 +76,7 @@
                         <div class="promocion-imagen one"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>Server & Storage Flex Attach</h2>
+                        <h2 class="one">Server & Storage Flex Attach</h2>
                     </div>
                 </a>
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -84,7 +84,7 @@
                         <div class="promocion-imagen two"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>HPE Pointnext</h2>
+                        <h2 class="two">HPE Pointnext</h2>
                     </div>
                 </a>
                 <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -92,7 +92,7 @@
                         <div class="promocion-imagen three"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>Storage Accelerate</h2>
+                        <h2 class="three">Storage Accelerate</h2>
                     </div>
                 </a>
                 <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -100,7 +100,7 @@
                         <div class="promocion-imagen four"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>Aruba Market Take Over</h2>
+                        <h2 class="four">Aruba Market Take Over</h2>
                     </div>
                 </a>
                 <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -108,7 +108,7 @@
                         <div class="promocion-imagen five"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>Aruba 3x2 Switches</h2>
+                        <h2 class="five">Aruba 3x2 Switches</h2>
                     </div>
                 </a>
                 <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -116,7 +116,15 @@
                         <div class="promocion-imagen six"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2>Aruba Mobility</h2>
+                        <h2 class="six">Aruba Mobility</h2>
+                    </div>
+                </a>
+                <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen six"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="seven">InstaSales</h2>
                     </div>
                 </a>
             </div>
