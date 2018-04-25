@@ -139,6 +139,7 @@ class Home extends CI_Controller {
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>';
             }else {
                 foreach ($datos as $key) {
@@ -150,6 +151,7 @@ class Home extends CI_Controller {
                                 <td>'.$key->net_price.'</td>
                                 <td>'.$key->effect_date.'</td>
                                 <td>'.$key->fecha_fin.'</td>
+                                <td>'.$key->name.'</td>
                             </tr>';
                 }
             }            
