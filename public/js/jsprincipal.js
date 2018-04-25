@@ -239,7 +239,6 @@ function buscarPromo(datos){
 	});
 }
 function triggerCategoria(id1){
-	var idMenu   = id1;
-	var linkMenu = idMenu.substr(0,2);
+	var linkMenu = id1.substr(0,2);
 	goToCategorias(linkMenu);
 }
