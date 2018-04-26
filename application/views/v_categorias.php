@@ -88,21 +88,10 @@
                                 <tr class="tr-header-reporte">
                                     <?php if($sales == 7) { ?>
                                     <th>Product number ID</th>
-                                    <th>Part Number</th>
                                     <th>Product Description</th>
-                                    <th>Product Line</th>
-                                    <th>Net Price</th>
-                                    <th>Efective Date</th>
-                                    <th>End Date</th>
-                                    <th>Categorías</th>
                                     <?php } else { ?>
                                     <th>Product number ID</th>
-                                    <th>Part Number</th>
                                     <th>Product Description</th>
-                                    <th>Product Line</th>
-                                    <th>Net Price</th>
-                                    <th>Efective Date</th>
-                                    <th>End Date</th>
                                     <?php } ?>
                                 </tr>
                             </thead>
