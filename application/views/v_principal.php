@@ -102,7 +102,7 @@
                         <div class="promocion-imagen one"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="one">Server & Storage Flex Attach</h2>
+                        <h2 class="one">Promoci&oacute;n 1</h2>
                     </div>
                 </a>
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -110,7 +110,7 @@
                         <div class="promocion-imagen two"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">HPE Pointnext</h2>
+                        <h2 class="two">Server & Storage Flex Attach</h2>
                     </div>
                 </a>
                 <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -118,7 +118,7 @@
                         <div class="promocion-imagen three"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="three">Storage Accelerate</h2>
+                        <h2 class="three">Promoci&oacute;n 3</h2>
                     </div>
                 </a>
                 <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -126,7 +126,7 @@
                         <div class="promocion-imagen four"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="four">Aruba Market Take Over</h2>
+                        <h2 class="four">HPE Pointnext</h2>
                     </div>
                 </a>
                 <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -134,7 +134,7 @@
                         <div class="promocion-imagen five"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="five">Aruba 3x2 Switches</h2>
+                        <h2 class="five">Promoci&oacute;n 5</h2>
                     </div>
                 </a>
                 <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -142,7 +142,7 @@
                         <div class="promocion-imagen six"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="six">Aruba Mobility</h2>
+                        <h2 class="six">Storage Accelerate</h2>
                     </div>
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -150,14 +150,78 @@
                         <div class="promocion-imagen seven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
+                        <h2 class="one">Promo Simplivity</h2>
+                    </div>
+                </a>
+                <a id="p8" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eight"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two">DCN TOR</h2>
+                    </div>
+                </a>
+                <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen nine"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="three">Promoci&oacute;n 9</h2>
+                    </div>
+                </a>
+                <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen ten"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="four">Promoci&oacute;n 10</h2>
+                    </div>
+                </a>
+                <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eleven"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="five">3PAR Avalanche & Store Once</h2>
+                    </div>
+                </a>
+                <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen twelve"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="six">Aruba Market Take Over</h2>
+                    </div>
+                </a>
+                <a id="p13" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen thirteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="one">Aruba 3x2 Switches</h2>
+                    </div>
+                </a>
+                <a id="p14" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen fourteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two">Aruba Mobility</h2>
+                    </div>
+                </a>
+                <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen fifteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
                         <h2 class="seven">InstaSales</h2>
                     </div>
                 </a>
             </div>
-            <div class="mdl-container seccion-table">
+            <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
                     <div class="mdl-card__supporting-text">
-                        <div class="table-responsive" id="tablaCates" style="display: none">
+                        <div class="table-responsive">
                             <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
                                 <thead>
                                     <tr class="tr-header-reporte">

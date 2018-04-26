@@ -114,6 +114,53 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-large" role="document">
+                <div class="modal-content">
+                    <div class="mdl-card">
+                        <div class="mdl-card__title">
+                            <h2>Aruba Mobility</h2>
+                            <p>Terms and Conditions</p>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="conditions">
+                                <h2>Flex Program Objectives:</h2>
+                                <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
+                                <h2>Mediciones / Measurements:</h2>
+                                <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
+                                <h2>Instrucción de Proceso / Order Proccesing Instructions:</h2>
+                                <p>Sell-Out claims must be submitted based on the program Terms and Conditions</p>
+                                <h2>Program Logic:</h2>
+                                <p>The HPE VAR or Reseller will be able to purchase Flexible Bundles or Packages from the Distributor that will include a fixed discount for each part number (PN). In order for this Promotion to be valid, each equipment will have to be sold with minimum four (4) additional options. All products MUST be reported / sold under the same Distributor invoice number, except for the Care Pack or Hardware Support included in this deal, which can be invoiced at a later time (no later than 8 working days after the Hardware is invoiced) and with a different invoice number.</p>
+                                <h2>Important:</h2>
+                                <p>All other possible options not included in this Deal (Ups, Racks, etc,) can be added with unlimited quantities and will be priced with the authorized pricing (NDP, or separate Deals). Only the options included in this Deal, will be taken into consideration as valid towards the minimum options required to reach the minimum of 4 valid options at special price.</p>
+                                <h2>Valid Compute</h2>
+                                <p>Configuration examples:</p>
+                                <ol>
+                                    <li>1 x Server DL 380 Gen10 + 1 x Memory Dimm FlexPro PN + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
+                                    <li>1 x Server ML 350 PN + 5 x Hard Drive FlexPro PN + 1 x Redundant Power Supply FlexPro PN + 2 x NIC FlexPro PN</li>
+                                    <li>1 x Server BL 460p PN + 2 x Hard Disk + 1 CPU + 1 HW Support Care Pack PN + 1 x MS ROK Server Lic + 1 HP UPS</li>
+                                </ol>
+                                <h2>Valid Storage</h2>
+                                <p>Configuration examples:</p>
+                                <ol>
+                                    <li>1 x MSA 2040 + 1 x SFP 4Pk + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
+                                    <li>1 x MSA1040 + 5 x Hard Drive FlexPro PN</li>
+                                </ol>
+                                <h2>Exception:</h2>
+                                <p>The PBM will be the only contact authorized to communicate any exception to the conditions of this Program. To approve any exception, the PBM will request approval from the Regional Channels Director, and then will be able to communicate formal approval to the Distributor. The Distributor is required to present proper argumentation via E-mail to the PBM so that the PBM can proceed to request the exception. In order to claim the rebate, the Distributor will be required to present all regular documents and a copy of the approval mail from the PBM. Any approval must be obtained in advanced, previous to invoicing.</p>
+                                <h2>Qualifyng Countries:</h2>
+                                <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
+                                <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
