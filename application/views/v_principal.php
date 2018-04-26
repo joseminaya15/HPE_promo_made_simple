@@ -154,24 +154,28 @@
                     </div>
                 </a>
             </div>
-            <div class="table-responsive" id="tablaCates" style="display: none">
-                <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
-                    <thead>
-                        <tr class="tr-header-reporte">
-                            <th>Product number ID</th>
-                            <th>Part Number</th>
-                            <th>Product Description</th>
-                            <th>Product Line</th>
-                            <th>Net Price</th>
-                            <th>Efective Date</th>
-                            <th>End Date</th>
-                            <th>Categorías</th>
-                        </tr>
-                    </thead>
-                    <tbody id="promociones">
-                        
-                    </tbody>
-                </table>
+            <div class="mdl-container seccion-table">
+                <div class="mdl-card mdl-table">
+                    <div class="mdl-card__supporting-text">
+                        <div class="table-responsive" id="tablaCates" style="display: none">
+                            <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
+                                <thead>
+                                    <tr class="tr-header-reporte">
+                                        <th>Product number ID</th>
+                                        <th>Part Number</th>
+                                        <th>Product Description</th>
+                                        <th>Product Line</th>
+                                        <th>Net Price</th>
+                                        <th>Efective Date</th>
+                                        <th>End Date</th>
+                                        <th>Categorías</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="promociones"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Modal -->
