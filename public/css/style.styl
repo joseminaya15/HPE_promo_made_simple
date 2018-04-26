@@ -895,7 +895,17 @@ footer
 	max-width 800px
 	z-index 2
 	&.home
-		max-width 600px
+		max-width 460px
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		text-align center
+		margin auto
+		.search-clear
+			max-width 45px
+			width 100%
 	.search-categoria
 		flexCenter()
 		width 100%
@@ -906,6 +916,7 @@ footer
 				font-size 18px
 				box-shadow none
 				border none
+				padding 6px
 		.search-clear
 			button
 				visibility hidden

@@ -61,6 +61,17 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="search-filter home">
+                            <div class="search-categoria">
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
+                                <div class="search-input">
+                                    <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="buscarPromo('inputSearch');">
+                                </div>
+                                <div class="search-clear">
+                                    <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,18 +84,6 @@
                         <div class="cont-carousel">
                             <h2>Welcome to Promos Made Simple</h2>
                             <p>You can see all current promotions and those that are about to expire</p>
-                            <div class="search-filter home">
-                                <div class="search-categoria">
-                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
-                                    <div class="search-input">
-                                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="buscarPromo('inputSearch');">
-                                    </div>
-                                    <div class="search-clear">
-                                        <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
-                                    </div>
-                                    <div class="search-icon"><i class="fa fa-server"></i></div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

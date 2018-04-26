@@ -250,4 +250,5 @@ function clearInput(){
 	$('#inputSearch').val('');
 	$('#cardsCates').css("display", "block");
 	$('#tablaCates').css("display", "none");
+	$('#buttonClear').css('visibility','hidden');
 }
