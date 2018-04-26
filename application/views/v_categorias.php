@@ -46,9 +46,9 @@
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p1">Server & Storage Flex Attach</a>
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p2">HPE Pointnext</a>
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">Storage Accelerate</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">Promo Simplivity</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">DCN TOR</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">3PAR Avalanche & Store Once</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p8">Simplivity</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p9">DCN TOR</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p10">3PAR Avalanche & Store Once</a>
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p4">Aruba Market Take Over</a>
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p5">Aruba 3x2 Switches</a>
                                     <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p6">Aruba Mobility</a>
@@ -216,6 +216,28 @@
                                             '<option value="Opciones">Opciones</option>'+
                                             '<option value="Storage SAN">Storage SAN</option>'+
                                             '<option value="Discos">Discos</option>'+
+                                         '</select>');
+                }else if(categoria == 'Simplivity'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="SIMPLIVITY BUNDLE 1">SIMPLIVITY BUNDLE 1</option>'+
+                                            '<option value="SIMPLIVITY BUNDLE 2">SIMPLIVITY BUNDLE 2</option>'+
+                                            '<option value="SIMPLIVITY BUNDLE 3">SIMPLIVITY BUNDLE 3</option>'+
+                                            '<option value="SIMPLIVITY BUNDLE 5">SIMPLIVITY BUNDLE 5</option>'+
+                                            '<option value="SIMPLIVITY BUNDLE 6">SIMPLIVITY BUNDLE 6</option>'+
+                                         '</select>');
+                }else if(categoria == 'DCN TOR'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="DCN PROMO PRODUCTS">DCN PROMO PRODUCTS</option>'+
+                                            '<option value="DCN BUNDLE 1">DCN BUNDLE 1</option>'+
+                                            '<option value="DCN BUNDLE 2">DCN BUNDLE 2</option>'+
+                                         '</select>');
+                }else if(categoria == '3PAR Avalanche & Store Once'){
+                    $('#combo').html('');
+                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
+                                            '<option value="3PAR BUNDLE 1">3PAR BUNDLE 1</option>'+
+                                            '<option value="3PAR BUNDLE 2">3PAR BUNDLE 2</option>'+
                                          '</select>');
                 }else if(categoria == 'Aruba Market Take Over'){
                     $('#combo').html('');
