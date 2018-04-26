@@ -106,6 +106,14 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
+                <!-- <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen one"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two">Server & Storage Base Promo</h2>
+                    </div>
+                </a> -->
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen two"></div>
@@ -114,6 +122,14 @@
                         <h2 class="two">Server & Storage Flex Attach</h2>
                     </div>
                 </a>
+                <!-- <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen three"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two">Tape Backup Media</h2>
+                    </div>
+                </a> -->
                 <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen four"></div>
@@ -122,6 +138,14 @@
                         <h2 class="four">HPE Pointnext</h2>
                     </div>
                 </a>
+                <!-- <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen five"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="four">Gen 10 Accelerate</h2>
+                    </div>
+                </a> -->
                 <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen six"></div>
@@ -146,6 +170,22 @@
                         <h2 class="two">DCN TOR</h2>
                     </div>
                 </a>
+                <!-- <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen nine"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="nine">Sinergy</h2>
+                    </div>
+                </a>
+                <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eleven"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="five">Virtual Licenses</h2>
+                    </div>
+                </a> -->
                 <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen eleven"></div>
