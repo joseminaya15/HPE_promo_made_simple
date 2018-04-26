@@ -187,6 +187,7 @@
                                     <tr class="tr-header-reporte">
                                         <th>Product number ID</th>
                                         <th>Product Description</th>
+                                        <th>Categorías</th>
                                     </tr>
                                 </thead>
                                 <tbody id="promociones"></tbody>

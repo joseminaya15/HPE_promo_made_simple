@@ -140,6 +140,7 @@ class Home extends CI_Controller {
                     $html .= '<tr>
                                 <td>'.$key->product_id.'</td>
                                 <td>'.$key->product_desc.'</td>
+                                <td>'.$key->name.'</td>
                             </tr>';
                 }
             }            
