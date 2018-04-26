@@ -13,11 +13,11 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $html           = null;
+        $html           = '';
         $opciones       = '<option><option>';
         $data['sales']  = $this->session->userdata('id_cates');
         $data['nombre'] = ucwords($this->session->userdata('nombre'));
-        if($this->session->userdata('id_cates') == 7){
+        if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             $opciones = '<option value="SERVIDORES">SERVIDORES</option>'.
                         '<option value="PROCESADORES">PROCESADORES</option>'.
@@ -46,9 +46,10 @@ class Categorias extends CI_Controller {
             }
             $datos = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id); 
             $data['opcion'] = $opciones;
+            
         }
         foreach ($datos as $key) {
-            if($this->session->userdata('id_cates') == 7){
+            if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>
                             <td>'.$key->product_id.'</td>
                             <td>'.$key->product_desc.'</td>
@@ -71,7 +72,7 @@ class Categorias extends CI_Controller {
             $categoria = $this->input->post('categoria');
             $id_cate   = $this->M_solicitud->getIdCategoria($categoria);
             $datos     = $this->M_solicitud->getDatosProducts(intval($id_cate));
-            if($this->session->userdata('id_cates') == 7){
+            if($this->session->userdata('id_cates') == 10){
                 if(count($datos) == 0){
                     $html = '<tr>
                                 <td></td>
@@ -119,7 +120,7 @@ class Categorias extends CI_Controller {
             }else {             
                 $datos = $this->M_solicitud->getDatosBuscadorProducts($cate, $texto);
             }
-            if($this->session->userdata('id_cates') == 7){
+            if($this->session->userdata('id_cates') == 10){
                 if(count($datos) == 0){
                     $html = '<tr>
                                 <td></td>

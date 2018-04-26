@@ -99,22 +99,7 @@ class Home extends CI_Controller {
         $data['msj']   = null;
         try {
             $cate    = $this->input->post('cate');
-            $id_cate = null;
-            if($cate == 'Server & Storage Flex Attach'){
-                $id_cate = 1;
-            }else if($cate == 'HPE Pointnext'){
-                $id_cate = 2;
-            }else if($cate == 'Storage Accelerate'){
-                $id_cate = 3;
-            }else if($cate == 'Aruba Market Take Over'){
-                $id_cate = 4;
-            }else if($cate == 'Aruba 3x2 Switches'){
-                $id_cate = 5;
-            }else if($cate == 'Aruba Mobility'){
-                $id_cate = 6;
-            }else if($cate == 'InstaSale'){
-                $id_cate = 7;
-            }
+            $id_cate = $this->M_solicitud->getIdByNameCate($cate);
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;

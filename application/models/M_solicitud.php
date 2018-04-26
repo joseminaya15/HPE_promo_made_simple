@@ -179,9 +179,9 @@ class M_solicitud extends  CI_Model{
       $sql = "SELECT p.*,
                     s.name,
                     c.Nombre,
-                    DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
+                    DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
                     DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
-               FROM productos p,
+               FROM products p,
                     categorias c,
                     sub_categorias s
               WHERE p.id_sub_cate = s.Id
@@ -221,6 +221,7 @@ class M_solicitud extends  CI_Model{
                 FROM sub_categorias c
                WHERE c.id_cate = ?";
       $result = $this->db->query($sql, array($id_cates));
+      //echo print_r($this->db->last_query());
       return $result->result();
     }
     function getDatosProductsByName($id_cate){
@@ -286,5 +287,12 @@ class M_solicitud extends  CI_Model{
                 AND SUBSTRING(p.effective_date, 6, 2) = SUBSTRING(CURDATE(), 6, 2)";
       $result = $this->db->query($sql);
       return $result->result();
+    }
+    function getIdByNameCate($cate){
+      $sql = "SELECT c.Id
+                FROM categorias c
+               WHERE (c.Nombre LIKE '%".$cate."%')";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
     }
 }
