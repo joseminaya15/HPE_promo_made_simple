@@ -150,7 +150,7 @@
                         <div class="promocion-imagen six"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="six">Storage Accelerate</h2>
+                        <h2 class="one">Storage Accelerate</h2>
                     </div>
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -190,7 +190,7 @@
                         <div class="promocion-imagen eleven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="five">3PAR Avalanche & Store Once</h2>
+                        <h2 class="three">3PAR Avalanche & Store Once</h2>
                     </div>
                 </a>
                 <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -206,7 +206,7 @@
                         <div class="promocion-imagen thirteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="one">Aruba 3x2 Switches</h2>
+                        <h2 class="six">Aruba 3x2 Switches</h2>
                     </div>
                 </a>
                 <a id="p14" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -214,7 +214,7 @@
                         <div class="promocion-imagen fourteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Aruba Mobility</h2>
+                        <h2 class="six">Aruba Mobility</h2>
                     </div>
                 </a>
                 <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
