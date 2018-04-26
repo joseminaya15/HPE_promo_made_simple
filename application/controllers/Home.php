@@ -112,7 +112,7 @@ class Home extends CI_Controller {
                 $id_cate = 5;
             }else if($cate == 'Aruba Mobility'){
                 $id_cate = 6;
-            }else if($cate == 'InstaSales'){
+            }else if($cate == 'InstaSale'){
                 $id_cate = 7;
             }
             $session = array('id_cates' => $id_cate);

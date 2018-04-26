@@ -10,7 +10,7 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>HPE PMS</title>
+    	<title>HPE Promos</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -49,7 +49,7 @@
                                     <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p4">Aruba Market Take Over</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p5">Aruba 3x2 Switches</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p6">Aruba Mobility</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p7">InstaSales</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p7">InstaSale</a>
                                 </ul>
                             </div>
                         </div>
