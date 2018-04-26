@@ -222,7 +222,6 @@ class M_solicitud extends  CI_Model{
                 FROM sub_categorias c
                WHERE c.id_cate = ?";
       $result = $this->db->query($sql, array($id_cates));
-      //echo print_r($this->db->last_query());
       return $result->result();
     }
     function getDatosProductsByName($id_cate){
