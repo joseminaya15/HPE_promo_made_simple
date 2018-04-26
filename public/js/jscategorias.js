@@ -86,7 +86,7 @@ function verificarDatos(e){
 function goToCategorias(id){
 	var idCategoria = $("#"+id);
 	var name_cate   = idCategoria.text();
-	let openModal = sessionStorage.getItem('OPEN_MODAL');
+	let openModal   = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
 	if(openModal && openModal == '1') {

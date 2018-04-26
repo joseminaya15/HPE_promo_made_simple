@@ -147,7 +147,7 @@
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen six"></div>
+                        <div class="promocion-imagen seven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="seven">InstaSales</h2>
