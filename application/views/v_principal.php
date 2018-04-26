@@ -62,7 +62,7 @@
                     <div class="imagen one"></div>
                     <div class="container">
                         <div class="cont-carousel">
-                            <h2>Welcome to Promo Made Simple</h2>
+                            <h2>Welcome to Promos Made Simple</h2>
                             <p>You can see all current promotions and those that are about to expire</p>
                             <div class="search-filter home">
                                 <div class="search-categoria">
@@ -82,14 +82,14 @@
                 <div class="item">
                     <div class="imagen two"></div>
                     <div class="cont-carousel">
-                        <h2>Welcome to Promo Made Simple</h2>
+                        <h2>Welcome to Promos Made Simple</h2>
                         <p>You can see all current promotions and those that are about to expire</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="imagen three"></div>
                     <div class="cont-carousel">
-                        <h2>Welcome to Promo Made Simple</h2>
+                        <h2>Welcome to Promos Made Simple</h2>
                         <p>You can see all current promotions and those that are about to expire</p>
                     </div>
                 </div>
