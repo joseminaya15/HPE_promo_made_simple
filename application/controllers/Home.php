@@ -137,4 +137,35 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+    function encontrarPromos(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html      = '';
+            $texto     = $this->input->post('texto');
+            $sub_cates = $this->input->post('sub_cates');
+            if($texto == null || $texto == ''){
+                throw new Exception("Error Processing Request", 1);
+            }
+            if($sub_cates == null || $texto == ''){
+                throw new Exception("Error Processing Request", 1);
+            }
+            $datos = $this->M_solicitud->getDatosBuscadorProductsByCate($sub_cates);
+            if(count($datos) == 0){
+                return;
+            }
+            foreach ($datos as $key) {
+                $html .= '<tr>
+                            <td>'.$key->product_id.'</td>
+                            <td>'.$key->product_desc.'</td>
+                            <td>'.$key->name.'</td>
+                         </tr>'; 
+            }
+            $data['promociones'] = $html;
+            $data['error']       = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        json_encode($data);
+    }
 }
