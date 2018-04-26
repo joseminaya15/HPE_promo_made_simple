@@ -34,6 +34,8 @@ $('#inputSearch').on('keyup',function() {
 });
 function clearInput(){
 	$('#inputSearch').val('');
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	buscarPromo('inputSearch');
 }
 function buscarPromo(datos){
