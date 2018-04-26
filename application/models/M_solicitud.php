@@ -214,7 +214,6 @@ class M_solicitud extends  CI_Model{
                 AND s.name LIKE ?
                 AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
       $result = $this->db->query($sql, array($id_cate));
-      //echo print_r($this->db->last_query());
       return $result->result();
     }
     function getIdSubCategoria($id_cates){
