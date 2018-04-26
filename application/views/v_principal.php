@@ -68,7 +68,7 @@
                                 <div class="search-categoria">
                                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
                                     <div class="search-input">
-                                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="verificarDatos(event);">
+                                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="buscarPromo('inputSearch');">
                                     </div>
                                     <div class="search-clear">
                                         <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
@@ -96,7 +96,7 @@
             </div>
         </section>
         <section>
-            <div class="mdl-container seccion-promociones">
+            <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
                 <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen one"></div>
@@ -153,6 +153,25 @@
                         <h2 class="seven">InstaSales</h2>
                     </div>
                 </a>
+            </div>
+            <div class="table-responsive" id="tablaCates" style="display: none">
+                <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
+                    <thead>
+                        <tr class="tr-header-reporte">
+                            <th>Product number ID</th>
+                            <th>Part Number</th>
+                            <th>Product Description</th>
+                            <th>Product Line</th>
+                            <th>Net Price</th>
+                            <th>Efective Date</th>
+                            <th>End Date</th>
+                            <th>Categorías</th>
+                        </tr>
+                    </thead>
+                    <tbody id="promociones">
+                        
+                    </tbody>
+                </table>
             </div>
         </section>
         <!-- Modal -->

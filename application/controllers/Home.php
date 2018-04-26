@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
+        $this->load->helper("url");
         $this->load->model('M_solicitud');
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -31,13 +31,13 @@ class Home extends CI_Controller {
                     if($password == base64_decode($username[0]->pass)){
                         $session = array('usuario'   => $usuario,
                                          'tipo_user' => $username[0]->tipo_user,
-                                         'nombre'    => $username[0]->Nombre,   
+                                         'nombre'    => $username[0]->Nombre,
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0 && $usuario == 'admin'){
                             $data['redirect'] = 'Listado';
                         }else {
-                            $data['pass'] = 'Contraseña incorrecta';
+                            $data['pass']     = 'Contraseña incorrecta';
                             $data['redirect'] = 'Home';
                         }
                         if($username[0]->tipo_user == 1){
@@ -47,7 +47,7 @@ class Home extends CI_Controller {
                         }
                         $data['error'] = EXIT_SUCCESS;
                     }else {
-                        $data['pass'] = 'Contraseña incorrecta';
+                        $data['pass']  = 'Contraseña incorrecta';
                     }
                 }
             }
@@ -139,6 +139,7 @@ class Home extends CI_Controller {
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>';
             }else {
                 foreach ($datos as $key) {
@@ -150,11 +151,12 @@ class Home extends CI_Controller {
                                 <td>'.$key->net_price.'</td>
                                 <td>'.$key->effect_date.'</td>
                                 <td>'.$key->fecha_fin.'</td>
+                                <td>'.$key->name.'</td>
                             </tr>';
                 }
             }            
             $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
+            $data['error']       = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }

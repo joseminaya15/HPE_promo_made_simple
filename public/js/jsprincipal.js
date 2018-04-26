@@ -209,14 +209,21 @@ function closeModal(){
 }
 function buscarPromo(datos){
 	var texto = $('#inputSearch').val();
+	if(texto == null || texto == ''){
+		$('#cardsCates').css("display", "block");
+	    $('#tablaCates').css("display", "none");
+	    return;
+	}
 	$.ajax({
 		data : {texto : texto},
 		url  : 'Home/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
-		try{
+	  try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
+	    	$('#cardsCates').css("display", "none");
+	    	$('#tablaCates').css("display", "block");
 	    	$('#promociones').html('');
 	    	$('#promociones').append(data.promociones);
 	    }else {
@@ -230,4 +237,17 @@ function buscarPromo(datos){
 }
 function triggerCategoria(id1){
 	goToCategorias(id1);
+}
+function inputActive(id){
+	var lenghtInput = $('#'+id).val();
+	if(lenghtInput.length > 0){
+		$('#buttonClear').css('visibility','visible')
+	}else{
+		$('#buttonClear').css('visibility','hidden')
+	}
+}
+function clearInput(){
+	$('#inputSearch').val('');
+	$('#cardsCates').css("display", "block");
+	$('#tablaCates').css("display", "none");
 }
