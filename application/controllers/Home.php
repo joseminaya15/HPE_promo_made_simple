@@ -134,24 +134,12 @@ class Home extends CI_Controller {
                 $html = '<tr>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                         </tr>';
             }else {
                 foreach ($datos as $key) {
                     $html .= '<tr>
                                 <td>'.$key->product_id.'</td>
-                                <td>'.$key->part_number.'</td>
                                 <td>'.$key->product_desc.'</td>
-                                <td>'.$key->product_line.'</td>
-                                <td>'.$key->net_price.'</td>
-                                <td>'.$key->effect_date.'</td>
-                                <td>'.$key->fecha_fin.'</td>
-                                <td>'.$key->name.'</td>
                             </tr>';
                 }
             }            
