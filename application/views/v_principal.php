@@ -61,7 +61,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="search-filter home">
+                        <div class="search-filter home" style="display: none;">
                             <div class="search-categoria">
                                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
                                 <div class="search-input">
@@ -349,11 +349,13 @@
                 if(openModal && openModal == '1') {
                     $("#ModalLogin").modal('hide');
                     $('.menu_header').css('display','flex');
+                    $('.search-filter.home').css('display','flex');
                 }
                 else{
                     $("#ModalLogin").modal('show');
                     sessionStorage.removeItem('OPEN_MODAL');
                     $('.menu_header').css('display','none');
+                    $('.search-filter.home').css('display','none');
                 }
             });
         </script>
