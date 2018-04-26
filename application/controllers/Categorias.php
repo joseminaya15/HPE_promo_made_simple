@@ -16,7 +16,8 @@ class Categorias extends CI_Controller {
         $html           = '';
         $opciones       = '<option><option>';
         $data['sales']  = $this->session->userdata('id_cates');
-        $data['nombre'] = ucwords($this->session->userdata('nombre'));
+        $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
+        $data['nombre'] = $nombre[0];
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             $opciones = '<option value="SERVIDORES">SERVIDORES</option>'.
