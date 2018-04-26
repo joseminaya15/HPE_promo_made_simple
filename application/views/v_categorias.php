@@ -43,13 +43,16 @@
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p1">Server & Storage Flex Attach</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p2">HPE Pointnext</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p3">Storage Accelerate</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p4">Aruba Market Take Over</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p5">Aruba 3x2 Switches</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p6">Aruba Mobility</a>
-                                    <a class="mdl-menu__item" onclick="triggerCategoria(this.id)" id="p7">InstaSale</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p1">Server & Storage Flex Attach</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p2">HPE Pointnext</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">Storage Accelerate</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">Promo Simplivity</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">DCN TOR</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">3PAR Avalanche & Store Once</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p4">Aruba Market Take Over</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p5">Aruba 3x2 Switches</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p6">Aruba Mobility</a>
+                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p7">InstaSale</a>
                                 </ul>
                             </div>
                         </div>

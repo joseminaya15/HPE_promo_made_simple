@@ -45,6 +45,9 @@
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Server & Storage Flex Attach</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p2')">HPE Pointnext</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Storage Accelerate</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Promo Simplivity</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p3')">DCN TOR</a>
+                                    <a class="mdl-menu__item" onclick="triggerCategoria('p3')">3PAR Avalanche & Store Once</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p4')">Aruba Market Take Over</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p5')">Aruba 3x2 Switches</a>
                                     <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Aruba Mobility</a>
