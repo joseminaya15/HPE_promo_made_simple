@@ -83,7 +83,7 @@
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="table-responsive">
-                        <table id="tableCategoria" class="table table-striped table-bordered" data-page-length="10">
+                        <table id="tableCategoria" class="table table-striped table-bordered">
                             <thead>
                                 <tr class="tr-header-reporte">
                                     <?php if($sales == 7) { ?>
@@ -193,7 +193,8 @@
             $( document ).ready(function() {
                 $('#tableCategoria').DataTable({
                     searching: false,
-                    "pageLength": 10
+                    paging: false,
+                    info: false
                 });
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
