@@ -92,23 +92,28 @@
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div id="header_promocion"></div>
-                    <div class="table-responsive">
-                        <table id="tableCategoria" class="table table-striped table-bordered">
-                            <thead>
-                                <tr class="tr-header-reporte">
-                                    <?php if($sales == 7) { ?>
-                                    <th>Product number ID</th>
-                                    <th>Product Description</th>
-                                    <?php } else { ?>
-                                    <th>Product number ID</th>
-                                    <th>Product Description</th>
-                                    <?php } ?>
-                                </tr>
-                            </thead>
-                            <tbody id="promociones">
-                                <?php echo $promociones ?>
-                            </tbody>
-                        </table>
+                    <div class="mdl-container__promocion">
+                        <div class="table-responsive">
+                            <table id="tableCategoria" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr class="tr-header-reporte">
+                                        <?php if($sales == 7) { ?>
+                                        <th>Product number ID</th>
+                                        <th>Product Description</th>
+                                        <?php } else { ?>
+                                        <th>Product number ID</th>
+                                        <th>Product Description</th>
+                                        <?php } ?>
+                                    </tr>
+                                </thead>
+                                <tbody id="promociones">
+                                    <?php echo $promociones ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="imagen-promocion">
+                            <img src="">
+                        </div>
                     </div>
                 </div>
             </div>
