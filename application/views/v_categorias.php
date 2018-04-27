@@ -166,8 +166,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="imagen-promocion">
-                            <img src="">
+                        <div class="promocion_categoria">
+                            <img src="<?php echo RUTA_IMG?>promociones/promocion2.png">
                         </div>
                     </div>
                 </div>
