@@ -39,20 +39,26 @@
                                 <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
                             </div>
                             <div class="menu_desplegable col-xs-12 p-0">
-                                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
-                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p1">Server & Storage Flex Attach</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p2">HPE Pointnext</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p3">Storage Accelerate</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p8">Simplivity</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p9">DCN TOR</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p10">3PAR Avalanche & Store Once</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p4">Aruba Market Take Over</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p5">Aruba 3x2 Switches</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p6">Aruba Mobility</a>
-                                    <a class="mdl-menu__item" onclick="goToCategorias(this.id)" id="p7">InstaSale</a>
+                                <ul class="dropdown-menu">
+                                    <div class="col-xs-6 p-0">
+                                        <p>Valor</p>
+                                        <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
+                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">Simplivity</a>
+                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">DCN TOR</a>
+                                        <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
+                                    </div>
+                                    <div class="col-xs-6 dropdown-menu__border p-0">
+                                        <p>Volumen</p>
+                                        <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
+                                        <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
+                                        <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Market Take Over</a>
+                                        <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba 3x2 Switches</a>
+                                        <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Mobility</a>
+                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">InstaSale</a>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
