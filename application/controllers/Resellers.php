@@ -13,9 +13,9 @@ class Resellers extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        if($this->session->userdata('tipo_user') != 1){
-            header("location: Login");
-        }
+        // if($this->session->userdata('tipo_user') != 1){
+        //     header("location: Login");
+        // }
         $promociones = $this->M_solicitud->getPromocionesSellers();
         if(count($promociones) != 0){
             $html           = '';

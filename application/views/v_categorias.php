@@ -79,11 +79,6 @@
                     </div>
                     <div class="search-icon"><i class="fa fa-server"></i></div>
                 </div>
-                <div class="filter-categoria" id="combo">
-                    <select class="selectpicker" id="id_cate" title="Categor&iacute;as" onchange="getTablaPromos()">
-                        <?php echo $opcion ?>
-                    </select>
-                </div>
             </div>
         </section>
         <section id="productos" class="col-xs-12">
