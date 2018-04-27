@@ -91,7 +91,62 @@
                 <div class="col-xs-12">
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
-                    <div id="header_promocion"></div>
+                    <div class="header_promocion">
+                        <div id="Ep2" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
+                            <p><strong>Start date:</strong><span>02/01/18</span></p>
+                            <p><strong>End date:</strong><span>04/30/18</span></p>
+                            <small id="Tp2" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep4" class="encabezado">
+                            <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
+                            <p><strong>Start date:</strong><span>02/01/18</span></p>
+                            <p><strong>End date:</strong><span>04/30/18</span></p>
+                            <small id="T4" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep6" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
+                            <p><strong>Start date:</strong><span>01/31/18</span></p>
+                            <p><strong>End date:</strong><span>05/31/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep7" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
+                            <p><strong>Start date:</strong><span>4/04/2018</span></p>
+                            <p><strong>End date:</strong><span>07/31/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep8" class="encabezado">
+                            <p><strong>Promo name:</strong><span>DCN Promo</span></p>
+                            <p><strong>Start date:</strong><span>04/11/18</span></p>
+                            <p><strong>End date:</strong><span>07/31/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep11" class="encabezado">
+                            <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
+                            <p><strong>Start date:</strong><span>04/11/18</span></p>
+                            <p><strong>End date:</strong><span>07/31/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep12" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
+                            <p><strong>Start date:</strong><span>03/06/18</span></p>
+                            <p><strong>End date:</strong><span>04/30/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep13" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
+                            <p><strong>Start date:</strong><span>12/12/17</span></p>
+                            <p><strong>End date:</strong><span>03/31/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div>
+                        <div id="Ep14" class="encabezado">
+                            <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
+                            <p><strong>Start date:</strong><span>02/21/18</span></p>
+                            <p><strong>End date:</strong><span>04/30/18</span></p>
+                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        </div> 
+                    </div>
                     <div class="mdl-container__promocion">
                         <div class="table-responsive">
                             <table id="tableCategoria" class="table table-striped table-bordered">
@@ -123,11 +178,11 @@
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
-                            <h2>Aruba Mobility</h2>
+                            <h2 id="nameTerminos"></h2>
                             <p>Terms and Conditions</p>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <div id="T2" class="conditions">
+                            <div id="Tp2-terminos" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
@@ -157,7 +212,37 @@
                                 <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
                                 <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
                             </div>
-                            <div id="T2" class="conditions">
+                            <div id="Tp4-terminos" class="conditions">
+                                <h2>Flex Program Objectives:</h2>
+                                <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
+                                <h2>Mediciones / Measurements:</h2>
+                                <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
+                                <h2>Instrucción de Proceso / Order Proccesing Instructions:</h2>
+                                <p>Sell-Out claims must be submitted based on the program Terms and Conditions</p>
+                                <h2>Program Logic:</h2>
+                                <p>The HPE VAR or Reseller will be able to purchase Flexible Bundles or Packages from the Distributor that will include a fixed discount for each part number (PN). In order for this Promotion to be valid, each equipment will have to be sold with minimum four (4) additional options. All products MUST be reported / sold under the same Distributor invoice number, except for the Care Pack or Hardware Support included in this deal, which can be invoiced at a later time (no later than 8 working days after the Hardware is invoiced) and with a different invoice number.</p>
+                                <h2>Important:</h2>
+                                <p>All other possible options not included in this Deal (Ups, Racks, etc,) can be added with unlimited quantities and will be priced with the authorized pricing (NDP, or separate Deals). Only the options included in this Deal, will be taken into consideration as valid towards the minimum options required to reach the minimum of 4 valid options at special price.</p>
+                                <h2>Valid Compute</h2>
+                                <p>Configuration examples:</p>
+                                <ol>
+                                    <li>1 x Server DL 380 Gen10 + 1 x Memory Dimm FlexPro PN + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
+                                    <li>1 x Server ML 350 PN + 5 x Hard Drive FlexPro PN + 1 x Redundant Power Supply FlexPro PN + 2 x NIC FlexPro PN</li>
+                                    <li>1 x Server BL 460p PN + 2 x Hard Disk + 1 CPU + 1 HW Support Care Pack PN + 1 x MS ROK Server Lic + 1 HP UPS</li>
+                                </ol>
+                                <h2>Valid Storage</h2>
+                                <p>Configuration examples:</p>
+                                <ol>
+                                    <li>1 x MSA 2040 + 1 x SFP 4Pk + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
+                                    <li>1 x MSA1040 + 5 x Hard Drive FlexPro PN</li>
+                                </ol>
+                                <h2>Exception:</h2>
+                                <p>The PBM will be the only contact authorized to communicate any exception to the conditions of this Program. To approve any exception, the PBM will request approval from the Regional Channels Director, and then will be able to communicate formal approval to the Distributor. The Distributor is required to present proper argumentation via E-mail to the PBM so that the PBM can proceed to request the exception. In order to claim the rebate, the Distributor will be required to present all regular documents and a copy of the approval mail from the PBM. Any approval must be obtained in advanced, previous to invoicing.</p>
+                                <h2>Qualifyng Countries:</h2>
+                                <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
+                                <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
+                            </div>
+                            <div id="T4" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
@@ -222,7 +307,8 @@
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('#namePromocion').text(nameCategoria);
-                $('#header_promocion').html(headerCategoria);
+                $('#nameTerminos').text(nameCategoria);
+                $('.header_promocion').find('#E'+openCategoria).css('display','block');
                 $('.selectpicker').val(1);
                 $('.menu_header').css('display','flex');
             });

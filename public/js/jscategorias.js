@@ -114,7 +114,7 @@ function goToCategorias(id){
 	});
 }
 function openModalTerminos(idTerm){
-	var idModal = $('#'+idTerm);
 	var modal   = $('#ModalTerminos');
-	modal.modal('show');
+	modal.find('#'+idTerm).css("display","block");
+	modal.modal('toggle');
 }

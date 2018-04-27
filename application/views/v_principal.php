@@ -119,12 +119,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="two">Server & Storage Flex Attach</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
-                            <p><strong>Start date:</strong><span>2/01/2018</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="T2" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <!-- <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -141,12 +135,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="four">HPE Pointnext</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
-                            <p><strong>Start date:</strong><span>2/01/2018</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="T4" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <!-- <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -163,12 +151,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="one">Storage Accelerate</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
-                            <p><strong>Start date:</strong><span>01/31/18</span></p>
-                            <p><strong>End date:</strong><span>05/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -177,12 +159,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="one">Simplivity</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
-                            <p><strong>Start date:</strong><span>4/04/2018</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p8" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -191,12 +167,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="two">DCN TOR</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>DCN Promo</span></p>
-                            <p><strong>Start date:</strong><span>04/11/18</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <!-- <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -221,12 +191,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="three">3PAR Avalanche & Store Once</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
-                            <p><strong>Start date:</strong><span>04/11/18</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -235,12 +199,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="six">Aruba Market Take Over</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
-                            <p><strong>Start date:</strong><span>03/06/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p13" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -249,12 +207,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="six">Aruba 3x2 Switches</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
-                            <p><strong>Start date:</strong><span>12/12/17</span></p>
-                            <p><strong>End date:</strong><span>03/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p14" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -263,12 +215,6 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="six">Aruba Mobility</h2>
-                        <div class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
-                            <p><strong>Start date:</strong><span>02/21/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
                     </div>
                 </a>
                 <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">

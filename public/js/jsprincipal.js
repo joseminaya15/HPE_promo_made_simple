@@ -17,13 +17,11 @@ $('#principal .owl-carousel').owlCarousel({
 	autoplayTimeout : 5000
 });
 function goToCategorias(id){
-	var idCategoria = $("#"+id);
-	var name_cate   = idCategoria.find('h2').text();
-	var encabezado  = idCategoria.find('.encabezado').html();
-	let openModal   = sessionStorage.getItem('OPEN_MODAL');
+	var idCategoria  = $("#"+id);
+	var name_cate    = idCategoria.find('h2').text();
+	let openModal    = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
-	sessionStorage.setItem('HEADER_CATEGORIA', encabezado);
 	if(openModal && openModal == '1') {
         $("#ModalLogin").modal('show');
     }
