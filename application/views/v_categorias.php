@@ -92,62 +92,67 @@
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
-                        <div id="Ep2" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
-                            <p><strong>Start date:</strong><span>02/01/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        <div class="col-xs-6 p-0">
+                            <div id="Ep2" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
+                                <p><strong>Start date:</strong><span>02/01/18</span></p>
+                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep4" class="encabezado">
+                                <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
+                                <p><strong>Start date:</strong><span>02/01/18</span></p>
+                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <small id="Ep4T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep6" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
+                                <p><strong>Start date:</strong><span>01/31/18</span></p>
+                                <p><strong>End date:</strong><span>05/31/18</span></p>
+                                <small id="Ep6T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep7" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
+                                <p><strong>Start date:</strong><span>4/04/2018</span></p>
+                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <small id="Ep7T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep8" class="encabezado">
+                                <p><strong>Promo name:</strong><span>DCN Promo</span></p>
+                                <p><strong>Start date:</strong><span>04/11/18</span></p>
+                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep11" class="encabezado">
+                                <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
+                                <p><strong>Start date:</strong><span>04/11/18</span></p>
+                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <small id="Ep11T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep12" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
+                                <p><strong>Start date:</strong><span>03/06/18</span></p>
+                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <small id="Ep12T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep13" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
+                                <p><strong>Start date:</strong><span>12/12/17</span></p>
+                                <p><strong>End date:</strong><span>03/31/18</span></p>
+                                <small id="Ep13T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep14" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
+                                <p><strong>Start date:</strong><span>02/21/18</span></p>
+                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
                         </div>
-                        <div id="Ep4" class="encabezado">
-                            <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
-                            <p><strong>Start date:</strong><span>02/01/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="Ep4T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                        <div class="col-xs-6 p-0 text-right">
+                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
                         </div>
-                        <div id="Ep6" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
-                            <p><strong>Start date:</strong><span>01/31/18</span></p>
-                            <p><strong>End date:</strong><span>05/31/18</span></p>
-                            <small id="Ep6T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep7" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
-                            <p><strong>Start date:</strong><span>4/04/2018</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small id="Ep7T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep8" class="encabezado">
-                            <p><strong>Promo name:</strong><span>DCN Promo</span></p>
-                            <p><strong>Start date:</strong><span>04/11/18</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep11" class="encabezado">
-                            <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
-                            <p><strong>Start date:</strong><span>04/11/18</span></p>
-                            <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small id="Ep11T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep12" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
-                            <p><strong>Start date:</strong><span>03/06/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="Ep12T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep13" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
-                            <p><strong>Start date:</strong><span>12/12/17</span></p>
-                            <p><strong>End date:</strong><span>03/31/18</span></p>
-                            <small id="Ep13T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div>
-                        <div id="Ep14" class="encabezado">
-                            <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
-                            <p><strong>Start date:</strong><span>02/21/18</span></p>
-                            <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                        </div> 
                     </div>
-                    <div class="mdl-container__promocion">
+                    <div class="mdl-container__promocion col-xs-12 p-0">
                         <div class="table-responsive">
                             <table id="tableCategoria" class="table table-striped table-bordered">
                                 <thead>
@@ -468,6 +473,42 @@
                     </div>
                     <div class="mdl-card__menu">
                         <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="mdl-card">
+                        <div class="mdl-card__title">
+                            <p>For further information, contact your preferred distributor.</p>
+                        </div>
+                        <div class="mdl-card__supporting-text text-center">
+                            <div class="mdl-card__iquote">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
+                                <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
+                            </div>
+                            <div class="mdl-card__iquote">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                <a href="" target="_blank">iQuote Tool</a>
+                            </div>
+                            <div class="mdl-card__iquote">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
+                            </div>
+                            <div class="mdl-card__iquote">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
+                                <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
+                            </div>
+                            <div class="mdl-card__iquote">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
+                                <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
+                            </div>                            
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>

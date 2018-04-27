@@ -114,7 +114,7 @@ function goToCategorias(id){
 	});
 }
 function openModalTerminos(id){
-	var modal   = $('#ModalTerminos');
+	var modal = $('#ModalTerminos');
 	modal.find('#E'+id+'Terminos').css("display","block");
 	modal.modal('toggle');
 }
