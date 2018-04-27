@@ -96,55 +96,55 @@
                             <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
                             <p><strong>Start date:</strong><span>02/01/18</span></p>
                             <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="Tp2" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep4" class="encabezado">
                             <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
                             <p><strong>Start date:</strong><span>02/01/18</span></p>
                             <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small id="T4" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep4T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep6" class="encabezado">
                             <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
                             <p><strong>Start date:</strong><span>01/31/18</span></p>
                             <p><strong>End date:</strong><span>05/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep6T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep7" class="encabezado">
                             <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
                             <p><strong>Start date:</strong><span>4/04/2018</span></p>
                             <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep7T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep8" class="encabezado">
                             <p><strong>Promo name:</strong><span>DCN Promo</span></p>
                             <p><strong>Start date:</strong><span>04/11/18</span></p>
                             <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep11" class="encabezado">
                             <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
                             <p><strong>Start date:</strong><span>04/11/18</span></p>
                             <p><strong>End date:</strong><span>07/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep11T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep12" class="encabezado">
                             <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
                             <p><strong>Start date:</strong><span>03/06/18</span></p>
                             <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep12T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep13" class="encabezado">
                             <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
                             <p><strong>Start date:</strong><span>12/12/17</span></p>
                             <p><strong>End date:</strong><span>03/31/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep13T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div>
                         <div id="Ep14" class="encabezado">
                             <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
                             <p><strong>Start date:</strong><span>02/21/18</span></p>
                             <p><strong>End date:</strong><span>04/30/18</span></p>
-                            <small onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                         </div> 
                     </div>
                     <div class="mdl-container__promocion">
@@ -182,8 +182,8 @@
                             <p>Terms and Conditions</p>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <div id="Tp2-terminos" class="conditions">
-                                <h2>Flex Program Objectives:</h2>
+                            <div id="Ep2Terminos" class="conditions">
+                                <h2>Flex Program Objectives2:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
                                 <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
@@ -212,8 +212,8 @@
                                 <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
                                 <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
                             </div>
-                            <div id="Tp4-terminos" class="conditions">
-                                <h2>Flex Program Objectives:</h2>
+                            <div id="Ep4Terminos" class="conditions">
+                                <h2>Flex Program Objectives4:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
                                 <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
@@ -242,35 +242,77 @@
                                 <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
                                 <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
                             </div>
-                            <div id="T4" class="conditions">
-                                <h2>Flex Program Objectives:</h2>
-                                <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
-                                <h2>Mediciones / Measurements:</h2>
-                                <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
-                                <h2>Instrucción de Proceso / Order Proccesing Instructions:</h2>
-                                <p>Sell-Out claims must be submitted based on the program Terms and Conditions</p>
-                                <h2>Program Logic:</h2>
-                                <p>The HPE VAR or Reseller will be able to purchase Flexible Bundles or Packages from the Distributor that will include a fixed discount for each part number (PN). In order for this Promotion to be valid, each equipment will have to be sold with minimum four (4) additional options. All products MUST be reported / sold under the same Distributor invoice number, except for the Care Pack or Hardware Support included in this deal, which can be invoiced at a later time (no later than 8 working days after the Hardware is invoiced) and with a different invoice number.</p>
-                                <h2>Important:</h2>
-                                <p>All other possible options not included in this Deal (Ups, Racks, etc,) can be added with unlimited quantities and will be priced with the authorized pricing (NDP, or separate Deals). Only the options included in this Deal, will be taken into consideration as valid towards the minimum options required to reach the minimum of 4 valid options at special price.</p>
-                                <h2>Valid Compute</h2>
-                                <p>Configuration examples:</p>
-                                <ol>
-                                    <li>1 x Server DL 380 Gen10 + 1 x Memory Dimm FlexPro PN + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
-                                    <li>1 x Server ML 350 PN + 5 x Hard Drive FlexPro PN + 1 x Redundant Power Supply FlexPro PN + 2 x NIC FlexPro PN</li>
-                                    <li>1 x Server BL 460p PN + 2 x Hard Disk + 1 CPU + 1 HW Support Care Pack PN + 1 x MS ROK Server Lic + 1 HP UPS</li>
-                                </ol>
-                                <h2>Valid Storage</h2>
-                                <p>Configuration examples:</p>
-                                <ol>
-                                    <li>1 x MSA 2040 + 1 x SFP 4Pk + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
-                                    <li>1 x MSA1040 + 5 x Hard Drive FlexPro PN</li>
-                                </ol>
-                                <h2>Exception:</h2>
-                                <p>The PBM will be the only contact authorized to communicate any exception to the conditions of this Program. To approve any exception, the PBM will request approval from the Regional Channels Director, and then will be able to communicate formal approval to the Distributor. The Distributor is required to present proper argumentation via E-mail to the PBM so that the PBM can proceed to request the exception. In order to claim the rebate, the Distributor will be required to present all regular documents and a copy of the approval mail from the PBM. Any approval must be obtained in advanced, previous to invoicing.</p>
-                                <h2>Qualifyng Countries:</h2>
-                                <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
-                                <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
+                            <div id="Ep6Terminos" class="conditions">
+                                <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
+                                <h2>If a Customer is specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
+                                <p>Or</p>
+                                <h2>If a Customer is not specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
+                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
+                                <h2>Other Notes:</h2>
+                                <p>This is not a legal quote.The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
+                                <h2>Offering Types:</h2>
+                                <ul>
+                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
+                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
+                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
+                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
+                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
+                                </ul>
+                                <h2>Dates:</h2>
+                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
+                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
+                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
+                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
+                            </div>
+                            <div id="Ep7Terminos" class="conditions">
+                                <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
+                                <h2>If a Customer is specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
+                                <p>Or</p>
+                                <h2>If a Customer is not specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
+                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
+                                <h2>Other Notes:</h2>
+                                <p>This is not a legal quote.The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
+                                <h2>Offering Types:</h2>
+                                <ul>
+                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
+                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
+                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
+                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
+                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
+                                </ul>
+                                <h2>Dates:</h2>
+                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
+                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
+                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
+                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
+                            </div>
+                            <div id="Ep8Terminos" class="conditions">
+                                <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
+                                <h2>If a Customer is specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
+                                <p>Or</p>
+                                <h2>If a Customer is not specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
+                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
+                                <h2>Other Notes:</h2>
+                                <p>This is not a legal quote.The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
+                                <h2>Offering Types:</h2>
+                                <ul>
+                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
+                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
+                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
+                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
+                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
+                                </ul>
+                                <h2>Dates:</h2>
+                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
+                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
+                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
+                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
                             </div>
                         </div>
                     </div>
@@ -309,6 +351,7 @@
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
+                $('#ModalTerminos').find('#E'+openCategoria+'Terminos').css('display','block');
                 $('.selectpicker').val(1);
                 $('.menu_header').css('display','flex');
             });
