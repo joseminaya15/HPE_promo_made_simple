@@ -91,6 +91,7 @@
                 <div class="col-xs-12">
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
+                    <div id="header_promocion"></div>
                     <div class="table-responsive">
                         <table id="tableCategoria" class="table table-striped table-bordered">
                             <thead>
@@ -181,10 +182,12 @@
             }
             $(window).load(function() {
                 $('#id_cate').prop('selectedIndex', 3);
-                let openCategoria = sessionStorage.getItem('OPEN_CATEGORIA');
-                let nameCategoria = sessionStorage.getItem('NAME_CATEGORIA');
+                let openCategoria   = sessionStorage.getItem('OPEN_CATEGORIA');
+                let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
+                let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('#namePromocion').text(nameCategoria);
+                $('#header_promocion').html(headerCategoria);
                 $('.selectpicker').val(1);
                 $('.menu_header').css('display','flex');
             });
