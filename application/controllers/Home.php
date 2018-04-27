@@ -124,7 +124,7 @@ class Home extends CI_Controller {
                         </tr>';
             }else {
                 foreach ($datos as $key) {
-                    $html .= '<tr onclick="directPromos('.$key->id_cates.')">
+                    $html .= '<tr onclick="directPromos('.$key->id_cates.')" style="cursor: pointer;color: #7991F4;text-decoration: underline;">
                                 <td>'.$key->product_id.'</td>
                                 <td>'.$key->product_desc.'</td>
                                 <td>'.$key->Nombre.'</td>
