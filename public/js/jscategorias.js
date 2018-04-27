@@ -113,3 +113,8 @@ function goToCategorias(id){
 		}
 	});
 }
+function openModalTerminos(idTerm){
+	var idModal = $('#'+idTerm);
+	var modal   = $('#ModalTerminos');
+	modal.modal('show');
+}

@@ -1073,6 +1073,7 @@ footer
 				text-decoration underline
 		.mdl-card__supporting-text
 			.conditions
+				display none
 				h2
 					font-size 20px
 					font-family $regular
@@ -1091,8 +1092,15 @@ footer
 			display inline-block
 			max-width 120px
 			width 100%
+	small
+		text-decoration underline
+		color $default
+		font-size 20px
+		cursor pointer
+		margin 10px 0
+		display inline-block
 .encabezado
-	display none
+	display none		
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
