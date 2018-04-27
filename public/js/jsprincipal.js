@@ -256,3 +256,28 @@ function clearInput(){
 	$('#tablaCates').css("display", "none");
 	$('#buttonClear').css('visibility','hidden');
 }
+function directPromos(id_cates){
+	var cates = null;
+	if(id_cates == 1){
+		cates = 'p2';
+	}else if(id_cates == 2){
+		cates = 'p4';
+	}else if(id_cates == 3){
+		cates = 'p6';
+	}else if(id_cates == 4){
+		cates = 'p7';
+	}else if(id_cates == 5){
+		cates = 'p8';
+	}else if(id_cates == 6){
+		cates = 'p11';
+	}else if(id_cates == 7){
+		cates = 'p12';
+	}else if(id_cates == 8){
+		cates = 'p13';
+	}else if(id_cates == 9){
+		cates = 'p14';
+	}else if(id_cates == 10){
+		cates = 'p15';
+	}
+	goToCategorias(cates);
+}

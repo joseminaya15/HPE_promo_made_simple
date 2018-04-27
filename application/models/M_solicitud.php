@@ -242,9 +242,9 @@ class M_solicitud extends  CI_Model{
       $sql = "SELECT p.*,
                      s.name,
                      c.Nombre,
-                     DATE_FORMAT(p.effective_date, '%d/%m/%Y') AS effect_date,
-                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
-                FROM productos p,
+                     DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
+                     DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+                FROM products p,
                      sub_categorias s,
                      categorias c
                WHERE p.id_sub_cate = s.Id
@@ -260,6 +260,7 @@ class M_solicitud extends  CI_Model{
       $sql = "SELECT p.*,
                     s.name,
                     c.Nombre,
+                    c.Id AS id_cates,
                     DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
                     DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
                FROM products p,
