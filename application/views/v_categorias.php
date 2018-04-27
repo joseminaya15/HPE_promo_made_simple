@@ -188,7 +188,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div id="Ep2Terminos" class="conditions">
-                                <h2>Flex Program Objectives2:</h2>
+                                <h2>Flex Program Objectives:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
                                 <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
@@ -218,7 +218,7 @@
                                 <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
                             </div>
                             <div id="Ep4Terminos" class="conditions">
-                                <h2>Flex Program Objectives4:</h2>
+                                <h2>Flex Program Objectives:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
                                 <h2>Mediciones / Measurements:</h2>
                                 <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
