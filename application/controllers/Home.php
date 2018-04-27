@@ -138,17 +138,4 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    /*function directPromos(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $id_cate = $this->input->post('id_cates');
-            $session = array('id_cates' => $id_cate);
-            $this->session->set_userdata($session);
-            $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }*/
 }
