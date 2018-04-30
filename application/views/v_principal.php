@@ -97,7 +97,7 @@
                 <div class="item">
                     <div class="imagen three"></div>
                     <div class="cont-carousel">
-                        <h2>Welcome to Promos Made Simple</h2>
+                        <h2>#Instasale</h2>
                         <p>You can see all current promotions and those that are about to expire</p>
                     </div>
                 </div>
