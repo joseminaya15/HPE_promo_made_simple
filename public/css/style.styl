@@ -893,6 +893,7 @@ footer
 	width 100%
 	max-width 600px
 	z-index 2
+	margin 0 15px
 	&.home
 		max-width 460px
 		position absolute
@@ -1137,8 +1138,12 @@ footer
 .promocion_categoria
 	width 100%
 	max-width 600px
+	order 2
 	img
-		width 100%	
+		width 100%
+.table_categoria
+	order 1
+		
 .subcategoria
 	display block
 	border none
@@ -1146,6 +1151,11 @@ footer
 	margin-top 25px
 	td
 		border none !important
+.click_here
+	a
+		color $default
+		font-family $medium
+		cursor pointer
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
@@ -1167,6 +1177,11 @@ footer
 				margin 5px 0
 			p
 				font-size 18px
+	.header img
+		max-width 100px
+@media ( max-width 600px )
+	.mdl-container__promocion
+		display block
 @media ( max-width 420px )
 	.fixed-logo
 		position relative

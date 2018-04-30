@@ -145,10 +145,14 @@
                         </div>
                         <div class="col-xs-6 p-0 text-right">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
+                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="table-responsive">
+                        <div class="promocion_categoria">
+                            <img src="<?php echo RUTA_IMG?>promociones/promocion2.png">
+                        </div>
+                        <div class="table-responsive table_categoria">
                             <table id="tableCategoria" class="table table-striped">
                                 <thead>
                                     <tr class="tr-header-reporte">
@@ -165,9 +169,6 @@
                                     <?php echo $promociones ?>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="promocion_categoria">
-                            <img src="<?php echo RUTA_IMG?>promociones/promocion2.png">
                         </div>
                     </div>
                 </div>
