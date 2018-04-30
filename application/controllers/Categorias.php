@@ -125,7 +125,6 @@ class Categorias extends CI_Controller {
                 $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto);
             }
             $cate = '';
-            $cate = $datos[0]->name;
             $html = '';
             $cont = 0;
             $cont1 = 0;
@@ -150,6 +149,7 @@ class Categorias extends CI_Controller {
                                 <td></td>
                             </tr>';
                 }else {
+                    $cate = $datos[0]->name;
                     foreach ($datos as $key) {
                         if($cate == $key->name){
                             if($cont1 == 0){
