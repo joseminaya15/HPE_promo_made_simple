@@ -90,56 +90,56 @@
                         <div class="col-xs-6 p-0">
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
-                                <p><strong>Start date:</strong><span>02/01/18</span></p>
-                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
-                                <p><strong>Start date:</strong><span>02/01/18</span></p>
-                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep4T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep6" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
-                                <p><strong>Start date:</strong><span>01/31/18</span></p>
-                                <p><strong>End date:</strong><span>05/31/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep6T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep7" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
-                                <p><strong>Start date:</strong><span>4/04/2018</span></p>
-                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep7T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep8" class="encabezado">
                                 <p><strong>Promo name:</strong><span>DCN Promo</span></p>
-                                <p><strong>Start date:</strong><span>04/11/18</span></p>
-                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
-                                <p><strong>Start date:</strong><span>04/11/18</span></p>
-                                <p><strong>End date:</strong><span>07/31/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep11T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep12" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
-                                <p><strong>Start date:</strong><span>03/06/18</span></p>
-                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep12T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep13" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
-                                <p><strong>Start date:</strong><span>12/12/17</span></p>
-                                <p><strong>End date:</strong><span>03/31/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep13T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep14" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
-                                <p><strong>Start date:</strong><span>02/21/18</span></p>
-                                <p><strong>End date:</strong><span>04/30/18</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                         </div>

@@ -64,6 +64,8 @@ class Categorias extends CI_Controller {
                 }
             }
         }
+        $data['start_date']  = $datos[0]->effect_date;
+        $data['end_date']    = $datos[0]->fecha_fin;
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
 	}
