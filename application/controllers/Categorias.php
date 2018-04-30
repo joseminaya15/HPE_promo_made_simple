@@ -14,40 +14,13 @@ class Categorias extends CI_Controller {
     }
 	public function index(){
         $html           = '';
-        $opciones       = '<option><option>';
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['nombre'] = $nombre[0];
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
-            $opciones = '<option value="SERVIDORES">SERVIDORES</option>'.
-                        '<option value="PROCESADORES">PROCESADORES</option>'.
-                        '<option value="DISCOS FLEX ATTACH">DISCOS</option>'.
-                        '<option value="OPCIONES">OPCIONES</option>'.
-                        '<option value="STORAGE">STORAGE</option>'.
-                        '<option value="SOFTWARE/LICENCIAS">SOFTWARE/LICENCIAS</option>'.
-                        '<option value="ISS ATTACH PROGRAM">ISS ATTACH PROGRAM</option>'.
-                        '<option value="HPN ATTACH PROGRAM">HPN ATTACH PROGRAM</option>'.
-                        '<option value="HPSD ATTACH PROGRAM">HPSD ATTACH PROGRAM</option>'.
-                        '<option value="SERVICIOS">SERVICIOS</option>'.
-                        '<option value="BACKUP EN CINTA">BACKUP EN CINTA</option>'.
-                        '<option value="OPCIONES">OPCIONES</option>'.
-                        '<option value="STORAGE SAN">STORAGE SAN</option>'.
-                        '<option value="DISCOS">DISCOS</option>'.
-                        '<option value="SWITCH SERIES">SWITCH SERIES</option>'.
-                        '<option value="OFFICE CONNECT - SWITCH SERIES">OFFICE CONNECT - SWITCH SERIES</option>'.
-                        '<option value="ACCESS POINTS">ACCESS POINTS</option>'.
-                        '<option value="BRIDGE SERIES">BRIDGE SERIES</option>'.
-                        '<option value="ACCESS ROUTER">ACCESS ROUTER</option>';
-            $data['opcion'] = $opciones;
         }else {
-            $id_sub_cate = $this->M_solicitud->getIdSubCategoria($this->session->userdata('id_cates'));
-            if(count($id_sub_cate) == 0){
-                return;
-            }
-            $datos = $this->M_solicitud->getDatosProducts($id_sub_cate[0]->Id); 
-            $data['opcion'] = $opciones;
-            
+            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
         foreach ($datos as $key) {
             if($this->session->userdata('id_cates') == 10){
@@ -115,11 +88,10 @@ class Categorias extends CI_Controller {
         try {
             $html  = null;
             $texto = $this->input->post('texto');
-            $cate  = $this->input->post('sub_cate');
             if($texto == null || $texto == ''){
-                $datos = $this->M_solicitud->getDatosProductsByName($cate);
+                $datos = $this->M_solicitud->getDatosProductsByName($this->session->userdata('id_cates'));
             }else {             
-                $datos = $this->M_solicitud->getDatosBuscadorProducts($cate, $texto);
+                $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto);
             }
             if($this->session->userdata('id_cates') == 10){
                 if(count($datos) == 0){
@@ -163,6 +135,20 @@ class Categorias extends CI_Controller {
         try {
             $this->session->unset_userdata('usuario');
             $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function goToCategorias(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $cate    = $this->input->post('cate');
+            $id_cate = $this->M_solicitud->getIdByNameCate($cate);
+            $session = array('id_cates' => $id_cate);
+            $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

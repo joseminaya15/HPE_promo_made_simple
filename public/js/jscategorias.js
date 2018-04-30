@@ -37,15 +37,10 @@ function clearInput(){
 	buscarPromo('inputSearch');
 }
 function buscarPromo(datos){
-	var promo 	  = $('#namePromocion').text();
-	var categoria = $('#'+datos).parents().find('.filter-categoria').find('.filter-option').text();
-	if(promo == 'Server & Storage Flex Attach' && categoria == 'Discos'){
-		categoria = 'DISCOS FLEX ATTACH';
-	}
+	var promo = $('#namePromocion').text();
 	var texto = $('#inputSearch').val();
 	$.ajax({
-		data : {texto 	 : texto,
-				sub_cate : categoria},
+		data : {texto : texto},
 		url  : 'categorias/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
@@ -99,7 +94,7 @@ function goToCategorias(id){
     }
     $.ajax({
 		data : {cate : name_cate},
-		url  : 'Home/goToCategorias',
+		url  : 'Categorias/goToCategorias',
 		type : 'POST'
 	}).done(function(data){
 		try{
