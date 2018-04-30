@@ -35,9 +35,8 @@ class Categorias extends CI_Controller {
             }else {
                 if($cate == $key->name){
                     if($cont1 == 0){
-                        $html = '<tr>
-                                    <td><strong>'.$key->name.'</strong></td>
-                                    <td></td>
+                        $html = '<tr class="subcategoria">
+                                    <td colspan="2"><strong>'.$key->name.'</strong></td>
                                 </tr>';
                         $cont1 = 1;
                     }
@@ -50,9 +49,8 @@ class Categorias extends CI_Controller {
                     $cate = $key->name;
                     $cont = 0;
                     if($cont == 0){
-                        $html .= '<tr>
-                                   <td><strong>'.$cate.'</strong></td>
-                                   <td></td>
+                        $html .= '<tr class="subcategoria">
+                                   <td colspan="2"><strong>'.$cate.'</strong></td>
                                  </tr>';
                         $cont=1;
                     }
@@ -153,9 +151,8 @@ class Categorias extends CI_Controller {
                     foreach ($datos as $key) {
                         if($cate == $key->name){
                             if($cont1 == 0){
-                                $html = '<tr>
-                                            <td><strong>'.$key->name.'</strong></td>
-                                            <td></td>
+                                $html = '<tr class="subcategoria">
+                                            <td colspan="2"><strong>'.$key->name.'</strong></td>
                                         </tr>';
                                 $cont1 = 1;
                             }
@@ -168,9 +165,8 @@ class Categorias extends CI_Controller {
                             $cate = $key->name;
                             $cont = 0;
                             if($cont == 0){
-                                $html .= '<tr>
-                                           <td><strong>'.$cate.'</strong></td>
-                                           <td></td>
+                                $html .= '<tr class="subcategoria">
+                                           <td colspan="2"><strong>'.$cate.'</strong></td>
                                          </tr>';
                                 $cont=1;
                             }

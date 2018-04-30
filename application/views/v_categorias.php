@@ -149,7 +149,7 @@
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
                         <div class="table-responsive">
-                            <table id="tableCategoria" class="table table-striped table-bordered">
+                            <table id="tableCategoria" class="table table-striped">
                                 <thead>
                                     <tr class="tr-header-reporte">
                                         <?php if($sales == 7) { ?>

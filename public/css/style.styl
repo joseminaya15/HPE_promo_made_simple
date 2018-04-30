@@ -1109,6 +1109,7 @@ footer
 	display none
 .mdl-container__promocion
 	flexCenter()
+	align-items start
 	.table-responsive
 		max-width 550px
 		width 100%
@@ -1138,6 +1139,21 @@ footer
 	max-width 600px
 	img
 		width 100%	
+.subcategoria
+	display block
+	border none
+	background-color transparent !important
+	margin-top 25px
+	td
+		border none !important
+@media ( max-width 1200px )
+	#principal
+		.owl-carousel
+			&.owl-theme
+				.owl-dots
+					left 25px	
+		.cont-carousel
+			padding 0 25px	
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
@@ -1164,3 +1180,12 @@ footer
 				padding 0
 			border 2px solid transparent
 		margin 0
+	#principal
+		.cont-carousel
+			h2
+				font-size 42px
+				line-height 40px
+			p
+				font-size 26px
+				line-height 26px
+				
