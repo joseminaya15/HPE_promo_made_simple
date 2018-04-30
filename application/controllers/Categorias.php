@@ -13,7 +13,6 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $html           = '';
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['nombre'] = $nombre[0];
@@ -22,6 +21,11 @@ class Categorias extends CI_Controller {
         }else {
             $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
+        $cate = '';
+        $cate = $datos[0]->name;
+        $html = '';
+        $cont = 0;
+        $cont1 = 0;
         foreach ($datos as $key) {
             if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>
@@ -29,16 +33,41 @@ class Categorias extends CI_Controller {
                             <td>'.$key->product_desc.'</td>
                         </tr>';
             }else {
-                $html .= '<tr>
-                            <td>'.$key->product_id.'</td>
-                            <td>'.$key->product_desc.'</td>
-                        </tr>';
+                if($cate == $key->name){
+                    if($cont1 == 0){
+                        $html = '<tr>
+                                    <td><strong>'.$key->name.'</strong></td>
+                                    <td></td>
+                                </tr>';
+                        $cont1 = 1;
+                    }
+                    $html .= '<tr>
+                                <td>'.$key->product_id.'</td>
+                                <td>'.$key->product_desc.'</td>
+                            </tr>';
+                }else
+                if($cate != $key->name){
+                    $cate = $key->name;
+                    $cont = 0;
+                    if($cont == 0){
+                        $html .= '<tr>
+                                   <td><strong>'.$cate.'</strong></td>
+                                   <td></td>
+                                 </tr>';
+                        $cont=1;
+                    }
+                    $html .= '
+                              <tr>
+                                <td>'.$key->product_id.'</td>
+                                <td>'.$key->product_desc.'</td>
+                              </tr>';
+                }
             }
         }
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
 	}
-    function getCategorias(){
+    /*function getCategorias(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -81,7 +110,7 @@ class Categorias extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-    }
+    }*/
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -93,6 +122,11 @@ class Categorias extends CI_Controller {
             }else {             
                 $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto);
             }
+            $cate = '';
+            $cate = $datos[0]->name;
+            $html = '';
+            $cont = 0;
+            $cont1 = 0;
             if($this->session->userdata('id_cates') == 10){
                 if(count($datos) == 0){
                     $html = '<tr>
@@ -115,10 +149,35 @@ class Categorias extends CI_Controller {
                             </tr>';
                 }else {
                     foreach ($datos as $key) {
-                        $html .= '<tr>
-                                    <td>'.$key->product_id.'</td>
-                                    <td>'.$key->product_desc.'</td>
-                                </tr>';
+                        if($cate == $key->name){
+                            if($cont1 == 0){
+                                $html = '<tr>
+                                            <td><strong>'.$key->name.'</strong></td>
+                                            <td></td>
+                                        </tr>';
+                                $cont1 = 1;
+                            }
+                            $html .= '<tr>
+                                        <td>'.$key->product_id.'</td>
+                                        <td>'.$key->product_desc.'</td>
+                                    </tr>';
+                        }else
+                        if($cate != $key->name){
+                            $cate = $key->name;
+                            $cont = 0;
+                            if($cont == 0){
+                                $html .= '<tr>
+                                           <td><strong>'.$cate.'</strong></td>
+                                           <td></td>
+                                         </tr>';
+                                $cont=1;
+                            }
+                            $html .= '
+                                      <tr>
+                                        <td>'.$key->product_id.'</td>
+                                        <td>'.$key->product_desc.'</td>
+                                      </tr>';
+                        }
                     }
                 }
             }
