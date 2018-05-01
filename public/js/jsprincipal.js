@@ -279,3 +279,6 @@ function directPromos(id_cates){
 	}
 	goToCategorias(cates);
 }
+function showSearch(){
+	
+}

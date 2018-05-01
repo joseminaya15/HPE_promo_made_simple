@@ -1145,17 +1145,38 @@ footer
 	order 1
 		
 .subcategoria
-	display block
 	border none
 	background-color transparent !important
-	margin-top 25px
 	td
 		border none !important
+		padding-top 25px !important
+		strong
+			font-family $medium
+			font-size 18px
 .click_here
 	a
 		color $default
 		font-family $medium
 		cursor pointer
+.menu_principal
+	margin-top 7px
+	flexCenter()
+	justify-content flex-end
+	.md-button--search
+		background-color #FFFFFF
+		color $color
+		min-width 30px
+		width 30px
+		height 30px
+		margin 0
+		display none
+		i
+			font-size 20px
+			color $color
+	.menu_desplegable
+		max-width 95px
+		button
+			margin 0
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
@@ -1163,7 +1184,13 @@ footer
 				.owl-dots
 					left 25px	
 		.cont-carousel
-			padding 0 25px	
+			padding 0 25px
+@media ( max-width 1000px )
+	.search-filter
+		visibility hidden
+	.menu_principal
+		.md-button--search
+			display block
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()

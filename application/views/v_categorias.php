@@ -39,18 +39,18 @@
                                 <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
                             </div>
                             <div class="menu_desplegable col-xs-12 p-0">
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <div class="col-xs-6 p-0">
+                                    <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Valor</p>
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
                                         <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">Simplivity</a>
                                         <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">DCN TOR</a>
                                         <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
                                     </div>
-                                    <div class="col-xs-6 dropdown-menu__border p-0">
+                                    <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Volumen</p>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>

@@ -37,28 +37,33 @@
                                 <p>Bienvenido(a) <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
-                            <div class="menu_desplegable col-xs-12 p-0">
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="mdi mdi-menu"></i>Menu
+                            <div class="menu_principal col-xs-12 p-0">
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab md-button--search" onclick="showSearch()">
+                                    <i class="mdi mdi-search"></i>
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <div class="col-xs-6 p-0">
-                                        <p>Valor</p>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p7')">Simplivity</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p8')">DCN TOR</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
-                                    </div>
-                                    <div class="col-xs-6 dropdown-menu__border p-0">
-                                        <p>Volumen</p>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p14)">Aruba Mobility</a>
-                                        <a class="mdl-menu__item" onclick="triggerCategoria('p15')">InstaSale</a>
-                                    </div>
-                                </ul>
+                                <div class="menu_desplegable col-xs-12 p-0">
+                                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-menu"></i>Menu
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <div class="col-xs-6 p-0">
+                                            <p>Valor</p>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p7')">Simplivity</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p8')">DCN TOR</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
+                                        </div>
+                                        <div class="col-xs-6 dropdown-menu__border p-0">
+                                            <p>Volumen</p>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p14)">Aruba Mobility</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">InstaSale</a>
+                                        </div>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="search-filter home" style="display: none;">
