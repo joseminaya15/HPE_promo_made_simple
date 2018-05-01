@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-xs-6 text-right p-0">
                             <div class="menu_header">
-                                <p>Bienvenido(a) <?php echo $nombre ?></p>
+                                <p>Welcome <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
                             <div class="menu_principal col-xs-12 p-0">
@@ -46,14 +46,14 @@
                                         <i class="mdi mdi-menu"></i>Menu
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <div class="col-xs-6 p-0">
+                                        <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Valor</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p7')">Simplivity</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p8')">DCN TOR</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p7')">HPE Simplivity</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p8')">Datacenter Networking - ToR</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
                                         </div>
-                                        <div class="col-xs-6 dropdown-menu__border p-0">
+                                        <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Volumen</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
@@ -163,7 +163,7 @@
                         <div class="promocion-imagen seven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="one">Simplivity</h2>
+                        <h2 class="one">HPE Simplivity</h2>
                     </div>
                 </a>
                 <a id="p8" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -171,7 +171,7 @@
                         <div class="promocion-imagen eight"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">DCN TOR</h2>
+                        <h2 class="two">Datacenter Networking ToR</h2>
                     </div>
                 </a>
                 <!-- <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">

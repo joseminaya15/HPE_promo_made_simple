@@ -1139,6 +1139,12 @@ footer
 	width 100%
 	max-width 600px
 	order 2
+	background-size 320px !important
+	height 750px
+	position relative
+	top 0
+	left 0
+	right 0
 	img
 		width 100%
 .table_categoria
@@ -1174,7 +1180,6 @@ footer
 			font-size 20px
 			color $color
 	.menu_desplegable
-		max-width 95px
 		button
 			margin 0
 @media ( max-width 1200px )
@@ -1191,6 +1196,11 @@ footer
 	.menu_principal
 		.md-button--search
 			display block
+	.menu_desplegable
+		max-width 95px
+		.dropdown-menu
+			.col-xs-12
+				width 100%
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()

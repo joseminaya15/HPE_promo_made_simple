@@ -30,12 +30,12 @@
             <div class="header">
                 <div class="mdl-container row">
                     <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
+                        <div class="col-xs-6 text-left p-0 opacity">
                             <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
-                        <div class="col-xs-6 text-right p-0">
+                        <div class="col-xs-6 text-right p-0 opacity">
                             <div class="menu_header">
-                                <p>Bienvenido(a) <?php echo $nombre ?></p>
+                                <p>Welcome <?php echo $nombre ?></p>
                                 <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
                             </div>
                             <div class="menu_desplegable col-xs-12 p-0">
@@ -46,8 +46,8 @@
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Valor</p>
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
-                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">Simplivity</a>
-                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">DCN TOR</a>
+                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
+                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">Datacenter Networking - ToR</a>
                                         <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
@@ -149,9 +149,7 @@
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="promocion_categoria">
-                            <img src="<?php echo RUTA_IMG?>promociones/promocion2.png">
-                        </div>
+                        <div class="promocion_categoria"></div>
                         <div class="table-responsive table_categoria">
                             <table id="tableCategoria" class="table table-striped">
                                 <thead>
@@ -535,6 +533,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+                $('.promocion_categoria').css("background","url('public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');

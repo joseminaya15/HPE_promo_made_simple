@@ -280,5 +280,5 @@ function directPromos(id_cates){
 	goToCategorias(cates);
 }
 function showSearch(){
-	
+	$('.search-filter').css('visibility','visible');
 }
