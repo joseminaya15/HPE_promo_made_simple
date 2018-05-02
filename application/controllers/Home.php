@@ -222,7 +222,6 @@ class Home extends CI_Controller {
                 </html>';
        $this->email->message($texto);
        $this->email->send();
-       echo print_r($this->email->send());
        $data['error'] = EXIT_SUCCESS;
       }catch (Exception $e){
         $data['msj'] = $e->getMessage();
