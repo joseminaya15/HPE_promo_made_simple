@@ -893,6 +893,7 @@ footer
 	width 100%
 	max-width 600px
 	z-index 2
+	margin 0 15px
 	&.home
 		max-width 460px
 		position absolute
@@ -1137,15 +1138,55 @@ footer
 .promocion_categoria
 	width 100%
 	max-width 600px
+	order 2
+	background-size 320px !important
+	height 750px
+	position relative
+	top 0
+	left 0
+	right 0
 	img
-		width 100%	
+		width 100%
+.table_categoria
+	order 1
+		
 .subcategoria
-	display block
 	border none
 	background-color transparent !important
-	margin-top 25px
 	td
 		border none !important
+		padding-top 25px !important
+		strong
+			font-family $medium
+			font-size 18px
+.click_here
+	a
+		color $default
+		font-family $medium
+		cursor pointer
+.menu_principal
+	margin-top 7px
+	flexCenter()
+	justify-content flex-end
+	.md-button--search
+		background-color #FFFFFF
+		color $color
+		min-width 30px
+		width 30px
+		height 30px
+		margin 0
+		display none
+		i
+			font-size 20px
+			color $color
+	.menu_desplegable
+		button
+			margin 0
+.header--principal
+	&.active
+		.header__left
+		.header__right
+			opacity 1
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
@@ -1153,7 +1194,28 @@ footer
 				.owl-dots
 					left 25px	
 		.cont-carousel
-			padding 0 25px	
+			padding 0 25px
+@media ( max-width 1000px )
+	.search-filter
+		visibility hidden
+	.menu_principal
+		.md-button--search
+			display block
+	.menu_desplegable
+		max-width 95px
+		.dropdown-menu
+			.col-xs-12
+				width 100%
+	.header--principal
+		&.active
+			.search-filter
+				visibility visible
+			.header__left
+			.header__right
+				opacity 0
+			.search-clear
+				button
+					visibility visible !important
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
@@ -1167,6 +1229,11 @@ footer
 				margin 5px 0
 			p
 				font-size 18px
+	.header img
+		max-width 100px
+@media ( max-width 600px )
+	.mdl-container__promocion
+		display block
 @media ( max-width 420px )
 	.fixed-logo
 		position relative

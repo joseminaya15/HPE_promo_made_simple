@@ -30,28 +30,28 @@
             <div class="header">
                 <div class="mdl-container row">
                     <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
+                        <div class="col-xs-6 text-left p-0 opacity">
                             <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
-                        <div class="col-xs-6 text-right p-0">
+                        <div class="col-xs-6 text-right p-0 opacity">
                             <div class="menu_header">
-                                <p>Bienvenido(a) <?php echo $nombre ?></p>
+                                <p>Welcome <?php echo $nombre ?></p>
                                 <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
                             </div>
                             <div class="menu_desplegable col-xs-12 p-0">
-                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <div class="col-xs-6 p-0">
-                                        <p>Valor</p>
+                                    <div class="col-sm-6 col-xs-12 p-0">
+                                        <p>Value</p>
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
-                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">Simplivity</a>
-                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">DCN TOR</a>
+                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
+                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">Datacenter Networking - ToR</a>
                                         <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
                                     </div>
-                                    <div class="col-xs-6 dropdown-menu__border p-0">
-                                        <p>Volumen</p>
+                                    <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
+                                        <p>Volume</p>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
                                         <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Market Take Over</a>
@@ -72,7 +72,7 @@
                 <div class="search-categoria">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
                     <div class="search-input">
-                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="verificarDatos(event);">
+                        <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description in this list" onkeyup="inputActive(this.id);" onkeypress="verificarDatos(event);">
                     </div>
                     <div class="search-clear">
                         <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
@@ -145,10 +145,12 @@
                         </div>
                         <div class="col-xs-6 p-0 text-right">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
+                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="table-responsive">
+                        <div class="promocion_categoria"></div>
+                        <div class="table-responsive table_categoria">
                             <table id="tableCategoria" class="table table-striped">
                                 <thead>
                                     <tr class="tr-header-reporte">
@@ -165,9 +167,6 @@
                                     <?php echo $promociones ?>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="promocion_categoria">
-                            <img src="<?php echo RUTA_IMG?>promociones/promocion2.png">
                         </div>
                     </div>
                 </div>
@@ -534,6 +533,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+                $('.promocion_categoria').css("background","url('public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
