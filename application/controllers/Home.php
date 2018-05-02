@@ -75,6 +75,7 @@ class Home extends CI_Controller {
             $session    = array('nombre'     => $nombre,
                                 'usuario'    => $usuario,
                                 'pais'       => $pais,
+                                'pass'       => $passRegister,
                                 'id_capitan' => $datoInsert['Id']);
             $this->session->set_userdata($session);
             $this->sendGmail($usuario);
@@ -154,7 +155,7 @@ class Home extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@marketinghpe.com');
-       $this->email->to('jminaya@brainblue.com');
+       $this->email->to($this->session->userdata('usuario'));
        $this->email->subject('Bienvenido a Promo Made Simple');
        $texto = '<!DOCTYPE html>
                 <html>
@@ -167,7 +168,7 @@ class Home extends CI_Controller {
                                             <td>
                                                 <table>
                                                     <tr>
-                                                        <td><img src="http://test.brainblue.com/HPE_promo_made_simple/public/img/logo/logo_header.png" width="120" alt="alternative text" border="0" style="display: block;"></td>
+                                                        <td><img src="http://marketinghpe.com/HPE_promo_made_simple/public/img/logo/logo_header.svg" width="125" alt="alternative text" border="0" style="display: block;"></td>
                                                         <td></td>
                                                     </tr>
                                                 </table>
@@ -175,7 +176,7 @@ class Home extends CI_Controller {
                                             <td>
                                                 <table cellspacing="0" cellpadding="0" border="0" align="right">
                                                     <tr>
-                                                        <td><font style="font-family: arial;color: #FFFFFF;font-weight: 600;">Promo Made Simple</font></td>
+                                                        <td><font style="font-family: arial;color: #FFFFFF;font-weight: 600;">Promos Made Simple</font></td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -187,29 +188,27 @@ class Home extends CI_Controller {
                                 <td>
                                     <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
                                         <tr>
-                                            <td style="text-align: center;padding: 0;margin: 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Promociones por vencer</font></td>
+                                            <td style="text-align: center;padding: 20px 0;margin: 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Welcome to Promos Made Simple</font></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;padding-top: 10px;padding-bottom: 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Login with your username and password</font></td>
                                         </tr>
                                         <tr>
                                             <td style="padding: 20px 0;">
-                                                <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 20px;">
-                                                    <thead>
-                                                        <tr>
-                                                            <th style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Number ID</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Part Number</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Description</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Line</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Net Price</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Efective Date</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">End Date</font></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    </tbody>
+                                                <table width="360" cellspacing="0" cellpadding="0" border="0" align="center" style="border: solid 1px #ccc;padding: 20px;">
+                                                    <tr>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Username:</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">'.$this->session->userdata('usuario').'</font></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Password:</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">'.$this->session->userdata('pass').'</font></td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: center;padding-bottom: 20px"><a href="http://test.brainblue.com/HPE_promo_made_simple/Home" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
+                                            <td style="text-align: center;padding: 20px 0"><a href="http://marketinghpe.com/HPE_promo_made_simple/Home" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: center;"><font style="font-family: arial;color: #D3D3D3;font-size: 12px;">&copy;2018 Hewlett Packard Enterprise Development LP</font></td>
