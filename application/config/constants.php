@@ -84,15 +84,16 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
+//NOMBRE DEL PROYECTO
+defined('PROYECTO_NAME') OR define('PROYECTO_NAME','HPE_promo_made_simple');
+
 //	RECURSOS PUBLICOS
+defined('RUTA_HPE')     OR define('RUTA_HPE'    , 'http://marketinghpe.com/'.PROYECTO_NAME.'/');
 defined('RUTA_CSS')     OR define('RUTA_CSS'    , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HPE_promo_made_simple/public/css/');
 defined('RUTA_FONTS')   OR define('RUTA_FONTS'  , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HPE_promo_made_simple/public/fonts/');
 defined('RUTA_IMG')     OR define('RUTA_IMG'    , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HPE_promo_made_simple/public/img/');
 defined('RUTA_JS')      OR define('RUTA_JS'     , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HPE_promo_made_simple/public/js/');
 defined('RUTA_PLUGINS') OR define('RUTA_PLUGINS', 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HPE_promo_made_simple/public/plugins/');
-
-//NOMBRE DEL PROYECTO
-defined('PROYECTO_NAME') OR define('PROYECTO_NAME','HPE_promo_made_simple');
 
 //MENSAJES DE ERROR,CONFIRMACION Y EDICION
 defined('MSJ_INS') OR define('MSJ_INS', 'Se Registr&oacute; Correctamente');
