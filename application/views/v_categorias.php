@@ -44,14 +44,14 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 p-0">
-                                        <p>Valor</p>
+                                        <p>Value</p>
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
                                         <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
                                         <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">Datacenter Networking - ToR</a>
                                         <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
-                                        <p>Volumen</p>
+                                        <p>Volume</p>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
                                         <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Market Take Over</a>
