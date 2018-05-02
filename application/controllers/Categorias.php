@@ -67,50 +67,6 @@ class Categorias extends CI_Controller {
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
 	}
-    /*function getCategorias(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $html      = null;
-            $categoria = $this->input->post('categoria');
-            $id_cate   = $this->M_solicitud->getIdCategoria($categoria);
-            $datos     = $this->M_solicitud->getDatosProducts(intval($id_cate));
-            if($this->session->userdata('id_cates') == 10){
-                if(count($datos) == 0){
-                    $html = '<tr>
-                                <td></td>
-                                <td></td>
-                            </tr>';
-                }else {
-                    foreach ($datos as $key) {
-                    $html .= '<tr>
-                                <td>'.$key->product_id.'</td>
-                                <td>'.$key->product_desc.'</td>
-                            </tr>';
-                    }
-                }
-            }else {
-                if(count($datos) == 0){
-                    $html = '<tr>
-                                <td></td>
-                                <td></td>
-                            </tr>';
-                }else {
-                    foreach ($datos as $key) {
-                    $html .= '<tr>
-                                <td>'.$key->product_id.'</td>
-                                <td>'.$key->product_desc.'</td>
-                            </tr>';
-                    }
-                }   
-            }         
-            $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
-        }catch(Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }*/
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
