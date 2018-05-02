@@ -253,6 +253,7 @@ function clearInput(){
 	$('#cardsCates').css("display", "block");
 	$('#tablaCates').css("display", "none");
 	$('#buttonClear').css('visibility','hidden');
+	$('.header--principal').removeClass('active');
 }
 function directPromos(id_cates){
 	var cates = null;
@@ -280,5 +281,5 @@ function directPromos(id_cates){
 	goToCategorias(cates);
 }
 function showSearch(){
-	$('.search-filter').css('visibility','visible');
+	$('.header--principal').addClass('active');
 }

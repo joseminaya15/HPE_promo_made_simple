@@ -1182,6 +1182,11 @@ footer
 	.menu_desplegable
 		button
 			margin 0
+.header--principal
+	&.active
+		.header__left
+		.header__right
+			opacity 1
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
@@ -1201,6 +1206,16 @@ footer
 		.dropdown-menu
 			.col-xs-12
 				width 100%
+	.header--principal
+		&.active
+			.search-filter
+				visibility visible
+			.header__left
+			.header__right
+				opacity 0
+			.search-clear
+				button
+					visibility visible !important
 @media ( max-width 768px )
 	.mdl-card-login
 		transformCenter()
