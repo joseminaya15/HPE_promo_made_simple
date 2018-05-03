@@ -30,7 +30,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0 header__left">
-                            <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
+                            <a href="Home"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
                         <div class="col-xs-6 text-right p-0 header__right">
                             <div class="menu_header">
