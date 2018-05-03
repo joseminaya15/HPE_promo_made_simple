@@ -159,7 +159,6 @@ class Categorias extends CI_Controller {
         $data['msj']   = null;
         try {
             $cate    = $this->input->post('cate');
-            print_r($cate);
             $id_cate = $this->M_solicitud->getIdByNameCate($cate);
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
