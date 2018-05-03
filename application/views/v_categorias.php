@@ -31,7 +31,7 @@
                 <div class="mdl-container row">
                     <div class="col-xs-12">
                         <div class="col-xs-6 text-left p-0 opacity">
-                            <a href="Distis"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
+                            <a href="Home"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
                         <div class="col-xs-6 text-right p-0 opacity">
                             <div class="menu_header">
@@ -87,18 +87,20 @@
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
-                        <div class="col-xs-6 p-0">
+                        <div class="col-sm-6 col-xs-12 p-0">
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep4T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Do not take risks operating on Warranty!! Protect your customer’s IT investment with the best service at the best price! Keep your infrastructure operational at all times and get alerts before a fault occurs with Proactive Care. Ensure correct deployment with original HPE installation and startup services.</span></p>
                             </div>
                             <div id="Ep6" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
@@ -117,12 +119,14 @@
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep11T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Increase our 3PAR Installed base with high availability and high performance for DataCenters of medium and small size companies.</span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
@@ -142,8 +146,14 @@
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
+                            <div id="Ep15" class="encabezado">
+                                <p><strong>Promo name:</strong><span>InstaSale</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
+                            </div>
                         </div>
-                        <div class="col-xs-6 p-0 text-right">
+                        <div class="col-sm-6 col-xs-12 p-0 text-right">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
                             <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
                         </div>
@@ -212,34 +222,11 @@
                                 <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
                             </div>
                             <div id="Ep4Terminos" class="conditions">
-                                <h2>Flex Program Objectives:</h2>
-                                <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>
-                                <h2>Mediciones / Measurements:</h2>
-                                <p>Constant market share monitoring and GM% contribution to the Business Unit</p>
-                                <h2>Instrucción de Proceso / Order Proccesing Instructions:</h2>
-                                <p>Sell-Out claims must be submitted based on the program Terms and Conditions</p>
-                                <h2>Program Logic:</h2>
-                                <p>The HPE VAR or Reseller will be able to purchase Flexible Bundles or Packages from the Distributor that will include a fixed discount for each part number (PN). In order for this Promotion to be valid, each equipment will have to be sold with minimum four (4) additional options. All products MUST be reported / sold under the same Distributor invoice number, except for the Care Pack or Hardware Support included in this deal, which can be invoiced at a later time (no later than 8 working days after the Hardware is invoiced) and with a different invoice number.</p>
-                                <h2>Important:</h2>
-                                <p>All other possible options not included in this Deal (Ups, Racks, etc,) can be added with unlimited quantities and will be priced with the authorized pricing (NDP, or separate Deals). Only the options included in this Deal, will be taken into consideration as valid towards the minimum options required to reach the minimum of 4 valid options at special price.</p>
-                                <h2>Valid Compute</h2>
-                                <p>Configuration examples:</p>
-                                <ol>
-                                    <li>1 x Server DL 380 Gen10 + 1 x Memory Dimm FlexPro PN + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
-                                    <li>1 x Server ML 350 PN + 5 x Hard Drive FlexPro PN + 1 x Redundant Power Supply FlexPro PN + 2 x NIC FlexPro PN</li>
-                                    <li>1 x Server BL 460p PN + 2 x Hard Disk + 1 CPU + 1 HW Support Care Pack PN + 1 x MS ROK Server Lic + 1 HP UPS</li>
-                                </ol>
-                                <h2>Valid Storage</h2>
-                                <p>Configuration examples:</p>
-                                <ol>
-                                    <li>1 x MSA 2040 + 1 x SFP 4Pk + 2 x Hard Drive FlexPro PN + 1 x HW Support Care Pack PN</li>
-                                    <li>1 x MSA1040 + 5 x Hard Drive FlexPro PN</li>
-                                </ol>
-                                <h2>Exception:</h2>
-                                <p>The PBM will be the only contact authorized to communicate any exception to the conditions of this Program. To approve any exception, the PBM will request approval from the Regional Channels Director, and then will be able to communicate formal approval to the Distributor. The Distributor is required to present proper argumentation via E-mail to the PBM so that the PBM can proceed to request the exception. In order to claim the rebate, the Distributor will be required to present all regular documents and a copy of the approval mail from the PBM. Any approval must be obtained in advanced, previous to invoicing.</p>
-                                <h2>Qualifyng Countries:</h2>
-                                <p>Uruguay, Paraguay, Bolivia, CALA, Guatemala, Belice, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Venezuela, Caribe, Anguilla, Antigua and Barbuda Islands, Aruba, Bahamas, Barbados, Belize, Bermuda, Cayman Islands, Grenada, Guyana, Puerto Rico, Saint Lucia, Saint Viccent and Grenadines, Surinam, Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands(British).</p>
-                                <p>The terms and conditions from the printed quote are in full force and effect End of Quote.</p>
+                                <h2>The program is for fixed promotional price.</h2>
+                                <p>Teams purchased up to 180 days participate.</p>
+                                <p>The Authorized discounts are only for the products mentioned here, for other products, consult with Mariano Gerber.</p>
+                                <p>Not combinable with other promotions</p>
+                                <p>Only applies to Wholesalers with active Exhibit for the products of the program.</p>
                             </div>
                             <div id="Ep6Terminos" class="conditions">
                                 <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
@@ -485,7 +472,7 @@
                             </div>
                             <div class="mdl-card__iquote">
                                 <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                <a href="" target="_blank">iQuote Tool</a>
+                                <a href="https://live.hpiquote.net/aspx/signin.aspx" target="_blank">iQuote Tool</a>
                             </div>
                             <div class="mdl-card__iquote">
                                 <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
