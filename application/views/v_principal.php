@@ -264,7 +264,7 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="login">
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="usuario">Username</label>
+                                        <label for="usuario">Email</label>
                                         <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
