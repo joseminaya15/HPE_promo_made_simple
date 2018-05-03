@@ -542,83 +542,8 @@
                 $('.menu_header').css('display','flex');
             });
             $( document ).ready(function() {
-                $('#tableCategoria').DataTable({
-                    searching: false,
-                    paging: false,
-                    info: false
-                });
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
-                if(categoria == 'Server & Storage Flex Attach'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Servidores" selected>Servidores</option>'+
-                                            '<option value="Procesadores">Procesadores</option>'+
-                                            '<option value="Memoria">Memoria</option>'+
-                                            '<option value="DISCOS FLEX ATTACH">Discos</option>'+
-                                            '<option value="Opciones">Opciones</option>'+
-                                            '<option value="Storage">Storage</option>'+
-                                            '<option value="Software/Licencias">Software/Licencias</option>'+
-                                         '</select>');
-                }else if(categoria == 'HPE Pointnext'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="ISS Attach Program">ISS Attach Program</option>'+
-                                            '<option value="HPN Attach Program">HPN Attach Program</option>'+
-                                            '<option value="HPSD Attach Program">HPSD Attach Program</option>'+
-                                         '</select>');
-                }else if(categoria == 'Storage Accelerate'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Servicios">Servicios</option>'+
-                                            '<option value="Backup en Cinta">Backup en Cinta</option>'+
-                                            '<option value="Opciones">Opciones</option>'+
-                                            '<option value="Storage SAN">Storage SAN</option>'+
-                                            '<option value="Discos">Discos</option>'+
-                                         '</select>');
-                }else if(categoria == 'Simplivity'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="SIMPLIVITY BUNDLE 1">SIMPLIVITY BUNDLE 1</option>'+
-                                            '<option value="SIMPLIVITY BUNDLE 2">SIMPLIVITY BUNDLE 2</option>'+
-                                            '<option value="SIMPLIVITY BUNDLE 3">SIMPLIVITY BUNDLE 3</option>'+
-                                            '<option value="SIMPLIVITY BUNDLE 5">SIMPLIVITY BUNDLE 5</option>'+
-                                            '<option value="SIMPLIVITY BUNDLE 6">SIMPLIVITY BUNDLE 6</option>'+
-                                         '</select>');
-                }else if(categoria == 'DCN TOR'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="DCN PROMO PRODUCTS">DCN PROMO PRODUCTS</option>'+
-                                            '<option value="DCN BUNDLE 1">DCN BUNDLE 1</option>'+
-                                            '<option value="DCN BUNDLE 2">DCN BUNDLE 2</option>'+
-                                         '</select>');
-                }else if(categoria == '3PAR Avalanche & Store Once'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="3PAR BUNDLE 1">3PAR BUNDLE 1</option>'+
-                                            '<option value="3PAR BUNDLE 2">3PAR BUNDLE 2</option>'+
-                                         '</select>');
-                }else if(categoria == 'Aruba Market Take Over'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Switch Series">Switch Series</option>'+
-                                            '<option value="Access Router">Access Router</option>'+
-                                            '<option value="Access Points">Access Points</option>'+
-                                         '</select>');
-                }else if(categoria == 'Aruba 3x2 Switches'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Switch Series">Switch Series</option>'+
-                                            '<option value="Office Connect - Switch Series">Office Connect - Switch Series</option>'+
-                                         '</select>');
-                }else if(categoria == 'Aruba Mobility'){
-                    $('#combo').html('');
-                    $('#combo').append('<select class="selectpicker" id="id_cate" onchange="getTablaPromos()">'+
-                                            '<option value="Access Points">Access Points</option>'+
-                                            '<option value="Bridge Series">Bridge Series</option>'+
-                                            '<option value="Access Router">Access Router</option>'+
-                                         '</select>');
-                }
             });
         </script>
     </body>

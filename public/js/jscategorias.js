@@ -91,7 +91,7 @@ function goToCategorias(id){
     else{
         $("#ModalLogin").modal('hide');
         sessionStorage.removeItem('OPEN_MODAL');
-		location.href = 'Categorias';
+		//location.href = 'Categorias';
     }
     $.ajax({
 		data : {cate : name_cate},
@@ -101,6 +101,7 @@ function goToCategorias(id){
 		try{
 	        data = JSON.parse(data);
 	        if(data.error == 0){
+	        	location.href = 'Categorias';
 	        }else {
 	        	return;
 	        }
