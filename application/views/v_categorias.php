@@ -463,7 +463,7 @@
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
-                            <p>For further information, contact your preferred distributor.</p>
+                            <p>For further information, contact your preferred distributor. If you don't have access to the Iquote of any wholesaler you can enter <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">here.</a></p>
                         </div>
                         <div class="mdl-card__supporting-text text-center">
                             <div class="mdl-card__iquote">
