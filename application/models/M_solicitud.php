@@ -187,7 +187,7 @@ class M_solicitud extends  CI_Model{
               WHERE p.id_sub_cate = s.Id
                 AND s.id_cate = c.Id
                 AND c.Id = ?
-                ORDER BY s.name";
+           ORDER BY s.name";
       $result = $this->db->query($sql, array($id_cate));
       //print_r($this->db->last_query());
       return $result->result();
