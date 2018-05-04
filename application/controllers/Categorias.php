@@ -37,7 +37,7 @@ class Categorias extends CI_Controller {
                 if($cate == $key->name){
                     if($cont1 == 0){
                         $html = '<tr class="subcategoria">
-                                    <td colspan="2"><strong>'.$key->name.'</strong></td>
+                                    <td colspan="2"><strong>'.strtoupper($key->name).'</strong></td>
                                 </tr>';
                         $cont1 = 1;
                     }
@@ -51,7 +51,7 @@ class Categorias extends CI_Controller {
                     $cont = 0;
                     if($cont == 0){
                         $html .= '<tr class="subcategoria">
-                                   <td colspan="2"><strong>'.$cate.'</strong></td>
+                                   <td colspan="2"><strong>'.strtoupper($cate).'</strong></td>
                                  </tr>';
                         $cont=1;
                     }
