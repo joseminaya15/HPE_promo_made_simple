@@ -29,10 +29,10 @@
             <div class="header header--principal">
                 <div class="mdl-container row">
                     <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0 header__left">
+                        <div class="col-sm-6 col-xs-4 text-left p-0 header__left">
                             <a href="Home"><img src="<?php echo RUTA_IMG?>logo/logo_header.svg"></a>
                         </div>
-                        <div class="col-xs-6 text-right p-0 header__right">
+                        <div class="col-sm-6 col-xs-8 text-right p-0 header__right">
                             <div class="menu_header">
                                 <p>Welcome <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>

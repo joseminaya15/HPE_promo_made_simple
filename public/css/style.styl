@@ -1220,15 +1220,17 @@ p.objective_comercial
 			padding 0 25px
 @media ( max-width 1000px )
 	.search-filter
-		visibility hidden
+		&.home
+			visibility hidden
 	.menu_principal
 		.md-button--search
 			display block
-	.menu_desplegable
-		max-width 95px
-		.dropdown-menu
-			.col-xs-12
-				width 100%
+	.header--principal		
+		.menu_desplegable
+			max-width 95px
+			.dropdown-menu
+				.col-xs-12
+					width 100%
 	.header--principal
 		&.active
 			.search-filter
