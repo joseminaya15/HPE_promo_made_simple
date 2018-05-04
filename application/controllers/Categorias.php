@@ -22,11 +22,12 @@ class Categorias extends CI_Controller {
             $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
         $cate = '';
-        $cate = $datos[0]->name;
         $html = '';
         $cont = 0;
         $cont1 = 0;
-        foreach ($datos as $key) {
+        if(count($datos) != 0) {
+            $cate = $datos[0]->name;
+            foreach ($datos as $key) {
             if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>
                             <td>'.$key->product_id.'</td>
@@ -64,6 +65,15 @@ class Categorias extends CI_Controller {
         }
         $data['start_date']  = $datos[0]->effect_date;
         $data['end_date']    = $datos[0]->fecha_fin;
+        }else {
+            $cate = '';
+            $html  = '<tr>
+                        <td></td>
+                        <td></td>
+                     </tr>';
+        $data['start_date']  = '';
+        $data['end_date']    = '';
+        }
         $data['promociones'] = $html;
         $this->load->view('v_categorias', $data);
 	}
