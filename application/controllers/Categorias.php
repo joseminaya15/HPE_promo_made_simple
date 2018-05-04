@@ -146,7 +146,7 @@ class Categorias extends CI_Controller {
                 }
             }
             $data['promociones'] = $html;
-            $data['error'] = EXIT_SUCCESS;
+            $data['error']       = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
