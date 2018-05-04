@@ -93,13 +93,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item opacity-5">
                     <div class="imagen two"></div>
                     <div class="cont-carousel">
-                        <h2>What do you have to do?</h2>
-                        <p>1) Write the name of the product in the search.</p>
-                        <p>2) Choose the promotion that suits your business.</p>
-                        <p>3) Enter Iquote and verify the prices of your trusted wholesaler.</p>
+                        <h2>How it works?</h2>
+                        <div class="cont-carousel__contenido">
+                            <strong>1</strong>
+                            <p>Search products by name or SKU.</p>
+                        </div>
+                        <div class="cont-carousel__contenido">
+                            <strong>2</strong>
+                            <p>Choose the best promotion that fits with your customer’s need.</p>
+                        </div>
+                        <div class="cont-carousel__contenido">
+                            <strong>3</strong>
+                            <p>Access iQuote through the website of your preferred distributor.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -107,6 +116,7 @@
                     <div class="cont-carousel">
                         <img class="img-instasale" src="<?php echo RUTA_IMG?>promociones/Instasale.png">
                         <h2>#Instasale</h2>
+                        <p>Find here the products with the highest rotation in market from HPE or Aruba. Best Price & local inventory guaranteed.</p>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-instasale" onclick="triggerCategoria('p15')">Go Now &#33;</button>
                     </div>
                 </div>

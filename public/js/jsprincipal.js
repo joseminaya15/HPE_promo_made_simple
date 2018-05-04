@@ -14,7 +14,7 @@ $('#principal .owl-carousel').owlCarousel({
 	nav : false,
 	loop : true,
 	autoplay : true,
-	autoplayTimeout : 5000
+	autoplayTimeout : 500000
 });
 function goToCategorias(id){
 	var idCategoria  = $("#"+id);
