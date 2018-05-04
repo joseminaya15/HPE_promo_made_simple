@@ -88,6 +88,13 @@
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0">
+                            <div id="Ep1" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Server & Storage Base Promo</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <small id="Ep1T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Take advantage of aggressive pricing on Best Seller products (HW + SW + Point Next) in the Heat of the Market&#33;</span></p>
+                            </div>
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
@@ -191,6 +198,11 @@
                             <p>Terms and Conditions</p>
                         </div>
                         <div class="mdl-card__supporting-text">
+                            <div id="Ep1Terminos" class="conditions">
+                                <h2>Conditions</h2>
+                                <p>Includes special prices for Pointnext attach services (local deal). Some promotions do not apply to all Distributors.</p>
+                                <p>Please review the terms and conditions of this promotion in pComm.</p>
+                            </div>
                             <div id="Ep2Terminos" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
                                 <p>This is a program designed to increase Run Rate, Options Attach, to facilitate sales processes and also increase market share</p>

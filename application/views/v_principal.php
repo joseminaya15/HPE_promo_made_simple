@@ -110,20 +110,20 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <!-- <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen one"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Server & Storage Base Promo</h2>
+                        <h2 class="three">Server & Storage Base Promo</h2>
                     </div>
-                </a> -->
+                </a>
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen two"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Server & Storage Flex Attach</h2>
+                        <h2 class="one">Server & Storage Flex Attach</h2>
                     </div>
                 </a>
                 <!-- <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -155,7 +155,7 @@
                         <div class="promocion-imagen six"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="one">Storage Accelerate</h2>
+                        <h2 class="four">Storage Accelerate</h2>
                     </div>
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -171,7 +171,7 @@
                         <div class="promocion-imagen eight"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Datacenter Networking - ToR</h2>
+                        <h2 class="three">Datacenter Networking - ToR</h2>
                     </div>
                 </a>
                 <!-- <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -195,7 +195,7 @@
                         <div class="promocion-imagen eleven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="three">3PAR Avalanche & Store Once</h2>
+                        <h2 class="two">3PAR Avalanche & Store Once</h2>
                     </div>
                 </a>
                 <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
