@@ -91,7 +91,6 @@ function goToCategorias(id){
     else{
         $("#ModalLogin").modal('hide');
         sessionStorage.removeItem('OPEN_MODAL');
-		//location.href = 'Categorias';
     }
     $.ajax({
 		data : {cate : name_cate},
