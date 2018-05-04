@@ -199,9 +199,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div id="Ep1Terminos" class="conditions">
-                                <h2>Conditions</h2>
-                                <p>Includes special prices for Pointnext attach services (local deal). Some promotions do not apply to all Distributors.</p>
-                                <p>Please review the terms and conditions of this promotion in pComm.</p>
+                                <h2>This is a based promo best seller</h2>
                             </div>
                             <div id="Ep2Terminos" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
