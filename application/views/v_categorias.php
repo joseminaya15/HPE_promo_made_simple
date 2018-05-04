@@ -36,7 +36,7 @@
                         <div class="col-sm-6 col-xs-8 text-right p-0 opacity">
                             <div class="menu_header">
                                 <p>Welcome <?php echo $nombre ?></p>
-                                <a href="Home" class="home">Home<i class="mdi mdi-home"></i></a>
+                                <a href="Home" class="home"><span>Home</span><i class="mdi mdi-home"></i></a>
                             </div>
                             <div class="menu_desplegable col-xs-12 p-0">
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
