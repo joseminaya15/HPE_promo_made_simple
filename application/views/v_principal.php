@@ -95,8 +95,10 @@
                 <div class="item">
                     <div class="imagen two"></div>
                     <div class="cont-carousel">
-                        <h2>Welcome to Promos Made Simple</h2>
-                        <p>You can see all current promotions and those that are about to expire</p>
+                        <h2>What do you have to do?</h2>
+                        <p>1) Write the name of the product in the search.</p>
+                        <p>2) Choose the promotion that suits your business.</p>
+                        <p>3) Enter Iquote and verify the prices of your trusted wholesaler.</p>
                     </div>
                 </div>
                 <div class="item">
