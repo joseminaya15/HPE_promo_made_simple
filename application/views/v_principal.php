@@ -106,7 +106,7 @@
                     <div class="cont-carousel">
                         <img class="img-instasale" src="<?php echo RUTA_IMG?>promociones/icono1.png">
                         <h2>#Instasale</h2>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-instasale" onclick="triggerCategoria('p15')">Go to Now</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-instasale" onclick="triggerCategoria('p15')">Go Now &#33;</button>
                     </div>
                 </div>
             </div>
