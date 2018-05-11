@@ -269,8 +269,8 @@
         </section>
         <footer>
             <div class="mdl-container">
-                <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
                 <small>For more information about our Promos, please contact us: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
+                <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
         <!-- Modal -->
