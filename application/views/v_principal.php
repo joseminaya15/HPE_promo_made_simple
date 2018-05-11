@@ -119,7 +119,6 @@
                         <img class="img-instasale" src="<?php echo RUTA_IMG?>promociones/Instasale.png">
                         <h2>#Instasale</h2>
                         <p>Find here the products with the highest rotation in market from HPE or Aruba. Best Price & local inventory guaranteed.</p>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-instasale" onclick="triggerCategoria('p15')">Click here &#33;</button>
                     </div>
                 </div>
             </div>
