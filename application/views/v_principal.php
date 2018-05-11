@@ -59,7 +59,7 @@
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Volume</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p15')">InstaSale</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Server & Storage Base Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
                                         </div>
@@ -131,7 +131,7 @@
                         <div class="promocion-imagen one"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="three">Server & Storage Base Promo</h2>
+                        <h2 class="three">Base Promo</h2>
                     </div>
                 </a>
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">

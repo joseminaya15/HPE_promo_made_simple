@@ -56,7 +56,7 @@
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Volume</p>
                                         <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">InstaSale</a>
-                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Base Promo</a>
+                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Base Promo</a>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
                                     </div>
@@ -90,7 +90,7 @@
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0">
                             <div id="Ep1" class="encabezado">
-                                <p><strong>Promo name:</strong><span>Server & Storage Base Promo</span></p>
+                                <p><strong>Promo name:</strong><span>Base Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep1T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
