@@ -359,6 +359,70 @@
                                 <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
                                 <p>*The approved amount per unit must be added in the external comments (IDA).</p>
                             </div>
+                            <div id="Ep9Terminos" class="conditions">
+                                <p>Prices for Synergy Servers are not limited to a minimum quantity.</p>
+                                <h2>By Buying a Minimum QTY of 4 Synergy Servers the Reseller will be able to buy :</h2>
+                                <p>* MAX QTY = 1 X HPE Synergy 12000 2FLM6PS10F Frame (797739-B21 - Min 4 compute modules to qualify)</p>
+                                <p>* MAX QTY = 2 X Composers (804353-B21)</p>
+                                <p>* MAX QTY = 2 X VC (794502-B23)</p>
+                                <p>* MAX QTY = 2 X N3R43A</p>
+                                <ul>
+                                    <li>1 X 861412-B21 HPE CAT6A 4ft Cbl</li>
+                                    <li>2 X 720199-B21</li>
+                                </ul>
+                                <p>*MANDATORY SUPPORT</p>
+                                <ul>
+                                    <li>H0VL5E</li>
+                                    <li>U8JM3E</li>
+                                    <li>H0VV2E</li>
+                                    <li>H0UT1E</li>
+                                    <li>H0XG0E</li>
+                                </ul>
+                                <p>* Other Options/Accesories and Services including (Not Minimum or maximum QTY required):</p>
+                                <ul>
+                                    <li>H5M58A</li>
+                                    <li>777452-B21</li>
+                                    <li>K2Q84A</li>
+                                    <li>779227-B21</li>
+                                    <li>720193-B21</li>
+                                    <li>455883-B21</li>
+                                    <li>AJ718A</li>
+                                    <li>817040-B21</li>
+                                    <li>H1BC5E</li>
+                                    <li>H0XQ7E</li>
+                                    <li>877740-B21</li>
+                                    <li>877746-B21</li>
+                                    <li>872475-B21</li>
+                                    <li>872477-B21</li>
+                                    <li>700139-B21</li>
+                                    <li>741279-B21</li>
+                                    <li>815098-B21</li>
+                                    <li>815100-B21</li>
+                                    <li>K2Q84A</li>
+                                    <li>QK724A</li>
+                                    <li>QK734A</li>
+                                    <li>804424-B21</li>
+                                    <li>777430-B21</li>
+                                </ul>
+                                <h2>If a Customer is not specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
+                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
+                                <h2>Other Notes:</h2>
+                                <p>This is not a legal quote. The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
+                                <h2>Offering Types:</h2>
+                                <ul>
+                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
+                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
+                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
+                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
+                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
+                                </ul>
+                                <h2>Dates:</h2>
+                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
+                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
+                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
+                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
+                            </div>
                             <div id="Ep11Terminos" class="conditions">
                                 <p>Terms and Conditions DCN TOP-OF-RACK:</p>
                                 <h2>BUNDLES AVALANCHE 3PAR</h2>
@@ -459,6 +523,45 @@
                                 <p>*The approved amount per unit must be added in the external comments (IDA).</p>
                             </div>
                             <div id="Ep14Terminos" class="conditions">
+                                <h2>If a Customer is specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
+                                <p>Or</p>
+                                <h2>If a Customer is not specified in this quotation:</h2>
+                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
+                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
+                                <h2>Other Notes:</h2>
+                                <p>This is not a legal quote. The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
+                                <h2>Offering Types:</h2>
+                                <ul>
+                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
+                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
+                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
+                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
+                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
+                                </ul>
+                                <h2>Dates:</h2>
+                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
+                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
+                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
+                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
+                            </div>
+                            <div id="Ep15Terminos" class="conditions">
+                                <p>Prices are valid for all qualifying resellers in countries from:</p>
+                                <ul>
+                                    <li>Puerto Rico</li>
+                                    <li>Costa Rica</li>
+                                </ul>
+                                <p>The quantities of each SKU are estimated, quantities are not limited in the present OPG Sales of United States-based exporters are allowed in the following conditions:</p>
+                                <ul>
+                                    <li>The Reseller must sell only in the territories approved in its distribution agreement.</li>
+                                    <li>The Reseller must keep the proof of sale under the distribution agreement for purposes audit.</li>
+                                    <li>Proof of compliance consists of: invoice, track account air, and export or import declaration</li>
+                                </ul>
+                                <p>For other countries please request an exception with your Distributor Business Manager</p>
+                                <p>The Sales Out must be restricted to authorized resellers / wholesalers for the countries authorized as specified in your current Distribution agreement with HPE. The rape of these restrictions will lead to lack of qualification to participate in this or in any future program.</p>
+                                <p>Hewlett-Packard Enterprise reserves the right to change or cancel this promotion, and review all related documentation at any time without prior notice All Claims in this promo must include the promotion number.</p>
+                                <p>The PDF document is considered the official announcement and the wholesaler must access it through Price Communicator.</p>
+                                <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
                                 <h2>If a Customer is specified in this quotation:</h2>
                                 <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
                                 <p>Or</p>
