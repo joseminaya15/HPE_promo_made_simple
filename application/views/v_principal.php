@@ -83,6 +83,8 @@
             </div>
         </section>
         <section id="principal">
+            <div class="logo-top"><img src="<?php echo RUTA_IMG?>logo/logo-top.png"></div>
+            <div class="logo-bottom"><img src="<?php echo RUTA_IMG?>logo/logo-bottom.png"></div>
             <div class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="imagen one"></div>
@@ -265,6 +267,12 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="mdl-container">
+                <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
+                <small>For more information about our Promos, please contact us: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
+            </div>
+        </footer>
         <!-- Modal -->
         <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm" role="document">

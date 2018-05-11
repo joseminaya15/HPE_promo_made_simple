@@ -492,21 +492,6 @@ label
 						float left
 					&:nth-child(2)
 						float right
-footer
-	background-color #D1D3D5
-	img
-		max-width 125px
-		margin-bottom 20px
-	p
-		font-family $regular
-		font-size 13px
-		margin 0
-	ul
-		li
-			display inline-block
-			padding 0 10px
-			font-family $regular
-			font-size 13px
 .left
 	text-align left
 .right
@@ -1231,6 +1216,36 @@ p.objective_comercial
 		box-shadow 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
 	p
 		margin 0
+.logo-top
+	position absolute
+	right 0
+	top 0
+	z-index 5
+	img
+		width 100%
+		max-width 185px
+.logo-bottom
+	position absolute
+	right 20px
+	bottom 50px
+	z-index 5
+	img
+		width 100%
+		max-width 140px
+footer
+	background-color #DDDDDD
+	padding 20px
+	p
+		margin 0
+		font-size 16px
+		color #333333
+		line-height 18px
+	small
+		font-size 14px
+		a
+			font-family $medium
+			text-decoration underline
+			color $color
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
@@ -1239,6 +1254,9 @@ p.objective_comercial
 					left 25px	
 		.cont-carousel
 			padding 0 25px 30px 25px
+	.logo-bottom		
+		img
+			max-width 140px
 @media ( max-width 1000px )
 	.search-filter
 		&.home
@@ -1295,6 +1313,13 @@ p.objective_comercial
 						display none
 					i
 						margin 0
+	.logo-top
+		display none
+	.logo-bottom
+		bottom 60px
+		right 20px
+		img
+			max-width 85px
 @media ( max-width 420px )
 	.fixed-logo
 		position relative
