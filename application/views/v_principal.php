@@ -244,7 +244,7 @@
                         <div class="promocion-imagen fifteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Nimble Promo</h2>
+                        <h2 class="one">Nimble Promo</h2>
                         <div class="encabezado"></div>
                     </div>
                 </a>
