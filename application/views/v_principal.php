@@ -56,7 +56,7 @@
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p7')">HPE Simplivity</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p15')">Nimble Promo</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Sinergy</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Synergy</a>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Volume</p>
@@ -196,7 +196,7 @@
                         <div class="promocion-imagen nine"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">Sinergy</h2>
+                        <h2 class="two">Synergy</h2>
                     </div>
                 </a>
                 <!-- <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">

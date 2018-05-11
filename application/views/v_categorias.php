@@ -53,7 +53,7 @@
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
                                         <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
                                         <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">Nimble Promo</a>
-                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)">Sinergy</a>
+                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)">Synergy</a>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
@@ -132,7 +132,7 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
-                                <p><strong>Promo name:</strong><span>Sinergy Promo</span></p>
+                                <p><strong>Promo name:</strong><span>Synergy Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep9T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
