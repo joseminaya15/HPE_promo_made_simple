@@ -46,7 +46,7 @@
                                         <i class="mdi mdi-menu"></i>Menu
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <div class="col-sm-6 col-xs-12 p-0">
+                                        <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Value</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
@@ -55,10 +55,12 @@
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p8')">Datacenter Networking - ToR</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p7')">HPE Simplivity</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">Nimble Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Sinergy</a>
                                         </div>
-                                        <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
+                                        <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Volume</p>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">InstaSale</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p16')">InstaSale</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
@@ -189,15 +191,15 @@
                         <h2 class="three">Datacenter Networking - ToR</h2>
                     </div>
                 </a>
-                <!-- <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen nine"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="nine">Sinergy</h2>
+                        <h2 class="two">Sinergy</h2>
                     </div>
                 </a>
-                <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <!-- <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen eleven"></div>
                     </div>
@@ -210,7 +212,7 @@
                         <div class="promocion-imagen eleven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="two">3PAR Avalanche & Store Once</h2>
+                        <h2 class="one">3PAR Avalanche & Store Once</h2>
                     </div>
                 </a>
                 <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -240,6 +242,15 @@
                 <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen fifteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two">Nimble Promo</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
+                <a id="p16" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen sixteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="seven">InstaSale</h2>

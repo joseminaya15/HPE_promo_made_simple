@@ -43,7 +43,7 @@
                                     <i class="mdi mdi-menu"></i>Menu
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <div class="col-sm-6 col-xs-12 p-0">
+                                    <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Value</p>
                                         <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
                                         <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Market Take Over</a>
@@ -52,10 +52,12 @@
                                         <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">Datacenter Networking - ToR</a>
                                         <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
                                         <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
+                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">Nimble Promo</a>
+                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)">Sinergy</a>
                                     </div>
-                                    <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
+                                    <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
-                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">InstaSale</a>
+                                        <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)">InstaSale</a>
                                         <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Base Promo</a>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
@@ -129,6 +131,12 @@
                                 <small id="Ep8T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
+                            <div id="Ep9" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Sinergy Promo</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <small id="Ep9T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
@@ -155,6 +163,12 @@
                                 <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep15" class="encabezado">
+                                <p><strong>Promo name:</strong><span>Nimble Promo</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <small id="Ep15T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                            </div>
+                            <div id="Ep16" class="encabezado">
                                 <p><strong>Promo name:</strong><span>InstaSale</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -190,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <footer>
+        <footer class="col-xs-12">
             <div class="mdl-container">
                 <small>For more information about our Promos, please contact us: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
