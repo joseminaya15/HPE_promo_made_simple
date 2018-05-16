@@ -21,10 +21,6 @@ class Cron extends CI_Controller {
         }
         foreach ($dates as $key) {
             $html .= '<tr>
-                        <td style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->product_id.'</font></td>
-                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->deal_number.'</font></td>
-                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->product_desc.'</font></td>
-                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->name.'</font></td>
                         <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Nombre.'</font></td>
                         <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->start_date.'</font></td>
                         <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->end_date.'</font></td>
@@ -90,11 +86,7 @@ class Cron extends CI_Controller {
                                                 <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 20px;">
                                                     <thead>
                                                         <tr>
-                                                            <th style="text-align: left;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Number ID</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Part Number</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Description</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Product Line</font></th>
-                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Net Price</font></th>
+                                                            <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Category</font></th>
                                                             <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">Efective Date</font></th>
                                                             <th style="border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 14px;">End Date</font></th>
                                                         </tr>

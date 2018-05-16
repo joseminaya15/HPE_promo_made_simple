@@ -238,9 +238,7 @@ class M_solicitud extends  CI_Model{
       return $result->result();
     }
     function getDatosCron(){
-      $sql = "SELECT p.*,
-                     s.name,
-                     c.Nombre,
+      $sql = "SELECT c.Nombre,
                      DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
                      DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
                 FROM products p,
@@ -251,6 +249,7 @@ class M_solicitud extends  CI_Model{
                  AND IF(CONVERT(SUBSTRING(p.end_date, 9, 2), SIGNED INTEGER) - CONVERT(SUBSTRING(CURDATE(), 9, 2), SIGNED INTEGER) <= 15, TRUE, FALSE)
                  AND SUBSTRING(CURDATE(), 3, 2) = SUBSTRING(p.end_date, 3, 2)
                  AND SUBSTRING(CURDATE(), 6, 2) = SUBSTRING(p.end_date, 6, 2)
+                 GROUP BY c.Nombre
                  LIMIT 50";
       $result = $this->db->query($sql);
       return $result->result();
