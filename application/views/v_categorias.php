@@ -90,7 +90,7 @@
                     <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
-                        <div class="col-sm-6 col-xs-12 p-0">
+                        <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
                             <div id="Ep1" class="encabezado">
                                 <p><strong>Promo name:</strong><span>Base Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
@@ -175,9 +175,12 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 p-0 text-right">
+                        <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
                             <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
+                        </div>
+                        <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
+                            <h4>Coming Soon! In this section you will find the best offers and promotions for a very limited time. Stay tuned!</h4>
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
@@ -649,6 +652,15 @@
                 
             }
             $(window).load(function() {
+                <?php if($texto != null ) {?>
+                    $('#cardTexto').css('display', 'block');
+                    $('#textRight').css('display', 'none');
+                    $('#textLeft').css('display', 'none');
+                    $('#tableCategoria').css('display', 'none');
+                <?php } else { ?>
+                    $('#textRight').css('display', 'block');
+                    $('#textLeft').css('display', 'block');
+                <?php } ?>
                 $('#id_cate').prop('selectedIndex', 3);
                 let openCategoria   = sessionStorage.getItem('OPEN_CATEGORIA');
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');

@@ -15,9 +15,15 @@ class Categorias extends CI_Controller {
 	public function index(){
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
+        $data['texto'] = '';
         $data['nombre'] = $nombre[0];
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
+            if(count($datos) == 0){
+                $data['texto'] = 'hola';
+            }else {
+                $data['texto'] = '';
+            }
         }else {
             $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
