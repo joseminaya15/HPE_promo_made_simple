@@ -15,7 +15,7 @@ class Categorias extends CI_Controller {
 	public function index(){
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
-        $data['texto'] = '';
+        $data['texto']  = '';
         $data['nombre'] = $nombre[0];
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
@@ -72,7 +72,7 @@ class Categorias extends CI_Controller {
         $data['start_date']  = $datos[0]->effect_date;
         $data['end_date']    = $datos[0]->fecha_fin;
         }else {
-            $cate = '';
+            $cate  = '';
             $html  = '<tr>
                         <td></td>
                         <td></td>
@@ -142,8 +142,7 @@ class Categorias extends CI_Controller {
                                          </tr>';
                                 $cont=1;
                             }
-                            $html .= '
-                                      <tr>
+                            $html .= '<tr>
                                         <td>'.$key->product_id.'</td>
                                         <td>'.$key->product_desc.'</td>
                                       </tr>';
