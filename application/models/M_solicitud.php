@@ -189,7 +189,6 @@ class M_solicitud extends  CI_Model{
                 AND c.Id = ?
            ORDER BY s.name";
       $result = $this->db->query($sql, array($id_cate));
-      //print_r($this->db->last_query());
       return $result->result();
     }
     function getIdCategoria($cate){
