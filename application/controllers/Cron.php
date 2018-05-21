@@ -22,8 +22,8 @@ class Cron extends CI_Controller {
         foreach ($dates as $key) {
             $html .= '<tr>
                         <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->Nombre.'</font></td>
-                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->start_date.'</font></td>
-                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->end_date.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->effect_date.'</font></td>
+                        <td style="text-align: center;border: 1px solid #cccccc;padding: 5px;"><font style="font-family: arial;font-size: 12px;">'.$key->fecha_fin.'</font></td>
                     </tr>';
         }
        array_push($arr_datos, $html);

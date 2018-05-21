@@ -179,8 +179,8 @@ class M_solicitud extends  CI_Model{
       $sql = "SELECT p.*,
                     s.name,
                     c.Nombre,
-                    DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
-                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+                    DATE_FORMAT(p.start_date, '%m/%d/%Y') AS effect_date,
+                    DATE_FORMAT(p.end_date, '%m/%d/%Y') AS fecha_fin
                FROM products p,
                     categorias c,
                     sub_categorias s
