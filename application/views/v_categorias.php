@@ -185,6 +185,7 @@
                                 <p><strong>Promo name:</strong><span>Nimble Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Important:</strong>Only sold in Costa Rica and Puerto Rico</p>
                                 <small id="Ep15T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep16" class="encabezado">
