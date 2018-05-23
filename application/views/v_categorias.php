@@ -691,7 +691,7 @@
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card">
+                    <div class="mdl-card Ip1 Ip2">
                         <div class="mdl-card__title">
                             <p>For further information, contact your preferred distributor. If you don't have access to the Iquote of any wholesaler you can enter <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">here.</a></p>
                         </div>
@@ -716,6 +716,17 @@
                                 <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
                                 <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
                             </div>                            
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                        </div>
+                    </div>
+                    <div class="mdl-card Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip13 Ip14 Ip15 Ip16">
+                        <div class="mdl-card__title">
+                            <p>Please Contact Us</p>
+                        </div>
+                        <div class="mdl-card__supporting-text text-center">
+                            <a>correo@hpe.com</a>                         
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
@@ -760,6 +771,7 @@
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('.promocion_categoria').css("background","url('public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
+                $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
