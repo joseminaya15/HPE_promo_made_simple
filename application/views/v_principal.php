@@ -143,14 +143,14 @@
                         <h2 class="one">Server & Storage Flex Attach</h2>
                     </div>
                 </a>
-                <!-- <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen three"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="two">Tape Backup Media</h2>
                     </div>
-                </a> -->
+                </a>
                 <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen four"></div>
