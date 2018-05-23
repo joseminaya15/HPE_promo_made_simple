@@ -61,6 +61,7 @@
                                         <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Base Promo</a>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
+                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)">Tape Backup Media</a>
                                     </div>
                                 </ul>
                             </div>
@@ -242,7 +243,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div id="Ep1Terminos" class="conditions">
-                                <h2>This is a based promo best seller</h2>
+                                <h2>This is an open promotion for any reseller with no conditions.</h2>
                             </div>
                             <div id="Ep2Terminos" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
