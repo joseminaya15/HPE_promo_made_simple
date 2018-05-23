@@ -64,6 +64,7 @@
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Tape Backup Media</a>
                                         </div>
                                     </ul>
                                 </div>

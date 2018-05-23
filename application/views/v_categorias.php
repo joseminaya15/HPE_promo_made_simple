@@ -61,6 +61,7 @@
                                         <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Base Promo</a>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
+                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)">Tape Backup Media</a>
                                     </div>
                                 </ul>
                             </div>
