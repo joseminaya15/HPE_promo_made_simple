@@ -112,8 +112,7 @@
                                 <p><strong>Promo name:</strong><span>Tape Backup Media</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
+                                <small id="Ep3T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
