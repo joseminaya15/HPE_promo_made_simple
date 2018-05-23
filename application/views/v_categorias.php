@@ -242,7 +242,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div id="Ep1Terminos" class="conditions">
-                                <h2>This is a based promo best seller</h2>
+                                <h2>This is an open promotion for any reseller with no conditions.</h2>
                             </div>
                             <div id="Ep2Terminos" class="conditions">
                                 <h2>Flex Program Objectives:</h2>
