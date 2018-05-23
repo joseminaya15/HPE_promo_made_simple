@@ -70,7 +70,7 @@ class Categorias extends CI_Controller {
             }
         }
         $data['start_date']  = $datos[0]->effect_date;
-        $data['deal_number'] = $datos[0]->deal_number;
+        $data['deal_number'] = $datos[0]->deal_number == null ? '-' : $datos[0]->deal_number;
         $data['end_date']    = $datos[0]->fecha_fin;
         }else {
             $cate  = '';
