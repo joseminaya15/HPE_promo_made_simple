@@ -92,6 +92,7 @@
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
                             <div id="Ep1" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Base Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -99,13 +100,23 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Take advantage of aggressive pricing on Best Seller products (HW + SW + Point Next) in the Heat of the Market&#33;</span></p>
                             </div>
                             <div id="Ep2" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
                             </div>
+                            <div id="Ep3" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
+                                <p><strong>Promo name:</strong><span>Tape Backup Media</span></p>
+                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <small id="Ep2T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
+                            </div>
                             <div id="Ep4" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -113,18 +124,21 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Do not take risks operating on Warranty!! Protect your customer’s IT investment with the best service at the best price! Keep your infrastructure operational at all times and get alerts before a fault occurs with Proactive Care. Ensure correct deployment with original HPE installation and startup services.</span></p>
                             </div>
                             <div id="Ep6" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep6T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep7" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep7T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep8" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>DCN Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -132,12 +146,14 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Synergy Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep9T"  onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep11" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -145,12 +161,14 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Increase our 3PAR Installed base with high availability and high performance for DataCenters of medium and small size companies.</span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep12T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep13" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
@@ -163,12 +181,14 @@
                                 <small id="Ep14T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep15" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>Nimble Promo</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep15T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep16" class="encabezado">
+                                <p><strong>Deal Number:</strong><span>999999</span></p>
                                 <p><strong>Promo name:</strong><span>InstaSale</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
