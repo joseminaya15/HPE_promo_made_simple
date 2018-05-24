@@ -723,10 +723,29 @@
                     </div>
                     <div class="mdl-card Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip13 Ip14 Ip15 Ip16">
                         <div class="mdl-card__title">
-                            <p>Please Contact Us</p>
+                            <p>For further information, contact your preferred distributor.</a></p>
                         </div>
                         <div class="mdl-card__supporting-text text-center">
-                            <a>correo@hpe.com</a>                         
+                            <div class="mdl-card__iquote any">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
+                                <a href="mailto:Erika.MenaMachuca@ingrammicro.com">Erika.MenaMachuca@ingrammicro.com</a>
+                            </div>
+                            <div class="mdl-card__iquote any">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                <a href="mailto:Anderson.Mendoza@intcomex.com">Anderson.Mendoza@intcomex.com</a>
+                            </div>
+                            <div class="mdl-card__iquote any">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                <a href="mailto:ricky_altez@solutionboxusa.com">ricky_altez@solutionboxusa.com</a>
+                            </div>
+                            <div class="mdl-card__iquote any">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
+                                <a href="mailto:LAHPEGSales@techdata.com">LAHPEGSales@techdata.com</a>
+                            </div>
+                            <div class="mdl-card__iquote any">
+                                <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
+                                <a href="mailto:Tatiana.Gomez@wtrade.com">Tatiana.Gomez@wtrade.com</a>
+                            </div>                            
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
@@ -778,6 +797,9 @@
                 $('#ModalTerminos').find('#E'+openCategoria+'Terminos').css('display','block');
                 $('.selectpicker').val(1);
                 $('.menu_header').css('display','flex');
+                if(nameCategoria == 'Base Promo' || nameCategoria == 'Server & Storage Flex Attach'){
+                    $('.header_promocion--iquote').css('display','inline-block');
+                }
             });
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');

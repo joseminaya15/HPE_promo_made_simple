@@ -355,6 +355,9 @@
                                         <label for="passRegister">Password</label>
                                         <input type="password" id="passRegister" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                                     </div>
+                                    <div class="col-xs-12 p-0">
+                                        <p class="text-important">All these promos are valid only for Central America and Carribbean.</p>
+                                    </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Register</button>
                                     </div>
