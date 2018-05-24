@@ -80,6 +80,7 @@
                                     <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
                                 </div>
                             </div>
+                            <p class="text-important search">All these promos are valid only for Central America and Carribbean.</p>
                         </div>
                     </div>
                 </div>
@@ -391,7 +392,7 @@
                 if(openModal && openModal == '1') {
                     $("#ModalLogin").modal('hide');
                     $('.menu_header').css('display','flex');
-                    $('.search-filter.home').css('display','flex');
+                    $('.search-filter.home').css('display','block');
                 }
                 else{
                     $("#ModalLogin").modal('show');
