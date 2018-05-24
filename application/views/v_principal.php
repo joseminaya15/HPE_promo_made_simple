@@ -323,6 +323,12 @@
                                         <select class="selectpicker" id="pais" title="Typically your Country">
                                             <option value="Dominican Republic">Dominican Republic</option>
                                             <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Panamá">Panam&aacute;</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Honduras">Honduras</option>
                                             <option value="Haiti">Haiti</option>
                                             <option value="Aruba">Aruba</option>
                                             <option value="Curacao">Curacao</option>

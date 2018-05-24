@@ -46,7 +46,7 @@ class Cron extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@marketinghpe.com');
-       $this->email->to('maria-alejandra.prieto@hpe.com');//maria-alejandra.prieto@hpe.com
+       $this->email->to('jhonatanibericom@gmail.com');//maria-alejandra.prieto@hpe.com
        $this->email->subject('Promociones por vencer en HPE promo made simple');
        $texto = '<!DOCTYPE html>
                 <html>
