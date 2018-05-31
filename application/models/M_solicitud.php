@@ -180,7 +180,8 @@ class M_solicitud extends  CI_Model{
                     s.name,
                     c.Nombre,
                     DATE_FORMAT(p.start_date, '%m/%d/%Y') AS effect_date,
-                    DATE_FORMAT(p.end_date, '%m/%d/%Y') AS fecha_fin
+                    DATE_FORMAT(p.end_date, '%m/%d/%Y') AS fecha_fin,
+                    p.est_qty
                FROM products p,
                     categorias c,
                     sub_categorias s

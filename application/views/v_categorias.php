@@ -216,6 +216,9 @@
                                         <?php } else { ?>
                                         <th>Product number ID</th>
                                         <th>Product Description</th>
+                                        <?php if($qty != '' || $qty != null) { ?>
+                                        <th>Est. Qty</th>
+                                        <?php } ?>
                                         <?php } ?>
                                     </tr>
                                 </thead>

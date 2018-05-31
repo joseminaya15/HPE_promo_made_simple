@@ -31,13 +31,20 @@ class Categorias extends CI_Controller {
         $html = '';
         $cont = 0;
         $cont1 = 0;
+        $dis   = '';
         if(count($datos) != 0) {
             $cate = $datos[0]->name;
             foreach ($datos as $key) {
+                if($key->est_qty == null || $key->est_qty == ''){
+                    $dis = 'display: none';
+                }else {
+                    $dis = 'display: block';
+                }
             if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>
                             <td>'.$key->product_id.'</td>
                             <td>'.$key->product_desc.'</td>
+                            <td style="'.$dis.'">'.$key->est_qty.'</td>
                         </tr>';
             }else {
                 if($cate == $key->name){
@@ -50,6 +57,7 @@ class Categorias extends CI_Controller {
                     $html .= '<tr>
                                 <td>'.$key->product_id.'</td>
                                 <td>'.$key->product_desc.'</td>
+                                <td style="'.$dis.'">'.$key->est_qty.'</td>
                             </tr>';
                 }else
                 if($cate != $key->name){
@@ -65,6 +73,7 @@ class Categorias extends CI_Controller {
                               <tr>
                                 <td>'.$key->product_id.'</td>
                                 <td>'.$key->product_desc.'</td>
+                                <td style="'.$dis.'">'.$key->est_qty.'</td>
                               </tr>';
                 }
             }
@@ -72,6 +81,7 @@ class Categorias extends CI_Controller {
         $data['start_date']  = $datos[0]->effect_date;
         $data['deal_number'] = $datos[0]->deal_number == null ? '-' : $datos[0]->deal_number;
         $data['end_date']    = $datos[0]->fecha_fin;
+        $data['qty']         = $datos[0]->est_qty;
         }else {
             $cate  = '';
             $html  = '<tr>
