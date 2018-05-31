@@ -80,7 +80,7 @@
                                     <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
                                 </div>
                             </div>
-                            <p class="text-important search">All these promos are valid only for Central America and Carribbean.</p>
+                            <p class="text-important search">All these promos are valid only for Central America and Caribbean.</p>
                         </div>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
                                         <input type="password" id="passRegister" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 p-0">
-                                        <p class="text-important">All these promos are valid only for Central America and Carribbean.</p>
+                                        <p class="text-important">All these promos are valid only for Central America and Caribbean.</p>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Register</button>
