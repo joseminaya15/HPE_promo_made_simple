@@ -175,6 +175,7 @@
                                 <small id="Ep13T" onclick="openModalTerminos(this.id)">Terms and Conditions</small>
                             </div>
                             <div id="Ep14" class="encabezado">
+                                <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
                                 <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
