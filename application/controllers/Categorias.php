@@ -38,7 +38,7 @@ class Categorias extends CI_Controller {
                 if($key->est_qty == null || $key->est_qty == ''){
                     $dis = 'display: none';
                 }else {
-                    $dis = 'display: block';
+                    $dis = 'display: table-cell';
                 }
             if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>

@@ -16,6 +16,7 @@ class Home extends CI_Controller {
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
         $this->session->unset_userdata('Id_user');
+        $this->session->unset_userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['nombre'] = $nombre[0];
         $this->load->view('v_principal', $data);
