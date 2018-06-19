@@ -693,6 +693,93 @@
                                 <p>*The approved amount per unit must be added in the external comments (IDA).</p>
                             </div>
                             <div id="Ep16Terminos" class="conditions">
+                                <p>These items must be included in ALL configurations - Available at promo licenses, Base (Best Sellers) and PointNext Tablero de Control</p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Qty</th>
+                                                <th>Product #</th>
+                                                <th>Product Description</th>
+                                            </tr>                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>734811-B21</td>
+                                                <td>HPE 1U Cable Management Arm for Rail Kit</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>D7S27AAE</td>
+                                                <td>HPE Smart Array SR SmartCache (Single Key/Multiple Servers) E-LTU</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>N0U73A</td>
+                                                <td>SUSE Linux Enterprise Server SAP 2 Sockets or 1-2 VM 3yr Subscription 24x7 Support Flexible LTU</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Q7E34AAE</td>
+                                                <td>HPE iLO Advanced Premium Security Edition Electronic License with 3yr Support on Licensed Features</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>455883-B21</td>
+                                                <td>HPE BLc 10G SFP+ SR Transceiver</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Qty</th>
+                                                <th>Product #</th>
+                                                <th>Services (can be found in Pointnext Dashboard)</th>
+                                            </tr>                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>HA114A1</td>
+                                                <td>HPE Installation and Startup Service</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>HA114A1 5A0</td>
+                                                <td>HPE Startup Entry 300 Series OS SVC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>H1K92A3</td>
+                                                <td>HPE 3Y Proactive Care 24x7 SVC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>H1K92A3 2J6</td>
+                                                <td>HPE SmartStorage Pack Support</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>H1K92A3 29G</td>
+                                                <td>HPE iLo Security 3yr Support</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>H1K92A3 YMJ</td>
+                                                <td>HPE SLES SAP 1-2 VM 3yr Flx LTU Support</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>H1K92A3 ZAX</td>
+                                                <td>HPE DL360 Gen10 HANA TDI Cmpt Blk Supp</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <p>Valid for Resellers and Distributors of the following countries:</p>
                                 <ul>
                                     <li>CALA</li>
