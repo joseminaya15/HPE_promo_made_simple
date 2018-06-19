@@ -693,43 +693,56 @@
                                 <p>*The approved amount per unit must be added in the external comments (IDA).</p>
                             </div>
                             <div id="Ep16Terminos" class="conditions">
-                                <p>Prices are valid for all qualifying resellers in countries from:</p>
+                                <p>Valid for Resellers and Distributors of the following countries:</p>
                                 <ul>
-                                    <li>Puerto Rico</li>
+                                    <li>CALA</li>
+                                    <li>Guatemala</li>
+                                    <li>Belice</li>
+                                    <li>Honduras</li>
+                                    <li>El Salvador</li>
+                                    <li>Nicaragua</li>
                                     <li>Costa Rica</li>
+                                    <li>Panama</li>
+                                    <li>Venezuela</li>
+                                    <li>Ecuador</li>
+                                    <li>Argentina</li>
+                                    <li>Colombia</li>
+                                    <li>Chile</li>
+                                    <li>Peru</li>
+                                    <li>Caribe</li>
+                                    <li>Anguilla</li>
+                                    <li>Antigua and Barbuda Islands</li>
+                                    <li>Aruba</li>
+                                    <li>Bahamas</li>
+                                    <li>Barbados</li>
+                                    <li>Belize</li>
+                                    <li>Bermuda</li>
+                                    <li>Cayman Islands</li>
+                                    <li>Grenada</li>
+                                    <li>Guyana</li>
+                                    <li>Haiti</li>
+                                    <li>Jamaica</li>
+                                    <li>Netherlands Antilles</li>
+                                    <li>Puerto Rico</li>
+                                    <li>Saint Kitts and Nevis</li>
+                                    <li>Saint Lucia</li>
+                                    <li>Saint Vincent and the Grenadines</li>
+                                    <li>Surinam</li>
+                                    <li>Trinidad and Tobago</li>
+                                    <li>Turks and Caicos Islands</li>
+                                    <li>Virgin Islands (British)</li>
                                 </ul>
-                                <p>The quantities of each SKU are estimated, quantities are not limited in the present OPG Sales of United States-based exporters are allowed in the following conditions:</p>
+                                <p>Las cantidades de cada SKU son estimados, no se limita cantidades en el presente OPG</p>
+                                <p>Las ventas de exportadores basados en Estados Unidos son permitidas en las condiciones siguientes:</p>
                                 <ul>
-                                    <li>The Reseller must sell only in the territories approved in its distribution agreement.</li>
-                                    <li>The Reseller must keep the proof of sale under the distribution agreement for purposes audit.</li>
-                                    <li>Proof of compliance consists of: invoice, track account air, and export or import declaration</li>
+                                    <li>El Reseller debe vender s&oacute;lo en los territorios aprobados en su acuerdo de distribuci&oacute;n.</li>
+                                    <li>El Reseller debe guardar la prueba de venta bajo el acuerdo de distribuci&oacute;n para fines de auditor&iacute;a.</li>
+                                    <li>La Prueba de la interpretaci&oacute;n (Proof of compliance) consiste en: factura, cuenta de v&iacute;a a&eacute;rea, y exportaci&oacute;n o declaraci&oacute;n de importaci&oacute;n</li>
                                 </ul>
-                                <p>For other countries please request an exception with your Distributor Business Manager</p>
-                                <p>The Sales Out must be restricted to authorized resellers / wholesalers for the countries authorized as specified in your current Distribution agreement with HPE. The rape of these restrictions will lead to lack of qualification to participate in this or in any future program.</p>
-                                <p>Hewlett-Packard Enterprise reserves the right to change or cancel this promotion, and review all related documentation at any time without prior notice All Claims in this promo must include the promotion number.</p>
-                                <p>The PDF document is considered the official announcement and the wholesaler must access it through Price Communicator.</p>
-                                <p>Terms and Conditions for Latin America Region - Rebates Discounts 12/01/2010</p>
-                                <h2>If a Customer is specified in this quotation:</h2>
-                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner End-User Special Negotiated Discount Program Terms.</p>
-                                <p>Or</p>
-                                <h2>If a Customer is not specified in this quotation:</h2>
-                                <p>Partner acknowledges and agrees that, in addition to the Terms contained within this Quotation, that acceptance of this quotation constitutes acceptance of the Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms. The Hewlett Packard Enterprise Partner Product Promotion and Channel Partner Discount Terms that can be found on the Partner Portal apply to commercial Promotions only.</p>
-                                <p>These Terms can be found on the Hewlett Packard Enterprise Partner Portal. Customer has the meaning defined in your Hewlett Packard Enterprise Partner Agreement.</p>
-                                <h2>Other Notes:</h2>
-                                <p>This is not a legal quote. The Terms & Conditions rule the content and processing of the Operational Guideline herein, and is the official document to process and recognize the discount(s) set herein.</p>
-                                <h2>Offering Types:</h2>
-                                <ul>
-                                    <li>Product Line (PL): Offering which applies to all of the Hewlett Packard Enterprise product numbers within the quoted PL.</li>
-                                    <li>Product Number (PN): Offering which applies to the designated product number only.</li>
-                                    <li>Bundle (BD): Offering which applies to the entire configuration or "bundle" only, purchased as a group.</li>
-                                    <li>BD Net Price: Fixed Big Deal / End-User Special Negotiated Discount Net Price offered on the product number or bundle.</li>
-                                    <li>Offering Type: Indication of which non-standard offering is authorized for each item on the quote; BD Net Price, % off Hewlett Packard Enterprise List.</li>
-                                </ul>
-                                <h2>Dates:</h2>
-                                <p>Promotion Begin/End Date: This is the period of the validity of the promotion. The fields used in Eclipse to indicate the dates are: Ship Begin / Ship End.</p>
-                                <p>Channel End Date: This date is used only for rebates and mark the last day when the reseller can submit the information for payment. This must be added in the comments section as External Comments using the special terms and conditions as Channel End Date.</p>
-                                <p>Promotion rebate payment end date: This date is used only for rebates and mark the last day Hewlett Packard Enterprise must make the payment of the rebate to the reseller. This must be added in the comments section as External Comments using the special terms and conditions as Promotion rebate payment end date.</p>
-                                <p>*The approved amount per unit must be added in the external comments (IDA).</p>
+                                <p>El Sales Out debe ser restringido a resellers/mayoristas autorizados para los pa&iacute;ses autorizados como lo especifica su actual acuerdo de Distribución con HPE. La violaci&oacute;n de estas restricciones de territorio conducir&aacute; a la falta de calificaci&oacute;n a participar en este o en cualquier futuro programa.</p>
+                                <p>Hewlett-Packard Enterprise se reserva el derecho de cambiar o anular esta promoción, y revisar toda la documentación relacionada en cualquier momento sin previo aviso</p>
+                                <p>Todas los Claims en este promo deben incluir el n&uacute;mero de promoci&oacute;n.</p>
+                                <p>El documento PDF es considerado el anuncio oficial y el mayorista debe accederlo a trav&eacute;s del Price Comunicator.</p>
                             </div>
                         </div>
                     </div>
