@@ -255,6 +255,15 @@
                         <div class="promocion-imagen sixteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
+                        <h2 class="three">SAP HANA</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
+                <a id="p17" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen seventeen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
                         <h2 class="seven">InstaSale</h2>
                         <div class="encabezado"></div>
                     </div>
