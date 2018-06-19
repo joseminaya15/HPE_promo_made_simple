@@ -256,7 +256,7 @@
                         <div class="promocion-imagen sixteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h2 class="three">SAP HANA</h2>
+                        <h2 class="two">SAP HANA</h2>
                         <div class="encabezado"></div>
                     </div>
                 </a>
