@@ -1128,11 +1128,14 @@ label
 		width 100%
 	a
 		display inline-block
-		margin 10px 0
+		margin 5px 0
 		color #000000
 		font-size 18px
 		color $color
 		font-family $medium
+	span
+		margin-top 5px
+		display block
 	&.any
 		max-width 250px
 		img
@@ -1274,6 +1277,10 @@ footer
 		a
 			font-family $medium
 			text-decoration underline
+			color $color
+.nav-tabs
+	&>li
+		&>a
 			color $color
 @media ( max-width 1200px )
 	#principal
