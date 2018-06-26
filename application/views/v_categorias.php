@@ -207,7 +207,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
-                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
+                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click Here.</a></p>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>Coming Soon! In this section you will find the best offers and promotions for a very limited time. Stay tuned!</h4>

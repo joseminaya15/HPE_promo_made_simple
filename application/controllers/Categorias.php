@@ -27,6 +27,7 @@ class Categorias extends CI_Controller {
         }else {
             $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
+        $deal = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate = '';
         $html = '';
         $cont = 0;
@@ -79,7 +80,7 @@ class Categorias extends CI_Controller {
             }
         }
         $data['start_date']  = $datos[0]->effect_date;
-        $data['deal_number'] = $datos[0]->deal_number;
+        $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
         $data['end_date']    = $datos[0]->fecha_fin;
         $data['qty']         = $datos[0]->est_qty;
         }else {
@@ -196,4 +197,15 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
+    /*function abrirModal(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        return json_encode(array_map('utf8_encode', $data));
+    }*/
 }

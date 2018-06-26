@@ -82,7 +82,7 @@ function verificarDatos(e){
 function goToCategorias(id){
 	var idCategoria = $("#"+id);
 	var name_cate   = idCategoria.text();
-	let openModal   = sessionStorage.getItem('OPEN_MODAL');
+	var openModal   = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
     $.ajax({
@@ -113,4 +113,21 @@ function openModalTerminos(id){
 	var modal = $('#ModalTerminos');
 	modal.find('#E'+id+'Terminos').css("display","block");
 	modal.modal('toggle');
+}
+function abrirModal(){
+    $.ajax({
+		//data : {cate : name_cate},
+		url  : 'Categorias/abrirModal',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        }else {
+	        	return;
+	        }
+		}catch(err){
+			msj('error',err.message);
+		}
+	});
 }

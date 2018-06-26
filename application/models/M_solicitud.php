@@ -294,4 +294,39 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
+    function getDatosCategorias($id_user){
+      if(!isset($id_user)){
+        $sql = "SELECT c.*
+                  FROM categorias c";
+      }else {
+        $sql = "SELECT c.*,
+                       cp.deal_number
+                  FROM categorias c,
+                       categoria_x_pais cp,
+                       paises p,
+                       users u
+                 WHERE cp.id_cate = c.Id
+                   AND p.Id = cp.id_pais
+                   AND u.id_pais = cp.id_pais
+                   AND u.Id = ?
+              GROUP BY c.Id";
+      }
+      $result = $this->db->query($sql, array($id_user));
+      return $result->result();
+    }
+    function getDealNumber($id_user, $cate){
+      $sql = "SELECT c.*,
+                       cp.deal_number
+                  FROM categorias c,
+                       categoria_x_pais cp,
+                       paises p,
+                       users u
+                 WHERE cp.id_cate = c.Id
+                   AND p.Id = cp.id_pais
+                   AND u.id_pais = cp.id_pais
+                   AND u.Id = ?
+                   AND c.Id = ?";
+      $result = $this->db->query($sql, array($id_user, $cate));
+      return $result->result();
+    }
 }

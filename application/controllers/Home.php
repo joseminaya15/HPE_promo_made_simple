@@ -13,11 +13,26 @@ class Home extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        $html = '';
+        $cont = 1;
+        $user = $this->session->userdata('Id_user');
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
-        $this->session->unset_userdata('Id_user');
-        $this->session->unset_userdata('id_cates');
-        $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
+        //$this->session->unset_userdata('Id_user');
+        $nombre = explode(" ", ucwords($this->session->userdata('nombre')));//color-'.$cont.'
+        $datos = $this->M_solicitud->getDatosCategorias($user);
+        foreach ($datos as $key) {
+            $html .= '<a id="p'.$cont.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                            <div class="mdl-card__title">
+                                <div class="promocion-imagen one"></div>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <h2 class="three">'.$key->Nombre.'</h2>
+                            </div>
+                        </a>';
+            $cont++;
+        }
+        $data['contenido']   = $html;
         $data['nombre'] = $nombre[0];
         $this->load->view('v_principal', $data);
 	}

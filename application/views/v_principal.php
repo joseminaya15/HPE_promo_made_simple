@@ -130,7 +130,8 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <?php echo $contenido ?>
+                <!-- <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen one"></div>
                     </div>
@@ -161,7 +162,7 @@
                     <div class="mdl-card__supporting-text">
                         <h2 class="four">HPE Pointnext</h2>
                     </div>
-                </a>
+                </a> -->
                 <!-- <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen five"></div>
@@ -170,7 +171,7 @@
                         <h2 class="four">Gen 10 Accelerate</h2>
                     </div>
                 </a> -->
-                <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <!-- <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen six"></div>
                     </div>
@@ -201,7 +202,7 @@
                     <div class="mdl-card__supporting-text">
                         <h2 class="two">Synergy</h2>
                     </div>
-                </a>
+                </a> -->
                 <!-- <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen eleven"></div>
@@ -210,7 +211,7 @@
                         <h2 class="five">Virtual Licenses</h2>
                     </div>
                 </a> -->
-                <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                <!-- <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen eleven"></div>
                     </div>
@@ -268,7 +269,7 @@
                         <h2 class="seven">InstaSale</h2>
                         <div class="encabezado"></div>
                     </div>
-                </a>
+                </a> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
