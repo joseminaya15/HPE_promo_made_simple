@@ -846,26 +846,56 @@
                         <div class="mdl-card__title">
                             <p>For further information, contact your preferred distributor. If you don't have access to the Iquote of any wholesaler you can enter <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">here.</a></p>
                         </div>
-                        <div class="mdl-card__supporting-text text-center">
-                            <div class="mdl-card__iquote">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
-                                <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
-                            </div>
-                            <div class="mdl-card__iquote">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                <a href="https://live.hpiquote.net/aspx/signin.aspx" target="_blank">iQuote Tool</a>
-                            </div>
-                            <div class="mdl-card__iquote">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
-                                <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
-                            </div>
-                            <div class="mdl-card__iquote">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
-                                <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
-                            </div>
-                            <div class="mdl-card__iquote">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
-                                <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
+                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
+                                <li><a href="#america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="caribe">
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
+                                        <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <a href="https://store.intcomex.com/Account/Login" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                        <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
+                                        <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
+                                        <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="america">
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>Costa Rica</span>
+                                        <a href="http://store.intcomex.com/iquote" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
+                                        <span>Guatemala</span>
+                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=10401609075948000547" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>El Salvador</span>
+                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=13740954574110992044" target="_blank">iQuote Tool</a>
+                                    </div>
+                                    <div class="mdl-card__iquote">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>Guatemala</span>
+                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=8933099990886705432" target="_blank">iQuote Tool</a>
+                                    </div>
+                                </div>
                             </div>                            
                         </div>
                         <div class="mdl-card__menu">
@@ -876,27 +906,57 @@
                         <div class="mdl-card__title">
                             <p>For further information, contact your preferred distributor.</a></p>
                         </div>
-                        <div class="mdl-card__supporting-text text-center">
-                            <div class="mdl-card__iquote any">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
-                                <a href="mailto:Erika.MenaMachuca@ingrammicro.com">Erika.MenaMachuca@ingrammicro.com</a>
-                            </div>
-                            <div class="mdl-card__iquote any">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                <a href="mailto:Anderson.Mendoza@intcomex.com">Anderson.Mendoza@intcomex.com</a>
-                            </div>
-                            <div class="mdl-card__iquote any">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
-                                <a href="mailto:ricky_altez@solutionboxusa.com">ricky_altez@solutionboxusa.com</a>
-                            </div>
-                            <div class="mdl-card__iquote any">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
-                                <a href="mailto:LAHPEGSales@techdata.com">LAHPEGSales@techdata.com</a>
-                            </div>
-                            <div class="mdl-card__iquote any">
-                                <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
-                                <a href="mailto:Tatiana.Gomez@wtrade.com">Tatiana.Gomez@wtrade.com</a>
-                            </div>                            
+                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#caribe1" aria-controls="caribe1" role="tab" data-toggle="tab">Caribe</a></li>
+                                <li><a href="#america1" aria-controls="america1" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="caribe1">
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
+                                        <a href="mailto:Erika.MenaMachuca@ingrammicro.com">Erika.MenaMachuca@ingrammicro.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <a href="mailto:Anderson.Mendoza@intcomex.com">Anderson.Mendoza@intcomex.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                        <a href="mailto:ricky_altez@solutionboxusa.com">ricky_altez@solutionboxusa.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
+                                        <a href="mailto:LAHPEGSales@techdata.com">LAHPEGSales@techdata.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
+                                        <a href="mailto:Tatiana.Gomez@wtrade.com">Tatiana.Gomez@wtrade.com</a>
+                                    </div>  
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="america1">
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>Costa Rica</span>
+                                        <a href="mailto:jviquez@intcomex.com">jviquez@intcomex.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
+                                        <span>Guatemala</span>
+                                        <a href="mailto:acaceres@tecnobodega.com.gt">acaceres@tecnobodega.com.gt</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>El Salvador</span>
+                                        <a href="mailto:Lilian.Gonzalez@intcomex.com">Lilian.Gonzalez@intcomex.com</a>
+                                    </div>
+                                    <div class="mdl-card__iquote any">
+                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                        <span>Guatemala</span>
+                                        <a href="mailto:mariaj.garcia@intcomex.com">mariaj.garcia@intcomex.com</a>
+                                    </div>
+                                </div>
+                            </div>                   
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
