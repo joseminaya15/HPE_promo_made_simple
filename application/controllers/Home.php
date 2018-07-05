@@ -27,7 +27,7 @@ class Home extends CI_Controller {
                                 <div class="promocion-imagen one"></div>
                             </div>
                             <div class="mdl-card__supporting-text">
-                                <h2 class="three">'.$key->Nombre.'</h2>
+                                <h2 class="three" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
                             </div>
                         </a>';
             $cont++;

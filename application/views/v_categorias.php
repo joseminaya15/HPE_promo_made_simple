@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
     <head>
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
@@ -25,7 +25,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
-    <body>
+    <body oncontextmenu='return false' onkeydown='return false'>
         <section id="promo" class="section">
             <div class="header">
                 <div class="mdl-container row">
@@ -45,24 +45,24 @@
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Value</p>
-                                        <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)">3PAR Avalanche & Store Once</a>
-                                        <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Market Take Over</a>
-                                        <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba 3x2 Switches</a>
-                                        <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)">Aruba Mobility</a>
-                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)">Datacenter Networking - ToR</a>
-                                        <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Pointnext</a>
-                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)">HPE Simplivity</a>
-                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)">Nimble Promo</a>
-                                        <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)">SAP HANA</a>
-                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)">Synergy</a>
+                                        <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</a>
+                                        <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Market Take Over">Aruba Market Take Over</a>
+                                        <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</a>
+                                        <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Mobility">Aruba Mobility</a>
+                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</a>
+                                        <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Pointnext">HPE Pointnext</a>
+                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Simplivity">HPE Simplivity</a>
+                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Nimble Promo">Nimble Promo</a>
+                                        <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="SAP HANA">SAP HANA</a>
+                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Synergy">Synergy</a>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
-                                        <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)">InstaSale</a>
-                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)">Base Promo</a>
-                                        <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)">Server & Storage Flex Attach</a>
-                                        <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)">Storage Accelerate</a>
-                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)">Tape Backup Media</a>
+                                        <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="InstaSale">InstaSale</a>
+                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a>
+                                        <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a>
+                                        <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Storage Accelerate">Storage Accelerate</a>
+                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Tape Backup Media">Tape Backup Media</a>
                                     </div>
                                 </ul>
                             </div>
