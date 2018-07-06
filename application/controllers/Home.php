@@ -40,7 +40,7 @@ class Home extends CI_Controller {
         $data['contenido'] = $html;
         $data['nombre']    = $nombre[0];
         $data['options']   = $opt;
-        $this->load->view('v_principal', $data);
+        $this->load->view('en/v_principal', $data);
 	}
     function ingresar(){
         $data['error'] = EXIT_ERROR;
