@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-8 text-right p-0 header__right">
                             <div class="menu_header">
-                                <p lang="en" translate="no">Welcome <?php echo $nombre ?></p>
+                                <p lang="en" translate="no">Bienvenido(a) <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
                             <div class="menu_principal col-xs-12 p-0">
@@ -97,7 +97,7 @@
                     <div class="imagen one"></div>
                     <div class="container">
                         <div class="cont-carousel">
-                            <h2>Welcome to Promos Made Simple</h2>
+                            <h2>Bienvenido a Promos Made Simple</h2>
                             <p>You can see all current promotions and those that are about to expire</p>
                         </div>
                     </div>
