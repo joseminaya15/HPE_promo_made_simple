@@ -33,7 +33,7 @@ class Home extends CI_Controller {
                                 <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
                             </div>
                             <div class="mdl-card__supporting-text">
-                                <h2 class="three" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
+                                <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
                             </div>
                         </a>';
             $cont++;
