@@ -49,6 +49,7 @@ class Home extends CI_Controller {
                         $session = array('usuario'   => $usuario,
                                          'tipo_user' => $username[0]->tipo_user,
                                          'nombre'    => $username[0]->Nombre,
+                                         'id_pais'   => $username[0]->id_pais,
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0 && $usuario == 'admin'){

@@ -852,7 +852,7 @@
                                 <li class="active"><a href="#caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
                                 <li><a href="#america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
                             </ul>
-                            <div class="tab-content">
+                            <div class="tab-content" id="tabla_contenido">
                                 <div role="tabpanel" class="tab-pane fade in active" id="caribe">
                                     <div class="mdl-card__iquote">
                                         <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
