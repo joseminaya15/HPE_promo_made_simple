@@ -116,7 +116,6 @@ function openModalTerminos(id){
 }
 function abrirModal(){
     $.ajax({
-		//data : {cate : name_cate},
 		url  : 'Categorias/abrirModal',
 		type : 'POST'
 	}).done(function(data){
