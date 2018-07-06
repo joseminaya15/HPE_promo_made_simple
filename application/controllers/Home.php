@@ -15,12 +15,17 @@ class Home extends CI_Controller {
 	public function index(){
         $html = '';
         $cont = 1;
+        $opt  = '';
         $user = $this->session->userdata('Id_user');
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
         //$this->session->unset_userdata('Id_user');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));//color-'.$cont.'
         $datos = $this->M_solicitud->getDatosCategorias($user);
+        $options = $this->M_solicitud->getPaises();
+        foreach ($options as $val) {
+            $opt .= '<option value="'.$val->Nombre.'">'.$val->Nombre.'</option>';
+        }
         foreach ($datos as $key) {
             $html .= '<a id="p'.$cont.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                             <div class="mdl-card__title">
@@ -34,6 +39,7 @@ class Home extends CI_Controller {
         }
         $data['contenido'] = $html;
         $data['nombre']    = $nombre[0];
+        $data['options']   = $opt;
         $this->load->view('v_principal', $data);
 	}
     function ingresar(){

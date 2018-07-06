@@ -336,4 +336,9 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql, array($id_pais));
       return $result->result();
     }
+    function getPaises(){
+      $sql = "SELECT * FROM paises ORDER BY Nombre ASC";
+      $result = $this->db->query($sql);
+      return $result->result();
+    }
 }
