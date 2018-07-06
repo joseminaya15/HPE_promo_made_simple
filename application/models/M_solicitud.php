@@ -329,4 +329,11 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql, array($id_user, $cate));
       return $result->result();
     }
+    function getPartners($id_pais){
+      $sql = "SELECT pp.* 
+                FROM pais_x_partner pp
+               WHERE pp.id_pais = ?";
+      $result = $this->db->query($sql, array($id_pais));
+      return $result->result();
+    }
 }

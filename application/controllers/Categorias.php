@@ -13,6 +13,7 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){ 
+        //print_r($this->session->userdata('id_pais'));
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
@@ -197,15 +198,24 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
-    /*function abrirModal(){
+    function abrirModal(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-
+            $html    = '';
+            $id_pais = $this->session->userdata('id_pais');
+            $datos   = $this->M_solicitud->getPartners($id_pais);
+            foreach ($datos as $key) {
+                $html .= '<div class="mdl-card__iquote">
+                                <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                          </div>';
+            }
+            $data['iquote'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
-        return json_encode(array_map('utf8_encode', $data));
-    }*/
+        echo json_encode($data);
+    }
 }

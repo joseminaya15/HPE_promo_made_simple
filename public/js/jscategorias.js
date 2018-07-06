@@ -123,6 +123,8 @@ function abrirModal(){
 		try{
 	        data = JSON.parse(data);
 	        if(data.error == 0){
+	        	$('#caribe').html('');
+	        	$('#caribe').append(data.iquote);
 	        }else {
 	        	return;
 	        }
