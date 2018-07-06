@@ -49,7 +49,7 @@
                                     </button>
                                     <ul class="dropdown-menu">
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
-                                            <p>Value</p>
+                                            <p>Valor</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
@@ -62,7 +62,7 @@
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Synergy</a>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
-                                            <p>Volume</p>
+                                            <p>Volumen</p>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p17')">InstaSale</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
@@ -77,13 +77,13 @@
                             <div class="search-categoria">
                                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="buscarPromo('inputSearch')"><i class="mdi mdi-search"></i></button>
                                 <div class="search-input">
-                                    <input type="text" class="form-control" id="inputSearch" placeholder="Search Product Number ID or Product Description" onkeyup="inputActive(this.id);" onkeypress="buscarPromo('inputSearch');">
+                                    <input type="text" class="form-control" id="inputSearch" placeholder="Buscar número de producto ID o descripción del producto" onkeyup="inputActive(this.id);" onkeypress="buscarPromo('inputSearch');">
                                 </div>
                                 <div class="search-clear">
                                     <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
                                 </div>
                             </div>
-                            <p class="text-important search">All these promos are valid only for Central America and Caribbean.</p>
+                            <p class="text-important search">Todas estas promociones son válidas solo para América Central y el Caribe.</p>
                         </div>
                     </div>
                 </div>
@@ -98,25 +98,25 @@
                     <div class="container">
                         <div class="cont-carousel">
                             <h2>Bienvenido a Promos Made Simple</h2>
-                            <p>You can see all current promotions and those that are about to expire</p>
+                            <p>Puede ver todas las promociones actuales y las que están a punto de caducar</p>
                         </div>
                     </div>
                 </div>
                 <div class="item opacity-5">
                     <div class="imagen two"></div>
                     <div class="cont-carousel">
-                        <h2>How it works?</h2>
+                        <h2>¿Cómo funciona?</h2>
                         <div class="cont-carousel__contenido">
                             <strong>1</strong>
-                            <p>Search products by name or SKU.</p>
+                            <p>Busque productos por nombre o SKU.</p>
                         </div>
                         <div class="cont-carousel__contenido">
                             <strong>2</strong>
-                            <p>Choose the best promotion that fits with your customer’s need.</p>
+                            <p>Elija la mejor promoción que se adapte a las necesidades de su cliente.</p>
                         </div>
                         <div class="cont-carousel__contenido">
                             <strong>3</strong>
-                            <p>Access iQuote through the website of your preferred distributor.</p>
+                            <p>Acceda a iQuote a través del sitio web de su distribuidor preferido.</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <div class="cont-carousel">
                         <img class="img-instasale" src="<?php echo RUTA_IMG?>promociones/Instasale.png">
                         <h2>#Instasale</h2>
-                        <p>Find here the products with the highest rotation in market from HPE or Aruba. Best Price & local inventory guaranteed.</p>
+                        <p>Encuentre aquí los productos con la rotación más alta en el mercado de HPE o Aruba. Mejor precio e inventario local garantizado.</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
         </section>
         <footer>
             <div class="mdl-container">
-                <small>For more information about our Promos, please contact us: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
@@ -166,82 +166,47 @@
                     <div class="mdl-card card-login">
                         <div class="mdl-card__supporting-text">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
-                                <li><a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Register</a></li>
+                                <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Ingresar</a></li>
+                                <li><a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Registrarse</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="login">
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="usuario">Email</label>
-                                        <input type="text" id="usuario" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                        <label for="usuario">Correo</label>
+                                        <input type="text" id="usuario" placeholder="Correo electr&oacute;nico" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="password">Password</label>
+                                        <label for="password">Contraseña</label>
                                         <input type="password" id="password" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="nombre">Full Name</label>
-                                        <input type="text" id="nombre" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                        <label for="nombre">Nombre completo</label>
+                                        <input type="text" id="nombre" placeholder="Nombre completo" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="correo">Email</label>
-                                        <input type="text" id="correo" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                        <label for="correo">Correo</label>
+                                        <input type="text" id="correo" placeholder="Correo electr&oacute;nico" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label>Country</label>
-                                        <select class="selectpicker" id="pais" title="Typically your Country">
-                                            <!-- <option value="Dominican Republic">Dominican Republic</option>
-                                            <option value="Puerto Rico">Puerto Rico</option>
-                                            <option value="Panamá">Panam&aacute;</option>
-                                            <option value="Costa Rica">Costa Rica</option>
-                                            <option value="Guatemala">Guatemala</option>
-                                            <option value="El Salvador">El Salvador</option>
-                                            <option value="Nicaragua">Nicaragua</option>
-                                            <option value="Honduras">Honduras</option>
-                                            <option value="Haiti">Haiti</option>
-                                            <option value="Aruba">Aruba</option>
-                                            <option value="Curacao">Curacao</option>
-                                            <option value="Guyana">Guyana</option>
-                                            <option value="Netherlands Antilles">Netherlands Antilles</option>
-                                            <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
-                                            <option value="St. Maarten">St. Maarten</option>
-                                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-                                            <option value="Suriname">Suriname</option>
-                                            <option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
-                                            <option value="Antigua & Bermuda">Antigua & Bermuda</option>
-                                            <option value="Virgin Islands (British)">Virgin Islands (British)</option>
-                                            <option value="Belize">Belize</option>
-                                            <option value="Turks & Caicos">Turks & Caicos</option>
-                                            <option value="Dominica">Dominica</option>
-                                            <option value="St Lucia">St Lucia</option>
-                                            <option value="Bonaire">Bonaire</option>
-                                            <option value="Martinique">Martinique</option>
-                                            <option value="St Barthelem">St Barthelem</option>
-                                            <option value="Anguilla">Anguilla</option>
-                                            <option value="Grenada">Grenada</option>
-                                            <option value="Bahamas">Bahamas</option>
-                                            <option value="Barbados">Barbados</option>
-                                            <option value="Cayman">Cayman</option>
-                                            <option value="Jamaica">Jamaica</option>
-                                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                            <option value="Bermuda">Bermuda</option> -->
+                                        <label>Pais</label>
+                                        <select class="selectpicker" id="pais" title="País">
                                             <?php echo $options ?>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <label for="passRegister">Password</label>
-                                        <input type="password" id="passRegister" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
+                                        <label for="passRegister">Contraseña</label>
+                                        <input type="password" id="passRegister" placeholder="Contraseña" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 p-0">
-                                        <p class="text-important">All these promos are valid only for Central America and Caribbean.</p>
+                                        <p class="text-important">Todas estas promociones son válidas solo para América Central y el Caribe.</p>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Register</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Registrar</button>
                                     </div>
                                 </div>
                             </div>
