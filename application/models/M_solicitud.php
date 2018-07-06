@@ -132,7 +132,8 @@ class M_solicitud extends  CI_Model{
     function getDatosCategorias($id_user){
         if(!isset($id_user)){
             $sql = "SELECT c.*
-                      FROM categorias c";
+                      FROM categorias c
+                  ORDER BY c.orden ASC";
         }else {
             $sql = "SELECT c.*,
                            cp.deal_number
@@ -144,7 +145,8 @@ class M_solicitud extends  CI_Model{
                        AND p.Id = cp.id_pais
                        AND u.id_pais = cp.id_pais
                        AND u.Id = ?
-                  GROUP BY c.Id";
+                  GROUP BY c.Id
+                  ORDER BY c.orden ASC";
         }
         $result = $this->db->query($sql, array($id_user));
         return $result->result();
