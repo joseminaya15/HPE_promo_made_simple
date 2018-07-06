@@ -156,7 +156,7 @@ function registrar() {
 			$('.selectpicker').selectpicker('refresh');
 			msj('error', 'Se registró correctamente');
         }else {
-			msj('error', 'Su usuario o contraseña son incorrectos');
+			msj('error', data.msj);
         	return;
         }
       }catch(err){

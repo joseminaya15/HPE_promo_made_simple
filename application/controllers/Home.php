@@ -91,21 +91,28 @@ class Home extends CI_Controller {
             $pais          = $this->input->post('pais');
             $tipo_user     = $this->input->post('tipo_user');
             $id_pais       = $this->M_solicitud->getIdPais($pais);
-            $arrayInsert   = array('Nombre'    => $nombre,
-                                   'Email'     => $usuario,
-                                   'pass'      => base64_encode($passRegister),
-                                   'Pais'      => $pais,
-                                   'tipo_user' => 1,
-                                   'id_pais'   => $id_pais);
-            $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
-            $session    = array('nombre'     => $nombre,
-                                'usuario'    => $usuario,
-                                'pais'       => $pais,
-                                'pass'       => $passRegister,
-                                'id_capitan' => $datoInsert['Id']);
-            $this->session->set_userdata($session);
-            $this->sendGmail($usuario);
-            $data['error'] = EXIT_SUCCESS;
+            $correo_verifi = $this->M_solicitud->verificarUsuario($usuario);
+            if(count($correo_verifi) == 0) {
+                $arrayInsert   = array('Nombre'    => $nombre,
+                                       'Email'     => $usuario,
+                                       'pass'      => base64_encode($passRegister),
+                                       'Pais'      => $pais,
+                                       'tipo_user' => 1,
+                                       'id_pais'   => $id_pais);
+                $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
+                $session    = array('nombre'     => $nombre,
+                                    'usuario'    => $usuario,
+                                    'pais'       => $pais,
+                                    'pass'       => $passRegister,
+                                    'id_capitan' => $datoInsert['Id']);
+                $this->session->set_userdata($session);
+                $this->sendGmail($usuario);
+                $data['error'] = EXIT_SUCCESS;
+                $data['msj']   = 'Registro exitoso';
+            } else if($usuario == $correo_verifi[0]->Email){
+                $data['msj']   = 'Correo ya registrado';
+            }
+
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
