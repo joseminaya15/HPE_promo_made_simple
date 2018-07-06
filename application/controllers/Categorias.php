@@ -18,6 +18,7 @@ class Categorias extends CI_Controller {
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
         $data['nombre'] = $nombre[0];
+        $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             if(count($datos) == 0){
@@ -96,7 +97,7 @@ class Categorias extends CI_Controller {
         $data['qty']         = '';
         }
         $data['promociones'] = $html;
-        $this->load->view('en/v_categorias', $data);
+        $this->load->view($idioma.'/v_categorias', $data);
 	}
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
