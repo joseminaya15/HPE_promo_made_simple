@@ -32,8 +32,8 @@ class Home extends CI_Controller {
                         </a>';
             $cont++;
         }
-        $data['contenido']   = $html;
-        $data['nombre'] = $nombre[0];
+        $data['contenido'] = $html;
+        $data['nombre']    = $nombre[0];
         $this->load->view('v_principal', $data);
 	}
     function ingresar(){
