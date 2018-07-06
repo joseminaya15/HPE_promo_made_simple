@@ -30,7 +30,7 @@ class Home extends CI_Controller {
         foreach ($datos as $key) {
             $html .= '<a id="p'.$cont.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                             <div class="mdl-card__title">
-                                <div class="promocion-imagen one"></div>
+                                <div class="promocion-imagen"></div>
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <h2 class="three" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
