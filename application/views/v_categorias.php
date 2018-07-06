@@ -25,7 +25,8 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
-    <body oncontextmenu='return false' onkeydown='return false'>
+    <!-- oncontextmenu='return false' -->
+    <body>
         <section id="promo" class="section">
             <div class="header">
                 <div class="mdl-container row">
