@@ -14,7 +14,11 @@ class M_solicitud extends  CI_Model{
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
     function verificarUsuario($user){
-        $sql = "SELECT *
+        $sql = "SELECT *,
+                       CASE WHEN (id_pais <= 25) THEN 'es'
+                            WHEN (id_pais >= 26 AND id_pais <= 52) THEN 'en'
+                            ELSE 'es'
+                        END AS idioma
                   FROM users
                  WHERE Email LIKE '%".$user."%'";
         $result = $this->db->query($sql);
