@@ -17,6 +17,7 @@ class Home extends CI_Controller {
         $cont = 1;
         $opt  = '';
         $user = $this->session->userdata('Id_user');
+        $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
         //$this->session->unset_userdata('Id_user');
@@ -40,7 +41,7 @@ class Home extends CI_Controller {
         $data['contenido'] = $html;
         $data['nombre']    = $nombre[0];
         $data['options']   = $opt;
-        $this->load->view('en/v_principal', $data);
+        $this->load->view($idioma.'/v_principal', $data);
 	}
     function ingresar(){
         $data['error'] = EXIT_ERROR;
@@ -57,7 +58,8 @@ class Home extends CI_Controller {
                                          'tipo_user' => $username[0]->tipo_user,
                                          'nombre'    => $username[0]->Nombre,
                                          'id_pais'   => $id_pais,
-                                         'Id_user'   => $username[0]->Id);
+                                         'Id_user'   => $username[0]->Id,
+                                         'idioma'    => $username[0]->idioma);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0 && $usuario == 'admin'){
                             $data['redirect'] = 'Listado';
@@ -67,8 +69,6 @@ class Home extends CI_Controller {
                         }
                         if($username[0]->tipo_user == 1){
                            $data['redirect'] = 'Home'; 
-                        }else if($username[0]->tipo_user == 2){
-                            $data['redirect'] = 'Home'; 
                         }
                         $data['error'] = EXIT_SUCCESS;
                     }else {
