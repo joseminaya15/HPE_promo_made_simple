@@ -268,6 +268,10 @@
             } else {
             }
             $(window).load(function() {
+                var URLactual = window.location;
+                // if(URLactual['href'] != 'http://www.hpepromosmadesimple.com/Home'){
+                //     location.href = 'http://www.hpepromosmadesimple.com/Home';
+                // }
                 let openModal = sessionStorage.getItem('OPEN_MODAL2');
                 if(openModal && openModal == '1') {
                     $("#ModalLogin").modal('hide');
