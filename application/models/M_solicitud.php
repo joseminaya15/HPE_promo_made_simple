@@ -341,4 +341,11 @@ class M_solicitud extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->result();
     }
+    function getIdPais($name){
+      $sql = "SELECT c.Id
+                FROM paises c
+               WHERE (c.Nombre LIKE '%".$name."%')";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
+    }
 }

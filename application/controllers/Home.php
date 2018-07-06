@@ -49,13 +49,14 @@ class Home extends CI_Controller {
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
             $username = $this->M_solicitud->verificarUsuario($usuario);
+            $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
             if(count($username) != 0){
                 if(strtolower($username[0]->Email) == strtolower($usuario)){
                     if($password == base64_decode($username[0]->pass)){
                         $session = array('usuario'   => $usuario,
                                          'tipo_user' => $username[0]->tipo_user,
                                          'nombre'    => $username[0]->Nombre,
-                                         'id_pais'   => $username[0]->id_pais,
+                                         'id_pais'   => $id_pais,
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         if($username[0]->tipo_user == 0 && $usuario == 'admin'){
@@ -89,11 +90,13 @@ class Home extends CI_Controller {
             $passRegister  = $this->input->post('passRegister');
             $pais          = $this->input->post('pais');
             $tipo_user     = $this->input->post('tipo_user');
+            $id_pais       = $this->M_solicitud->getIdPais($pais);
             $arrayInsert   = array('Nombre'    => $nombre,
                                    'Email'     => $usuario,
                                    'pass'      => base64_encode($passRegister),
                                    'Pais'      => $pais,
-                                   'tipo_user' => 1);
+                                   'tipo_user' => 1,
+                                   'id_pais'   => $id_pais);
             $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
             $session    = array('nombre'     => $nombre,
                                 'usuario'    => $usuario,
