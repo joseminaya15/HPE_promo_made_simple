@@ -61,12 +61,6 @@ class Home extends CI_Controller {
                                          'Id_user'   => $username[0]->Id,
                                          'idioma'    => $username[0]->idioma);
                         $this->session->set_userdata($session);
-                        if($username[0]->tipo_user == 0 && $usuario == 'admin'){
-                            $data['redirect'] = 'Listado';
-                        }else {
-                            $data['pass']     = 'Contraseña incorrecta';
-                            $data['redirect'] = 'Home';
-                        }
                         if($username[0]->tipo_user == 1){
                            $data['redirect'] = 'Home'; 
                         }
@@ -124,6 +118,8 @@ class Home extends CI_Controller {
         try {
             $this->session->unset_userdata('usuario');
             $this->session->unset_userdata('Id_user');
+            $session = array('idioma' => 'en');
+            $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
