@@ -48,26 +48,31 @@ class Home extends CI_Controller {
          try {
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
+            $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
-            $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
-            if(count($username) != 0){
-                if(strtolower($username[0]->Email) == strtolower($usuario)){
-                    if($password == base64_decode($username[0]->pass)){
-                        $session = array('usuario'   => $usuario,
-                                         'tipo_user' => $username[0]->tipo_user,
-                                         'nombre'    => $username[0]->Nombre,
-                                         'id_pais'   => $id_pais,
-                                         'Id_user'   => $username[0]->Id,
-                                         'idioma'    => $username[0]->idioma);
-                        $this->session->set_userdata($session);
-                        if($username[0]->tipo_user == 1){
-                           $data['redirect'] = 'Home'; 
+            if($username[0]->idioma == $idioma){
+                $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
+                if(count($username) != 0){
+                    if(strtolower($username[0]->Email) == strtolower($usuario)){
+                        if($password == base64_decode($username[0]->pass)){
+                            $session = array('usuario'   => $usuario,
+                                             'tipo_user' => $username[0]->tipo_user,
+                                             'nombre'    => $username[0]->Nombre,
+                                             'id_pais'   => $id_pais,
+                                             'Id_user'   => $username[0]->Id,
+                                             'idioma'    => $username[0]->idioma);
+                            $this->session->set_userdata($session);
+                            if($username[0]->tipo_user == 1){
+                               $data['redirect'] = 'Home'; 
+                            }
+                            $data['error'] = EXIT_SUCCESS;
+                        }else {
+                            $data['pass']  = 'Contraseña incorrecta';
                         }
-                        $data['error'] = EXIT_SUCCESS;
-                    }else {
-                        $data['pass']  = 'Contraseña incorrecta';
                     }
                 }
+            }else {
+                $data['pass'] = 'Su correo fue registrado en otro idioma';
             }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
