@@ -173,8 +173,13 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
-    function getPaises(){
-        $sql = "SELECT * FROM paises ORDER BY Nombre ASC";
+    function getPaises($idioma){
+        if($idioma == 'es'){
+          $paises = 'WHERE Id <= 25';
+        }else {
+          $paises = 'WHERE Id >= 26 AND Id <= 52';
+        }
+        $sql = "SELECT * FROM paises ".$paises." ORDER BY Nombre ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }

@@ -20,9 +20,9 @@ class Home extends CI_Controller {
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
-        $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
-        $datos = $this->M_solicitud->getDatosCategorias($user);
-        $options = $this->M_solicitud->getPaises();
+        $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
+        $datos   = $this->M_solicitud->getDatosCategorias($user);
+        $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
         foreach ($options as $val) {
             $opt .= '<option value="'.$val->Nombre.'">'.$val->Nombre.'</option>';
         }
