@@ -50,8 +50,8 @@ class Home extends CI_Controller {
             $password = $this->input->post('password');
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
-            if($username[0]->idioma == $idioma){
-                if(count($username) != 0){
+            if(count($username) != 0){
+                if($username[0]->idioma == $idioma){
                     $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
                     if(strtolower($username[0]->Email) == strtolower($usuario)){
                         if($password == base64_decode($username[0]->pass)){
@@ -71,10 +71,10 @@ class Home extends CI_Controller {
                         }
                     } 
                 } else {
-                    $data['pass'] = 'Usuario no registrado';
+                    $data['pass'] = 'Su correo fue registrado en otro idioma';
                 }
-            }else {
-                $data['pass'] = 'Su correo fue registrado en otro idioma'; 
+            } else {
+                $data['pass'] = 'Usuario no registrado';
             }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
