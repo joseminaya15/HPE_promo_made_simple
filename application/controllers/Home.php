@@ -51,8 +51,8 @@ class Home extends CI_Controller {
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if($username[0]->idioma == $idioma){
-                $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
                 if(count($username) != 0){
+                    $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
                     if(strtolower($username[0]->Email) == strtolower($usuario)){
                         if($password == base64_decode($username[0]->pass)){
                             $session = array('usuario'   => $usuario,
@@ -69,7 +69,9 @@ class Home extends CI_Controller {
                         }else {
                             $data['pass']  = 'Contraseña incorrecta';
                         }
-                    }
+                    } 
+                } else {
+                    $data['pass'] = 'Usuario no registrado';
                 }
             }else {
                 $data['pass'] = 'Su correo fue registrado en otro idioma'; 
