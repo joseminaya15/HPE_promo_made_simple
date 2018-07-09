@@ -12,7 +12,7 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-	public function index(){ 
+	public function index(){
         //print_r($this->session->userdata('id_pais'));
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
@@ -43,58 +43,46 @@ class Categorias extends CI_Controller {
                 }else {
                     $dis = 'display: table-cell';
                 }
-            if($this->session->userdata('id_cates') == 10){
+                if($this->session->userdata('id_cates') == 10){
                 $html .= '<tr>
                             <td>'.$key->product_id.'</td>
                             <td>'.$key->product_desc.'</td>
                             <td style="'.$dis.'">'.$key->est_qty.'</td>
                         </tr>';
-            }else {
-                if($cate == $key->name){
-                    if($cont1 == 0){
-                        $html = '<tr class="subcategoria">
-                                    <td colspan="2"><strong>'.strtoupper($key->name).'</strong></td>
+                }else {
+                    if($cate == $key->name){
+                        $html .= '<tr>
+                                    <td>'.$key->product_id.'</td>
+                                    <td>'.$key->product_desc.'</td>
+                                    <td style="'.$dis.'">'.$key->est_qty.'</td>
                                 </tr>';
-                        $cont1 = 1;
+                    }else{
+                        if($cate != $key->name){
+                            $cate = $key->name;
+                            $html .= '
+                                      <tr>
+                                        <td>'.$key->product_id.'</td>
+                                        <td>'.$key->product_desc.'</td>
+                                        <td style="'.$dis.'">'.$key->est_qty.'</td>
+                                      </tr>';
+                        }
                     }
-                    $html .= '<tr>
-                                <td>'.$key->product_id.'</td>
-                                <td>'.$key->product_desc.'</td>
-                                <td style="'.$dis.'">'.$key->est_qty.'</td>
-                            </tr>';
-                }else
-                if($cate != $key->name){
-                    $cate = $key->name;
-                    $cont = 0;
-                    if($cont == 0){
-                        $html .= '<tr class="subcategoria">
-                                   <td colspan="2"><strong>'.strtoupper($cate).'</strong></td>
-                                 </tr>';
-                        $cont=1;
-                    }
-                    $html .= '
-                              <tr>
-                                <td>'.$key->product_id.'</td>
-                                <td>'.$key->product_desc.'</td>
-                                <td style="'.$dis.'">'.$key->est_qty.'</td>
-                              </tr>';
                 }
             }
-        }
-        $data['start_date']  = $datos[0]->effect_date;
-        $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
-        $data['end_date']    = $datos[0]->fecha_fin;
-        $data['qty']         = $datos[0]->est_qty;
+            $data['start_date']  = $datos[0]->effect_date;
+            $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
+            $data['end_date']    = $datos[0]->fecha_fin;
+            $data['qty']         = $datos[0]->est_qty;
         }else {
             $cate  = '';
             $html  = '<tr>
                         <td></td>
                         <td></td>
                      </tr>';
-        $data['start_date']  = '';
-        $data['end_date']    = '';
-        $data['deal_number'] = '';
-        $data['qty']         = '';
+            $data['start_date']  = '';
+            $data['end_date']    = '';
+            $data['deal_number'] = '';
+            $data['qty']         = '';
         }
         $data['promociones'] = $html;
         $this->load->view($idioma.'/v_categorias', $data);

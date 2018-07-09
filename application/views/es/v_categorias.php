@@ -221,13 +221,13 @@
                                 <thead>
                                     <tr class="tr-header-reporte">
                                         <?php if($sales == 7) { ?>
-                                        <th>Product number ID</th>
-                                        <th>Product Description</th>
+                                            <th>Product number ID</th>
+                                            <th>Product Description</th>
                                         <?php } else { ?>
-                                        <th>Product number ID</th>
-                                        <th>Product Description</th>
+                                            <th>Product number ID</th>
+                                            <th>Product Description</th>
                                         <?php if($qty != '' || $qty != null) { ?>
-                                        <th>Est. Qty</th>
+                                            <th>Est. Qty</th>
                                         <?php } ?>
                                         <?php } ?>
                                     </tr>
