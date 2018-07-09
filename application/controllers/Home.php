@@ -112,7 +112,6 @@ class Home extends CI_Controller {
             } else if($usuario == $correo_verifi[0]->Email){
                 $data['msj']   = 'Correo ya registrado';
             }
-
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
