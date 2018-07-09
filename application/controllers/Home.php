@@ -13,10 +13,10 @@ class Home extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $html = '';
-        $cont = 1;
-        $opt  = '';
-        $user = $this->session->userdata('Id_user');
+        $html   = '';
+        $cont   = 1;
+        $opt    = '';
+        $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
@@ -72,7 +72,7 @@ class Home extends CI_Controller {
                     }
                 }
             }else {
-                $data['pass'] = 'Su correo fue registrado en otro idioma';
+                $data['pass'] = 'Su correo fue registrado en otro idioma'; 
             }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
