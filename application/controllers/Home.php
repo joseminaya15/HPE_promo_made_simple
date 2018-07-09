@@ -19,7 +19,7 @@ class Home extends CI_Controller {
         $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         $this->session->unset_userdata('user');
-        $this->session->unset_userdata('tipo_user');//verificar
+        $this->session->unset_userdata('tipo_user');
         $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
         $datos   = $this->M_solicitud->getDatosCategorias($user);
         $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
@@ -38,7 +38,7 @@ class Home extends CI_Controller {
             $cont++;
         }
         $data['contenido'] = $html;
-        $data['nombre']    = $nombre[0];
+        $data['nombre']    = ucwords($nombre[0]);
         $data['options']   = $opt;
         $this->load->view($idioma.'/v_principal', $data);
 	}
