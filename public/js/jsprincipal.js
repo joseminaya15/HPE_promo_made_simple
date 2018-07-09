@@ -42,7 +42,8 @@ function goToCategorias(id){
 	        	return;
 	        }
 		}catch(err){
-			msj('error',err.message);
+			toastr.remove();
+          	msj('error',err.message);
 		}
 	});
 }
@@ -62,7 +63,8 @@ function cerrarCesion(){
 	        	return;
 	        }
 		}catch(err){
-			msj('error',err.message);
+			toastr.remove();
+          	msj('error',err.message);
 		}
 	});
 }
@@ -70,11 +72,13 @@ function ingresar(){
 	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
 	if(usuario == null || usuario == ''){
-		msj('error', 'Ingrese su usuario');
+		toastr.remove();
+        msj('error', 'Ingrese su usuario');
 		return;
 	}
 	if(password == null || password == ''){
-    msj('error', 'Ingrese su contraseña');
+    	toastr.remove();
+      	msj('error', 'Ingrese su contraseña');
 		return;
 	}
 	$.ajax({
@@ -96,14 +100,17 @@ function ingresar(){
 			$('.search-filter.home').css('display','flex');
         }else {
           if(data.pass == null || data.pass == '') {
-            msj('error', 'alguno de sus datos son incorrectos');
+            toastr.remove();
+          	msj('error', 'alguno de sus datos son incorrectos');
           }else {
-            msj('error', data.pass);
+            toastr.remove();
+          	msj('error', data.pass);
           }
         	return;
         }
       }catch(err){
-        msj('error',err.message);
+        toastr.remove();
+      	msj('error',err.message);
       }
 	});
 }
@@ -114,27 +121,38 @@ function registrar() {
 	var pais 	  	  = $('#pais').val();
 	var tipo_user = 1;
 	if(nombre == '' && correo == '' && passRegister == ''){
-		msj('error', 'Ingrese sus datos');
+		toastr.remove();
+      	msj('error', 'Ingrese sus datos');
 		return;
 	}
 	if(nombre == null || nombre == undefined || nombre == ''){
-		msj('error', 'Ingrese su nombre');
+		toastr.remove();
+      	msj('error', 'Ingrese su nombre');
 		return;
 	}
 	if(correo == ''){
-		msj('error', 'Ingrese su correo');
+		toastr.remove();
+      	msj('error', 'Ingrese su correo');
 		return;
 	}
 	if (!validateEmail(correo)){
-		msj('error', 'El formato del correo es incorrecto');
+		toastr.remove();
+      	msj('error', 'El formato del correo es incorrecto');
+		return;
+	}
+	if(validateEmailCorporative(correo)){
+		toastr.remove();
+      	msj('error', 'Ingrese su email corporativo');
 		return;
 	}
 	if(pais == ''){
-		msj('error', 'Ingrese su país');
+		toastr.remove();
+      	msj('error', 'Ingrese su país');
 		return;
 	}
 	if(passRegister == ''){
-		msj('error', 'Ingrese su contraseña');
+		toastr.remove();
+      	msj('error', 'Ingrese su contraseña');
 		return;
 	}
 	$.ajax({
@@ -147,20 +165,23 @@ function registrar() {
 		type : 'POST'
 	}).done(function(data){
 		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	$('#nombre').val("");
-			$('#passRegister').val("");
-			$('#correo').val("");
-			$('#pais').val("0");
-			$('.selectpicker').selectpicker('refresh');
-			msj('error', 'Se registró correctamente');
-        }else {
-			msj('error', data.msj);
-        	return;
-        }
-      }catch(err){
-        msj('error',err.message);
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	$('#nombre').val("");
+				$('#passRegister').val("");
+				$('#correo').val("");
+				$('#pais').val("0");
+				$('.selectpicker').selectpicker('refresh');
+				toastr.remove();
+	          	msj('error', 'Se registró correctamente');
+	        }else {
+				toastr.remove();
+	          	msj('error', data.msj);
+	        	return;
+	        }
+      	}catch(err){
+        	toastr.remove();
+          	msj('error',err.message);
       }
 	});
 }
@@ -193,6 +214,10 @@ function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+function validateEmailCorporative(email){
+    var re = /[a-zA-Z0-9@]+(?=hotmail.com|yahoo.com|gmail.com)/;
+    return re.test(email);
+}
 function verificarDatos(e){
 	if(e.keyCode === 13){
 		e.preventDefault();
@@ -221,20 +246,22 @@ function buscarPromo(datos){
 		url  : 'Home/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
-	  try{
-	    data = JSON.parse(data);
-	    if(data.error == 0){
-	    	$('#cardsCates').css("display", "none");
-	    	$('#tablaCates').css("display", "block");
-	    	$('#promociones').html('');
-	    	$('#promociones').append(data.promociones);
-	    }else {
-	    	msj('error', data.msj);
-	    	return;
-	    }
-	  }catch(err){
-	    msj('error',err.message);
-	  }
+	  	try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	$('#cardsCates').css("display", "none");
+		    	$('#tablaCates').css("display", "block");
+		    	$('#promociones').html('');
+		    	$('#promociones').append(data.promociones);
+		    }else {
+		    	toastr.remove();
+	          	msj('error', data.msj);
+		    	return;
+		    }
+	  	}catch(err){
+	    	toastr.remove();
+          	msj('error',err.message);
+	  	}
 	});
 }
 function triggerCategoria(id1){
@@ -289,16 +316,18 @@ function goTo(idioma){
 		url  : 'Home/goTo',
 		type : 'POST'
 	}).done(function(data){
-	  try{
-	    data = JSON.parse(data);
-	    if(data.error == 0){
-	    	location.href = "Home";
-	    }else {
-	    	msj('error', data.msj);
-	    	return;
-	    }
-	  }catch(err){
-	    msj('error',err.message);
-	  }
+	  	try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	location.href = "Home";
+		    }else {
+		    	toastr.remove();
+	          	msj('error', data.msj);
+		    	return;
+		    }
+	  	}catch(err){
+	    	toastr.remove();
+          	msj('error',err.message);
+	  	}
 	});
 }
