@@ -129,7 +129,7 @@ class Home extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $cate    = $this->input->post('cate');
+            $cate    = trim($this->input->post('cate'));
             $id_cate = $this->M_solicitud->getIdByNameCate($cate);
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
@@ -177,7 +177,7 @@ class Home extends CI_Controller {
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'info@marketinghpe.com',
-                            'smtp_pass' => 'hpeinfo18',
+                            'smtp_pass' => 'hpEmSac$18',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
