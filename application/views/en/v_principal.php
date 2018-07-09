@@ -72,7 +72,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-xs-2">
-                                    <a onclick="goTo('es')">Es</a>
+                                    <span style="color: #FFFFFF;font-size: 16px;"><a onclick="goTo('es')">Es</a> / <span style="font-weight: bold;">En</span></span>
                                 </div>
                             </div>
                         </div>

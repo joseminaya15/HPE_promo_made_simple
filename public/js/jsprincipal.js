@@ -108,10 +108,10 @@ function ingresar(){
 	});
 }
 function registrar() {
-	var nombre 	  = $('#nombre').val();
-	var correo    = $('#correo').val();
+	var nombre 	  	  = $('#nombre').val();
+	var correo    	  = $('#correo').val();
 	var passRegister  = $('#passRegister').val();
-	var pais 	  = $('#pais').val();
+	var pais 	  	  = $('#pais').val();
 	var tipo_user = 1;
 	if(nombre == '' && correo == '' && passRegister == ''){
 		msj('error', 'Ingrese sus datos');
