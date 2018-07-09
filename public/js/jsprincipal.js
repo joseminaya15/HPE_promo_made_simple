@@ -283,3 +283,22 @@ function directPromos(id_cates){
 function showSearch(){
 	$('.header--principal').addClass('active');
 }
+function goTo(idioma){
+	$.ajax({
+		data : {idioma : idioma},
+		url  : 'Home/goTo',
+		type : 'POST'
+	}).done(function(data){
+	  try{
+	    data = JSON.parse(data);
+	    if(data.error == 0){
+	    	location.href = "Home";
+	    }else {
+	    	msj('error', data.msj);
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}

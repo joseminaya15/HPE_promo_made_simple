@@ -255,4 +255,17 @@ class Home extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
+    function goTo(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $idioma = $this->input->post('idioma');
+            $session = array('idioma' => $idioma);
+            $this->session->set_userdata($session);
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

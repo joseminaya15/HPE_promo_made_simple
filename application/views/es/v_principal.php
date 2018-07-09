@@ -43,7 +43,7 @@
                                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab md-button--search" onclick="showSearch()">
                                     <i class="mdi mdi-search"></i>
                                 </button>
-                                <div class="menu_desplegable col-xs-12 p-0">
+                                <div class="menu_desplegable col-xs-10 p-0">
                                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="mdi mdi-menu"></i>Menu
                                     </button>
@@ -70,6 +70,9 @@
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Tape Backup Media</a>
                                         </div>
                                     </ul>
+                                </div>
+                                <div class="col-xs-2">
+                                    <a onclick="goTo('en')">En</a>
                                 </div>
                             </div>
                         </div>
