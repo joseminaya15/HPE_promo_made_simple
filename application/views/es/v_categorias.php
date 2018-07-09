@@ -100,7 +100,7 @@
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep1T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
-                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span>Aproveche los precios agresivos en los productos Best Seller (HW + SW + Point Next) en el Heat of the Market&#33;</span></p>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Take advantage of aggressive pricing on Best Seller products (HW + SW + Point Next) in the Heat of the Market&#33;</span></p>
                             </div>
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -108,7 +108,7 @@
                                 <p><strong>Feha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep2T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
-                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span>Obtenga descuentos adicionales (en la parte superior del Programa base) combinando un Producto del sistema (Servidor o SD) con un mínimo de 4 Opciones de mayor venta (HW o TS válidos).</span></p>
+                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
                             </div>
                             <div id="Ep3" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -128,81 +128,81 @@
                             <div id="Ep6" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep6T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep7" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep7T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep8" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>DCN Promo</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep8T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Synergy Promo</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep9T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep11T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Increase our 3PAR Installed base with high availability and high performance for DataCenters of medium and small size companies.</span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep12T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep13" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep13T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep14" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep14T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep15" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Nimble Promo</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <p><strong>Important:</strong>This product can only be sale in Costa Rica y Puerto Rico</p>
                                 <small id="Ep15T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep16" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>SAP HANA</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <small id="Ep16T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
                             </div>
                             <div id="Ep17" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>InstaSale</span></p>
-                                <p><strong>Start date:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
                             </div>
                         </div>
