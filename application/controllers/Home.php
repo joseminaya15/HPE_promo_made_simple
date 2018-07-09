@@ -264,7 +264,7 @@ class Home extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $idioma = $this->input->post('idioma');
+            $idioma  = $this->input->post('idioma');
             $session = array('idioma' => $idioma);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
