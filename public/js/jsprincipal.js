@@ -320,6 +320,9 @@ function goTo(idioma){
 		    data = JSON.parse(data);
 		    if(data.error == 0){
 		    	location.href = "Home";
+		    	$('.menu_header').css('display','none');
+	        	$('.search-filter.home').css('display','none');
+	        	sessionStorage.setItem('OPEN_MODAL2', '2');
 		    }else {
 		    	toastr.remove();
 	          	msj('error', data.msj);
