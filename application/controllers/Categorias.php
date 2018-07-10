@@ -160,7 +160,7 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function cerrarCesion(){
+    function cerrarCesion() {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
