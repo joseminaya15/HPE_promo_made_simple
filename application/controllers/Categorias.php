@@ -12,7 +12,7 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-	public function index(){
+	public function index() {
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre         = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
