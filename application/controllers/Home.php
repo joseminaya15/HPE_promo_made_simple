@@ -124,7 +124,7 @@ class Home extends CI_Controller {
             $session = array('idioma' => 'en');
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e){
+        } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
@@ -138,7 +138,7 @@ class Home extends CI_Controller {
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e){
+        } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
