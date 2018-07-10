@@ -14,7 +14,6 @@ class Home extends CI_Controller {
     }
 	public function index(){
         $html   = '';
-        $cont   = 1;
         $opt    = '';
         $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
@@ -35,7 +34,6 @@ class Home extends CI_Controller {
                             <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
                         </div>
                      </a>';
-            $cont++;
         }
         $data['contenido'] = $html;
         $data['nombre']    = ucwords($nombre[0]);
