@@ -13,9 +13,8 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        //print_r($this->session->userdata('id_pais'));
         $data['sales']  = $this->session->userdata('id_cates');
-        $nombre = explode(" ", ucwords($this->session->userdata('nombre')));
+        $nombre         = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
         $data['nombre'] = $nombre[0];
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
@@ -29,10 +28,10 @@ class Categorias extends CI_Controller {
         }else {
             $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
         }
-        $deal = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
-        $cate = '';
-        $html = '';
-        $cont = 0;
+        $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
+        $cate  = '';
+        $html  = '';
+        $cont  = 0;
         $cont1 = 0;
         $dis   = '';
         if(count($datos) != 0) {
@@ -56,7 +55,7 @@ class Categorias extends CI_Controller {
                                     <td>'.$key->product_desc.'</td>
                                     <td style="'.$dis.'">'.$key->est_qty.'</td>
                                 </tr>';
-                    }else{
+                    }else {
                         if($cate != $key->name){
                             $cate = $key->name;
                             $html .= '
