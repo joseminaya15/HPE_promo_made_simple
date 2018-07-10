@@ -167,7 +167,7 @@ class Home extends CI_Controller {
             }            
             $data['promociones'] = $html;
             $data['error']       = EXIT_SUCCESS;
-        }catch(Exception $e){
+        }catch(Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
@@ -254,7 +254,7 @@ class Home extends CI_Controller {
        $this->email->message($texto);
        $this->email->send();
        $data['error'] = EXIT_SUCCESS;
-      }catch (Exception $e){
+      }catch (Exception $e) {
         $data['msj'] = $e->getMessage();
       }
       return json_encode(array_map('utf8_encode', $data));
@@ -269,7 +269,7 @@ class Home extends CI_Controller {
             $this->session->unset_userdata('Id_user');
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e){
+        } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
