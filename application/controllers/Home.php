@@ -259,7 +259,7 @@ class Home extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-    function goTo(){
+    function goTo() {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
