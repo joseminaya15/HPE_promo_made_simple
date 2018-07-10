@@ -62,7 +62,7 @@ class Home extends CI_Controller {
                                              'Id_user'   => $username[0]->Id,
                                              'idioma'    => $username[0]->idioma);
                             $this->session->set_userdata($session);
-                            if($username[0]->tipo_user == 1){
+                            if($username[0]->tipo_user == TIPO_USER){
                                $data['redirect'] = 'Home'; 
                             }
                             $data['error'] = EXIT_SUCCESS;
@@ -97,7 +97,7 @@ class Home extends CI_Controller {
                                        'Email'     => $usuario,
                                        'pass'      => base64_encode($passRegister),
                                        'Pais'      => $pais,
-                                       'tipo_user' => 1,
+                                       'tipo_user' => TIPO_USER,
                                        'id_pais'   => $id_pais);
                 $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
                 $session    = array('nombre'     => $nombre,

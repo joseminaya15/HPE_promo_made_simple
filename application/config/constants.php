@@ -105,3 +105,5 @@ defined('MSJ_INSERT_ERROR')   OR define('MSJ_INSERT_ERROR', 'Se ha insertado inc
 defined('MSJ_INSERT_SUCCESS') OR define('MSJ_INSERT_SUCCESS', 'Se ha insertado correctamente');
 defined('MSJ_DELETE_ERROR')   OR define('MSJ_DELETE_ERROR', 'Se ha eliminado incorrectamente');
 defined('MSJ_DELETE_SUCCESS') OR define('MSJ_DELETE_SUCCESS', 'Se ha eliminado correctamente');
+//tipo de usuario
+defined('TIPO_USER') OR define('TIPO_USER', 1);
