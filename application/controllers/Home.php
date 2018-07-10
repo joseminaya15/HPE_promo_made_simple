@@ -172,7 +172,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function sendGmail($email){
+    function sendGmail($email) {
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
