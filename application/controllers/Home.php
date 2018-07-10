@@ -27,14 +27,14 @@ class Home extends CI_Controller {
             $opt .= '<option value="'.$val->Nombre.'">'.$val->Nombre.'</option>';
         }
         foreach ($datos as $key) {
-            $html .= '<a id="p'.$cont.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
-                            <div class="mdl-card__title">
-                                <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
-                            </div>
-                        </a>';
+            $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
+                        </div>
+                     </a>';
             $cont++;
         }
         $data['contenido'] = $html;
