@@ -77,7 +77,7 @@ class Categorias extends CI_Controller {
             $html  = '<tr>
                         <td></td>
                         <td></td>
-                     </tr>';
+                      </tr>';
             $data['start_date']  = '';
             $data['end_date']    = '';
             $data['deal_number'] = '';
