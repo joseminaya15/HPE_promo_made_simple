@@ -97,9 +97,9 @@ class Categorias extends CI_Controller {
             }else {             
                 $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto);
             }
-            $cate = '';
-            $html = '';
-            $cont = 0;
+            $cate  = '';
+            $html  = '';
+            $cont  = 0;
             $cont1 = 0;
             if($this->session->userdata('id_cates') == 10){
                 if(count($datos) == 0){
