@@ -40,7 +40,7 @@ class Home extends CI_Controller {
         $data['options']   = $opt;
         $this->load->view($idioma.'/v_principal', $data);
 	}
-    function ingresar(){
+    function ingresar() {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
@@ -79,7 +79,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function registrar(){
+    function registrar() {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
