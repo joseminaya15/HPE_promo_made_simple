@@ -6,8 +6,8 @@
         <meta http-equiv="Content-Language" content="en-En" />
         <meta name="google" value="notranslate">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description"            content="HPE promo made simple">
-        <meta name="keywords"               content="HPE promo made simple">
+        <meta name="description"            content="HPE promos made simple">
+        <meta name="keywords"               content="HPE promos made simple">
         <meta name="robots"                 content="Index,Follow">
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
