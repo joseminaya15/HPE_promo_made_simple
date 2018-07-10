@@ -17,7 +17,7 @@ class Categorias extends CI_Controller {
         $nombre         = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
         $data['nombre'] = $nombre[0];
-        $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
+        $idioma         = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             if(count($datos) == 0){
