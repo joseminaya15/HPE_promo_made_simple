@@ -167,9 +167,12 @@ class M_solicitud extends  CI_Model{
         return $result->result();
     }
     function getPartners($id_pais){
-        $sql = "SELECT pp.* 
-                  FROM pais_x_partner pp
-                 WHERE pp.id_pais IN ?";
+        $sql = "SELECT pp.*,
+                       p.Nombre
+                  FROM pais_x_partner pp,
+                       paises p
+                 WHERE pp.id_pais IN ?
+                   AND pp.id_pais = p.Id";
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }

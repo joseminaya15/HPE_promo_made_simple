@@ -69,7 +69,7 @@ class Home extends CI_Controller {
                     $arrPais  = explode(' / ', $username[0]->Pais);
                     $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
-                    $idpais   = (count($id_pais) == 1) ? $id_pais : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
+                    $idpais   = (count($id_pais) == 1) ? $id_pais[0]->Id : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
                     if(strtolower($username[0]->Email) == strtolower($usuario)){
                         if($password == base64_decode($username[0]->pass)){
                             $session = array('usuario'   => $usuario,

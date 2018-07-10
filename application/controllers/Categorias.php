@@ -192,7 +192,7 @@ class Categorias extends CI_Controller {
         try {
             $html    = '';
             $id_pais = $this->session->userdata('id_pais');
-            $idpais  = (count(explode(',', $id_pais[0]->Id)) == 1 ) ? array($id_pais[0]->Id) : explode(',', $id_pais[0]->Id) ;
+            $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais) ;
             $datos   = $this->M_solicitud->getPartners($idpais);
             $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
             $pais    = '';
