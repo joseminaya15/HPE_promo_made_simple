@@ -207,7 +207,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
+                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">
                             <p class="click_here">Solicite una cotización hoy. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
@@ -843,74 +843,81 @@
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card Ip1 Ip2">
+                    <div class="mdl-card Ip1 Ip2 Ip13">
                         <div class="mdl-card__title">
-                            <p>Para obtener más información, comuníquese con su distribuidor preferido. Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
+                            <p>Para obtener más información, comuníquese con su distribuidor preferido.</p>
                         </div>
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
-                                <li><a href="#america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
-                            </ul>
-                            <div class="tab-content" id="tabla_contenido">
-                                <div role="tabpanel" class="tab-pane fade in active" id="caribe">
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
-                                        <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
+                            <div class="col-md-3">
+                                <p>Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
+                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
+                                <a href="https://iquote.hpe.com/aspx/signin.aspx" targer="_blank"> iQuoute </a>
+                            </div>
+                            <div class="col-md-9">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
+                                    <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
+                                </ul>
+                                <div class="tab-content" id="tabla_contenido">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="caribe">
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
+                                            <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                            <a href="https://store.intcomex.com/Account/Login" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                            <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
+                                            <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
+                                            <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
+                                        </div>
                                     </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <a href="https://store.intcomex.com/Account/Login" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
-                                        <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
-                                        <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
-                                        <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
+                                    <div role="tabpanel" class="tab-pane fade" id="america">
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                            <span>Costa Rica</span>
+                                            <a href="http://store.intcomex.com/iquote" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
+                                            <span>Guatemala</span>
+                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=10401609075948000547" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                            <span>El Salvador</span>
+                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=13740954574110992044" target="_blank">iQuote Tool</a>
+                                        </div>
+                                        <div class="mdl-card__iquote">
+                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
+                                            <span>Guatemala</span>
+                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=8933099990886705432" target="_blank">iQuote Tool</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" class="tab-pane fade" id="america">
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>Costa Rica</span>
-                                        <a href="http://store.intcomex.com/iquote" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
-                                        <span>Guatemala</span>
-                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=10401609075948000547" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>El Salvador</span>
-                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=13740954574110992044" target="_blank">iQuote Tool</a>
-                                    </div>
-                                    <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>Guatemala</span>
-                                        <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=8933099990886705432" target="_blank">iQuote Tool</a>
-                                    </div>
-                                </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
                         </div>
                     </div>
-                    <div class="mdl-card Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip13 Ip14 Ip15 Ip16">
+                    <div class="mdl-card Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip14 Ip15 Ip16">
                         <div class="mdl-card__title">
                             <p>Para obtener más información, comuníquese con su distribuidor preferido.</a></p>
                         </div>
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#caribe1" aria-controls="caribe1" role="tab" data-toggle="tab">Caribe</a></li>
-                                <li><a href="#america1" aria-controls="america1" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
+                                <li class="active"><a href="#caribe1" id="tab-caribe1" aria-controls="caribe1" role="tab" data-toggle="tab">Caribe</a></li>
+                                <li><a href="#america1" id="tab-america1" aria-controls="america1" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="caribe1">

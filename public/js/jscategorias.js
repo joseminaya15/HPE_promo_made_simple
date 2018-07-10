@@ -115,6 +115,7 @@ function openModalTerminos(id){
 	modal.modal('toggle');
 }
 function abrirModal(){
+	var arrPais = '';
     $.ajax({
 		url  : 'Categorias/abrirModal',
 		type : 'POST'
@@ -122,8 +123,30 @@ function abrirModal(){
 		try{
 	        data = JSON.parse(data);
 	        if(data.error == 0){
-	        	$('#caribe').html('');
-	        	$('#caribe').append(data.iquote);
+	        	arrPais = data.pais.split('/');
+	        	console.log(arrPais);
+	        	if(arrPais.length == 1){
+		        	$('#caribe').html('');
+		        	$('#caribe').append(data.iquote);
+		        	$('#tab-caribe').text(data.pais);
+		        	$('#tab-america').css('display', 'none');
+		        	$('#tab-caribe1').text(data.pais);
+		        	$('#tab-caribe1').text(data.pais);
+		        	$('#tab-america1').css('display', 'none');
+	        	} else {
+		        	$('#caribe').html('');
+		        	$('#caribe').append(data.iquote);
+		        	$('#america').html('');
+		        	$('#america').append(data.iquote);
+		        	$('#tab-caribe').text(arrPais[0]);
+		        	$('#tab-america').text(arrPais[1]);
+		        	$('#caribe1').html('');
+		        	$('#caribe1').append(data.iquote);
+		        	$('#america1').html('');
+		        	$('#america1').append(data.iquote);
+		        	$('#tab-caribe1').text(arrPais[0]);
+		        	$('#tab-america1').text(arrPais[1]);
+	        	}
 	        }else {
 	        	return;
 	        }

@@ -192,7 +192,18 @@ class Categorias extends CI_Controller {
         try {
             $html    = '';
             $id_pais = $this->session->userdata('id_pais');
-            $datos   = $this->M_solicitud->getPartners($id_pais);
+            $idpais  = (count(explode(',', $id_pais[0]->Id)) == 1 ) ? array($id_pais[0]->Id) : explode(',', $id_pais[0]->Id) ;
+            $datos   = $this->M_solicitud->getPartners($idpais);
+            $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
+            $pais    = '';
+            foreach ($options as $key) {
+                foreach ($idpais as $value) {
+                    if($value == $key->Id){
+                        $pais .= $key->Nombre.'/';
+                    }
+                }
+            }
+            $pais = trim($pais, '/');
             foreach ($datos as $key) {
                 $html .= '<div class="mdl-card__iquote">
                                 <img src="'.RUTA_IMG.'logo/'.$key->img.'">
@@ -200,7 +211,8 @@ class Categorias extends CI_Controller {
                           </div>';
             }
             $data['iquote'] = $html;
-            $data['error']  = EXIT_SUCCESS;
+            $data['pais']   = $pais;
+            $data['error'] = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }

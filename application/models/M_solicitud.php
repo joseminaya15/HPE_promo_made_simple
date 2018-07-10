@@ -143,7 +143,7 @@ class M_solicitud extends  CI_Model{
                            users u
                      WHERE cp.id_cate = c.Id
                        AND p.Id = cp.id_pais
-                       AND u.id_pais = cp.id_pais
+                       AND cp.id_pais IN (u.id_pais)
                        AND u.Id = ?
                   GROUP BY c.Id
                   ORDER BY c.orden ASC";
@@ -160,7 +160,7 @@ class M_solicitud extends  CI_Model{
                        users u
                  WHERE cp.id_cate = c.Id
                    AND p.Id = cp.id_pais
-                   AND u.id_pais = cp.id_pais
+                   AND cp.id_pais IN (u.id_pais)
                    AND u.Id = ?
                    AND c.Id = ?";
         $result = $this->db->query($sql, array($id_user, $cate));
@@ -169,7 +169,7 @@ class M_solicitud extends  CI_Model{
     function getPartners($id_pais){
         $sql = "SELECT pp.* 
                   FROM pais_x_partner pp
-                 WHERE pp.id_pais = ?";
+                 WHERE pp.id_pais IN ?";
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
@@ -186,8 +186,8 @@ class M_solicitud extends  CI_Model{
     function getIdPais($name){
         $sql = "SELECT c.Id
                   FROM paises c
-                 WHERE (c.Nombre LIKE '%".$name."%')";
-        $result = $this->db->query($sql);
-        return $result->row()->Id;
+                 WHERE (c.Nombre IN ?)";
+        $result = $this->db->query($sql, array($name));
+        return $result->result();
     }
 }

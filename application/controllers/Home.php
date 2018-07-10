@@ -17,13 +17,28 @@ class Home extends CI_Controller {
         $opt    = '';
         $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
+        // $pais   = ( $this->session->userdata('pais') != '' ) ? $this->session->userdata('pais') : 'América Central y el Caribe';
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
         $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
         $datos   = $this->M_solicitud->getDatosCategorias($user);
         $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
+        $combina1= '';
+        $combina2= '';
         foreach ($options as $val) {
-            $opt .= '<option value="'.$val->Nombre.'">'.$val->Nombre.'</option>';
+            if($val->Nombre == 'Bolivia') {
+                $combina1 .= $val->Nombre.' / Ecuador';
+                $opt .= '<option value="'.$combina1.'">'.$combina1.'</option>';
+            } else if($val->Nombre == 'Ecuador') {
+                $opt .= '';
+            } else if($val->Nombre == 'Uruguay') {
+                $opt .= '';
+            } else if($val->Nombre == 'Paraguay') {
+                $combina2 .= $val->Nombre.' / Uruguay';
+                $opt .= '<option value="'.$combina2.'">'.$combina2.'</option>';
+            } else {
+                $opt .= '<option value="'.$val->Nombre.'">'.$val->Nombre.'</option>';
+            }
         }
         foreach ($datos as $key) {
             $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
@@ -37,6 +52,7 @@ class Home extends CI_Controller {
         }
         $data['contenido'] = $html;
         $data['nombre']    = ucwords($nombre[0]);
+        // $data['pais']      = $pais;
         $data['options']   = $opt;
         $this->load->view($idioma.'/v_principal', $data);
 	}
@@ -50,13 +66,16 @@ class Home extends CI_Controller {
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if(count($username) != 0){
                 if($username[0]->idioma == $idioma){
-                    $id_pais  = $this->M_solicitud->getIdPais($username[0]->Pais);
+                    $arrPais  = explode(' / ', $username[0]->Pais);
+                    $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
+                    $id_pais  = $this->M_solicitud->getIdPais($pais2);
+                    $idpais   = (count($id_pais) == 1) ? $id_pais : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
                     if(strtolower($username[0]->Email) == strtolower($usuario)){
                         if($password == base64_decode($username[0]->pass)){
                             $session = array('usuario'   => $usuario,
                                              'tipo_user' => $username[0]->tipo_user,
                                              'nombre'    => $username[0]->Nombre,
-                                             'id_pais'   => $id_pais,
+                                             'id_pais'   => $idpais,
                                              'Id_user'   => $username[0]->Id,
                                              'idioma'    => $username[0]->idioma);
                             $this->session->set_userdata($session);
@@ -88,7 +107,10 @@ class Home extends CI_Controller {
             $passRegister  = $this->input->post('passRegister');
             $pais          = $this->input->post('pais');
             $tipo_user     = $this->input->post('tipo_user');
-            $id_pais       = $this->M_solicitud->getIdPais($pais);
+            $arrPais       = explode(' / ', $pais);
+            $pais2         = (count($arrPais) == 1) ? array($pais) : $arrPais ;
+            $id_pais       = $this->M_solicitud->getIdPais($pais2);
+            $idpais        = (sizeof($id_pais) == 1) ? $id_pais : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
             $correo_verifi = $this->M_solicitud->verificarUsuario($usuario);
             if(count($correo_verifi) == 0) {
                 $arrayInsert = array('Nombre'    => $nombre,
@@ -96,7 +118,7 @@ class Home extends CI_Controller {
                                      'pass'      => base64_encode($passRegister),
                                      'Pais'      => $pais,
                                      'tipo_user' => TIPO_USER,
-                                     'id_pais'   => $id_pais);
+                                     'id_pais'   => $idpais);
                 $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
                 $session    = array('nombre'     => $nombre,
                                     'usuario'    => $usuario,
