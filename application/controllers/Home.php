@@ -91,12 +91,12 @@ class Home extends CI_Controller {
             $id_pais       = $this->M_solicitud->getIdPais($pais);
             $correo_verifi = $this->M_solicitud->verificarUsuario($usuario);
             if(count($correo_verifi) == 0) {
-                $arrayInsert   = array('Nombre'    => $nombre,
-                                       'Email'     => $usuario,
-                                       'pass'      => base64_encode($passRegister),
-                                       'Pais'      => $pais,
-                                       'tipo_user' => TIPO_USER,
-                                       'id_pais'   => $id_pais);
+                $arrayInsert = array('Nombre'    => $nombre,
+                                     'Email'     => $usuario,
+                                     'pass'      => base64_encode($passRegister),
+                                     'Pais'      => $pais,
+                                     'tipo_user' => TIPO_USER,
+                                     'id_pais'   => $id_pais);
                 $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
                 $session    = array('nombre'     => $nombre,
                                     'usuario'    => $usuario,
