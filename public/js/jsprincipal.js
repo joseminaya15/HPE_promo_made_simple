@@ -142,7 +142,7 @@ function registrar() {
 	}
 	if(validateEmailCorporative(correo)){
 		toastr.remove();
-      	msj('error', 'Ingrese su email corporativo');
+      	msj('error', 'Ingrese un email corporativo');
 		return;
 	}
 	if(pais == ''){
