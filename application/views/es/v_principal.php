@@ -135,9 +135,9 @@
                         <div class="js-categorias">
                             <h2>Servidores</h2>
                             <ul>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
                                 <li><a href="">Base Promo</a></li>
                                 <li><a href="">HPE Pointnext</a></li>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
                             </ul>
                         </div>
                     </div>
@@ -155,9 +155,10 @@
                         <div class="js-categorias">
                             <h2>Almacenamiento</h2>
                             <ul>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
                                 <li><a href="">Base Promo</a></li>
                                 <li><a href="">HPE Pointnext</a></li>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a href="">3PAR Avalanche & Store Once</a></li>
                             </ul>
                         </div>
                     </div>
@@ -175,9 +176,9 @@
                         <div class="js-categorias">
                             <h2>Redes</h2>
                             <ul>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
                                 <li><a href="">Base Promo</a></li>
                                 <li><a href="">HPE Pointnext</a></li>
+                                <li><a href="">Datacenter Networking - ToR</a></li>
                             </ul>
                         </div>
                     </div>
@@ -195,9 +196,10 @@
                         <div class="js-categorias">
                             <h2>Servicios</h2>
                             <ul>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
                                 <li><a href="">Base Promo</a></li>
                                 <li><a href="">HPE Pointnext</a></li>
+                                <li><a href="">Datacenter Networking - ToR</a></li>
+                                <li><a href="">3PAR Avalanche & Store Once</a></li>
                             </ul>
                         </div>
                     </div>
