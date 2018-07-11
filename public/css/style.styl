@@ -862,14 +862,6 @@ label
 		height 234px
 		z-index 1000
 		box-shadow none
-		.js-flip__front
-			flipCardFront()
-			background-color #FFFFFF
-			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
-		.js-flip__back
-			flipCardBack()
-			background-color #FFFFFF
-			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 		&:hover
 			.js-flip__front
 				flipCardFrontHover()
@@ -878,6 +870,29 @@ label
 			.mdl-card__title
 				.promocion-imagen
 					transform scale(1)
+		.js-flip__front
+			flipCardFront()
+			background-color #FFFFFF
+			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+		.js-flip__back
+			flipCardBack()
+			background-color #FFFFFF
+			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+			padding 20px
+		.js-categorias
+			text-align left
+			h2
+				font-size 28px
+				line-height 30px
+				margin 10px 0
+				font-family $medium
+				color #757575
+			ul
+				li
+					margin 5px 0
+					a
+						color #000000
+						font-size 18px
 	.mdl-card__title
 		display block
 		overflow hidden

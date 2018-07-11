@@ -134,7 +134,11 @@
                     <div class="js-flip__back">
                         <div class="js-categorias">
                             <h2>Servidores</h2>
-                            <a href="">HPE PointNext</a>
+                            <ul>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a href="">Base Promo</a></li>
+                                <li><a href="">HPE Pointnext</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -150,7 +154,11 @@
                     <div class="js-flip__back">
                         <div class="js-categorias">
                             <h2>Almacenamiento</h2>
-                            <a href="">HPE PointNext</a>
+                            <ul>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a href="">Base Promo</a></li>
+                                <li><a href="">HPE Pointnext</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -166,7 +174,11 @@
                     <div class="js-flip__back">
                         <div class="js-categorias">
                             <h2>Redes</h2>
-                            <a href="">HPE PointNext</a>
+                            <ul>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a href="">Base Promo</a></li>
+                                <li><a href="">HPE Pointnext</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -182,7 +194,11 @@
                     <div class="js-flip__back">
                         <div class="js-categorias">
                             <h2>Servicios</h2>
-                            <a href="">HPE PointNext</a>
+                            <ul>
+                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a href="">Base Promo</a></li>
+                                <li><a href="">HPE Pointnext</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
