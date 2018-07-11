@@ -150,7 +150,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function goToCategorias() {
+    function goToCategorias(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -164,7 +164,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function buscarPromo() {
+    function buscarPromo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -193,7 +193,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function sendGmail($email) {
+    function sendGmail($email){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
