@@ -12,7 +12,7 @@ class Categorias extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-	public function index() {
+	public function index(){
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre         = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
@@ -37,7 +37,7 @@ class Categorias extends CI_Controller {
         $cont  = 0;
         $cont1 = 0;
         $dis   = '';
-        if(count($datos) != 0) {
+        if(count($datos) != 0){
             $cate = $datos[0]->name;
             foreach ($datos as $key) {
                 if($key->est_qty == null || $key->est_qty == ''){
@@ -178,7 +178,7 @@ class Categorias extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function cerrarCesion() {
+    function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -243,10 +243,10 @@ class Categorias extends CI_Controller {
                     }
                 }
             }
-            $data['iquote'] = $html;
-            $data['iquote2']= $html2;
-            $data['pais']   = $pais;
-            $data['error'] = EXIT_SUCCESS;
+            $data['iquote']  = $html;
+            $data['iquote2'] = $html2;
+            $data['pais']    = $pais;
+            $data['error']   = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
