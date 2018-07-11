@@ -39,7 +39,7 @@ class Categorias extends CI_Controller {
         $dis   = '';
         if(count($datos) != 0){
             $cate = $datos[0]->name;
-            foreach ($datos as $key) {
+            foreach ($datos as $key){
                 if($key->est_qty == null || $key->est_qty == ''){
                     $dis = 'display: none';
                 }else {
