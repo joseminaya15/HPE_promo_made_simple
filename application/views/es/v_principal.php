@@ -135,7 +135,55 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <?php echo $contenido ?>
+                <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen server"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="verde">Servers</h2>
+                    </div>
+                 </div>
+                 <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen storage"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="default">Storage</h2>
+                    </div>
+                 </div>
+                 <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen networking"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="orange">Networking</h2>
+                    </div>
+                 </div>
+                 <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen service"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="purple">Services</h2>
+                    </div>
+                 </div>
+                 <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen seller"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="marron">Best Sellers</h2>
+                    </div>
+                 </div>
+                 <div class="mdl-card mdl-promociones">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen engage"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="marron">Engage&Grow</h2>
+                    </div>
+                 </div>
+                <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
