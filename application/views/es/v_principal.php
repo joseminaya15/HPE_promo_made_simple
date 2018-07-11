@@ -50,24 +50,11 @@
                                     <ul class="dropdown-menu">
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Valor</p>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p14)">Aruba Mobility</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p8')">Datacenter Networking - ToR</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Pointnext</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p7')">HPE Simplivity</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">Nimble Promo</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p16')">SAP HANA</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Synergy</a>
+                                            <?php echo $combo1 ?>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Volumen</p>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p17')">InstaSale</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p2')">Server & Storage Flex Attach</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p6')">Storage Accelerate</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Tape Backup Media</a>
+                                            <?php echo $combo2 ?>
                                         </div>
                                     </ul>
                                 </div>

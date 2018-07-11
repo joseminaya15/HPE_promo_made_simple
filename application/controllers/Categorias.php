@@ -16,7 +16,10 @@ class Categorias extends CI_Controller {
         $data['sales']  = $this->session->userdata('id_cates');
         $nombre         = explode(" ", ucwords($this->session->userdata('nombre')));
         $data['texto']  = '';
+        $combo1         = '';
+        $combo2         = '';
         $data['nombre'] = $nombre[0];
+        $promos         = $this->M_solicitud->getDatosCategorias($this->session->userdata('Id_user'));
         $idioma         = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
@@ -87,6 +90,15 @@ class Categorias extends CI_Controller {
             $data['deal_number'] = '';
             $data['qty']         = '';
         }
+        foreach ($promos as $val) {
+            if($val->Id == 10 || $val->Id == 13 || $val->Id == 1 || $val->Id == 3 || $val->Id == 11){
+                $combo2 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
+            }else {
+                $combo1 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
+            }
+        }
+        $data['combo1']      = $combo1;
+        $data['combo2']      = $combo2;
         $data['promociones'] = $html;
         $this->load->view($idioma.'/v_categorias', $data);
 	}
@@ -182,8 +194,6 @@ class Categorias extends CI_Controller {
         try {
             $cate    = $this->input->post('cate');
             $id_cate = $this->M_solicitud->getIdByNameCate($cate);
-            print_r($this->db->last_query());
-            exit;
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;

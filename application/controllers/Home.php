@@ -15,6 +15,8 @@ class Home extends CI_Controller {
 	public function index(){
         $html   = '';
         $opt    = '';
+        $combo1 = '';
+        $combo2 = '';
         $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         // $pais   = ( $this->session->userdata('pais') != '' ) ? $this->session->userdata('pais') : 'América Central y el Caribe';
@@ -49,10 +51,17 @@ class Home extends CI_Controller {
                             <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
                         </div>
                      </a>';
+            if($key->Id == 10 || $key->Id == 13 || $key->Id == 1 || $key->Id == 3 || $key->Id == 11){
+                $combo2 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
+            }else {
+                $combo1 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
+            }
         }
         $data['contenido'] = $html;
         $data['nombre']    = ucwords($nombre[0]);
         $data['options']   = $opt;
+        $data['combo1']    = $combo1;
+        $data['combo2']    = $combo2;
         $this->load->view($idioma.'/v_principal', $data);
 	}
     function ingresar(){
