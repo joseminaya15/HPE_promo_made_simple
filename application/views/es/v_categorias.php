@@ -21,7 +21,7 @@
         <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
@@ -90,7 +90,7 @@
         <section id="productos" class="col-xs-12">
             <div class="mdl-container">
                 <div class="col-xs-12">
-                    <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Regresar</a>
+                    <a href="Home" class="js-flex js-go js-return"><i class="mdi mdi-arrow_back"></i>Regresar</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0" id="textLeft">

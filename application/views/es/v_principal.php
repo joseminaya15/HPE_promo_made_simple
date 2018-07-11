@@ -22,7 +22,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
@@ -124,11 +124,11 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="imagen three"></div>
+                    <div class="imagen four"></div>
                     <div class="cont-carousel">
-                        <img class="img-instasale" src="<?php echo RUTA_IMG?>promociones/Instasale.png">
-                        <h2>#Instasale</h2>
-                        <p>Encuentre aquí los productos con la rotación más alta en el mercado de HPE o Aruba. Mejor precio e inventario local garantizado.</p>
+                        <h2>HPE Marketing HUB</h2>
+                        <p>Conoce la nueva herramienta que te da acceso al repositorio m&aacute;s completo e innovador de marketing digital. Posiciona tu negocio con las nuevas tecnolog&iacute;as.</p>
+                        <a href="http://www.hpemarketinghub.com/" target="_blank" class="js-flex js-go"><i class="mdi mdi-arrow_forward"></i>Explora Ahora</a>
                     </div>
                 </div>
             </div>

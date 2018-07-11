@@ -1,0 +1,46 @@
+/*@font-face {
+	font-family: 'MetricRegular';
+	src: url('MetricHPE/MetricHPE-Desktop-Regular.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MetricBold';
+	src: url('MetricHPE/MetricHPE-Desktop-Bold.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MetricLight';
+	src: url('MetricHPE/MetricHPE-Desktop-Light.otf');
+	font-weight: 100;
+}
+@font-face {
+	font-family: 'MetricSemiBold';
+	src: url('MetricHPE/MetricHPE-Desktop-SemiBold.otf');
+	font-weight: 100;
+}*/
+@font-face{
+	font-family: 'MetricLight';
+	src: url('MetricWeb/MetricWeb-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'MetricRegular';
+	src: url('MetricWeb/MetricWeb-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'MetricSemiBold';
+	src: url('MetricWeb/MetricWeb-SemiBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'MetricBold';
+	src: url('MetricWeb/MetricWeb-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
