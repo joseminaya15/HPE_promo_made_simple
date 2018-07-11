@@ -191,6 +191,7 @@ class Categorias extends CI_Controller {
         $data['msj']   = null;
         try {
             $html    = '';
+            $html2   = '';
             $id_pais = $this->session->userdata('id_pais');
             $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais) ;
             $datos   = $this->M_solicitud->getPartners($idpais);
@@ -205,12 +206,27 @@ class Categorias extends CI_Controller {
             }
             $pais = trim($pais, '/');
             foreach ($datos as $key) {
-                $html .= '<div class="mdl-card__iquote">
-                                <img src="'.RUTA_IMG.'logo/'.$key->img.'">
-                                <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
-                          </div>';
+                if (count(explode(',',$id_pais)) == 1) {
+                    $html .= '<div class="mdl-card__iquote">
+                                    <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                    <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                              </div>';
+                } else {
+                    if(explode('/', $pais)[0] == $key->Nombre) {
+                        $html .= '<div class="mdl-card__iquote">
+                                        <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                        <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                                  </div>';
+                    } else {
+                        $html2 .= '<div class="mdl-card__iquote">
+                                         <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                         <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                                   </div>';
+                    }
+                }
             }
             $data['iquote'] = $html;
+            $data['iquote2']= $html2;
             $data['pais']   = $pais;
             $data['error'] = EXIT_SUCCESS;
         }catch (Exception $e){

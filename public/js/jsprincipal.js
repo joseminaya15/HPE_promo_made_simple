@@ -215,7 +215,7 @@ function validateEmail(email){
     return re.test(email);
 }
 function validateEmailCorporative(email){
-    var re = /[a-zA-Z0-9@]+(?=hotmail.com|yahoo.com|gmail.com)/;
+    var re = /[a-zA-Z0-9@]+(?=hotmail.com|yahoo.com|gmail.com|huawei.com|dell.com|lenovo.com)/;
     return re.test(email);
 }
 function verificarDatos(e){
