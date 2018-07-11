@@ -89,6 +89,7 @@
                                 <!-- <small id="Ep1T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -98,6 +99,7 @@
                                 <!-- <small id="Ep2T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep3" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -107,6 +109,7 @@
                                 <!-- <small id="Ep3T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -116,6 +119,7 @@
                                 <!-- <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep5" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -125,6 +129,7 @@
                                 <!-- <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep6" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -134,6 +139,7 @@
                                 <!-- <small id="Ep6T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep7" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -143,6 +149,7 @@
                                 <!-- <small id="Ep7T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep8" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -152,6 +159,7 @@
                                 <!-- <small id="Ep8T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -161,6 +169,7 @@
                                 <!-- <small id="Ep9T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -170,6 +179,7 @@
                                 <!-- <small id="Ep11T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -179,6 +189,7 @@
                                 <!-- <small id="Ep12T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep13" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -188,6 +199,7 @@
                                 <!-- <small id="Ep13T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep14" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -197,6 +209,7 @@
                                 <!-- <small id="Ep14T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep15" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -207,6 +220,7 @@
                                 <!-- <small id="Ep15T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep16" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -216,6 +230,7 @@
                                 <!-- <small id="Ep16T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                             <div id="Ep17" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -224,6 +239,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
