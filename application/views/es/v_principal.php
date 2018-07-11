@@ -135,54 +135,86 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen server"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="verde">Servidores</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias">
+                            <h2>Servidores</h2>
+                            <a href="">HPE PointNext</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen storage"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="default">Almacenamiento</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias">
+                            <h2>Almacenamiento</h2>
+                            <a href="">HPE PointNext</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen networking"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="orange">Redes</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias">
+                            <h2>Redes</h2>
+                            <a href="">HPE PointNext</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen service"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="purple">Servicios</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias">
+                            <h2>Servicios</h2>
+                            <a href="">HPE PointNext</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="mdl-card mdl-promociones">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen server"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="verde">Servers</h2>
-                    </div>
-                 </div>
-                 <div class="mdl-card mdl-promociones">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen storage"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="default">Storage</h2>
-                    </div>
-                 </div>
-                 <div class="mdl-card mdl-promociones">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen networking"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="orange">Networking</h2>
-                    </div>
-                 </div>
-                 <div class="mdl-card mdl-promociones">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen service"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="purple">Services</h2>
-                    </div>
-                 </div>
-                 <div class="mdl-card mdl-promociones">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen seller"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron">Best Sellers</h2>
                     </div>
-                 </div>
-                 <div class="mdl-card mdl-promociones">
+                </div>
+                <div class="mdl-card mdl-promociones">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen engage"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron">Engage&Grow</h2>
                     </div>
-                 </div>
+                </div>
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">

@@ -32,7 +32,7 @@ widthTransition()
 	-ms-transition max-width .2s linear
 	-o-transition max-width .2s linear
 	transition max-width .2s linear
-AllTransition()
+allTransition()
 	-webkit-transition all .2s linear
 	-moz-transition all .2s linear
 	-ms-transition all .2s linear
@@ -55,6 +55,61 @@ flexCenter()
 	display -webkit-flex
 	align-items center
 	justify-content center
+flipCardFront()
+	position absolute
+	width 100%
+	height 100%
+	z-index 900
+	display block
+	-moz-backface-visibility hidden
+	-webkit-backface-visibility hidden
+	backface-visibility hidden
+	-webkit-transform perspective(600) rotateY(0)
+	-moz-transform perspective(600) rotateY(0)
+	-o-transform perspective(600) rotateY(0)
+	transform perspective(600) rotateY(0)
+	-webkit-transition transform 500ms
+	-moz-transition transform 500ms
+	-ms-transition transform 500ms
+	-o-transition transform 500ms
+	transition transform 500ms
+flipCardBack()
+	position absolute
+	width 100%
+	height 100%
+	z-index 800
+	display block
+	-moz-backface-visibility hidden
+	-webkit-backface-visibility hidden
+	backface-visibility hidden
+	-webkit-transform rotateY(-180deg)
+	-moz-transform rotateY(-180deg)
+	-o-transform rotateY(-180deg)
+	transform rotateY(-180deg)
+	-webkit-transition transform 500ms
+	-moz-transition transform 500ms
+	-ms-transition transform 500ms
+	-o-transition transform 500ms
+	transition transform 500ms
+flipCardFrontHover()
+	-webkit-transform rotateY(180deg)
+	-moz-transform rotateY(180deg)
+	-o-transform rotateY(180deg)
+	transform rotateY(180deg)
+	-webkit-transform perspective(600) rotateY(180deg)
+	-moz-transform perspective(600) rotateY(180deg)
+	-o-transform perspective(600) rotateY(180deg)
+	transform perspective(600) rotateY(180deg)
+flipCardBackHover()
+	-webkit-transform rotateY(0)
+	-moz-transform rotateY(0)
+	-o-transform rotateY(0)
+	transform rotateY(0)
+	-webkit-transform perspective(600) rotateY(0deg)
+	-moz-transform perspective(600) rotateY(0deg)
+	-o-transform perspective(600) rotateY(0deg)
+	transform perspective(600) rotateY(0deg)
+	z-index 950
 body
 	margin 0
 	padding 0
@@ -84,7 +139,7 @@ label
 		i
 			left 7px
 	i
-		AllTransition()
+		allTransition()
 		color $default
 		font-size 26px
 		position absolute
@@ -802,6 +857,27 @@ label
 		.mdl-card__title
 			.promocion-imagen
 				transform scale(1.1)
+	&.js-flip
+		position relative
+		height 234px
+		z-index 1000
+		box-shadow none
+		.js-flip__front
+			flipCardFront()
+			background-color #FFFFFF
+			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+		.js-flip__back
+			flipCardBack()
+			background-color #FFFFFF
+			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+		&:hover
+			.js-flip__front
+				flipCardFrontHover()
+			.js-flip__back
+				flipCardBackHover()
+			.mdl-card__title
+				.promocion-imagen
+					transform scale(1)
 	.mdl-card__title
 		display block
 		overflow hidden
