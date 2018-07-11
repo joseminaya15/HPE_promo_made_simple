@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	function __construct() {
+	function __construct(){
         parent::__construct();
         $this->load->helper("url");
         $this->load->model('M_solicitud');
@@ -55,7 +55,7 @@ class Home extends CI_Controller {
         $data['options']   = $opt;
         $this->load->view($idioma.'/v_principal', $data);
 	}
-    function ingresar() {
+    function ingresar(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
@@ -97,7 +97,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function registrar() {
+    function registrar(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
@@ -136,7 +136,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function cerrarCesion() {
+    function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -280,7 +280,7 @@ class Home extends CI_Controller {
       }
       return json_encode(array_map('utf8_encode', $data));
     }
-    function goTo() {
+    function goTo(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
