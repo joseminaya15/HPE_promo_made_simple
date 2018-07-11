@@ -52,7 +52,6 @@ class Home extends CI_Controller {
         }
         $data['contenido'] = $html;
         $data['nombre']    = ucwords($nombre[0]);
-        // $data['pais']      = $pais;
         $data['options']   = $opt;
         $this->load->view($idioma.'/v_principal', $data);
 	}
