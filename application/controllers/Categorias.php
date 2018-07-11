@@ -71,6 +71,7 @@ class Categorias extends CI_Controller {
             $data['start_date']  = $datos[0]->effect_date;
             $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
+            $data['condiciones'] = ($datos[0]->condiciones_es != '' ) ? $datos[0]->condiciones_es : '-';
             $data['qty']         = $datos[0]->est_qty;
         }else {
             $cate  = '';
@@ -80,6 +81,7 @@ class Categorias extends CI_Controller {
                       </tr>';
             $data['start_date']  = '';
             $data['end_date']    = '';
+            $data['condiciones'] = '';
             $data['deal_number'] = '';
             $data['qty']         = '';
         }

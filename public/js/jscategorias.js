@@ -109,11 +109,6 @@ function goToCategorias(id){
 		}
 	});
 }
-function openModalTerminos(id){
-	var modal = $('#ModalTerminos');
-	modal.find('#E'+id+'Terminos').css("display","block");
-	modal.modal('toggle');
-}
 function abrirModal(){
 	var arrPais = '';
     $.ajax({
@@ -124,7 +119,6 @@ function abrirModal(){
 	        data = JSON.parse(data);
 	        if(data.error == 0){
 	        	arrPais = data.pais.split('/');
-	        	console.log(arrPais);
 	        	if(arrPais.length == 1){
 		        	$('#caribe').html('');
 		        	$('#caribe').append(data.iquote);

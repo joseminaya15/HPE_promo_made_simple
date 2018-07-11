@@ -99,7 +99,8 @@
                                 <p><strong>Promo name:</strong><span>Base Promo</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep1T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep1T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Take advantage of aggressive pricing on Best Seller products (HW + SW + Point Next) in the Heat of the Market&#33;</span></p>
                             </div>
                             <div id="Ep2" class="encabezado">
@@ -107,7 +108,8 @@
                                 <p><strong>Promo name:</strong><span>Server & Storage Flex Attach</span></p>
                                 <p><strong>Feha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep2T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep2T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
                             </div>
                             <div id="Ep3" class="encabezado">
@@ -115,14 +117,16 @@
                                 <p><strong>Promo name:</strong><span>Tape Backup Media</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep3T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep3T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Do not take risks operating on Warranty!! Protect your customer’s IT investment with the best service at the best price! Keep your infrastructure operational at all times and get alerts before a fault occurs with Proactive Care. Ensure correct deployment with original HPE installation and startup services.</span></p>
                             </div>
                             <div id="Ep6" class="encabezado">
@@ -130,21 +134,24 @@
                                 <p><strong>Promo name:</strong><span>Storage Accelerate</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep6T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep6T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep7" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Promo Simplivity</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep7T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep7T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep8" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>DCN Promo</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep8T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep8T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
@@ -152,14 +159,16 @@
                                 <p><strong>Promo name:</strong><span>Synergy Promo</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep9T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep9T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>3PAR Avalanche & Store Once</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep11T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep11T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Increase our 3PAR Installed base with high availability and high performance for DataCenters of medium and small size companies.</span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
@@ -167,21 +176,24 @@
                                 <p><strong>Promo name:</strong><span>Aruba Market Take Over</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep12T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep12T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep13" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba 3x2 Switches</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep13T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep13T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep14" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Aruba Mobility</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep14T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep14T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep15" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -189,14 +201,16 @@
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <p><strong>Important:</strong>This product can only be sale in Costa Rica y Puerto Rico</p>
-                                <small id="Ep15T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep15T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep16" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>SAP HANA</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <small id="Ep16T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small>
+                                <!-- <small id="Ep16T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
                             </div>
                             <div id="Ep17" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -247,13 +261,13 @@
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
-        <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <!-- <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-large" role="document">
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
                             <h2 id="nameTerminos"></h2>
-                            <p>T&eacute;rminos y condiciones</p>
+                            <p>Terms and Conditions</p>
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div id="Ep1Terminos" class="conditions">
@@ -839,7 +853,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -848,12 +862,12 @@
                             <p>Para obtener más información, comuníquese con su distribuidor preferido.</p>
                         </div>
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <div class="col-md-3">
+                            <div class="row col-md-3" >
                                 <p>Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
                                 <img src="<?php echo RUTA_IMG?>promo/iquote.png">
-                                <a href="https://iquote.hpe.com/aspx/signin.aspx" targer="_blank"> iQuoute </a>
+                                <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"> iQuoute </a>
                             </div>
-                            <div class="col-md-9">
+                            <div class="row col-md-9">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
                                     <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
