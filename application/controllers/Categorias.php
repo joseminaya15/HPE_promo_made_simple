@@ -73,6 +73,7 @@ class Categorias extends CI_Controller {
             $data['end_date']    = $datos[0]->fecha_fin;
             $data['condiciones'] = ($datos[0]->condiciones_es != '' ) ? $datos[0]->condiciones_es : '-';
             $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
+            $data['novedades']    = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
             $data['qty']         = $datos[0]->est_qty;
         }else {
             $cate  = '';
@@ -84,6 +85,7 @@ class Categorias extends CI_Controller {
             $data['end_date']    = '';
             $data['condiciones'] = '';
             $data['objetivo']    = '';
+            $data['novedades']    = '';
             $data['deal_number'] = '';
             $data['qty']         = '';
         }

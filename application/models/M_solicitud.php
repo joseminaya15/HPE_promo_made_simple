@@ -32,7 +32,8 @@ class M_solicitud extends  CI_Model{
                        DATE_FORMAT(p.end_date, '%m/%d/%Y') AS fecha_fin,
                        p.est_qty,
                        c.condiciones_es,
-                       c.objetivo_es
+                       c.objetivo_es,
+                       c.novedades_es
                   FROM products p,
                        categorias c,
                        sub_categorias s
