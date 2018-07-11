@@ -101,7 +101,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep1T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Take advantage of aggressive pricing on Best Seller products (HW + SW + Point Next) in the Heat of the Market&#33;</span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep2" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -110,7 +110,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep2T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Obtain additional discounts (On top of Base Program) by combining a System Product (Server or SD) with a minimum of 4 Best Selling Options (HW or TS valid).</span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep3" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -119,6 +119,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep3T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep4" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -127,7 +128,16 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Do not take risks operating on Warranty!! Protect your customer’s IT investment with the best service at the best price! Keep your infrastructure operational at all times and get alerts before a fault occurs with Proactive Care. Ensure correct deployment with original HPE installation and startup services.</span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
+                            </div>
+                            <div id="Ep5" class="encabezado">
+                                <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
+                                <p><strong>Promo name:</strong><span>HPE Pointnext</span></p>
+                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
+                                <!-- <small id="Ep4T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep6" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -136,6 +146,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep6T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep7" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -144,6 +155,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep7T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep8" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -152,7 +164,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep8T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Excellent Promo to attach network solutions for data center connectivity in a simplify way, in all compute and storage opportunities.</span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep9" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -161,6 +173,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep9T"  onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep11" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -169,7 +182,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep11T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Increase our 3PAR Installed base with high availability and high performance for DataCenters of medium and small size companies.</span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep12" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -178,6 +191,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep12T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep13" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -186,6 +200,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep13T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep14" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -194,6 +209,7 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep14T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep15" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -203,6 +219,7 @@
                                 <p><strong>Important:</strong>This product can only be sale in Costa Rica y Puerto Rico</p>
                                 <!-- <small id="Ep15T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep16" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
@@ -211,13 +228,15 @@
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 <!-- <small id="Ep16T" onclick="openModalTerminos(this.id)">T&eacute;rminos y condiciones</small> -->
                                 <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                             <div id="Ep17" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>InstaSale</span></p>
                                 <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                 <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
+                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
+                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
