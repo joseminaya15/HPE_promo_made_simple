@@ -110,7 +110,7 @@ class Home extends CI_Controller {
             $arrPais       = explode(' / ', $pais);
             $pais2         = (count($arrPais) == 1) ? array($pais) : $arrPais ;
             $id_pais       = $this->M_solicitud->getIdPais($pais2);
-            $idpais        = (sizeof($id_pais) == 1) ? $id_pais : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
+            $idpais        = (sizeof($id_pais) == 1) ? $id_pais[0]->Id : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
             $correo_verifi = $this->M_solicitud->verificarUsuario($usuario);
             if(count($correo_verifi) == 0) {
                 $arrayInsert = array('Nombre'    => $nombre,
