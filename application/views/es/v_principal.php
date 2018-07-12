@@ -282,6 +282,10 @@
                                         <input type="text" id="correo" placeholder="Correo electr&oacute;nico" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
+                                        <label for="empresa">Empresa</label>
+                                        <input type="text" id="empresa" placeholder="Empresa" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
                                         <label>Pais</label>
                                         <select class="selectpicker" id="pais" title="País">
                                             <?php echo $options ?>

@@ -119,6 +119,7 @@ function registrar() {
 	var correo    	  = $('#correo').val();
 	var passRegister  = $('#passRegister').val();
 	var pais 	  	  = $('#pais').val();
+	var empresa       = $('#empresa').val();
 	var tipo_user = 1;
 	if(nombre == '' && correo == '' && passRegister == ''){
 		toastr.remove();
@@ -145,6 +146,10 @@ function registrar() {
       	msj('error', 'Ingrese un email corporativo');
 		return;
 	}
+	if(empresa == '' || empresa == null){
+		msj('error', 'Ingrese su empresa');
+		return;
+	}
 	if(pais == ''){
 		toastr.remove();
       	msj('error', 'Ingrese su país');
@@ -160,7 +165,8 @@ function registrar() {
 				usuario       : correo,
 				passRegister  : passRegister,
 				pais 	      : pais,
-				tipo_user     : tipo_user},
+				tipo_user     : tipo_user,
+				empresa  	  : empresa},
 		url  : 'Home/registrar',
 		type : 'POST'
 	}).done(function(data){
@@ -171,6 +177,7 @@ function registrar() {
 				$('#passRegister').val("");
 				$('#correo').val("");
 				$('#pais').val("0");
+				$('#empresa').val("");
 				$('.selectpicker').selectpicker('refresh');
 				toastr.remove();
 	          	msj('error', 'Se registró correctamente');

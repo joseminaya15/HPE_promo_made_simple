@@ -163,6 +163,7 @@ class Home extends CI_Controller {
             $passRegister  = $this->input->post('passRegister');
             $pais          = $this->input->post('pais');
             $tipo_user     = $this->input->post('tipo_user');
+            $empresa       = $this->input->post('empresa');
             $arrPais       = explode(' / ', $pais);
             $pais2         = (count($arrPais) == 1) ? array($pais) : $arrPais ;
             $id_pais       = $this->M_solicitud->getIdPais($pais2);
@@ -173,6 +174,7 @@ class Home extends CI_Controller {
                                      'Email'     => $usuario,
                                      'pass'      => base64_encode($passRegister),
                                      'Pais'      => $pais,
+                                     'empresa'   => $empresa,
                                      'tipo_user' => TIPO_USER,
                                      'id_pais'   => $idpais);
                 $datoInsert = $this->M_solicitud->insertarDatos($arrayInsert, 'users');
