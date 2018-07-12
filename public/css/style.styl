@@ -3,7 +3,7 @@ $bold      = 'MetricBold'
 $medium    = 'MetricSemiBold'
 $light     = 'MetricLight'
 $default   = #00B58E
-$volumen   = #624967
+$volumen   = #614767
 $valor     = #F79679
 $color     = #425563
 $transCen  = translate(-50%,-50%)
@@ -1191,9 +1191,11 @@ label
 		font-size 18px
 		margin 3px 0
 		strong
+			font-family $medium
 			display inline-block
 			max-width 120px
 			width 100%
+			font-weight 100
 	small
 		text-decoration underline
 		color $default
@@ -1208,6 +1210,8 @@ label
 	display none
 .encabezado
 	display none
+.js-encabezado
+	margin 10px 0
 .mdl-container__promocion
 	flexCenter()
 	align-items start
@@ -1360,6 +1364,25 @@ p.objective_comercial
 		margin-top 0
 		font-size 14px
 		line-height 16px
+.js-information
+	.js-information__flex
+		background-color #D1D3D4
+		padding 5px
+		position relative
+		.js-information__left
+			width 100%
+			justify-content flex-start
+			margin 0
+			font-size 18px
+			line-height 20px
+			font-family $medium
+			color $volumen
+		img
+			width 100%
+			max-width 90px
+			position absolute
+			right 0
+			top -10px
 footer
 	background-color #DDDDDD
 	padding 20px

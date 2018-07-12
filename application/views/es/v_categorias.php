@@ -81,14 +81,35 @@
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
-                            <div id="Ep1" class="encabezado" style="display: block;">
-                                <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
-                                <p><strong>Promo name:</strong><span>Base Promo</span></p>
-                                <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
-                                <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
-                                <p><strong>T&eacute;rminos y condiciones:</strong><span><?php echo $condiciones ?></span></p>
-                                <p class="objective_comercial"><strong>Objetivo comercial:</strong><span><?php echo $objetivo ?></span></p>
-                                <p><strong>Novedades:</strong><span><?php echo $novedades ?></span></p>
+                            <div class="js-encabezado">
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">Objetivo Comercial</h2>
+                                    </div>
+                                    <p><?php echo $objetivo ?></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">What's New!</h2>
+                                        <img src="<?php echo RUTA_IMG?>promo/new.png">
+                                    </div>
+                                    <p><?php echo $novedades ?></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">Detalle</h2>
+                                    </div>
+                                    <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
+                                    <p><strong>Promo name:</strong><span>Base Promo</span></p>
+                                    <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                    <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">Condiciones</h2>
+                                    </div>
+                                    <p><?php echo $condiciones ?></p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
