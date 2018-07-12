@@ -80,7 +80,7 @@
                     <a href="Home" class="js-flex js-go js-return"><i class="mdi mdi-arrow_back"></i>Regresar</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
-                        <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
+                        <div class="col-sm-7 col-xs-12 p-0" id="textLeft">
                             <div class="js-encabezado">
                                 <div class="js-information">
                                     <div class="js-information__flex">
@@ -112,16 +112,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
+                        <div class="col-sm-5 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">
                             <p class="click_here">Solicite una cotización hoy. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
+                            <div class="promocion_categoria"></div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>¡Próximamente! En esta sección, encontrará las mejores ofertas y promociones durante un tiempo muy limitado. ¡Manténganse al tanto!</h4>
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="promocion_categoria"></div>
                         <div class="table-responsive table_categoria">
                             <table id="tableCategoria" class="table table-striped">
                                 <thead>
