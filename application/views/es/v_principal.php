@@ -122,7 +122,7 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <div class="mdl-promociones js-flip">
+                <!-- <div class="mdl-promociones js-flip">
                     <div class="js-flip__front">
                         <div class="mdl-card__title">
                             <div class="promocion-imagen server"></div>
@@ -135,9 +135,9 @@
                         <div class="js-categorias">
                             <h2>Servidores</h2>
                             <ul>
-                                <li><a href="">Base Promo</a></li>
-                                <li><a href="">HPE Pointnext</a></li>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
+                                <li><a id="p13" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a></li>
+                                <li><a id="p2" onclick="goToCategorias(this.id)" data-id="HPE Pointnext">HPE Pointnext</a></li>
+                                <li><a id="p1" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a></li>
                             </ul>
                         </div>
                     </div>
@@ -203,7 +203,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <?php echo $contenido ?>
                 <div class="mdl-card mdl-promociones">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen seller"></div>

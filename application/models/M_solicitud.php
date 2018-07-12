@@ -196,4 +196,30 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($name));
         return $result->result();
     }
+    function getRelacionXCates2(){
+        $sql = "SELECT c.*,
+                       r.Nombre AS nom_rel
+                  FROM cates_x_relacion cr,
+                       categorias c,
+                       relacion r
+                 WHERE r.Id = cr.id_rel
+                   AND c.Id = cr.id_cate
+                   ORDER BY r.Nombre, c.Id DESC";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getRelacionXCates1(){
+        $sql = "SELECT r.Nombre as relacion,
+                       r.color,
+                       r.img
+                  FROM cates_x_relacion cr,
+                       categorias c,
+                       relacion r
+                 WHERE r.Id = cr.id_rel
+                   AND c.Id = cr.id_cate
+                GROUP BY r.Nombre
+                ORDER BY r.Nombre DESC";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }
