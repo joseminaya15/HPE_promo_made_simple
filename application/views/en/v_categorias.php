@@ -66,6 +66,9 @@
                                     </div>
                                 </ul>
                             </div>
+                            <div class="col-xs-2">
+                                <span style="color: #FFFFFF;font-size: 16px"><a onclick="goTo('en')">Es</a> / <span style="font-weight: bold;">En</span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
