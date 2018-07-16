@@ -70,7 +70,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-xs-2">
-                                    <span style="color: #FFFFFF;font-size: 16px"><a onclick="goTo('en')">Es</a> / <span style="font-weight: bold;">En</span></span>
+                                    <span id="idioma_change" style="color: #FFFFFF;font-size: 16px"><a onclick="goTo('en')">Es</a> / <span style="font-weight: bold;">En</span></span>
                                 </div>
                             </div>
                         </div>
@@ -412,12 +412,14 @@
                     $("#ModalLogin").modal('hide');
                     $('.menu_header').css('display','flex');
                     $('.search-filter.home').css('display','block');
+                    $('#idioma_change').css('display', 'none');
                 }
                 else{
                     $("#ModalLogin").modal('show');
                     sessionStorage.removeItem('OPEN_MODAL');
                     $('.menu_header').css('display','none');
                     $('.search-filter.home').css('display','none');
+                    $('#idioma_change').css('display', 'block');
                 }
             });
         </script>

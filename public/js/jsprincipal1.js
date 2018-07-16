@@ -58,6 +58,7 @@ function cerrarCesion(){
 	        	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');
+	        	$('#idioma_change').css('display', 'block');
 	        }else {
 	        	return;
 	        }
@@ -89,6 +90,7 @@ function ingresar(){
         	$('#usuario').val("");
         	$('#password').val("");
         	$("#ModalLogin").modal('hide');
+        	$('#idioma_change').css('display', 'none');
         	location.href = 'Home';
         	sessionStorage.setItem('OPEN_MODAL2', '1');
         	sessionStorage.removeItem('OPEN_MODAL');
@@ -282,4 +284,9 @@ function goTo(idioma = 'en'){
           	msj('error',err.message);
 	  	}
 	});
+}
+var cates = null;
+function directPromos(id_cates){
+	cates = 'p'+id_cates;
+	goToCategorias(cates);
 }
