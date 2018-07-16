@@ -28,7 +28,7 @@ class Home extends CI_Controller {
         $this->session->unset_userdata('tipo_user');
         $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
         $datos   = $this->M_solicitud->getDatosCategorias($user);
-        $options = $this->M_solicitud->getPaises($this->session->userdata('idioma'));
+        $options = $this->M_solicitud->getPaises('es');
         $relas   = $this->M_solicitud->getRelacionXCates1();
         $combina1= '';
         $combina2= '';
@@ -133,7 +133,7 @@ class Home extends CI_Controller {
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if(count($username) != 0){
-                if($username[0]->idioma == $idioma){
+                if($username[0]->idioma == 'es'){
                     $arrPais  = explode(' / ', $username[0]->Pais);
                     $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
