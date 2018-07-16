@@ -48,24 +48,24 @@
                                     <ul class="dropdown-menu">
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Value</p>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p14)">Aruba Mobility</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p6')">3PAR Avalanche & Store Once</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p7')">Aruba Market Take Over</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p8')">Aruba 3x2 Switches</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9)">Aruba Mobility</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p5')">Datacenter Networking - ToR</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p2')">HPE Pointnext</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Simplivity</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">Nimble Promo</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p16')">SAP HANA</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Synergy</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p14')">Nimble Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">SAP HANA</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Synergy</a>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Volume</p>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p17')">InstaSale</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p10')">InstaSale</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Base Promo</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Server & Storage Flex Attach</a>
                                             <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Storage Accelerate</a>
-                                            <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Tape Backup Media</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p11')">Tape Backup Media</a>
                                         </div>
                                     </ul>
                                 </div>
