@@ -175,13 +175,13 @@
                         <div class="mdl-card__title">
                             <p>Para obtener más información, comuníquese con su distribuidor preferido.</p>
                         </div>
-                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <div class="row col-md-3" >
+                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15 js-modal">
+                            <div class="col-md-3" >
                                 <p>Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
                                 <img src="<?php echo RUTA_IMG?>logo/logo_iquote.png">
                                 <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote</a>
                             </div>
-                            <div class="row col-md-9">
+                            <div class="col-md-9">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
                                     <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
