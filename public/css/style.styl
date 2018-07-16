@@ -118,6 +118,8 @@ body
 	font-family $regular
 label
 	font-weight 100
+img
+	width 100%
 .js-flex
 	flexCenter()
 #promo
@@ -1245,6 +1247,7 @@ label
 .mdl-container__promocion
 	flexCenter()
 	align-items start
+	justify-content flex-start
 	.table-responsive
 		max-width 550px
 		width 100%
@@ -1287,8 +1290,8 @@ label
 	width 100%
 	max-width 600px
 	order 2
-	background-size 320px !important
-	height 750px
+	background-size contain !important
+	height 400px
 	position relative
 	top 0
 	left 0
@@ -1394,6 +1397,14 @@ p.objective_comercial
 		margin-top 0
 		font-size 14px
 		line-height 16px
+.panel-title
+	a
+		text-decoration none !important
+		color #FFFFFF !important
+		font-family $medium
+		font-size 18px
+.panel-heading
+	background-color $default !important
 .js-information
 	.js-information__flex
 		background-color #D1D3D4
@@ -1483,6 +1494,8 @@ footer
 				font-size 18px
 	.header img
 		max-width 100px
+	.promocion_categoria
+		background-position center !important
 @media ( max-width 600px )
 	.mdl-container__promocion
 		display block

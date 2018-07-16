@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html>
     <head>
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
@@ -122,26 +122,41 @@
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="table-responsive table_categoria">
-                            <table id="tableCategoria" class="table table-striped">
-                                <thead>
-                                    <tr class="tr-header-reporte">
-                                        <?php if($sales == 7) { ?>
-                                            <th>Product number ID</th>
-                                            <th>Product Description</th>
-                                        <?php } else { ?>
-                                            <th>Product number ID</th>
-                                            <th>Product Description</th>
-                                        <?php if($qty != '' || $qty != null) { ?>
-                                            <th>Est. Qty</th>
-                                        <?php } ?>
-                                        <?php } ?>
-                                    </tr>
-                                </thead>
-                                <tbody id="promociones">
-                                    <?php echo $promociones ?>
-                                </tbody>
-                            </table>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Ver listado de productos
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="table-responsive table_categoria">
+                                            <table id="tableCategoria" class="table table-striped">
+                                                <thead>
+                                                    <tr class="tr-header-reporte">
+                                                        <?php if($sales == 7) { ?>
+                                                            <th>Product number ID</th>
+                                                            <th>Product Description</th>
+                                                        <?php } else { ?>
+                                                            <th>Product number ID</th>
+                                                            <th>Product Description</th>
+                                                        <?php if($qty != '' || $qty != null) { ?>
+                                                            <th>Est. Qty</th>
+                                                        <?php } ?>
+                                                        <?php } ?>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="promociones">
+                                                    <?php echo $promociones ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,8 +178,8 @@
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
                             <div class="row col-md-3" >
                                 <p>Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
-                                <img src="<?php echo RUTA_IMG?>promo/iquote.png">
-                                <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"> iQuoute </a>
+                                <img src="<?php echo RUTA_IMG?>logo/logo_iquote.png">
+                                <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote</a>
                             </div>
                             <div class="row col-md-9">
                                 <ul class="nav nav-tabs" role="tablist">
@@ -318,8 +333,8 @@
                 let openCategoria   = sessionStorage.getItem('OPEN_CATEGORIA');
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
-                $('.header_categoria').css("background","url('public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
+                $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+                $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top right");
                 $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
