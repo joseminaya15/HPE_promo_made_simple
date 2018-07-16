@@ -196,6 +196,13 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($name));
         return $result->result();
     }
+    function getNombrePais($id) {
+        $sql = "SELECT Nombre
+                  FROM paises
+                 WHERE Id IN ?";
+        $result = $this->db->query($sql, array($id));
+        return $result->result();
+    }
     function getRelacionXCates2(){
         $sql = "SELECT c.*,
                        r.Nombre AS nom_rel
