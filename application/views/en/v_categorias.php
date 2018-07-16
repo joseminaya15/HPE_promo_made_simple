@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" translate="no">
+﻿<!DOCTYPE html>
+<html lang="en">
     <head>
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
@@ -21,11 +21,10 @@
         <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
-    <!-- oncontextmenu='return false' -->
     <body>
         <section id="promo" class="section">
             <div class="header">
@@ -46,11 +45,24 @@
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Value</p>
-                                        <?php echo $combo1 ?>
+                                        <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</a>
+                                        <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Market Take Over">Aruba Market Take Over</a>
+                                        <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</a>
+                                        <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Mobility">Aruba Mobility</a>
+                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</a>
+                                        <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Pointnext">HPE Pointnext</a>
+                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Simplivity">HPE Simplivity</a>
+                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Nimble Promo">Nimble Promo</a>
+                                        <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="SAP HANA">SAP HANA</a>
+                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Synergy">Synergy</a>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
-                                        <?php echo $combo2 ?>
+                                        <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="InstaSale">InstaSale</a>
+                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a>
+                                        <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a>
+                                        <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Storage Accelerate">Storage Accelerate</a>
+                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Tape Backup Media">Tape Backup Media</a>
                                     </div>
                                 </ul>
                             </div>
@@ -195,7 +207,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
-                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click Here.</a></p>
+                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>Coming Soon! In this section you will find the best offers and promotions for a very limited time. Stay tuned!</h4>
@@ -839,7 +851,7 @@
                                 <li class="active"><a href="#caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
                                 <li><a href="#america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
                             </ul>
-                            <div class="tab-content" id="tabla_contenido">
+                            <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="caribe">
                                     <div class="mdl-card__iquote">
                                         <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
@@ -963,8 +975,8 @@
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script type="text/javascript" src="<?php echo RUTA_JS?>jsprincipal.js?v=<?php echo time();?>"></script>
-        <script type="text/javascript" src="<?php echo RUTA_JS?>jscategorias.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="<?php echo RUTA_JS?>jsprincipal1.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="<?php echo RUTA_JS?>jscategorias1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');

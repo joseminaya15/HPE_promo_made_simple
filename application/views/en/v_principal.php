@@ -1,10 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
-        <meta http-equiv="Content-Language" content="en-En" />
-        <meta name="google" value="notranslate">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <meta name="description"            content="HPE promo made simple">
         <meta name="keywords"               content="HPE promo made simple">
@@ -22,7 +20,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
@@ -36,30 +34,40 @@
                         </div>
                         <div class="col-sm-6 col-xs-8 text-right p-0 header__right">
                             <div class="menu_header">
-                                <p lang="en" translate="no">Welcome <?php echo $nombre ?></p>
+                                <p>Welcome <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
                             <div class="menu_principal col-xs-12 p-0">
                                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab md-button--search" onclick="showSearch()">
                                     <i class="mdi mdi-search"></i>
                                 </button>
-                                <div class="menu_desplegable col-xs-10 p-0">
+                                <div class="menu_desplegable col-xs-12 p-0">
                                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="mdi mdi-menu"></i>Menu
                                     </button>
                                     <ul class="dropdown-menu">
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                             <p>Value</p>
-                                            <?php echo $combo1 ?>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p11')">3PAR Avalanche & Store Once</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p12')">Aruba Market Take Over</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p13')">Aruba 3x2 Switches</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p14)">Aruba Mobility</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p5')">Datacenter Networking - ToR</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p2')">HPE Pointnext</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p4')">HPE Simplivity</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p15')">Nimble Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p16')">SAP HANA</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p9')">Synergy</a>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
                                             <p>Volume</p>
-                                            <?php echo $combo2 ?>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p17')">InstaSale</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Base Promo</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p1')">Server & Storage Flex Attach</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Storage Accelerate</a>
+                                            <a class="mdl-menu__item" onclick="triggerCategoria('p3')">Tape Backup Media</a>
                                         </div>
                                     </ul>
-                                </div>
-                                <div class="col-xs-2">
-                                    <span style="color: #FFFFFF;font-size: 16px;"><a onclick="goTo('es')">Es</a> / <span style="font-weight: bold;">En</span></span>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +130,145 @@
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <?php echo $contenido ?>
+                <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen one"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="three" data-id="Base Promo">Base Promo</h2>
+                    </div>
+                </a>
+                <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen two"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="one" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</h2>
+                    </div>
+                </a>
+                <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen three"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two" data-id="Tape Backup Media">Tape Backup Media</h2>
+                    </div>
+                </a>
+                <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen four"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="four" data-id="HPE Pointnext">HPE Pointnext</h2>
+                    </div>
+                </a>
+                <!-- <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen five"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="four" data-id="Gen 10 Accelerate">Gen 10 Accelerate</h2>
+                    </div>
+                </a> -->
+                <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen six"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="four" data-id="Storage Accelerate">Storage Accelerate</h2>
+                    </div>
+                </a>
+                <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen seven"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="one" data-id="HPE Simplivity">HPE Simplivity</h2>
+                    </div>
+                </a>
+                <a id="p8" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eight"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="three" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</h2>
+                    </div>
+                </a>
+                <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen nine"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two" data-id="Synergy">Synergy</h2>
+                    </div>
+                </a>
+                <!-- <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eleven"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="five" data-id="Virtual Licenses">Virtual Licenses</h2>
+                    </div>
+                </a> -->
+                <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen eleven"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="one" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</h2>
+                    </div>
+                </a>
+                <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen twelve"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="six" data-id="Aruba Market Take Over">Aruba Market Take Over</h2>
+                    </div>
+                </a>
+                <a id="p13" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen thirteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="six" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</h2>
+                    </div>
+                </a>
+                <a id="p14" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen fourteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="six" data-id="Aruba Mobility">Aruba Mobility</h2>
+                    </div>
+                </a>
+                <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen fifteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="one" data-id="Nimble Promo">Nimble Promo</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
+                <a id="p16" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen sixteen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="two" data-id="SAP HANA">SAP HANA</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
+                <a id="p17" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen seventeen"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="seven" data-id="InstaSale">InstaSale</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
@@ -185,7 +331,7 @@
                                     <div class="col-xs-12 form-group mdl-input">
                                         <label>Country</label>
                                         <select class="selectpicker" id="pais" title="Typically your Country">
-                                            <!-- <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
                                             <option value="Puerto Rico">Puerto Rico</option>
                                             <option value="Panamá">Panam&aacute;</option>
                                             <option value="Costa Rica">Costa Rica</option>
@@ -219,8 +365,7 @@
                                             <option value="Cayman">Cayman</option>
                                             <option value="Jamaica">Jamaica</option>
                                             <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                            <option value="Bermuda">Bermuda</option> -->
-                                            <?php echo $options ?>
+                                            <option value="Bermuda">Bermuda</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
@@ -252,17 +397,13 @@
         <script src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>jsprincipal.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsprincipal1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
             } else {
             }
             $(window).load(function() {
-                var URLactual = window.location;
-                // if(URLactual['href'] != 'http://www.hpepromosmadesimple.com/Home'){
-                //     location.href = 'http://www.hpepromosmadesimple.com/Home';
-                // }
                 let openModal = sessionStorage.getItem('OPEN_MODAL2');
                 if(openModal && openModal == '1') {
                     $("#ModalLogin").modal('hide');

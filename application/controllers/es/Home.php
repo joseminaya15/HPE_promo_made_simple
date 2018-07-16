@@ -51,54 +51,58 @@ class Home extends CI_Controller {
         $html3 = '';
         $html4 = '';
         $relas2 = $this->M_solicitud->getRelacionXCates2();
-        foreach ($relas as $rel) {
-            $html1 = '';
-            $html2 = '';
-            $html3 = '';
-            $html4 = '';
-            $var   = '';
-            $html .= '<div class="mdl-promociones js-flip">
-                        <div class="js-flip__front">
-                            <div class="mdl-card__title">
-                                <div class="promocion-imagen '.$rel->img.'"></div>
+        if($this->session->userdata('idioma') != 'en'){
+             foreach ($relas as $rel) {
+                $html1 = '';
+                $html2 = '';
+                $html3 = '';
+                $html4 = '';
+                $var   = '';
+                $html .= '<div class="mdl-promociones js-flip">
+                            <div class="js-flip__front">
+                                <div class="mdl-card__title">
+                                    <div class="promocion-imagen '.$rel->img.'"></div>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
+                                </div>
                             </div>
-                            <div class="mdl-card__supporting-text">
-                                <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
-                            </div>
-                        </div>
-                        <div class="js-flip__back">
-                            <div class="js-categorias">
-                                <h2>'.$rel->relacion.'</h2>
-                                <ul>';
-            foreach ($relas2 as $rels) {
-                if($rels->nom_rel == $rel->relacion){
-                    $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                    $var  = $html1;
-                }else if($rels->nom_rel == $rel->relacion){
-                    $html2 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                    $var = $html2;
-                }else if($rels->nom_rel == $rel->relacion){
-                    $html3 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                    $var = $html3;
-                }else if($rels->nom_rel == $rel->relacion){
-                    $html4 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                    $var = $html4;
+                            <div class="js-flip__back">
+                                <div class="js-categorias">
+                                    <h2>'.$rel->relacion.'</h2>
+                                    <ul>';
+                foreach ($relas2 as $rels) {
+                    if($rels->nom_rel == $rel->relacion){
+                        $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        $var  = $html1;
+                    }else if($rels->nom_rel == $rel->relacion){
+                        $html2 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        $var = $html2;
+                    }else if($rels->nom_rel == $rel->relacion){
+                        $html3 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        $var = $html3;
+                    }else if($rels->nom_rel == $rel->relacion){
+                        $html4 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        $var = $html4;
+                    }
                 }
-            }
-            $html .= $var.' </ul>
+                $html .= $var.' </ul>
+                                </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>';
+            }
         }
         foreach ($datos as $key) {
-            // $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
-            //             <div class="mdl-card__title">
-            //                 <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
-            //             </div>
-            //             <div class="mdl-card__supporting-text">
-            //                 <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
-            //             </div>
-            //          </a>';
+            if($this->session->userdata('idioma') == 'en'){
+                $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+                            <div class="mdl-card__title">
+                                <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
+                            </div>
+                         </a>';
+            }
             if($key->Id == 10 || $key->Id == 13 || $key->Id == 1 || $key->Id == 3 || $key->Id == 11){
                 $combo2 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
             }else {
