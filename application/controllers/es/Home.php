@@ -19,8 +19,7 @@ class Home extends CI_Controller {
         $combo2 = '';
         $user   = $this->session->userdata('Id_user');
         $idioma = 'es';
-
-        $pais1  = $this->session->userdata('id_pais');
+        $pais1  = $this->session->userdata('id_pais') == '' ? 1 : $this->session->userdata('id_pais');
         $arrPais = explode(',', $pais1);
         $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
         $nomPais = $this->M_solicitud->getNombrePais($pais2);
