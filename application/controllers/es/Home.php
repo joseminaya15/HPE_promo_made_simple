@@ -18,7 +18,7 @@ class Home extends CI_Controller {
         $combo1 = '';
         $combo2 = '';
         $user   = $this->session->userdata('Id_user');
-        $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
+        $idioma = 'es';
 
         $pais1  = $this->session->userdata('id_pais');
         $arrPais = explode(',', $pais1);
@@ -55,7 +55,7 @@ class Home extends CI_Controller {
         $html3 = '';
         $html4 = '';
         $relas2 = $this->M_solicitud->getRelacionXCates2();
-        if($this->session->userdata('idioma') != 'en'){
+        // if('es' != 'en'){
              foreach ($relas as $rel) {
                 $html1 = '';
                 $html2 = '';
@@ -95,18 +95,18 @@ class Home extends CI_Controller {
                             </div>
                         </div>';
             }
-        }
+        // }
         foreach ($datos as $key) {
-            if($this->session->userdata('idioma') == 'en'){
-                $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
-                            <div class="mdl-card__title">
-                                <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
-                            </div>
-                         </a>';
-            }
+            // if('es' == 'en'){
+            //     $html .= '<a id="p'.$key->Id.'" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
+            //                 <div class="mdl-card__title">
+            //                     <div class="promocion-imagen" style="background: url('.RUTA_IMG.'promociones/'.$key->img.') no-repeat center center;"></div>
+            //                 </div>
+            //                 <div class="mdl-card__supporting-text">
+            //                     <h2 class="'.$key->color.'" data-id="'.$key->Nombre.'">'.$key->Nombre.'</h2>
+            //                 </div>
+            //              </a>';
+            // }
             if($key->Id == 10 || $key->Id == 13 || $key->Id == 1 || $key->Id == 3 || $key->Id == 11){
                 $combo2 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
             }else {
@@ -121,7 +121,7 @@ class Home extends CI_Controller {
         if ($idioma == 'es') {
             $data['pais']      = (count($nomPais) == 1) ? $nomPais[0]->Nombre : ($nomPais[0]->Nombre.' y '.$nomPais[1]->Nombre);
         }
-        $this->load->view($idioma.'/v_principal', $data);
+        $this->load->view('es/v_principal', $data);
 	}
     
     function ingresar(){
