@@ -270,7 +270,7 @@ function goTo(idioma = 'en'){
 	  	try{
 		    data = JSON.parse(data);
 		    if(data.error == 0){
-		    	location.href = "http://localhost:8080/HPE_promo_made_simple/es/Home";
+		    	location.href = "http://localhost/HPE_promo_made_simple/es/Home";
 		    	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');
