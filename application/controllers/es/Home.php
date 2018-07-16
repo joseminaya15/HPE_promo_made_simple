@@ -55,7 +55,7 @@ class Home extends CI_Controller {
         $html4 = '';
         $relas2 = $this->M_solicitud->getRelacionXCates2();
         // if('es' != 'en'){
-             foreach ($relas as $rel) {
+            foreach ($relas as $rel) {
                 $html1 = '';
                 $html2 = '';
                 $html3 = '';
@@ -78,7 +78,7 @@ class Home extends CI_Controller {
                     if($rels->nom_rel == $rel->relacion){
                         $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
                         $var  = $html1;
-                    }else if($rels->nom_rel == $rel->relacion){
+                    }/*else if($rels->nom_rel == $rel->relacion){
                         $html2 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
                         $var = $html2;
                     }else if($rels->nom_rel == $rel->relacion){
@@ -87,7 +87,7 @@ class Home extends CI_Controller {
                     }else if($rels->nom_rel == $rel->relacion){
                         $html4 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
                         $var = $html4;
-                    }
+                    }*/
                 }
                 $html .= $var.' </ul>
                                 </div>

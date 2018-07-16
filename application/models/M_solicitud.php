@@ -225,7 +225,7 @@ class M_solicitud extends  CI_Model{
                  WHERE r.Id = cr.id_rel
                    AND c.Id = cr.id_cate
                 GROUP BY r.Nombre
-                ORDER BY r.Nombre DESC";
+                ORDER BY r.Id ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }

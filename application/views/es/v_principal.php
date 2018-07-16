@@ -213,14 +213,14 @@
                         <h2 class="marron">Best Sellers</h2>
                     </div>
                 </div>
-                <div class="mdl-card mdl-promociones">
+                <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen engage"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron">Engage&Grow</h2>
                     </div>
-                </div>
+                </a>
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
