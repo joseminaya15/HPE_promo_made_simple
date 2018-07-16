@@ -237,9 +237,6 @@ function buscarPromo(datos){
 	  }
 	});
 }
-function triggerCategoria(id1){
-	goToCategorias(id1);
-}
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
 	if(lenghtInput.length > 0){
@@ -256,39 +253,8 @@ function clearInput(){
 	$('.header--principal').removeClass('active');
 }
 var cates = null;
-function directPromos(id_cates){
-	if(id_cates == 1){
-		cates = 'p2';
-	}else if(id_cates == 2){
-		cates = 'p4';
-	}else if(id_cates == 3){
-		cates = 'p6';
-	}else if(id_cates == 4){
-		cates = 'p7';
-	}else if(id_cates == 5){
-		cates = 'p8';
-	}else if(id_cates == 6){
-		cates = 'p11';
-	}else if(id_cates == 7){
-		cates = 'p12';
-	}else if(id_cates == 8){
-		cates = 'p13';
-	}else if(id_cates == 9){
-		cates = 'p14';
-	}/*else if(id_cates == 10){
-		cates = 'p15';
-	}*/else if(id_cates == 11){
-		cates = 'p3';
-	}else if(id_cates == 15){
-		cates = 'p16';
-	}else if(id_cates == 12){
-		cates = 'p9';
-	}else if(id_cates == 13){
-		cates = 'p1';
-	}else if(id_cates == 14){
-		cates = 'p15';
-	}
-	goToCategorias(cates);
+function triggerCategoria(id1){
+	goToCategorias(id1);
 }
 function showSearch(){
 	$('.header--principal').addClass('active');

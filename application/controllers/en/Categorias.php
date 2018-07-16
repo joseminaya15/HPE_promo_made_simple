@@ -94,7 +94,7 @@ class Categorias extends CI_Controller {
         $data['qty']         = '';
         }
         $data['promociones'] = $html;
-        $this->load->view('v_categorias', $data);
+        $this->load->view('en/v_categorias', $data);
 	}
     function buscarPromo(){
         $data['error'] = EXIT_ERROR;
