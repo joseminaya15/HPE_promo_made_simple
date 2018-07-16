@@ -19,7 +19,11 @@ class Home extends CI_Controller {
         $combo2 = '';
         $user   = $this->session->userdata('Id_user');
         $idioma = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
-        // $pais   = ( $this->session->userdata('pais') != '' ) ? $this->session->userdata('pais') : 'América Central y el Caribe';
+
+        $pais1  = $this->session->userdata('id_pais');
+        $arrPais = explode(',', $pais1);
+        $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
+        $nomPais = $this->M_solicitud->getNombrePais($pais2);
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('tipo_user');
         $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
@@ -114,8 +118,12 @@ class Home extends CI_Controller {
         $data['options']   = $opt;
         $data['combo1']    = $combo1;
         $data['combo2']    = $combo2;
+        if ($idioma == 'es') {
+            $data['pais']      = (count($nomPais) == 1) ? $nomPais[0]->Nombre : ($nomPais[0]->Nombre.' y '.$nomPais[1]->Nombre);
+        }
         $this->load->view($idioma.'/v_principal', $data);
 	}
+    
     function ingresar(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;

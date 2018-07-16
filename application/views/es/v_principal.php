@@ -81,7 +81,7 @@
                                     <button id="buttonClear" class="mdl-button mdl-js-button mdl-button--icon" onclick="clearInput()"><i class="mdi mdi-close"></i></button>
                                 </div>
                             </div>
-                            <p class="text-important search">All these promos are valid only for Central America and Caribbean.</p>
+                            <p class="text-important search">Todas estas promociones son válidas solo para <?php echo $pais?></p>
                         </div>
                     </div>
                 </div>
