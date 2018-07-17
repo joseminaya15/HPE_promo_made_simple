@@ -106,9 +106,9 @@ class Home extends CI_Controller {
             //                 </div>
             //              </a>';
             // }
-            if($key->Id == 10 || $key->Id == 13 || $key->Id == 1 || $key->Id == 3 || $key->Id == 11){
+            if(/*$key->Id == 10 || $key->Id == 13 || $key->Id == 1 || $key->Id == 3 || $key->Id == 11*/$key->Id == 6 || $key->Id == 5 || $key->Id == 15){
                 $combo2 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
-            }else {
+            }else if($key->Id == 13 || $key->Id == 1 || $key->Id == 2 || $key->Id == 11 || $key->Id == 10){
                 $combo1 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$key->Id.'&quot;)">'.$key->Nombre.'</a>';
             }
         }

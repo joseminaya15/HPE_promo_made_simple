@@ -306,7 +306,7 @@ function goTo(idioma){
 	  	try{
 		    data = JSON.parse(data);
 		    if(data.error == 0){
-		    	location.href = "http://localhost/HPE_promo_made_simple/en/Home";
+		    	location.href = "http://192.168.200.146:8080/HPE_promo_made_simple/en/Home";
 		    	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');
