@@ -243,7 +243,7 @@
         </section>
         <footer>
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
@@ -293,9 +293,6 @@
                                     <div class="col-xs-12 form-group mdl-input">
                                         <label for="passRegister">Contraseña</label>
                                         <input type="password" id="passRegister" placeholder="Contraseña" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 p-0">
-                                        <p class="text-important">Todas estas promociones son válidas solo para América Central y el Caribe.</p>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Registrar</button>
