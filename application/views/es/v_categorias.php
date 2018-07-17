@@ -84,6 +84,14 @@
                             <div class="js-encabezado">
                                 <div class="js-information">
                                     <div class="js-information__flex">
+                                        <h2 class="js-information__left">Detalle</h2>
+                                    </div>
+                                    <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
+                                    <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                    <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
                                         <h2 class="js-information__left">Objetivo Comercial</h2>
                                     </div>
                                     <p><?php echo $objetivo ?></p>
@@ -94,14 +102,6 @@
                                         <img src="<?php echo RUTA_IMG?>promo/new.png">
                                     </div>
                                     <p><?php echo $novedades ?></p>
-                                </div>
-                                <div class="js-information">
-                                    <div class="js-information__flex">
-                                        <h2 class="js-information__left">Detalle</h2>
-                                    </div>
-                                    <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
-                                    <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
-                                    <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
@@ -163,7 +163,7 @@
         </section>
         <footer class="col-xs-12">
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:maria-alejandra.prieto@hpe.com">maria-alejandra.prieto@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>

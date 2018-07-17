@@ -137,15 +137,17 @@ img
 	padding-left 35px
 	&.js-return
 		color #000000 !important
+		i
+			color $default
 	&:hover
 		i
 			left 7px
 	i
 		allTransition()
-		color $default
 		font-size 26px
 		position absolute
 		left 0
+		color #FFFFFF
 .center-login
 	height 100vh
 	position relative
@@ -938,7 +940,7 @@ img
 			&.sixteen
 				background url(../img/promociones/p15.jpg) center center no-repeat
 			&.seventeen
-				background url(../img/promociones/p10.jpg) center center no-repeat
+				background url(../img/promociones/p10.png) center center no-repeat
 			&.server
 				background url(../img/promociones/p4.jpg) center center no-repeat
 			&.storage
@@ -1083,12 +1085,11 @@ img
 	margin 50px 0
 #namePromocion
 	margin 0
-	margin-top 10px
-	margin-bottom 20px
+	margin 20px 0 10px 0
 	font-size 40px
 	line-height 42px
 	font-family $medium
-	text-align center
+	text-align left
 /*DATATABLE*/
 .pagination
 	&>li>a

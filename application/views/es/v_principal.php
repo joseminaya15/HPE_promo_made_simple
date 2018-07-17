@@ -114,7 +114,7 @@
                     <div class="cont-carousel">
                         <h2>HPE Marketing HUB</h2>
                         <p>Conoce la nueva herramienta que te da acceso al repositorio m&aacute;s completo e innovador de marketing digital. Posiciona tu negocio con las nuevas tecnolog&iacute;as.</p>
-                        <a href="http://www.hpemarketinghub.com/" target="_blank" class="js-flex js-go"><i class="mdi mdi-arrow_forward" style="color: #fff"></i>Explora Ahora</a>
+                        <a href="http://www.hpemarketinghub.com/" target="_blank" class="js-flex js-go"><i class="mdi mdi-arrow_forward"></i>Explora Ahora</a>
                     </div>
                 </div>
             </div>
