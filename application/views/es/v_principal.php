@@ -87,7 +87,7 @@
                     <div class="container">
                         <div class="cont-carousel">
                             <h2>Bienvenido a Promos Made Simple</h2>
-                            <p>Puede ver todas las promociones actuales y las que están a punto de caducar</p>
+                            <p>Conoce nuestras promociones vigentes para este trimestre. ¡Buena suerte en tus ventas!</p>
                         </div>
                     </div>
                 </div>
@@ -212,7 +212,7 @@
                         <h2 class="marron">Best Sellers</h2>
                     </div>
                 </div>
-                <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php">
+                <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen engage"></div>
                     </div>
