@@ -118,7 +118,7 @@ class Home extends CI_Controller {
         $data['combo1']    = $combo1;
         $data['combo2']    = $combo2;
         if ($idioma == 'es') {
-            $data['pais']      = (count($nomPais) == 1) ? $nomPais[0]->Nombre : ($nomPais[0]->Nombre.' y '.$nomPais[1]->Nombre);
+            $data['pais']  = (count($nomPais) == 1) ? $nomPais[0]->Nombre : ($nomPais[0]->Nombre.' y '.$nomPais[1]->Nombre);
         }
         $this->load->view('es/v_principal', $data);
 	}
