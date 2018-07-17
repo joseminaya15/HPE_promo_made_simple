@@ -29,7 +29,7 @@ class Categorias extends CI_Controller {
                 $data['texto'] = '';
             }
         }else {
-            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
+            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'es'); 
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate  = '';

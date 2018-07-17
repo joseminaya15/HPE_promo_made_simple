@@ -25,7 +25,7 @@ class Categorias extends CI_Controller {
                 $data['texto'] = '';
             }
         }else {
-            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates')); 
+            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'en'); 
         }
         $cate = '';
         $html = '';

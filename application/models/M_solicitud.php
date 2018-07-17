@@ -24,12 +24,19 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDatosProducts($id_cate){
+    function getDatosProducts($id_cate, $idioma){
+        $texto = '';
+        if($idioma == 'es'){
+          $texto = "DATE_FORMAT(c.fec_ini, '%m/%d/%Y') AS effect_date,
+                       DATE_FORMAT(c.fec_fin, '%m/%d/%Y') AS fecha_fin,";
+        }else {
+          $texto = "DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
+                       DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin,";
+        }
         $sql = "SELECT p.*,
                        s.name,
                        c.Nombre,
-                       DATE_FORMAT(c.fec_ini, '%m/%d/%Y') AS effect_date,
-                       DATE_FORMAT(c.fec_fin, '%m/%d/%Y') AS fecha_fin,
+                       ".$texto."
                        p.est_qty,
                        c.condiciones_es,
                        c.objetivo_es,
