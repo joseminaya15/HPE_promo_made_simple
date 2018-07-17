@@ -97,15 +97,15 @@
                         <h2>¿Cómo funciona?</h2>
                         <div class="cont-carousel__contenido">
                             <strong>1</strong>
-                            <p>Busque productos por nombre o SKU.</p>
+                            <p>Busca productos por nombre o SKU.</p>
                         </div>
                         <div class="cont-carousel__contenido">
                             <strong>2</strong>
-                            <p>Elija la mejor promoción que se adapte a las necesidades de su cliente.</p>
+                            <p>Elije la mejor promoción que se adapte a las necesidades de tu cliente.</p>
                         </div>
                         <div class="cont-carousel__contenido">
                             <strong>3</strong>
-                            <p>Acceda a iQuote a través del sitio web de su distribuidor preferido.</p>
+                            <p>Accede a iQuote a través del sitio web de tu distribuidor preferido.</p>
                         </div>
                     </div>
                 </div>
@@ -212,14 +212,34 @@
                         <h2 class="marron">Best Sellers</h2>
                     </div>
                 </div>
-                <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen engage"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="marron">Engage&Grow</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias">
+                            <h2>Gana m&aacute;s puntos:</h2>
+                            <ul>
+                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Registrando tus ventas en HPE financial services.</a></li>
+                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entrenandote en storage.</a></li>
+                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en Aruba clearpass.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen engage"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron">Engage&Grow</h2>
                     </div>
-                </a>
+                </a> -->
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
