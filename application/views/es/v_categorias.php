@@ -100,13 +100,12 @@
                                         <h2 class="js-information__left">Detalle</h2>
                                     </div>
                                     <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
-                                    <p><strong>Promo name:</strong><span>Base Promo</span></p>
                                     <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                     <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
-                                        <h2 class="js-information__left">Condiciones</h2>
+                                        <h2 class="js-information__left">T&eacute;rminos y Condiciones</h2>
                                     </div>
                                     <p><?php echo $condiciones ?></p>
                                 </div>
@@ -171,13 +170,11 @@
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card Ip1 Ip2 Ip13">
-                        <div class="mdl-card__title">
-                            <p>Para obtener más información, comuníquese con su distribuidor preferido.</p>
-                        </div>
+                    <div class="mdl-card Ip1 Ip2 Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip13 Ip4 Ip15">
+                        <div class="mdl-card__title"></div>
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15 js-modal">
                             <div class="col-md-3" >
-                                <p>Si no tiene acceso al Iquote de cualquier mayorista, puede ingresar <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">aquí.</a></p>
+                                <p>Cotiza directamente con <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal o a través del iQuote de su mayorista de confianza</p>
                                 <img src="<?php echo RUTA_IMG?>logo/logo_iquote.png">
                                 <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote</a>
                             </div>
@@ -233,66 +230,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
-                        </div>
-                    </div>
-                    <div class="mdl-card Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip14 Ip15 Ip16">
-                        <div class="mdl-card__title">
-                            <p>Para obtener más información, comuníquese con su distribuidor preferido.</a></p>
-                        </div>
-                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#caribe1" id="tab-caribe1" aria-controls="caribe1" role="tab" data-toggle="tab">Caribe</a></li>
-                                <li><a href="#america1" id="tab-america1" aria-controls="america1" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active" id="caribe1">
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
-                                        <a href="mailto:Erika.MenaMachuca@ingrammicro.com">Erika.MenaMachuca@ingrammicro.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <a href="mailto:Anderson.Mendoza@intcomex.com">Anderson.Mendoza@intcomex.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
-                                        <a href="mailto:ricky_altez@solutionboxusa.com">ricky_altez@solutionboxusa.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
-                                        <a href="mailto:LAHPEGSales@techdata.com">LAHPEGSales@techdata.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
-                                        <a href="mailto:Tatiana.Gomez@wtrade.com">Tatiana.Gomez@wtrade.com</a>
-                                    </div>  
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="america1">
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>Costa Rica</span>
-                                        <a href="mailto:jviquez@intcomex.com">jviquez@intcomex.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
-                                        <span>Guatemala</span>
-                                        <a href="mailto:acaceres@tecnobodega.com.gt">acaceres@tecnobodega.com.gt</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>El Salvador</span>
-                                        <a href="mailto:Lilian.Gonzalez@intcomex.com">Lilian.Gonzalez@intcomex.com</a>
-                                    </div>
-                                    <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                        <span>Guatemala</span>
-                                        <a href="mailto:mariaj.garcia@intcomex.com">mariaj.garcia@intcomex.com</a>
-                                    </div>
-                                </div>
-                            </div>                   
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>

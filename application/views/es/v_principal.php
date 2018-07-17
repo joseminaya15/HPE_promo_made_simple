@@ -114,104 +114,37 @@
                     <div class="cont-carousel">
                         <h2>HPE Marketing HUB</h2>
                         <p>Conoce la nueva herramienta que te da acceso al repositorio m&aacute;s completo e innovador de marketing digital. Posiciona tu negocio con las nuevas tecnolog&iacute;as.</p>
-                        <a href="http://www.hpemarketinghub.com/" target="_blank" class="js-flex js-go"><i class="mdi mdi-arrow_forward"></i>Explora Ahora</a>
+                        <a href="http://www.hpemarketinghub.com/" target="_blank" class="js-flex js-go"><i class="mdi mdi-arrow_forward" style="color: #fff"></i>Explora Ahora</a>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
-                <!-- <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen server"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="verde">Servidores</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias">
-                            <h2>Servidores</h2>
-                            <ul>
-                                <li><a id="p13" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a></li>
-                                <li><a id="p2" onclick="goToCategorias(this.id)" data-id="HPE Pointnext">HPE Pointnext</a></li>
-                                <li><a id="p1" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen storage"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="default">Almacenamiento</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias">
-                            <h2>Almacenamiento</h2>
-                            <ul>
-                                <li><a href="">Base Promo</a></li>
-                                <li><a href="">HPE Pointnext</a></li>
-                                <li><a href="">Server & Storage Flex Attach</a></li>
-                                <li><a href="">3PAR Avalanche & Store Once</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen networking"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="orange">Redes</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias">
-                            <h2>Redes</h2>
-                            <ul>
-                                <li><a href="">Base Promo</a></li>
-                                <li><a href="">HPE Pointnext</a></li>
-                                <li><a href="">Datacenter Networking - ToR</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen service"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="purple">Servicios</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias">
-                            <h2>Servicios</h2>
-                            <ul>
-                                <li><a href="">Base Promo</a></li>
-                                <li><a href="">HPE Pointnext</a></li>
-                                <li><a href="">Datacenter Networking - ToR</a></li>
-                                <li><a href="">3PAR Avalanche & Store Once</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
                 <?php echo $contenido ?>
-                <div class="mdl-card mdl-promociones">
+                <div class="mdl-promociones js-flip">
+                    <div class="js-flip__front">
+                        <div class="mdl-card__title">
+                            <div class="promocion-imagen seventeen"></div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h2 class="verde">Instasale</h2>
+                        </div>
+                    </div>
+                    <div class="js-flip__back">
+                        <div class="js-categorias js-flex" style="justify-content: center;height: 100%;">
+                            <h2>MUY PRONTO</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="mdl-card mdl-promociones">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen seller"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron">Best Sellers</h2>
                     </div>
-                </div>
+                </div> -->
                 <div class="mdl-promociones js-flip">
                     <div class="js-flip__front">
                         <div class="mdl-card__title">
@@ -232,14 +165,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <a class="mdl-card mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen engage"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="marron">Engage&Grow</h2>
-                    </div>
-                </a> -->
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">

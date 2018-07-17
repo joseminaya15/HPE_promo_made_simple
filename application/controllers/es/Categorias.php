@@ -71,10 +71,23 @@ class Categorias extends CI_Controller {
                     }
                 }
             }
+            $condicion = '';
+            $explode = explode('.', $datos[0]->condiciones_es);
+            $count = count($explode);
+            unset($explode[$count-1]);
+            if( $datos[0]->condiciones_es != '' ) {
+                $condicion .= '<ul>';
+                foreach ($explode as $key) {
+                    $condicion .= '<li>'.$key.'.</li>';
+                }
+                $condicion .= '</ul>';
+            } else {
+                $condicion = '-';
+            }
             $data['start_date']  = $datos[0]->effect_date;
             $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
-            $data['condiciones'] = ($datos[0]->condiciones_es != '' ) ? $datos[0]->condiciones_es : '-';
+            $data['condiciones'] = $condicion;
             $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
             $data['novedades']    = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
             $data['qty']         = $datos[0]->est_qty;
