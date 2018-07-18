@@ -19,6 +19,8 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css">
+        <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
@@ -121,6 +123,7 @@
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar excel</button>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -136,16 +139,8 @@
                                             <table id="tableCategoria" class="table table-striped">
                                                 <thead>
                                                     <tr class="tr-header-reporte">
-                                                        <?php if($sales == 7) { ?>
-                                                            <th>Product number ID</th>
-                                                            <th>Product Description</th>
-                                                        <?php } else { ?>
-                                                            <th>Product number ID</th>
-                                                            <th>Product Description</th>
-                                                        <?php if($qty != '' || $qty != null) { ?>
-                                                            <th>Est. Qty</th>
-                                                        <?php } ?>
-                                                        <?php } ?>
+                                                        <th>Product number ID</th>
+                                                        <th>Product Description</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="promociones">
@@ -247,6 +242,16 @@
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jsprincipal.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jscategorias.js?v=<?php echo time();?>"></script>
@@ -257,6 +262,7 @@
                 
             }
             $(window).load(function() {
+                $('.buttons-excel').css('display', 'none');
                 <?php if($texto != null ) {?>
                     $('#cardTexto').css('display', 'block');
                     $('#textRight').css('display', 'none');
@@ -286,6 +292,23 @@
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
+            });
+            $(document).ready(function() {
+                $('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [100],
+                    buttons: [
+                        {
+                            extend:'excel',
+                            text: 'Exportar a Excel'
+                        }
+                    ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
             });
         </script>
     </body>

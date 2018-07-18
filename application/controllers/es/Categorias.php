@@ -43,29 +43,29 @@ class Categorias extends CI_Controller {
                 if($key->est_qty == null || $key->est_qty == ''){
                     $dis = 'display: none';
                 }else {
-                    $dis = 'display: table-cell';
+                    $dis = 'display: none';//cambiar table-cell
                 }
                 if($this->session->userdata('id_cates') == 10){
+                    //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
                 $html .= '<tr>
                             <td>'.$key->product_id.'</td>
                             <td>'.$key->product_desc.'</td>
-                            <td style="'.$dis.'">'.$key->est_qty.'</td>
                         </tr>';
                 }else {
                     if($cate == $key->name){
+                        //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
                         $html .= '<tr>
                                     <td>'.$key->product_id.'</td>
                                     <td>'.$key->product_desc.'</td>
-                                    <td style="'.$dis.'">'.$key->est_qty.'</td>
                                 </tr>';
                     }else {
+                        //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
                         if($cate != $key->name){
                             $cate = $key->name;
                             $html .= '
                                       <tr>
                                         <td>'.$key->product_id.'</td>
                                         <td>'.$key->product_desc.'</td>
-                                        <td style="'.$dis.'">'.$key->est_qty.'</td>
                                       </tr>';
                         }
                     }

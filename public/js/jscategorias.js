@@ -148,3 +148,6 @@ function abrirModal(){
 		}
 	});
 }
+function triggerBoton(){
+	$(".buttons-excel").trigger( "click" );
+}

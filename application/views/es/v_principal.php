@@ -128,7 +128,7 @@
                             <div class="promocion-imagen seventeen"></div>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <h2 class="verde">Instasale</h2>
+                            <h2 class="black">Instasale</h2>
                         </div>
                     </div>
                     <div class="js-flip__back">
@@ -161,6 +161,7 @@
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Registrando tus ventas en HPE financial services.</a></li>
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entrenandote en storage.</a></li>
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en Aruba clearpass.</a></li>
+                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Ver m&aacute;s</a></li>
                             </ul>
                         </div>
                     </div>
