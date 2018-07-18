@@ -101,7 +101,7 @@
                                 <div class="js-information">
                                     <div class="js-information__flex">
                                         <h2 class="js-information__left">What's New!</h2>
-                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="top" title="Conoce las novedades para este semestre">
+                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este semestre">
                                     </div>
                                     <p><?php echo $novedades ?></p>
                                 </div>
@@ -169,24 +169,22 @@
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card" style="display: block;">
-                        <div class="mdl-card__title"></div>
-                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15 js-modal">
-                            <div class="col-md-3" >
-                                <p>Cotiza directamente con <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal o a través del iQuote de su mayorista de confianza</p>
-                                <img src="<?php echo RUTA_IMG?>logo/logo_iquote.png">
-                                <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote</a>
+                    <div class="mdl-card js-modal" style="display: block;">
+                        <div class="mdl-card__title">
+                            <p>Cotiza directamente con <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal</p>
+                            <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"><img src="<?php echo RUTA_IMG?>logo/logo_iquote.png"></a>
+                        </div>
+                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
+                            <p>o a trav&eacute;s del iQuote de su mayorista de confianza.</p>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
+                                <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
+                            </ul>
+                            <div class="tab-content" id="tabla_contenido">
+                                <div role="tabpanel" class="tab-pane fade in active" id="caribe"></div>
+                                <div role="tabpanel" class="tab-pane fade" id="america"></div>
                             </div>
-                            <div class="col-md-9">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
-                                    <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
-                                </ul>
-                                <div class="tab-content" id="tabla_contenido">
-                                    <div role="tabpanel" class="tab-pane fade in active" id="caribe"></div>
-                                    <div role="tabpanel" class="tab-pane fade" id="america"></div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>

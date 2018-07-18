@@ -1407,7 +1407,13 @@ p.objective_comercial
 		font-family $medium
 		font-size 18px
 .js-modal
-	flexCenter()
+	.mdl-card__title
+		p
+			text-align left !important
+			max-width 100% !important
+	a
+		img
+			max-width 200px
 .panel-heading
 	background-color $default !important
 .js-information
@@ -1454,6 +1460,11 @@ footer
 			font-family $medium
 			text-decoration underline
 			color $color
+.tooltip-inner
+	background-color #757575
+	font-family $regular
+	font-size 18px
+	line-height 18px
 .nav-tabs
 	&>li
 		&>a
@@ -1537,8 +1548,6 @@ footer
 		right 20px
 		img
 			max-width 85px
-	.js-modal
-		display block
 @media ( max-width 420px )
 	.fixed-logo
 		position relative
