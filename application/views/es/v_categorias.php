@@ -113,10 +113,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-5 col-xs-12 p-0 text-right" id="textRight">
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;">
-                            <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iquote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
-                            <div class="promocion_categoria"></div>
+                        <div class="col-sm-5 col-xs-12 text-right" id="textRight">
+                            <div class="js-iquote">
+                                <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;">
+                                <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iQuote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
+                            </div>
+                            <div class="js-iquote">
+                                <div class="promocion_categoria"></div>
+                            </div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>¡Próximamente! En esta sección, encontrará las mejores ofertas y promociones durante un tiempo muy limitado. ¡Manténganse al tanto!</h4>
@@ -235,7 +239,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top right");
+                $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
