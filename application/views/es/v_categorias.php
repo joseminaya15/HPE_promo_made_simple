@@ -115,7 +115,7 @@
                         </div>
                         <div class="col-sm-5 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">
-                            <p class="click_here">Solicite una cotización hoy. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
+                            <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iquote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
                             <div class="promocion_categoria"></div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
