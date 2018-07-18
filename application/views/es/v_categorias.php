@@ -179,50 +179,8 @@
                                     <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
                                 </ul>
                                 <div class="tab-content" id="tabla_contenido">
-                                    <div role="tabpanel" class="tab-pane fade in active" id="caribe">
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_ingram.png">
-                                            <a href="http://mi.ingrammicro.com/c/HPiQuoteWelcome.aspx" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                            <a href="https://store.intcomex.com/Account/Login" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
-                                            <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_techdata.png">
-                                            <a href="https://sso.techdata.com/as/authorization.oauth2?client_id=shop_client&response_type=code&redirect_uri=https://shop.techdata.com/oauth&pfidpadapterid=ShieldBaseAuthnAdaptor" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_westham.png">
-                                            <a href="https://www.wtrade.com/iquote/default.aspx" target="_blank">iQuote Tool</a>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="america">
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                            <span>Costa Rica</span>
-                                            <a href="http://store.intcomex.com/iquote" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_tecnobodega.png">
-                                            <span>Guatemala</span>
-                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=10401609075948000547" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                            <span>El Salvador</span>
-                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=13740954574110992044" target="_blank">iQuote Tool</a>
-                                        </div>
-                                        <div class="mdl-card__iquote">
-                                            <img src="<?php echo RUTA_IMG?>logo/logo_intcomex.png">
-                                            <span>Guatemala</span>
-                                            <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=8933099990886705432" target="_blank">iQuote Tool</a>
-                                        </div>
-                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade in active" id="caribe"></div>
+                                    <div role="tabpanel" class="tab-pane fade" id="america"></div>
                                 </div>
                             </div>
                         </div>
