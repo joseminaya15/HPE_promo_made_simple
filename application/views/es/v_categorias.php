@@ -101,7 +101,7 @@
                                 <div class="js-information">
                                     <div class="js-information__flex">
                                         <h2 class="js-information__left">What's New!</h2>
-                                        <img src="<?php echo RUTA_IMG?>promo/new.png">
+                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="top" title="Conoce las novedades para este semestre">
                                     </div>
                                     <p><?php echo $novedades ?></p>
                                 </div>
@@ -292,6 +292,7 @@
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
+                $('[data-toggle="tooltip"]').tooltip();
             });
             $(document).ready(function() {
                 $('#tableCategoria').DataTable( {

@@ -132,19 +132,10 @@
                         </div>
                     </div>
                     <div class="js-flip__back">
-                        <div class="js-categorias js-flex" style="justify-content: center;height: 100%;">
-                            <h2>MUY PRONTO</h2>
+                        <div class="js-categorias">
                         </div>
                     </div>
                 </div>
-                <!-- <div class="mdl-card mdl-promociones">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen seller"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="marron">Best Sellers</h2>
-                    </div>
-                </div> -->
                 <div class="mdl-promociones js-flip">
                     <div class="js-flip__front">
                         <div class="mdl-card__title">
