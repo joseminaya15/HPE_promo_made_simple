@@ -210,16 +210,19 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
-    function getRelacionXCates2(){
+    function getRelacionXCates2($id_pais){
         $sql = "SELECT c.*,
                        r.Nombre AS nom_rel
-                  FROM cates_x_relacion cr,
-                       categorias c,
-                       relacion r
-                 WHERE r.Id = cr.id_rel
+                  FROM categoria_x_pais cp,
+                       cates_x_relacion cr,
+                       relacion r,
+                       categorias c
+                 WHERE cp.id_pais IN ?
+                   AND cr.id_cate = cp.id_cate
+                   AND r.Id = cr.id_rel 
                    AND c.Id = cr.id_cate
-                   ORDER BY r.Nombre, c.Id DESC";
-        $result = $this->db->query($sql);
+              ORDER BY r.Nombre, c.Id DESC";
+        $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
     function getRelacionXCates1(){
