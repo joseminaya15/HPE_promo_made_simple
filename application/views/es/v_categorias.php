@@ -165,7 +165,7 @@
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card Ip1 Ip2 Ip3 Ip4 Ip5 Ip6 Ip7 Ip8 Ip9 Ip10 Ip11 Ip12 Ip13 Ip4 Ip15">
+                    <div class="mdl-card" style="display: block;">
                         <div class="mdl-card__title"></div>
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15 js-modal">
                             <div class="col-md-3" >
@@ -236,7 +236,6 @@
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top right");
-                $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
