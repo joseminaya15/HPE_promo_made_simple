@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="col-sm-5 col-xs-12 p-0 text-right" id="textRight">
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">
+                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;">
                             <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iquote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
                             <div class="promocion_categoria"></div>
                         </div>
@@ -285,9 +285,6 @@
                 $('#ModalTerminos').find('#E'+openCategoria+'Terminos').css('display','block');
                 $('.selectpicker').val(1);
                 $('.menu_header').css('display','flex');
-                if(nameCategoria == 'Base Promo' || nameCategoria == 'Server & Storage Flex Attach'){
-                    $('.header_promocion--iquote').css('display','inline-block');
-                }
             });
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
