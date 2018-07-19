@@ -255,7 +255,7 @@
                     searching : false,
                     responsive: true,
                     dom: 'Bfrtip',
-                    aLengthMenu : [100],
+                    aLengthMenu : [10],
                     buttons: [
                         {
                             extend:'excel',

@@ -239,4 +239,33 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getCategoriasxPais($id_cates, $id_pais){
+        $sql = "SELECT p.*,
+                       DATE_FORMAT(p.start_date, '%d/%m/%Y') AS fecha_inicio,
+                       DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin,
+                       c.*
+                  FROM products1 p,
+                       paises pa,
+                       categorias c
+                 WHERE p.id_pais = pa.Id
+                   AND p.id_categoria = pa.Id
+                   AND c.Id = ?
+                   AND pa.Id = ?";
+        $result = $this->db->query($sql, array($id_cates, $id_pais));
+        return $result->result();
+    }
+    function searchProductxCatexPais($texto){
+        $sql = "SELECT p.*,
+                       c.Nombre,
+                       DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
+                       DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+                  FROM products1 p,
+                       categorias c,
+                       paises pa
+                 WHERE p.id_pais = pa.Id
+                   AND p.id_categoria = c.Id
+                   AND (p.sku LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%')";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

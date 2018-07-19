@@ -214,7 +214,7 @@ class Home extends CI_Controller {
             $html  = null;
             $cate  = null;
             $texto = $this->input->post('texto');
-            $datos = $this->M_solicitud->getDatosBuscadorProductsByCate($texto);
+            $datos = $this->M_solicitud->searchProductxCatexPais($texto);
             if(count($datos) == 0){
                 $html = '<tr>
                             <td></td>
@@ -222,8 +222,8 @@ class Home extends CI_Controller {
                         </tr>';
             }else {
                 foreach ($datos as $key) {
-                    $html .= '<tr onclick="directPromos('.$key->id_cates.')" style="cursor: pointer;color: #7991F4;text-decoration: underline;">
-                                <td>'.$key->product_id.'</td>
+                    $html .= '<tr onclick="directPromos('.$key->id_categoria.')" style="cursor: pointer;color: #7991F4;text-decoration: underline;">
+                                <td>'.$key->sku.'</td>
                                 <td>'.$key->product_desc.'</td>
                                 <td>'.$key->Nombre.'</td>
                             </tr>';

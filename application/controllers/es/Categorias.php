@@ -29,7 +29,8 @@ class Categorias extends CI_Controller {
                 $data['texto'] = '';
             }
         }else {
-            $datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'es'); 
+            //$datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'es'); 
+            $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $this->session->userdata('id_pais'));
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate  = '';
@@ -38,7 +39,8 @@ class Categorias extends CI_Controller {
         $cont1 = 0;
         $dis   = '';
         if(count($datos) != 0){
-            $cate = $datos[0]->name;
+            //codigo con las sub categorias
+            /*$cate = $datos[0]->name;
             foreach ($datos as $key){
                 if($key->est_qty == null || $key->est_qty == ''){
                     $dis = 'display: none';
@@ -69,15 +71,21 @@ class Categorias extends CI_Controller {
                                       </tr>';
                         }
                     }
+                }*/
+                foreach ($datos as $key) {
+                    $html .= '<tr>
+                                  <td>'.$key->sku.'</td>
+                                  <td>'.$key->product_desc.'</td>
+                              </tr>';
                 }
-            }
-            $data['start_date']  = $datos[0]->effect_date;
+            //}
+            $data['start_date']  = /*$datos[0]->effect_date*/$datos[0]->fecha_inicio;
             $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
-            $data['end_date']    = $datos[0]->fecha_fin;
+            $data['end_date']    = /*$datos[0]->fecha_fin*/$datos[0]->fecha_fin;
             $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
             $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
             $data['novedades']   = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
-            $data['qty']         = $datos[0]->est_qty;
+            $data['qty']         = /*$datos[0]->est_qty*/'';
         }else {
             $cate  = '';
             $html  = '<tr>
