@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section id="productos" class="col-xs-12">
+        <section id="productos" class="col-xs-12 p-0">
             <div class="mdl-container">
                 <div class="col-xs-12">
                     <a href="Home" class="js-flex js-go js-return"><i class="mdi mdi-arrow_back"></i>Regresar</a>
