@@ -127,32 +127,26 @@
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar excel</button>
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Ver listado de productos
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <div class="table-responsive table_categoria">
-                                            <table id="tableCategoria" class="table table-striped">
-                                                <thead>
-                                                    <tr class="tr-header-reporte">
-                                                        <th>Product number ID</th>
-                                                        <th>Product Description</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="promociones">
-                                                    <?php echo $promociones ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                        <div class="js-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="js-accordion__title" role="tab" id="headingOne">
+                                <a class="mdl-button mdl-js-button mdl-js-ripple-effect" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Ver listado de productos
+                                </a>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar excel</button>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="table-responsive table_categoria">
+                                    <table id="tableCategoria" class="table table-striped">
+                                        <thead>
+                                            <tr class="tr-header-reporte">
+                                                <th>Product number ID</th>
+                                                <th>Product Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="promociones">
+                                            <?php echo $promociones ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -170,11 +164,9 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="mdl-card js-modal" style="display: block;">
-                        <div class="mdl-card__title">
+                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
                             <p>Cotiza directamente con <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal</p>
                             <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"><img src="<?php echo RUTA_IMG?>logo/logo_iquote.png"></a>
-                        </div>
-                        <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
                             <p>o a trav&eacute;s del iQuote de su mayorista de confianza.</p>
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
