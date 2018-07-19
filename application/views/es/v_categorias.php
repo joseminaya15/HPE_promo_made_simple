@@ -224,6 +224,7 @@
                     $('#textRight').css('display', 'none');
                     $('#textLeft').css('display', 'none');
                     $('#tableCategoria').css('display', 'none');
+                    $('.js-accordion').css('display','none');
                 <?php } else { ?>
                     $('#textRight').css('display', 'block');
                     $('#textLeft').css('display', 'block');
