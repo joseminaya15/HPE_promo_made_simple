@@ -130,7 +130,7 @@
                         <div class="js-accordion" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="js-accordion__title" role="tab" id="headingOne">
                                 <a class="mdl-button mdl-js-button mdl-js-ripple-effect" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Ver listado de productos
+                                Ver lista detallada de productos en esta promoci&oacute;n
                                 </a>
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar excel</button>
                             </div>
