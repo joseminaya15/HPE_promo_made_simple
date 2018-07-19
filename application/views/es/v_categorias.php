@@ -115,8 +115,13 @@
                         </div>
                         <div class="col-sm-5 col-xs-12 text-right" id="textRight">
                             <div class="js-iquote">
-                                <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;">
-                                <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iQuote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
+                                <div class="js-iquote__left">
+                                    <img src="<?php echo RUTA_IMG?>fondo/fondo1.jpg">
+                                </div>
+                                <div class="js-iquote__right">
+                                    <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;">
+                                    <p class="click_here">Ingresa y cotiza directamente a trav&eacute;s de nuestra herramienta iQuote. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click aquí.</a></p>
+                                </div>
                             </div>
                             <div class="js-iquote">
                                 <div class="promocion_categoria"></div>
