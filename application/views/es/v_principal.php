@@ -132,7 +132,8 @@
                         </div>
                     </div>
                     <div class="js-flip__back">
-                        <div class="js-categorias">
+                        <div class="js-categorias js-flex" style="height: 100%;">
+                            <h2>Muy Pronto</h2>
                         </div>
                     </div>
                 </div>
