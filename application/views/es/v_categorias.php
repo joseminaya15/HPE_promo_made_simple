@@ -85,9 +85,6 @@
                         <div class="col-sm-7 col-xs-12 p-0" id="textLeft">
                             <div class="js-encabezado">
                                 <div class="js-information">
-                                    <div class="js-information__flex">
-                                        <h2 class="js-information__left">Detalle</h2>
-                                    </div>
                                     <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                     <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                     <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
@@ -124,7 +121,9 @@
                                 </div>
                             </div>
                             <div class="js-iquote">
-                                <div class="promocion_categoria"></div>
+                                <div class="promocion_categoria js-promocion__categoria">
+                                    <img src="<?php echo RUTA_IMG?>fondo/fondo-promocion.png">
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">

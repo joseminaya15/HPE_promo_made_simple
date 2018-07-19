@@ -1248,6 +1248,8 @@ img
 	display none
 .js-encabezado
 	margin 15px 0
+	width 100%
+	max-width 600px
 .mdl-container__promocion
 	flexCenter()
 	align-items start
@@ -1300,6 +1302,11 @@ img
 	top 0
 	left 0
 	right 0
+	&.js-promocion__categoria
+		background none !important
+		text-align center
+		img
+			max-width 360px
 	img
 		width 100%
 .table_categoria
@@ -1468,6 +1475,7 @@ p.objective_comercial
 		justify-content flex-end
 	.js-iquote__right
 		width 100%
+		padding 15px
 footer
 	background-color #DDDDDD
 	padding 20px
@@ -1570,6 +1578,19 @@ footer
 		right 20px
 		img
 			max-width 85px
+	.js-iquote
+		display block
+		.js-iquote__left
+			max-width 100%
+		.js-iquote__right
+			padding 25px 15px
+	.js-accordion 
+		.js-accordion__title 
+			a
+				margin 10px 0
+				width 100%
+			button
+				width 100%
 @media ( max-width 420px )
 	.fixed-logo
 		position relative
