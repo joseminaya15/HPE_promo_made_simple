@@ -80,7 +80,7 @@ class Categorias extends CI_Controller {
                 }
             //}
             $data['start_date']  = /*$datos[0]->effect_date*/$datos[0]->fecha_inicio;
-            $data['deal_number'] = count($deal) != 0 ? $deal[0]->deal_number : '-';
+            $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
             $data['end_date']    = /*$datos[0]->fecha_fin*/$datos[0]->fecha_fin;
             $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
             $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
