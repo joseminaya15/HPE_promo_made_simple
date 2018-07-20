@@ -868,8 +868,6 @@ img
 		height 234px
 		z-index 1000
 		box-shadow none
-		margin 10px
-		max-width 280px
 		&:hover
 			.js-flip__front
 				flipCardFrontHover()
@@ -1482,6 +1480,14 @@ p.objective_comercial
 	.js-iquote__right
 		width 100%
 		padding 15px
+.js-engage
+	flexCenter()
+	.js-engage__left
+		width 100%
+		max-width 300px
+	.js-engage__right
+		width 100%
+		max-width calc(100% - 300px)
 footer
 	background-color #DDDDDD
 	padding 20px

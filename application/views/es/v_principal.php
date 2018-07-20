@@ -136,9 +136,16 @@
                             <h2>Muy Pronto</h2>
                         </div>
                     </div>
-                </div>
-                <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
+                </div> -->
+                <div class="mdl-promociones js-engage">
+                    <div class="js-engage__left">
+                        
+                    </div>
+                    <div class="js-engage__right">
+                        <p>Conoce aqu&iacute; los incentivos que tenemos para ti este trimestre en</p>
+                        <img src="">
+                    </div>
+                    <!-- <div class="js-flip__front">
                         <div class="mdl-card__title">
                             <div class="promocion-imagen engage"></div>
                         </div>
@@ -156,8 +163,8 @@
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Ver m&aacute;s</a></li>
                             </ul>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
+                </div>
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
