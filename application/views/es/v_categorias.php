@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
-                                        <h2 class="js-information__left">What's New!</h2>
+                                        <h2 class="js-information__left">Novedades</h2>
                                         <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este semestre">
                                     </div>
                                     <p><?php echo $novedades ?></p>

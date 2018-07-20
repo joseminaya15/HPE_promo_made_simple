@@ -87,7 +87,7 @@
                     <div class="container">
                         <div class="cont-carousel">
                             <h2>Bienvenido a Promos Made Simple</h2>
-                            <p>Conoce nuestras promociones vigentes para este trimestre. ¡Buena suerte en tus ventas!</p>
+                            <p>Conoce nuestras mejores promociones vigentes este trimestre alrededor de los productos y soluciones m&aacute;s populares de nuestro portafolio.</p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                             <h2>Gana m&aacute;s puntos:</h2>
                             <ul>
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Registrando tus ventas en HPE financial services.</a></li>
-                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entrenandote en storage.</a></li>
+                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en storage.</a></li>
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en Aruba clearpass.</a></li>
                                 <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Ver m&aacute;s</a></li>
                             </ul>
