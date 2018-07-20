@@ -214,6 +214,39 @@
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
+                        <div class="js-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="js-accordion__title" role="tab" id="headingOne">
+                                <a class="mdl-button mdl-js-button mdl-js-ripple-effect" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                See detailed list of products in this promotion
+                                </a>
+                                <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">download excel</button>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="table-responsive table_categoria">
+                                    <table id="tableCategoria" class="table table-striped">
+                                        <thead>
+                                            <tr class="tr-header-reporte">
+                                                <?php if($sales == 7) { ?>
+                                                <th>Product number ID</th>
+                                                <th>Product Description</th>
+                                                <?php } else { ?>
+                                                <th>Product number ID</th>
+                                                <th>Product Description</th>
+                                                <?php if($qty != '' || $qty != null) { ?>
+                                                <th>Est. Qty</th>
+                                                <?php } ?>
+                                                <?php } ?>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="promociones">
+                                            <?php echo $promociones ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mdl-container__promocion col-xs-12 p-0">
                         <div class="promocion_categoria"></div>
                         <div class="table-responsive table_categoria">
                             <table id="tableCategoria" class="table table-striped">
@@ -236,7 +269,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -974,6 +1007,16 @@
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jsprincipal1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jscategorias1.js?v=<?php echo time();?>"></script>
@@ -1013,6 +1056,23 @@
             $( document ).ready(function() {
                 let categoria = sessionStorage.getItem('NAME_CATEGORIA');
                 let selectCategoria = sessionStorage.getItem('OPEN_MODAL2');
+            });
+            $(document).ready(function() {
+                $('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [10],
+                    buttons: [
+                        {
+                            extend:'excel',
+                            text: 'Export to Excel'
+                        }
+                    ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
             });
         </script>
     </body>

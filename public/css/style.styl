@@ -868,6 +868,8 @@ img
 		height 234px
 		z-index 1000
 		box-shadow none
+		margin 10px
+		max-width 280px
 		&:hover
 			.js-flip__front
 				flipCardFrontHover()
@@ -884,18 +886,20 @@ img
 			flipCardBack()
 			background-color #FFFFFF
 			box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
-			padding 20px
+			padding 15px
 		.js-categorias
 			text-align left
 			h2
 				font-size 28px
 				line-height 30px
-				margin 10px 0
+				margin 5px 0
 				font-family $medium
 				color #757575
 			ul
+				padding-left 30px
 				li
 					margin 5px 0
+					line-height 22px
 					a
 						color #000000
 						font-size 18px
@@ -993,6 +997,8 @@ img
 	margin-top -60px
 	text-align center
 	margin-bottom 60px
+	&.js-seccion--promociones
+		margin-top -45px
 #categoria
 	height 450px
 	overflow hidden
@@ -1510,6 +1516,12 @@ footer
 	.logo-bottom		
 		img
 			max-width 140px
+	.mdl-promociones
+		&.js-flip
+			max-width 320px
+	.seccion-promociones
+		&.js-seccion--promociones
+			max-width 1000px
 @media ( max-width 1000px )
 	.search-filter
 		&.home

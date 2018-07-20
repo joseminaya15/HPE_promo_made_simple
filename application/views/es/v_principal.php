@@ -120,9 +120,9 @@
             </div>
         </section>
         <section>
-            <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
+            <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
                 <?php echo $contenido ?>
-                <div class="mdl-promociones js-flip">
+                <!-- <div class="mdl-promociones js-flip">
                     <div class="js-flip__front">
                         <div class="mdl-card__title">
                             <div class="promocion-imagen seventeen"></div>
@@ -157,7 +157,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
