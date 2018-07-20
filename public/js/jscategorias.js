@@ -50,6 +50,25 @@ function buscarPromo(datos){
 	    if(data.error == 0){
 	    	$('#promociones').html('');
 	    	$('#promociones').append(data.promociones);
+    		$("#tableCategoria").dataTable().fnDestroy();
+	    	if(data.texto == '') {
+	    		$('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [10],
+                    buttons: [
+                        {
+                            extend:'excel',
+                            text: 'Exportar a Excel'
+                        }
+                    ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
+                $('.buttons-excel').css('display', 'none');
+	    	}
 	    }else {
 	    	msj('error', data.msj);
 	    	return;

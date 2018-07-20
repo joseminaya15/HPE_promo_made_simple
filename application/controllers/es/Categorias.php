@@ -150,35 +150,14 @@ class Categorias extends CI_Controller {
                 }else {
                     $cate = $datos[0]->name;
                     foreach ($datos as $key) {
-                        if($cate == $key->name){
-                            if($cont1 == 0){
-                                $html = '<tr class="subcategoria">
-                                            <td colspan="2"><strong>'.$key->name.'</strong></td>
-                                        </tr>';
-                                $cont1 = 1;
-                            }
-                            $html .= '<tr>
-                                        <td>'.$key->product_id.'</td>
-                                        <td>'.$key->product_desc.'</td>
-                                    </tr>';
-                        }else
-                        if($cate != $key->name){
-                            $cate = $key->name;
-                            $cont = 0;
-                            if($cont == 0){
-                                $html .= '<tr class="subcategoria">
-                                           <td colspan="2"><strong>'.$cate.'</strong></td>
-                                         </tr>';
-                                $cont=1;
-                            }
-                            $html .= '<tr>
-                                        <td>'.$key->product_id.'</td>
-                                        <td>'.$key->product_desc.'</td>
-                                      </tr>';
-                        }
+                        $html .= '<tr>
+                                      <td>'.$key->product_id.'</td>
+                                      <td>'.$key->product_desc.'</td>
+                                  </tr>';
                     }
                 }
             }
+            $data['texto']       = $texto;
             $data['promociones'] = $html;
             $data['error']       = EXIT_SUCCESS;
         }catch(Exception $e){
