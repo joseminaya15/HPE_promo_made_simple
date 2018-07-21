@@ -122,22 +122,7 @@
         <section>
             <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
                 <?php echo $contenido ?>
-                <!-- <div class="mdl-promociones js-flip">
-                    <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen seventeen"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="black">Instasale</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias js-flex" style="height: 100%;">
-                            <h2>Muy Pronto</h2>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="mdl-promociones js-engage">
+                <!-- <div class="mdl-promociones js-engage">
                     <div class="js-engage__left">
                         
                     </div>
@@ -145,26 +130,7 @@
                         <p>Conoce aqu&iacute; los incentivos que tenemos para ti este trimestre en</p>
                         <img src="">
                     </div>
-                    <!-- <div class="js-flip__front">
-                        <div class="mdl-card__title">
-                            <div class="promocion-imagen engage"></div>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <h2 class="marron">Engage&Grow</h2>
-                        </div>
-                    </div>
-                    <div class="js-flip__back">
-                        <div class="js-categorias">
-                            <h2>Gana m&aacute;s puntos:</h2>
-                            <ul>
-                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Registrando tus ventas en HPE financial services.</a></li>
-                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en storage.</a></li>
-                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Entren&aacute;ndote en Aruba clearpass.</a></li>
-                                <li><a href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">Ver m&aacute;s</a></li>
-                            </ul>
-                        </div>
-                    </div> -->
-                </div>
+                </div> -->
                 <!-- <?php echo $contenido ?> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
