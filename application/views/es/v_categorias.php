@@ -122,7 +122,7 @@
                             </div>
                             <div class="js-iquote">
                                 <div class="promocion_categoria js-promocion__categoria">
-                                    <img src="<?php echo RUTA_IMG?>fondo/fondo-promocion.png">
+                                    <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-promocion.png"> -->
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,8 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
+                // $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria-es.png') no-repeat top center");
+                $('.promocion_categoria').append('<img src="<?php echo RUTA_IMG?>promociones/'+openCategoria+'-categoria-es.jpg">');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
