@@ -122,17 +122,17 @@
         <section>
             <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
                 <?php echo $contenido ?>
-                <div class="mdl-promociones js-flip" style="max-width: 680px;margin-top: 7px;">
+                <a class="mdl-promociones js-flip" style="max-width: 680px;margin-top: 7px;" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="js-iquote" style="max-width: 100%;">
                         <div class="js-engage__left">
                             <img src="<?php echo RUTA_IMG?>promo/img_engage.jpg">
                         </div>
                         <div class="js-engage__right">
-                            <p style="font-size: 23px;">Conoce aqu&iacute; los incentivos que tenemos para ti este trimestre en</p>
+                            <p style="font-size: 23px;color: #000000 !important;">Conoce aqu&iacute; los incentivos que tenemos para ti este trimestre en</p>
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>promo/Logo_EngagenGrow.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;max-width: 200px !important;">
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- <?php echo $contenido ?> -->
                 <!-- <a class="js-iquote" style="max-width: 57%;margin: 0 auto;" href="https://www.hpengageandgrow.com/pages/login.php">
                     <div class="js-iquote__left">
