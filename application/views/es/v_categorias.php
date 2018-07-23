@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
-                            <h4>¡Próximamente! En esta sección, encontrará las mejores ofertas y promociones durante un tiempo muy limitado. ¡Manténganse al tanto!</h4>
+                            <h4>¡Próximamente! En esta sección, encontrarás las mejores ofertas y promociones durante un tiempo muy limitado. ¡Mantente al tanto!</h4>
                         </div>
                     </div>
                     <div class="mdl-container__promocion col-xs-12 p-0">
