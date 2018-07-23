@@ -101,10 +101,15 @@ class Categorias extends CI_Controller {
             $data['qty']         = '';
         }
         foreach ($promos as $val) {
-            if($val->Id == 10 || $val->Id == 13 || $val->Id == 1 || $val->Id == 3 || $val->Id == 11){
-                $combo2 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
-            }else {
-                $combo1 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
+            // if($val->Id == 10 || $val->Id == 13 || $val->Id == 1 || $val->Id == 3 || $val->Id == 11){
+            //     $combo2 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
+            // }else {
+            //     $combo1 .= '<a id="p'.$val->Id.'" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="'.$val->Nombre.'">'.$val->Nombre.'</a>';
+            // }
+            if($val->Id == 6 || $val->Id == 5 || $val->Id == 15){
+                $combo2 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$val->Id.'&quot;)">'.$val->Nombre.'</a>';
+            }else if($val->Id == 13 || $val->Id == 1 || $val->Id == 2 || $val->Id == 11 || $val->Id == 10){
+                $combo1 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$val->Id.'&quot;)">'.$val->Nombre.'</a>';
             }
         }
         $data['combo1']      = $combo1;
