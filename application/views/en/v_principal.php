@@ -151,7 +151,7 @@
                 </a>
                 <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen six"></div>
+                        <div class="promocion-imagen eightteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="default" data-id="Tape Backup Media">Tape Backup Media</h2>
@@ -191,7 +191,7 @@
                 </a>
                 <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen sixteen"></div>
+                        <div class="promocion-imagen nineteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</h2>
@@ -215,7 +215,7 @@
                 </a> -->
                 <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen eleven"></div>
+                        <div class="promocion-imagen three"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="verde" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</h2>
