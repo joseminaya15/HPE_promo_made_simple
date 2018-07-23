@@ -128,8 +128,8 @@
                             <img src="<?php echo RUTA_IMG?>promo/img_engage.jpg">
                         </div>
                         <div class="js-engage__right">
-                            <p style="font-size: 23px;color: #000000 !important;">Conoce aqu&iacute; los incentivos que tenemos para ti este trimestre en</p>
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>promo/engage.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;max-width: 200px !important;">
+                            <p style="font-size: 23px !important;color: #000000 !important;max-width: 80% !important;margin-left: 33px !important;">Conoce aqu&iacute; los incentivos que tenemos para ti <span style="display: inline-block;">este trimestre:</span></p>
+                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>promo/Logo_EngagenGrow.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;max-width: 200px !important;">
                         </div>
                     </div>
                 </a>

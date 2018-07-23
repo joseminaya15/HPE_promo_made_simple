@@ -221,7 +221,7 @@ class M_solicitud extends  CI_Model{
                    AND cr.id_cate = cp.id_cate
                    AND r.Id = cr.id_rel 
                    AND c.Id = cr.id_cate
-              ORDER BY r.Nombre, c.Id DESC";
+              ORDER BY r.Nombre DESC, c.orden_2 ASC, c.Id DESC";
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
