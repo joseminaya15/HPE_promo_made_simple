@@ -135,7 +135,7 @@
             <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
                 <a id="p13" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen one"></div>
+                        <div class="promocion-imagen thirteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron" data-id="Base Promo">Base Promo</h2>
@@ -143,7 +143,7 @@
                 </a>
                 <a id="p1" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen two"></div>
+                        <div class="promocion-imagen one"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="verde" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</h2>
@@ -151,7 +151,7 @@
                 </a>
                 <a id="p11" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen three"></div>
+                        <div class="promocion-imagen six"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="default" data-id="Tape Backup Media">Tape Backup Media</h2>
@@ -159,7 +159,7 @@
                 </a>
                 <a id="p2" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen four"></div>
+                        <div class="promocion-imagen two"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="purple" data-id="HPE Pointnext">HPE Pointnext</h2>
@@ -175,7 +175,7 @@
                 </a> -->
                 <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen six"></div>
+                        <div class="promocion-imagen three"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="purple" data-id="Storage Accelerate">Storage Accelerate</h2>
@@ -183,7 +183,7 @@
                 </a>
                 <a id="p4" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen seven"></div>
+                        <div class="promocion-imagen four"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="verde" data-id="HPE Simplivity">HPE Simplivity</h2>
@@ -191,7 +191,7 @@
                 </a>
                 <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen eight"></div>
+                        <div class="promocion-imagen sixteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="marron" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</h2>
@@ -199,7 +199,7 @@
                 </a>
                 <a id="p12" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen nine"></div>
+                        <div class="promocion-imagen twelve"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="default" data-id="Synergy">Synergy</h2>
@@ -223,7 +223,7 @@
                 </a>
                 <a id="p7" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen twelve"></div>
+                        <div class="promocion-imagen seven"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="orange" data-id="Aruba Market Take Over">Aruba Market Take Over</h2>
@@ -231,7 +231,7 @@
                 </a>
                 <a id="p8" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen thirteen"></div>
+                        <div class="promocion-imagen eight"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="orange" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</h2>
@@ -239,7 +239,7 @@
                 </a>
                 <a id="p9" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen fourteen"></div>
+                        <div class="promocion-imagen nine"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="orange" data-id="Aruba Mobility">Aruba Mobility</h2>
@@ -247,7 +247,7 @@
                 </a>
                 <a id="p14" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen fifteen"></div>
+                        <div class="promocion-imagen fourteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="verde" data-id="Nimble Promo">Nimble Promo</h2>
@@ -256,7 +256,7 @@
                 </a>
                 <a id="p15" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
-                        <div class="promocion-imagen sixteen"></div>
+                        <div class="promocion-imagen fifteen"></div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="default" data-id="SAP HANA">SAP HANA</h2>
