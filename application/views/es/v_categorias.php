@@ -169,9 +169,9 @@
                 <div class="modal-content">
                     <div class="mdl-card js-modal" style="display: block;">
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <p>Cotiza directamente con <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal</p>
+                            <p>Cotiza directamente con nuestro <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal</p>
                             <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"><img src="<?php echo RUTA_IMG?>logo/logo_iquote.png"></a>
-                            <p>o a trav&eacute;s del iQuote de su mayorista de confianza.</p>
+                            <p>O a trav&eacute;s del iQuote de tu mayorista de confianza.</p>
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active"><a href="#caribe" id="tab-caribe" aria-controls="caribe" role="tab" data-toggle="tab">Caribe</a></li>
                                 <li><a href="#america" id="tab-america" aria-controls="america" role="tab" data-toggle="tab">CentroAm&eacute;rica</a></li>
