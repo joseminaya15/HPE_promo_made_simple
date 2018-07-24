@@ -47,11 +47,11 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
-                                        <p>Valor</p>
+                                        <p>Volumen</p>
                                         <?php echo $combo1 ?>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
-                                        <p>Volumen</p>
+                                        <p>Valor</p>
                                         <?php echo $combo2 ?>
                                     </div>
                                 </ul>
@@ -158,7 +158,7 @@
         </section>
         <footer class="col-xs-12">
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, cont&aacute;ctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
@@ -167,7 +167,7 @@
                 <div class="modal-content">
                     <div class="mdl-card js-modal" style="display: block;">
                         <div class="mdl-card__supporting-text text-center p-l-15 p-r-15">
-                            <p>Cotiza directamente con nuestro <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> universal</p>
+                            <p>Cotiza directamente con nuestro <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank">iQuote </a> Universal</p>
                             <a href="https://iquote.hpe.com/aspx/signin.aspx" target="_blank"><img src="<?php echo RUTA_IMG?>logo/logo_iquote.png"></a>
                             <p>O a trav&eacute;s del iQuote de tu mayorista de confianza.</p>
                             <ul class="nav nav-tabs" role="tablist">

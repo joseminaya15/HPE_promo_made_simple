@@ -48,11 +48,11 @@
                                     </button>
                                     <ul class="dropdown-menu">
                                         <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
-                                            <p>Valor</p>
+                                            <p>Volumen</p>
                                             <?php echo $combo1 ?>
                                         </div>
                                         <div class="col-sm-6 col-xs-12 p-0">
-                                            <p>Volumen</p>
+                                            <p>Valor</p>
                                             <?php echo $combo2 ?>
                                         </div>
                                     </ul>
@@ -122,27 +122,15 @@
         <section>
             <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
                 <?php echo $contenido ?>
-                <a class="mdl-promociones js-flip" style="max-width: 680px;margin-top: 7px;" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
-                    <div class="js-iquote" style="max-width: 100%;">
-                        <div class="js-engage__left">
-                            <img src="<?php echo RUTA_IMG?>promo/img_engage.jpg">
-                        </div>
+                <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                    <div class="js-engage">
+                        <div class="js-engage__left"></div>
                         <div class="js-engage__right">
-                            <p style="font-size: 36px !important;color: #000000 !important;max-width: 80% !important;margin-left: 33px !important;">Conoce los incentivos que tenemos para ti <span style="display: inline-block;">este trimestre:</span></p>
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>promo/Logo_EngagenGrow.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;max-width: 315px !important;">
+                            <p>Conoce los incentivos que tenemos para ti este trimestre:</span></p>
+                            <img src="<?php echo RUTA_IMG?>promo/logo-engage.png">
                         </div>
                     </div>
                 </a>
-                <!-- <?php echo $contenido ?> -->
-                <!-- <a class="js-iquote" style="max-width: 57%;margin: 0 auto;" href="https://www.hpengageandgrow.com/pages/login.php">
-                    <div class="js-iquote__left">
-                        <img src="<?php echo RUTA_IMG?>promo/img_engage.jpg">
-                    </div>
-                    <div class="js-iquote__right">
-                        <p class="click_here" style="font-size: 18px;color: #000000 !important;">Conoce los incentivos que tenemos para ti este trimestre en</p>
-                        <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>promo/Logo_EngagenGrow.png" data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()" style="display: inline-block;max-width: 200px !important;">
-                    </div>
-                </a> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
@@ -165,7 +153,7 @@
         </section>
         <footer>
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, cont&aacute;ctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>

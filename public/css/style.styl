@@ -1299,6 +1299,15 @@ img
 	width 100%
 	margin 25px
 	vertical-align top
+	&.any
+		max-width 250px
+		img
+			max-width 125px
+		a
+			font-size 16px
+	.js-mayorista
+		flexCenter()
+		height 65px
 	img
 		width 100%
 	a
@@ -1311,12 +1320,6 @@ img
 	span
 		margin-top 5px
 		display block
-	&.any
-		max-width 250px
-		img
-			max-width 125px
-		a
-			font-size 16px
 #ModalIquote
 	.mdl-card
 		width 100%
@@ -1457,7 +1460,9 @@ p.objective_comercial
 			max-width 100% !important
 	a
 		img
-			max-width 200px
+			max-width 180px
+			padding 5px 10px
+			border 2px solid #000000
 .js-accordion
 	width 100%
 	max-width 600px
@@ -1512,14 +1517,35 @@ p.objective_comercial
 	.js-iquote__right
 		width 100%
 		padding 15px
-.js-engage
-	flexCenter()
-	.js-engage__left
-		width 100%
-		max-width 300px
-	.js-engage__right
-		width 100%
-		max-width calc(100% - 300px)
+.js-promocion__engage
+	max-width 680px
+	padding 10px
+	text-decoration none
+	.js-engage
+		flexCenter()
+		.js-engage__left
+			width 100%
+			max-width 300px
+			position relative
+			top 0
+			left 0
+			right 0
+			bottom 0
+			height 214px
+			background url(../img/promo/img_engage.jpg) center center no-repeat
+			background-size cover
+		.js-engage__right
+			width 100%
+			max-width calc(100% - 300px)
+			p
+				color #000000
+				margin 0
+				font-size 32px
+				line-height 30px
+				font-family $medium
+				padding 15px 25px
+			img
+				max-width 250px				
 footer
 	background-color #DDDDDD
 	padding 20px
@@ -1543,6 +1569,7 @@ footer
 	&>li
 		&>a
 			color $color
+			text-transform uppercase
 @media ( max-width 1200px )
 	#principal
 		.owl-carousel
