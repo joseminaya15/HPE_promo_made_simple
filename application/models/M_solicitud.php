@@ -188,7 +188,7 @@ class M_solicitud extends  CI_Model{
     }
     function getPaises($idioma){
         if($idioma == 'es'){
-          $paises = 'WHERE Id <= 25';
+          $paises = 'WHERE Id <= 25 AND Id <> 10';
         }else {
           $paises = 'WHERE Id >= 26 AND Id <= 52';
         }
