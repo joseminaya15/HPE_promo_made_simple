@@ -121,9 +121,7 @@
                                 </div>
                             </div>
                             <div class="js-iquote">
-                                <div class="promocion_categoria js-promocion__categoria">
-                                    <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-promocion.png"> -->
-                                </div>
+                                <div class="promocion_categoria js-promocion__categoria"></div>
                             </div>
                         </div>
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
