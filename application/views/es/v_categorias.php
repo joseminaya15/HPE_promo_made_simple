@@ -98,7 +98,7 @@
                                 <div class="js-information">
                                     <div class="js-information__flex">
                                         <h2 class="js-information__left">Novedades</h2>
-                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este semestre">
+                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este trimestre">
                                     </div>
                                     <p><?php echo $novedades ?></p>
                                 </div>
@@ -160,7 +160,7 @@
         </section>
         <footer class="col-xs-12">
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, contáctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>

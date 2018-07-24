@@ -165,7 +165,7 @@
         </section>
         <footer>
             <div class="mdl-container">
-                <small>Para obtener más información acerca de nuestras promociones, contáctenos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
+                <small>Para obtener más información acerca de nuestras promociones, contáctanos: <a href="mailto:paola.vallejo@hpe.com">paola.vallejo@hpe.com</a></small>
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
