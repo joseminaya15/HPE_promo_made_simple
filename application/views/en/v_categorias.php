@@ -895,7 +895,7 @@
                                         <a href="https://store.intcomex.com/Account/Login" target="_blank">iQuote Tool</a>
                                     </div>
                                     <div class="mdl-card__iquote">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/solutionbox.png">
                                         <a href="https://www.solutionboxusa.com/configuradores?conf=iQuote" target="_blank">iQuote Tool</a>
                                     </div>
                                     <div class="mdl-card__iquote">
@@ -955,7 +955,7 @@
                                         <a href="mailto:Anderson.Mendoza@intcomex.com">Anderson.Mendoza@intcomex.com</a>
                                     </div>
                                     <div class="mdl-card__iquote any">
-                                        <img src="<?php echo RUTA_IMG?>logo/logo_solution.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/solutionbox.png">
                                         <a href="mailto:ricky_altez@solutionboxusa.com">ricky_altez@solutionboxusa.com</a>
                                     </div>
                                     <div class="mdl-card__iquote any">
