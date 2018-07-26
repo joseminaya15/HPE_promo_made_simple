@@ -55,7 +55,7 @@ function cerrarCesion(){
 		try{
 	        data = JSON.parse(data);
 	        if(data.error == 0){
-	        	location.href = 'Home';
+	        	location.href = '../Home';
 	        	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');
