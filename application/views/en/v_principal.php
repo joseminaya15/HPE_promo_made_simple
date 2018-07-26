@@ -400,7 +400,7 @@
                             <p>Please select your language</p>
                         </div>
                         <div class="mdl-card__actions">
-                            <a href="en/Home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Espa&ntilde;ol</a>
+                            <a href="es/Home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Espa&ntilde;ol</a>
                             <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">English</a>
                         </div>
                     </div>
@@ -429,7 +429,7 @@
                 if(openLanguage && openLanguage == '1') {
                     $("#ModalLanguage").modal('hide');
                     $('.menu_header').css('display','flex');
-                     $('.search-filter.home').css('display','block');
+                    $('.search-filter.home').css('display','block');
                 }
                 else{
                     $("#ModalLanguage").modal('show');
