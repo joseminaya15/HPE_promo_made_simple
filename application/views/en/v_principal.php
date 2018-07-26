@@ -423,9 +423,10 @@
             } else {
             }
             $(window).load(function() {
-                let openModal = sessionStorage.getItem('OPEN_MODAL2');
+                sessionStorage.setItem('OPEN_MODAL', '1');
+                var openModal = sessionStorage.getItem('OPEN_MODAL');
                 if(openModal && openModal == '1') {
-                    $("#ModalLogin").modal('hide');
+                    $("#ModalLanguage").modal('hide');
                     $('.menu_header').css('display','flex');
                     $('.search-filter.home').css('display','block');
                     $('#idioma_change').css('display', 'none');

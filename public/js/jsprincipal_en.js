@@ -1,6 +1,6 @@
-// $(window).load(function() {
-//     $("#ModalLogin").modal('show');
-// });
+$(window).load(function() {
+    $("#ModalLanguage").modal('show');
+});
 $('#principal .owl-carousel').owlCarousel({
 	lazyLoad : true,
 	animateOut: 'fadeOut',
@@ -22,6 +22,7 @@ function goToCategorias(id){
 	var openModal    = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	$("#ModalLogin").modal('show');
     $.ajax({
 		data : {cate : name_cate},
 		url  : 'Home/goToCategorias',
