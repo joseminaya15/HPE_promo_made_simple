@@ -32,7 +32,6 @@ class Categorias extends CI_Controller {
                 $data['texto'] = '';
             }
         }else {
-            //$datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'es'); 
             $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2);
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
@@ -42,53 +41,19 @@ class Categorias extends CI_Controller {
         $cont1 = 0;
         $dis   = '';
         if(count($datos) != 0){
-            //codigo con las sub categorias
-            /*$cate = $datos[0]->name;
-            foreach ($datos as $key){
-                if($key->est_qty == null || $key->est_qty == ''){
-                    $dis = 'display: none';
-                }else {
-                    $dis = 'display: none';//cambiar table-cell
-                }
-                if($this->session->userdata('id_cates') == 10){
-                    //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
-                $html .= '<tr>
-                            <td>'.$key->product_id.'</td>
-                            <td>'.$key->product_desc.'</td>
-                        </tr>';
-                }else {
-                    if($cate == $key->name){
-                        //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
-                        $html .= '<tr>
-                                    <td>'.$key->product_id.'</td>
-                                    <td>'.$key->product_desc.'</td>
-                                </tr>';
-                    }else {
-                        //$qty = '<td style="'.$dis.'">'.$key->est_qty.'</td>';
-                        if($cate != $key->name){
-                            $cate = $key->name;
-                            $html .= '
-                                      <tr>
-                                        <td>'.$key->product_id.'</td>
-                                        <td>'.$key->product_desc.'</td>
-                                      </tr>';
-                        }
-                    }
-                }*/
                 foreach ($datos as $key) {
                     $html .= '<tr>
                                   <td>'.$key->sku.'</td>
                                   <td>'.$key->product_desc.'</td>
                               </tr>';
                 }
-            //}
-            $data['start_date']  = /*$datos[0]->effect_date*/$datos[0]->fecha_inicio;
+            $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
-            $data['end_date']    = /*$datos[0]->fecha_fin*/$datos[0]->fecha_fin;
+            $data['end_date']    = $datos[0]->fecha_fin;
             $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
             $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
             $data['novedades']   = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
-            $data['qty']         = /*$datos[0]->est_qty*/'';
+            $data['qty']         = '';
         }else {
             $cate  = '';
             $html  = '<tr>
