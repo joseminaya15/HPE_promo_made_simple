@@ -185,6 +185,7 @@ class Home extends CI_Controller {
         try {
             $this->session->unset_userdata('usuario');
             $this->session->unset_userdata('Id_user');
+            session_destroy();
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
