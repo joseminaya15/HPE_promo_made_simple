@@ -22,6 +22,7 @@ function goToCategorias(id){
 	var openModal    = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	sessionStorage.setItem('OPEN_MODAL', 1);
 	$("#ModalLogin").modal('show');
     $.ajax({
 		data : {cate : name_cate},
@@ -36,7 +37,7 @@ function goToCategorias(id){
 			    }
 			    else{
 			        $("#ModalLogin").modal('hide');
-			        sessionStorage.removeItem('OPEN_MODAL');
+					sessionStorage.setItem('OPEN_MODAL', '1');
 					location.href = 'Categorias';
 			    }
 	        }else {
@@ -58,7 +59,7 @@ function cerrarCesion(){
 	        	location.href = 'Home';
 	        	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
-	        	sessionStorage.setItem('OPEN_MODAL2', '2');
+	        	// sessionStorage.setItem('OPEN_MODAL2', '2');
 	        	$('#idioma_change').css('display', 'block');
 	        }else {
 	        	return;
@@ -93,7 +94,8 @@ function ingresar(){
         	$("#ModalLogin").modal('hide');
         	$('#idioma_change').css('display', 'none');
         	location.href = 'Home';
-        	sessionStorage.setItem('OPEN_MODAL2', '1');
+        	// sessionStorage.setItem('OPEN_MODAL2', '1');
+        	sessionStorage.setItem('OPEN_LANGUAGE', '1');
         	sessionStorage.removeItem('OPEN_MODAL');
 			$('.menu_header').css('display','flex');
 			$('.search-filter.home').css('display','flex');
@@ -203,7 +205,7 @@ function verificarDatos(e){
     }
 }
 function closeModal(){
-	sessionStorage.setItem('OPEN_MODAL', '1');
+	// sessionStorage.setItem('OPEN_MODAL', '1');
 	$("#ModalLogin").modal('hide');
 	$('#usuario').val("");
 	$('#password').val("");

@@ -20,7 +20,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
@@ -400,7 +400,7 @@
                             <p>Please select your language</p>
                         </div>
                         <div class="mdl-card__actions">
-                            <a href="es/Home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Espa&ntilde;ol</a>
+                            <a href="en/Home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Espa&ntilde;ol</a>
                             <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">English</a>
                         </div>
                     </div>
@@ -423,21 +423,31 @@
             } else {
             }
             $(window).load(function() {
-                sessionStorage.setItem('OPEN_MODAL', '1');
-                var openModal = sessionStorage.getItem('OPEN_MODAL');
-                if(openModal && openModal == '1') {
+                // sessionStorage.setItem('OPEN_MODAL', '1');
+                // var openModal    = sessionStorage.getItem('OPEN_MODAL');
+                var openLanguage = sessionStorage.getItem('OPEN_LANGUAGE');
+                if(openLanguage && openLanguage == '1') {
                     $("#ModalLanguage").modal('hide');
                     $('.menu_header').css('display','flex');
-                    $('.search-filter.home').css('display','block');
-                    $('#idioma_change').css('display', 'none');
+                     $('.search-filter.home').css('display','block');
                 }
                 else{
                     $("#ModalLanguage").modal('show');
                     sessionStorage.removeItem('OPEN_MODAL');
                     $('.menu_header').css('display','none');
                     $('.search-filter.home').css('display','none');
-                    $('#idioma_change').css('display', 'block');
                 }
+                // if(openModal && openModal == '1') {
+                //     $("#ModalLogin").modal('hide');
+                //     $('.menu_header').css('display','flex');
+                //     $('.search-filter.home').css('display','block');
+                // }
+                // else{
+                //     // $("#ModalLogin").modal('show');
+                //     sessionStorage.removeItem('OPEN_MODAL');
+                //     $('.menu_header').css('display','none');
+                //     $('.search-filter.home').css('display','none');
+                // }
             });
         </script>
     </body>
