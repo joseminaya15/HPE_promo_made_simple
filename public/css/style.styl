@@ -717,17 +717,6 @@ img
 .mdl-card__menu
 	top 8px
 	right 8px
-#ModalBorrarOferta
-	.mdl-card
-		min-height 100%
-		.mdl-card__actions
-			padding 20px
-			padding-top 0
-			button
-				background-color red
-				text-transform initial
-				color #FFFFFF
-				font-family $medium
 .fixed-logo
 	position absolute
 	top 50px
@@ -1257,6 +1246,47 @@ img
 					padding-left 25px
 					li
 						padding-left 15px
+.modal-md
+	width 100%
+	max-width 450px
+	text-align center
+	.mdl-card
+		width 100%
+		.mdl-card__title
+			padding 50px 16px 10px 16px
+			h2
+				font-size 40px
+				line-height 40px
+				color $default
+				margin 10px auto
+				font-family $bold
+		.mdl-card__supporting-text
+			h3
+				color #000000
+				font-family $bold
+				font-size 28px
+				line-height 30px
+				margin 5px 0
+			p
+				font-size 26px
+				color #000000
+				line-height 28px
+		.mdl-card__actions
+			padding 10px 16px 30px 16px
+			a
+				allTransition()
+				border 2px solid $default
+				background-color transparent
+				text-transform initial
+				margin 10px 20px
+				box-shadow none !important
+				font-family $medium
+				font-size 20px
+				text-decoration none
+				padding 0 30px
+				&:hover
+					background-color $default
+					color #FFFFFF				
 .header_promocion
 	p
 		font-size 18px

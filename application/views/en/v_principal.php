@@ -388,6 +388,25 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="ModalLanguage" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="mdl-card">
+                        <div class="mdl-card__title">
+                            <h2>Bienvenido / Welcome</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <h3>Por favor seleccione su idioma</h3>
+                            <p>Please select your language</p>
+                        </div>
+                        <div class="mdl-card__actions">
+                            <a href="es/Home" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Espa&ntilde;ol</a>
+                            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">English</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -412,7 +431,7 @@
                     $('#idioma_change').css('display', 'none');
                 }
                 else{
-                    $("#ModalLogin").modal('show');
+                    $("#ModalLanguage").modal('show');
                     sessionStorage.removeItem('OPEN_MODAL');
                     $('.menu_header').css('display','none');
                     $('.search-filter.home').css('display','none');
