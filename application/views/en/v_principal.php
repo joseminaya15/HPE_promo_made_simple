@@ -423,11 +423,10 @@
             } else {
             }
             $(window).load(function() {
-                // sessionStorage.setItem('OPEN_MODAL', '1');
-                // var openModal    = sessionStorage.getItem('OPEN_MODAL');
                 var openLanguage = sessionStorage.getItem('OPEN_LANGUAGE');
                 if(openLanguage && openLanguage == '1') {
                     $("#ModalLanguage").modal('hide');
+                    $("#ModalLanguage").css('display','none');
                     $('.menu_header').css('display','flex');
                     $('.search-filter.home').css('display','block');
                 }
@@ -437,17 +436,6 @@
                     $('.menu_header').css('display','none');
                     $('.search-filter.home').css('display','none');
                 }
-                // if(openModal && openModal == '1') {
-                //     $("#ModalLogin").modal('hide');
-                //     $('.menu_header').css('display','flex');
-                //     $('.search-filter.home').css('display','block');
-                // }
-                // else{
-                //     // $("#ModalLogin").modal('show');
-                //     sessionStorage.removeItem('OPEN_MODAL');
-                //     $('.menu_header').css('display','none');
-                //     $('.search-filter.home').css('display','none');
-                // }
             });
         </script>
     </body>

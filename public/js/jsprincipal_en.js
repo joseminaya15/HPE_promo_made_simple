@@ -16,63 +16,10 @@ $('#principal .owl-carousel').owlCarousel({
 	autoplay : true,
 	autoplayTimeout : 5000
 });
-function goToCategorias(id){
-	var idCategoria  = $("#"+id);
-	var name_cate    = idCategoria.find('h2').attr('data-id');
-	var openModal    = sessionStorage.getItem('OPEN_MODAL');
-	sessionStorage.setItem('OPEN_CATEGORIA', id);
-	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
-	$("#ModalLogin").modal('show');
-    $.ajax({
-		data : {cate : name_cate},
-		url  : 'Home/goToCategorias',
-		type : 'POST'
-	}).done(function(data){
-		try{
-	        data = JSON.parse(data);
-	        if(data.error == 0){
-	        	if(openModal && openModal == '1') {
-			        $("#ModalLogin").modal('show');
-			    }
-			    else{
-			        $("#ModalLogin").modal('hide');
-					sessionStorage.setItem('OPEN_MODAL', '1');
-					location.href = 'Categorias';
-			    }
-	        }else {
-	        	return;
-	        }
-		}catch(err){
-			msj('error',err.message);
-		}
-	});
-}
-function cerrarCesion(){
-	$.ajax({
-		url  : 'Home/cerrarCesion',
-		type : 'POST'
-	}).done(function(data){
-		try{
-	        data = JSON.parse(data);
-	        if(data.error == 0){
-	        	location.href = 'Home';
-	        	$('.menu_header').css('display','none');
-	        	$('.search-filter.home').css('display','none');
-	        	sessionStorage.removeItem('OPEN_LANGUAGE');
-	        	sessionStorage.removeItem('OPEN_MODAL');
-	        }else {
-	        	return;
-	        }
-		}catch(err){
-			msj('error',err.message);
-		}
-	});
-}
 function ingresar(){
 	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
-	sessionStorage.setItem('OPEN_LANGUAGE', '1');
-	sessionStorage.setItem('OPEN_MODAL', 1);
+	sessionStorage.setItem('OPEN_MODAL', '1');
 	if(usuario == null || usuario == ''){
 		msj('error', 'Ingrese su usuario');
 		return;
@@ -93,11 +40,8 @@ function ingresar(){
         	$('#usuario').val("");
         	$('#password').val("");
         	$("#ModalLogin").modal('hide');
-        	$('#idioma_change').css('display', 'none');
         	location.href = 'Home';
-        	// sessionStorage.setItem('OPEN_MODAL2', '1');
-        	// sessionStorage.removeItem('OPEN_MODAL');
-        	sessionStorage.removeItem('OPEN_LANGUAGE');
+			sessionStorage.setItem('OPEN_LANGUAGE', '1');
 			$('.menu_header').css('display','flex');
 			$('.search-filter.home').css('display','flex');
         }else {
@@ -111,6 +55,36 @@ function ingresar(){
       }catch(err){
         msj('error',err.message);
       }
+	});
+}
+function goToCategorias(id){
+	var idCategoria  = $("#"+id);
+	var name_cate    = idCategoria.find('h2').attr('data-id');
+	var openModal    = sessionStorage.getItem('OPEN_MODAL');
+	sessionStorage.setItem('OPEN_CATEGORIA', id);
+	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	$("#ModalLogin").modal('show');
+    $.ajax({
+		data : {cate : name_cate},
+		url  : 'Home/goToCategorias',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	if(openModal && openModal == '1') {
+	        		$("#ModalLogin").modal('hide');
+					location.href = 'Categorias';
+			    }
+			    else{
+			        $("#ModalLogin").modal('show');
+			    }
+	        }else {
+	        	return;
+	        }
+		}catch(err){
+			msj('error',err.message);
+		}
 	});
 }
 function registrar() {
@@ -170,6 +144,27 @@ function registrar() {
       }
 	});
 }
+function cerrarCesion(){
+	$.ajax({
+		url  : 'Home/cerrarCesion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	location.href = 'Home';
+	        	$('.menu_header').css('display','none');
+	        	$('.search-filter.home').css('display','none');
+	        	sessionStorage.removeItem('OPEN_LANGUAGE');
+	        	sessionStorage.removeItem('OPEN_MODAL');
+	        }else {
+	        	return;
+	        }
+		}catch(err){
+			msj('error',err.message);
+		}
+	});
+}
 function soloLetras(e){
     key 	     = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
@@ -206,7 +201,6 @@ function verificarDatos(e){
     }
 }
 function closeModal(){
-	// sessionStorage.setItem('OPEN_MODAL', '1');
 	$("#ModalLogin").modal('hide');
 	$('#usuario').val("");
 	$('#password').val("");
