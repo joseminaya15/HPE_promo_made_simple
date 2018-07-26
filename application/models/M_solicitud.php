@@ -248,9 +248,9 @@ class M_solicitud extends  CI_Model{
                        paises pa,
                        categorias c
                  WHERE p.id_pais = pa.Id
-                   AND p.id_categoria = pa.Id
+                   AND p.id_categoria = c.Id
                    AND c.Id = ?
-                   AND pa.Id = ?";
+                   AND pa.Id IN ?";
         $result = $this->db->query($sql, array($id_cates, $id_pais));
         return $result->result();
     }

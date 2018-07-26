@@ -21,6 +21,9 @@ class Categorias extends CI_Controller {
         $data['nombre'] = $nombre[0];
         $promos         = $this->M_solicitud->getDatosCategorias($this->session->userdata('Id_user'));
         $idioma         = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
+        $pais1   = $this->session->userdata('id_pais');
+        $arrPais = explode(',', $pais1);
+        $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             if(count($datos) == 0){
@@ -30,7 +33,7 @@ class Categorias extends CI_Controller {
             }
         }else {
             //$datos = $this->M_solicitud->getDatosProducts($this->session->userdata('id_cates'), 'es'); 
-            $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $this->session->userdata('id_pais'));
+            $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2);
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate  = '';
