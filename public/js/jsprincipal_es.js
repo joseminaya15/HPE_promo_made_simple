@@ -297,27 +297,3 @@ function directPromos(id_cates){
 function showSearch(){
 	$('.header--principal').addClass('active');
 }
-function goTo(idioma){
-	$.ajax({
-		data : {idioma : idioma},
-		url  : 'Home/goTo',
-		type : 'POST'
-	}).done(function(data){
-	  	try{
-		    data = JSON.parse(data);
-		    if(data.error == 0){
-		    	location.href = "../en/Home";
-		    	$('.menu_header').css('display','none');
-	        	$('.search-filter.home').css('display','none');
-	        	sessionStorage.setItem('OPEN_MODAL2', '2');
-		    }else {
-		    	toastr.remove();
-	          	msj('error', data.msj);
-		    	return;
-		    }
-	  	}catch(err){
-	    	toastr.remove();
-          	msj('error',err.message);
-	  	}
-	});
-}
