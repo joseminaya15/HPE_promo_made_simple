@@ -188,9 +188,9 @@ class M_solicitud extends  CI_Model{
     }
     function getPaises($idioma){
         if($idioma == 'es'){
-          $paises = 'WHERE Id <= 10';
+          $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,14,18,22,25)';
         }else {
-          $paises = 'WHERE Id >= 11 AND Id <= 52';
+          $paises = 'WHERE Id NOT IN (1,2,3,4,5,6,7,8,9,10,12,14,18,22,25)';
         }
         $sql = "SELECT * FROM paises ".$paises." ORDER BY Nombre ASC";
         $result = $this->db->query($sql);
