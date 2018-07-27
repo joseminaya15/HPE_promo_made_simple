@@ -50,7 +50,11 @@ class Categorias extends CI_Controller {
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
-            $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
+            if ($pais1 == "6, 7") {
+                $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'<li>Esta promoción solo aplica para Ecuador.</li></ul>' : '-' ;
+            } else {
+                $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;    
+            }
             if ($pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
                 $data['objetivo']    = '¡Aprovecha los precios agresivos en las licencias más vendidas, cuando están en el furor del mercado!';
                 $data['novedades']   = '-';
