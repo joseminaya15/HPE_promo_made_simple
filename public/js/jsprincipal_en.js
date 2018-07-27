@@ -245,6 +245,9 @@ function inputActive(id){
 		$('#buttonClear').css('visibility','hidden')
 	}
 }
+function triggerCategoria(id1){
+	goToCategorias(id1);
+}
 function clearInput(){
 	$('#inputSearch').val('');
 	$('#cardsCates').css("display", "block");
@@ -253,14 +256,10 @@ function clearInput(){
 	$('.header--principal').removeClass('active');
 }
 var cates = null;
-function triggerCategoria(id1){
-	goToCategorias(id1);
-}
-function showSearch(){
-	$('.header--principal').addClass('active');
-}
-var cates = null;
 function directPromos(id_cates){
 	cates = 'p'+id_cates;
 	goToCategorias(cates);
+}
+function showSearch(){
+	$('.header--principal').addClass('active');
 }

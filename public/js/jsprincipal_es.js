@@ -275,9 +275,6 @@ function buscarPromo(datos){
 	  	}
 	});
 }
-function triggerCategoria(id1){
-	goToCategorias(id1);
-}
 function inputActive(id){
 	var lenghtInput = $('#'+id).val();
 	if(lenghtInput.length > 0){
@@ -285,6 +282,9 @@ function inputActive(id){
 	}else{
 		$('#buttonClear').css('visibility','hidden')
 	}
+}
+function triggerCategoria(id1){
+	goToCategorias(id1);
 }
 function clearInput(){
 	$('#inputSearch').val('');

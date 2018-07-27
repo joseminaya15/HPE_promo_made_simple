@@ -255,7 +255,7 @@
                 </a>
             </div> -->
             <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
-                <!-- <?php echo $contenido ?> -->
+                <?php echo $contenido ?>
                 <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="js-engage">
                         <div class="js-engage__left"></div>
