@@ -89,7 +89,7 @@
         <section id="productos" class="col-xs-12">
             <div class="mdl-container">
                 <div class="col-xs-12">
-                    <a href="Home" class="return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
+                    <a href="Home" class="js-flex js-go js-return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
                         <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
