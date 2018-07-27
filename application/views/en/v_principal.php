@@ -129,7 +129,7 @@
             </div>
         </section>
         <section>
-            <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
+            <!-- <div class="mdl-container seccion-promociones" id="cardsCates" style="display: block">
                 <a id="p13" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen thirteen"></div>
@@ -162,14 +162,6 @@
                         <h2 class="purple" data-id="HPE Pointnext">HPE Pointnext</h2>
                     </div>
                 </a>
-                <!-- <a id="p5" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen five"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="four" data-id="Gen 10 Accelerate">Gen 10 Accelerate</h2>
-                    </div>
-                </a> -->
                 <a id="p3" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen three"></div>
@@ -202,14 +194,6 @@
                         <h2 class="default" data-id="Synergy">Synergy</h2>
                     </div>
                 </a>
-                <!-- <a id="p10" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
-                    <div class="mdl-card__title">
-                        <div class="promocion-imagen eleven"></div>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <h2 class="five" data-id="Virtual Licenses">Virtual Licenses</h2>
-                    </div>
-                </a> -->
                 <a id="p6" class="mdl-card mdl-promociones" onclick="goToCategorias(this.id)">
                     <div class="mdl-card__title">
                         <div class="promocion-imagen three"></div>
@@ -267,6 +251,18 @@
                     <div class="mdl-card__supporting-text">
                         <h2 class="black" data-id="InstaSale">InstaSale</h2>
                         <div class="encabezado"></div>
+                    </div>
+                </a>
+            </div> -->
+            <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
+                <!-- <?php echo $contenido ?> -->
+                <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                    <div class="js-engage">
+                        <div class="js-engage__left"></div>
+                        <div class="js-engage__right">
+                            <p>Conoce los incentivos que tenemos para ti este trimestre:</span></p>
+                            <img src="<?php echo RUTA_IMG?>promo/logo-engage.png">
+                        </div>
                     </div>
                 </a>
             </div>

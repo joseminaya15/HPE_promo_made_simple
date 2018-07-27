@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-8 text-right p-0 header__right">
                             <div class="menu_header">
-                                <p lang="en" translate="no">Bienvenido(a) <?php echo $nombre ?></p>
+                                <p>Bienvenido(a) <?php echo $nombre ?></p>
                                 <a onclick="cerrarCesion()" class="logout">Logout</a>
                             </div>
                             <div class="menu_principal col-xs-12 p-0">
