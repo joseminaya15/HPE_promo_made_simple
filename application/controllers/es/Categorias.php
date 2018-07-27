@@ -51,8 +51,13 @@ class Categorias extends CI_Controller {
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
             $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
-            $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
-            $data['novedades']   = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
+            if ($pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
+                $data['objetivo']    = '¡Aprovecha los precios agresivos en las licencias más vendidas, cuando están en el furor del mercado!';
+                $data['novedades']   = '-';
+            } else {
+                $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
+                $data['novedades']   = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
+            }
             $data['qty']         = '';
         }else {
             $cate  = '';

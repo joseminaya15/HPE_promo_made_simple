@@ -21,7 +21,6 @@ function goToCategorias(id){
 	var name_cate    = idCategoria.attr('data-id');
 	var openModal    = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
-	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
     $.ajax({
 		data : {cate : name_cate},
 		url  : 'Home/goToCategorias',
@@ -29,6 +28,11 @@ function goToCategorias(id){
 	}).done(function(data){
 		try{
 	        data = JSON.parse(data);
+	        if((data.pais == 2 || data.pais == 3 || data.pais == 4) && name_cate == 'Base Promo'){
+	        	sessionStorage.setItem('NAME_CATEGORIA', 'Promo Licencias');
+	        } else {
+	        	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
+	        }
 	        if(data.error == 0){
 	        	if(openModal && openModal == '1') {
 			        $("#ModalLogin").modal('show');

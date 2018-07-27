@@ -69,7 +69,15 @@ class Home extends CI_Controller {
                                 <ul>';
             foreach ($relas2 as $rels) {
                 if($rels->nom_rel == $rel->relacion){
-                    $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                    if ( $pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
+                        if ($rels->Nombre == 'Base Promo') {
+                            $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">Promo Licencias</a></li>';
+                        } else {
+                            $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        }
+                    } else {
+                        $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                    }
                     $var  = $html1;
                 }
             }
@@ -200,6 +208,7 @@ class Home extends CI_Controller {
             $id_cate = $this->M_solicitud->getIdByNameCate($cate);
             $session = array('id_cates' => $id_cate);
             $this->session->set_userdata($session);
+            $data['pais']  = $this->session->userdata('id_pais');
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e) {
             $data['msj'] = $e->getMessage();
