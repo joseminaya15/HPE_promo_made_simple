@@ -40,6 +40,7 @@ class Categorias extends CI_Controller {
         $cont  = 0;
         $cont1 = 0;
         $dis   = '';
+        $cates = $this->session->userdata('id_cates');
         if(count($datos) != 0){
                 foreach ($datos as $key) {
                     $html .= '<tr>
@@ -50,12 +51,12 @@ class Categorias extends CI_Controller {
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
-            if ($pais1 == "6, 7") {
+            if ($pais1 == "6, 7" && $cates == 2) {
                 $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'<li>Esta promoción solo aplica para Ecuador.</li></ul>' : '-' ;
             } else {
                 $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;    
             }
-            if ($pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
+            if (($pais1 == 2 || $pais1 == 3 || $pais1 == 4) && $cates == 13 ) {
                 $data['objetivo']    = '¡Aprovecha los precios agresivos en las licencias más vendidas, cuando están en el furor del mercado!';
                 $data['novedades']   = '-';
             } else {
