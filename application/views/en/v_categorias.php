@@ -92,7 +92,7 @@
                     <a href="Home" class="js-flex js-go js-return"><i class="mdi mdi-arrow_back"></i>Back to Home</a>
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
-                        <div class="col-sm-6 col-xs-12 p-0" id="textLeft">
+                        <div class="col-sm-7 col-xs-12 p-0" id="textLeft">
                             <div id="Ep1" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Base Promo</span></p>
@@ -205,10 +205,24 @@
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
+                        <div class="col-sm-5 col-xs-12 text-right" id="textRight">
+                            <div class="js-iquote">
+                                <div class="js-iquote__left">
+                                    <img src="<?php echo RUTA_IMG?>fondo/fondo1.jpg">
+                                </div>
+                                <div class="js-iquote__right">
+                                    <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" style="display: inline-block;">
+                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
+                                </div>
+                            </div>
+                            <div class="js-iquote">
+                                <div class="promocion_categoria"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
                             <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
                             <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
-                        </div>
+                        </div> -->
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>Coming Soon! In this section you will find the best offers and promotions for a very limited time. Stay tuned!</h4>
                         </div>
@@ -246,30 +260,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="mdl-container__promocion col-xs-12 p-0">
-                        <div class="promocion_categoria"></div>
-                        <div class="table-responsive table_categoria">
-                            <table id="tableCategoria" class="table table-striped">
-                                <thead>
-                                    <tr class="tr-header-reporte">
-                                        <?php if($sales == 7) { ?>
-                                        <th>Product number ID</th>
-                                        <th>Product Description</th>
-                                        <?php } else { ?>
-                                        <th>Product number ID</th>
-                                        <th>Product Description</th>
-                                        <?php if($qty != '' || $qty != null) { ?>
-                                        <th>Est. Qty</th>
-                                        <?php } ?>
-                                        <?php } ?>
-                                    </tr>
-                                </thead>
-                                <tbody id="promociones">
-                                    <?php echo $promociones ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
