@@ -18,7 +18,7 @@ class Home extends CI_Controller {
         $combo1 = '';
         $combo2 = '';
         $user   = $this->session->userdata('Id_user');
-        $idioma = 'es';
+        $idioma = 'en';
         $pais1  = $this->session->userdata('id_pais') == '' ? 1 : $this->session->userdata('id_pais');
         $arrPais = explode(',', $pais1);
         $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
@@ -98,7 +98,7 @@ class Home extends CI_Controller {
         $data['options']   = $opt;
         $data['combo1']    = $combo1;
         $data['combo2']    = $combo2;
-        if ($idioma == 'es') {
+        if ($idioma == 'en') {
             $data['pais']  = (count($nomPais) == 1) ? $nomPais[0]->Nombre : ($nomPais[0]->Nombre.' y '.$nomPais[1]->Nombre);
         }
         $this->load->view('en/v_principal', $data);
@@ -113,7 +113,7 @@ class Home extends CI_Controller {
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
             if(count($username) != 0){
-                if($username[0]->idioma == 'es'){
+                if($username[0]->idioma == 'en'){
                     $arrPais  = explode(' / ', $username[0]->Pais);
                     $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
