@@ -240,12 +240,12 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getCategoriasxPais($id_cates, $id_pais){
+    function getCategoriasxPais($id_cates, $id_pais, $cate){
         $sql = "SELECT p.*,
                        DATE_FORMAT(p.start_date, '%d/%m/%Y') AS fecha_inicio,
                        DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin,
                        c.*
-                  FROM products1 p,
+                  FROM products".$cate." p,
                        paises pa,
                        categorias c
                  WHERE p.id_pais = pa.Id

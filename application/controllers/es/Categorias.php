@@ -32,7 +32,7 @@ class Categorias extends CI_Controller {
                 $data['texto'] = '';
             }
         }else {
-            $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2);
+            $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2, 1);
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate  = '';
