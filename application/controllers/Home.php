@@ -60,12 +60,12 @@ class Home extends CI_Controller {
                                 <div class="promocion-imagen '.$rel->img.'"></div>
                             </div>
                             <div class="mdl-card__supporting-text">
-                                <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
+                                <h2 class="'.$rel->color.'">'.$rel->nombre_en.'</h2>
                             </div>
                         </div>
                         <div class="js-flip__back">
                             <div class="js-categorias">
-                                <h2>'.$rel->relacion.'</h2>
+                                <h2>'.$rel->nombre_en.'</h2>
                                 <ul>';
             foreach ($relas2 as $rels) {
                 if($rels->nom_rel == $rel->relacion){

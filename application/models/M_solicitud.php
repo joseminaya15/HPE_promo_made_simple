@@ -24,33 +24,33 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDatosProducts($id_cate, $idioma){
-        $texto = '';
-        if($idioma == 'es'){
-          $texto = "DATE_FORMAT(c.fec_ini, '%m/%d/%Y') AS effect_date,
-                       DATE_FORMAT(c.fec_fin, '%m/%d/%Y') AS fecha_fin,";
-        }else {
-          $texto = "DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
-                       DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin,";
-        }
-        $sql = "SELECT p.*,
-                       s.name,
-                       c.Nombre,
-                       ".$texto."
-                       p.est_qty,
-                       c.condiciones_es,
-                       c.objetivo_es,
-                       c.novedades_es
-                  FROM products p,
-                       categorias c,
-                       sub_categorias s
-                 WHERE p.id_sub_cate = s.Id
-                   AND s.id_cate = c.Id
-                   AND c.Id = ?
-              ORDER BY s.name";
-        $result = $this->db->query($sql, array($id_cate));
-        return $result->result();
-    }
+    // function getDatosProducts($id_cate, $idioma){
+    //     $texto = '';
+    //     if($idioma == 'es'){
+    //       $texto = "DATE_FORMAT(c.fec_ini, '%m/%d/%Y') AS effect_date,
+    //                    DATE_FORMAT(c.fec_fin, '%m/%d/%Y') AS fecha_fin,";
+    //     }else {
+    //       $texto = "DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
+    //                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin,";
+    //     }
+    //     $sql = "SELECT p.*,
+    //                    s.name,
+    //                    c.Nombre,
+    //                    ".$texto."
+    //                    p.est_qty,
+    //                    c.condiciones_es,
+    //                    c.objetivo_es,
+    //                    c.novedades_es
+    //               FROM products p,
+    //                    categorias c,
+    //                    sub_categorias s
+    //              WHERE p.id_sub_cate = s.Id
+    //                AND s.id_cate = c.Id
+    //                AND c.Id = ?
+    //           ORDER BY s.name";
+    //     $result = $this->db->query($sql, array($id_cate));
+    //     return $result->result();
+    // }
     function getDatosBuscadorProducts($id_cate, $texto){
         $sql = "SELECT p.*,
                        s.name,
@@ -99,22 +99,22 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDatosBuscadorProductsByCate($texto){
-        $sql = "SELECT p.*,
-                       s.name,
-                       c.Nombre,
-                       c.Id AS id_cates,
-                       DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
-                       DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
-                  FROM products p,
-                       categorias c,
-                       sub_categorias s
-                 WHERE p.id_sub_cate = s.Id
-                   AND s.id_cate = c.Id
-                   AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
-        $result = $this->db->query($sql);
-        return $result->result();
-    }
+    // function getDatosBuscadorProductsByCate($texto){
+    //     $sql = "SELECT p.*,
+    //                    s.name,
+    //                    c.Nombre,
+    //                    c.Id AS id_cates,
+    //                    DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
+    //                    DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
+    //               FROM products p,
+    //                    categorias c,
+    //                    sub_categorias s
+    //              WHERE p.id_sub_cate = s.Id
+    //                AND s.id_cate = c.Id
+    //                AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
+    //     $result = $this->db->query($sql);
+    //     return $result->result();
+    // }
     function getDatosInstaSales(){
         $sql = "SELECT p.*, 
                        s.name,
@@ -212,7 +212,7 @@ class M_solicitud extends  CI_Model{
     }
     function getRelacionXCates2($id_pais){
         $sql = "SELECT c.*,
-                       r.Nombre AS nom_rel
+                       r.Nombre_es AS nom_rel
                   FROM categoria_x_pais cp,
                        cates_x_relacion cr,
                        relacion r,
@@ -221,12 +221,13 @@ class M_solicitud extends  CI_Model{
                    AND cr.id_cate = cp.id_cate
                    AND r.Id = cr.id_rel 
                    AND c.Id = cr.id_cate
-              ORDER BY r.Nombre DESC, c.orden_2 ASC, c.Id DESC";
+              ORDER BY r.Nombre_es DESC, c.orden_2 ASC, c.Id DESC";
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
     function getRelacionXCates1(){
-        $sql = "SELECT r.Nombre as relacion,
+        $sql = "SELECT r.Nombre_es as relacion,
+                       r.Nombre_en as nombre_en,
                        r.color,
                        r.img
                   FROM cates_x_relacion cr,
@@ -234,7 +235,7 @@ class M_solicitud extends  CI_Model{
                        relacion r
                  WHERE r.Id = cr.id_rel
                    AND c.Id = cr.id_cate
-                GROUP BY r.Nombre
+                GROUP BY r.Nombre_es
                 ORDER BY r.Id ASC";
         $result = $this->db->query($sql);
         return $result->result();
