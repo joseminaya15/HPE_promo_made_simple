@@ -265,7 +265,7 @@
                         <div class="encabezado"></div>
                     </div>
                 </a>
-                <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                <!-- <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="js-engage">
                         <div class="js-engage__left"></div>
                         <div class="js-engage__right">
@@ -273,7 +273,7 @@
                             <img src="<?php echo RUTA_IMG?>promo/logo-engage.png">
                         </div>
                     </div>
-                </a>
+                </a> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
