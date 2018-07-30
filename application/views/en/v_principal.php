@@ -256,6 +256,15 @@
             </div> -->
             <div class="mdl-container seccion-promociones js-seccion--promociones" id="cardsCates" style="display: block">
                 <?php echo $contenido ?>
+                <a class="mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                    <div class="mdl-card__title">
+                        <div class="promocion-imagen engage-grow"></div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <h2 class="black" data-id="InstaSale">ENGAGE & GROW</h2>
+                        <div class="encabezado"></div>
+                    </div>
+                </a>
                 <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
                     <div class="js-engage">
                         <div class="js-engage__left"></div>
