@@ -15,8 +15,8 @@ class M_solicitud extends  CI_Model{
     }
     function verificarUsuario($user){
         $sql = "SELECT *,
-                       CASE WHEN (id_pais <= 25) THEN 'es'
-                            WHEN (id_pais >= 26 AND id_pais <= 52) THEN 'en'
+                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,14,18,22,25) ) THEN 'es'
+                            WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,14,18,22,25) ) THEN 'en'
                             ELSE 'es'
                         END AS idioma
                   FROM users
