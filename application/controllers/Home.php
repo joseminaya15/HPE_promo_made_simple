@@ -365,29 +365,38 @@ class Home extends CI_Controller {
     }
     function enviarEmailPass(){
         $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {  
-       $this->load->library("email");
-       $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
-       $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@marketinghpe.com',
-                            'smtp_pass' => 'sapmktinfo18',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");    
-       $this->email->initialize($configGmail);
-       $this->email->from('info@sapmarketing.net');
-       $this->email->to($email);
-       $this->email->subject('Merci de votre intérêt pour SAP Business One.');
-       $texto = '';
-        $this->email->message($texto);
-        $this->email->send();
-        $data['error'] = EXIT_SUCCESS;
-      }catch (Exception $e){
-        $data['msj'] = $e->getMessage();
-      }
-      return json_encode(array_map('utf8_encode', $data));
+        $data['msj']   = null;
+        try {  
+            $this->load->library("email");
+            $configGmail = array('protocol' => 'smtp',
+                                'smtp_host' => 'smtpout.secureserver.net',
+                                'smtp_port' => 3535,
+                                'smtp_user' => 'info@marketinghpe.com',
+                                'smtp_pass' => 'hpEmSac$18',
+                                'mailtype'  => 'html',
+                                'charset'   => 'utf-8',
+                                'newline'   => "\r\n");    
+            $this->email->initialize($configGmail);
+            $this->email->from('info@marketinghpe.com');
+            $this->email->to('jhonatanibericom@gmail.com');
+            $this->email->subject('Merci de votre intérêt pour SAP Business One.');
+            $texto = '<!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>AAAA</title>
+                        </head>
+                        <body>
+                         <h1>asaassa</h1>
+                         <h2>asaassa1</h2>
+                         <h2>asaassa2</h2>
+                        </body>
+                     </html>';
+            $this->email->message($texto);
+            $this->email->send();
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        return json_encode(array_map('utf8_encode', $data));
     }
 }

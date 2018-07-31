@@ -102,41 +102,41 @@ function registrar() {
 	var tipo_user 	  = 1;
 	if(nombre == '' && correo == '' && passRegister == ''){
 		toastr.remove();
-		msj('error', 'Ingrese sus datos');
+		msj('error', 'Enter your data');
 		return;
 	}
 	if(nombre == null || nombre == undefined || nombre == ''){
 		toastr.remove();
-		msj('error', 'Ingrese su nombre');
+		msj('error', 'Enter your name');
 		return;
 	}
 	if(correo == ''){
 		toastr.remove();
-		msj('error', 'Ingrese su correo');
+		msj('error', 'Enter your email');
 		return;
 	}
 	if (!validateEmail(correo)){
 		toastr.remove();
-		msj('error', 'El formato del correo es incorrecto');
+		msj('error', 'The format of the email is incorrect');
 		return;
 	}
 	if(validateEmailCorporative(correo)){
 		toastr.remove();
-      	msj('error', 'Ingrese un email corporativo');
+      	msj('error', 'Enter a corporate email');
 		return;
 	}
-	/*if(empresa == '' || empresa == null){
-		msj('error', 'Ingrese su empresa');
+	if(empresa == '' || empresa == null){
+		msj('error', 'Enter your company');
 		return;
-	}*/
+	}
 	if(pais == ''){
 		toastr.remove();
-		msj('error', 'Ingrese su país');
+		msj('error', 'Enter your country');
 		return;
 	}
 	if(passRegister == ''){
 		toastr.remove();
-		msj('error', 'Ingrese su contraseña');
+		msj('error', 'Enter your password');
 		return;
 	}
 	$.ajax({
@@ -151,15 +151,16 @@ function registrar() {
 	}).done(function(data){
 		try{
 	        data = JSON.parse(data);
+	        console.log(data);
 	        if(data.error == 0){
-	        	$('#nombre').val("");
+	        	/*$('#nombre').val("");
 				$('#passRegister').val("");
 				$('#correo').val("");
 				$('#pais').val("0");
 				$('#empresa').val("");
-				$('.selectpicker').selectpicker('refresh');
-				toastr.remove();
-				msj('error', 'Se registró correctamente');
+				$('.selectpicker').selectpicker('refresh');*/
+				//toastr.remove();
+				//msj('error', data.msj);
 	        }else {
 	        	toastr.remove();
 				msj('error', data.msj);

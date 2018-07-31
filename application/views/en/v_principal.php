@@ -343,6 +343,10 @@
                                         <input type="text" id="correo" placeholder="Typically an email address" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
+                                        <label for="empresa">Company</label>
+                                        <input type="text" id="empresa" placeholder="Typically an Company" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
                                         <label>Country</label>
                                         <select class="selectpicker" id="pais" title="Typically your Country">
                                             <option value="Dominican Republic">Dominican Republic</option>
