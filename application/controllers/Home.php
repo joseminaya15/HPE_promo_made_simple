@@ -27,7 +27,7 @@ class Home extends CI_Controller {
         $this->session->unset_userdata('tipo_user');
         $nombre  = explode(" ", ucwords($this->session->userdata('nombre')));
         $datos   = $this->M_solicitud->getDatosCategorias($user);
-        $options = $this->M_solicitud->getPaises('es');
+        $options = $this->M_solicitud->getPaises('en');
         $relas   = $this->M_solicitud->getRelacionXCates1();
         $combina1= '';
         $combina2= '';

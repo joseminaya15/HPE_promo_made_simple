@@ -19,6 +19,8 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css">
+        <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metricweb.css?v=<?php echo time();?>">
@@ -93,6 +95,34 @@
                     <h2 id="namePromocion"></h2>
                     <div class="header_promocion">
                         <div class="col-sm-7 col-xs-12 p-0" id="textLeft">
+                            <div class="js-encabezado">
+                                <div class="js-information">
+                                    <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
+                                    <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
+                                    <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">Objetivo Comercial</h2>
+                                    </div>
+                                    <p><?php echo $objetivo ?></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">Novedades</h2>
+                                        <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este trimestre">
+                                    </div>
+                                    <p><?php echo $novedades ?></p>
+                                </div>
+                                <div class="js-information">
+                                    <div class="js-information__flex">
+                                        <h2 class="js-information__left">T&eacute;rminos y Condiciones</h2>
+                                    </div>
+                                    <p><?php echo $condiciones ?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-7 col-xs-12 p-0" id="textLeft">
                             <div id="Ep1" class="encabezado">
                                 <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
                                 <p><strong>Promo name:</strong><span>Base Promo</span></p>
@@ -204,7 +234,7 @@
                                 <p><strong>End date:</strong><span><?php echo $end_date ?></span></p>
                                 <p class="objective_comercial"><strong>Commercial Objetive:</strong><span>Final Sale on previous generations Systems and Options (ie. Gen9). Limited QTYs available.</span></p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-sm-5 col-xs-12 text-right" id="textRight">
                             <div class="js-iquote">
                                 <div class="js-iquote__left">
