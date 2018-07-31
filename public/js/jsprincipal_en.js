@@ -21,10 +21,12 @@ function ingresar(){
 	var password = $('#password').val();
 	sessionStorage.setItem('OPEN_MODAL', '1');
 	if(usuario == null || usuario == ''){
+		toastr.remove();
 		msj('error', 'Ingrese su usuario');
 		return;
 	}
 	if(password == null || password == ''){
+		toastr.remove();
     msj('error', 'Ingrese su contraseña');
 		return;
 	}
@@ -46,20 +48,23 @@ function ingresar(){
 			$('.search-filter.home').css('display','flex');
         }else {
           if(data.pass == null || data.pass == '') {
+          	toastr.remove();
             msj('error', 'alguno de sus datos son incorrectos');
           }else {
+          	toastr.remove();
             msj('error', data.pass);
           }
         	return;
         }
       }catch(err){
+      	toastr.remove();
         msj('error',err.message);
       }
 	});
 }
 function goToCategorias(id){
 	var idCategoria  = $("#"+id);
-	var name_cate    = idCategoria.find('h2').attr('data-id');
+	var name_cate    = idCategoria.parents('.js-categorias').find('h2').text();
 	var openModal    = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
@@ -83,37 +88,54 @@ function goToCategorias(id){
 	        	return;
 	        }
 		}catch(err){
+			toastr.remove();
 			msj('error',err.message);
 		}
 	});
 }
 function registrar() {
-	var nombre 	  = $('#nombre').val();
-	var correo    = $('#correo').val();
+	var nombre 	  	  = $('#nombre').val();
+	var correo    	  = $('#correo').val();
 	var passRegister  = $('#passRegister').val();
-	var pais 	  = $('#pais').val();
-	var tipo_user = 1;
+	var pais 	  	  = $('#pais').val();
+	var empresa       = $('#empresa').val();
+	var tipo_user 	  = 1;
 	if(nombre == '' && correo == '' && passRegister == ''){
+		toastr.remove();
 		msj('error', 'Ingrese sus datos');
 		return;
 	}
 	if(nombre == null || nombre == undefined || nombre == ''){
+		toastr.remove();
 		msj('error', 'Ingrese su nombre');
 		return;
 	}
 	if(correo == ''){
+		toastr.remove();
 		msj('error', 'Ingrese su correo');
 		return;
 	}
 	if (!validateEmail(correo)){
+		toastr.remove();
 		msj('error', 'El formato del correo es incorrecto');
 		return;
 	}
+	if(validateEmailCorporative(correo)){
+		toastr.remove();
+      	msj('error', 'Ingrese un email corporativo');
+		return;
+	}
+	/*if(empresa == '' || empresa == null){
+		msj('error', 'Ingrese su empresa');
+		return;
+	}*/
 	if(pais == ''){
+		toastr.remove();
 		msj('error', 'Ingrese su país');
 		return;
 	}
 	if(passRegister == ''){
+		toastr.remove();
 		msj('error', 'Ingrese su contraseña');
 		return;
 	}
@@ -122,26 +144,31 @@ function registrar() {
 				usuario       : correo,
 				passRegister  : passRegister,
 				pais 	      : pais,
-				tipo_user     : tipo_user},
+				tipo_user     : tipo_user,
+				empresa  	  : empresa},
 		url  : 'Home/registrar',
 		type : 'POST'
 	}).done(function(data){
 		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	$('#nombre').val("");
-			$('#passRegister').val("");
-			$('#correo').val("");
-			$('#pais').val("0");
-			$('.selectpicker').selectpicker('refresh');
-			msj('error', 'Se registró correctamente');
-        }else {
-			msj('error', 'Su usuario o contraseña son incorrectos');
-        	return;
-        }
-      }catch(err){
-        msj('error',err.message);
-      }
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	$('#nombre').val("");
+				$('#passRegister').val("");
+				$('#correo').val("");
+				$('#pais').val("0");
+				$('#empresa').val("");
+				$('.selectpicker').selectpicker('refresh');
+				toastr.remove();
+				msj('error', 'Se registró correctamente');
+	        }else {
+	        	toastr.remove();
+				msj('error', data.msj);
+	        	return;
+	        }
+      	}catch(err){
+	      	toastr.remove();
+	        msj('error',err.message);
+      	}
 	});
 }
 function cerrarCesion(){
@@ -161,6 +188,7 @@ function cerrarCesion(){
 	        	return;
 	        }
 		}catch(err){
+			toastr.remove();
 			msj('error',err.message);
 		}
 	});
@@ -194,6 +222,10 @@ function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+function validateEmailCorporative(email){
+    var re = /[a-zA-Z0-9@]+(?=hotmail.com|yahoo.com|gmail.com|outlook.com|huawei.com|dell.com|lenovo.com)/;
+    return re.test(email);
+}
 function verificarDatos(e){
 	if(e.keyCode === 13){
 		e.preventDefault();
@@ -221,20 +253,22 @@ function buscarPromo(datos){
 		url  : 'Home/buscarPromo',
 		type : 'POST'
 	}).done(function(data){
-	  try{
-	    data = JSON.parse(data);
-	    if(data.error == 0){
-	    	$('#cardsCates').css("display", "none");
-	    	$('#tablaCates').css("display", "block");
-	    	$('#promociones').html('');
-	    	$('#promociones').append(data.promociones);
-	    }else {
-	    	msj('error', data.msj);
-	    	return;
-	    }
-	  }catch(err){
-	    msj('error',err.message);
-	  }
+	  	try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	$('#cardsCates').css("display", "none");
+		    	$('#tablaCates').css("display", "block");
+		    	$('#promociones').html('');
+		    	$('#promociones').append(data.promociones);
+		    }else {
+		    	toastr.remove();
+		    	msj('error', data.msj);
+		    	return;
+		    }
+	  	}catch(err){
+		  	toastr.remove();
+		    msj('error',err.message);
+	  	}
 	});
 }
 function inputActive(id){
@@ -280,6 +314,7 @@ function atras(){
 function recuperar(){
 	var usuario = $('#usuario').val();
 	if(usuario == '' || usuario == null){
+		toastr.remove();
 		msj('error', 'Ingrese su correo electrónico');
 		return;
 	}
@@ -295,10 +330,12 @@ function recuperar(){
 	    if(data.error == 0){
 	    	//$('#usuario').val("");
 	    }else {
+	    	toastr.remove();
 	    	msj('error', data.msj);
 	    	return;
 	    }
 	  }catch(err){
+	  	toastr.remove();
 	    msj('error',err.message);
 	  }
 	});

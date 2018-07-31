@@ -1030,7 +1030,6 @@
                 let openCategoria   = sessionStorage.getItem('OPEN_CATEGORIA');
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
-                console.log(openCategoria);
                 $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
                 $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria-es.jpg') no-repeat top center");
                 $('.I'+openCategoria).css('display','block');
