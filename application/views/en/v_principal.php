@@ -327,10 +327,10 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right" style="display: none" id="divRecuperar">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recuperar()">Recuperar</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recuperar()">Recover</button>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right" style="display: none" id="divAtras">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="atras()">Retroceder</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="atras()">Go back</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
