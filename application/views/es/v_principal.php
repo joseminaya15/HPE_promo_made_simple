@@ -170,7 +170,7 @@
                                         <label for="usuario">Correo</label>
                                         <input type="text" id="usuario" placeholder="Correo electr&oacute;nico" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 form-group mdl-input"  id="divPassword" style="display: block">
                                         <label for="password">Contraseña</label>
                                         <input type="password" id="password" onkeyup="verificarDatos(event);">
                                     </div>
@@ -178,7 +178,7 @@
                                         <a onclick="cambiarRecuperar();">¿Olvidaste tu contrase&ntilde;a?</a>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()"  style="display: block" id="divLogin">Ingresar</button>
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right" style="display: none" id="divRecuperar">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recuperar()">Recuperar</button>
