@@ -216,7 +216,7 @@
                                 </div>
                             </div>
                             <div class="js-iquote">
-                                <div class="promocion_categoria js-promocion__categoria"></div>
+                                <div class="promocion_categoria"></div>
                             </div>
                         </div>
                         <!-- <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
@@ -1030,8 +1030,8 @@
                 let openCategoria   = sessionStorage.getItem('OPEN_CATEGORIA');
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
-                $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('../public/img/promociones/"+openCategoria+"-categoria-es.jpg') no-repeat top center");
+                $('.header_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
+                $('.promocion_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
                 $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
