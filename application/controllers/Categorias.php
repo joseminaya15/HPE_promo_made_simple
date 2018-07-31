@@ -51,9 +51,9 @@ class Categorias extends CI_Controller {
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
             $data['end_date']    = $datos[0]->fecha_fin;
-            $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;
-            $data['objetivo']    = ($datos[0]->objetivo_es != '' ) ? $datos[0]->objetivo_es : '-';
-            $data['novedades']   = ($datos[0]->novedades_es != '' ) ? $datos[0]->novedades_es : '-';
+            $data['condiciones'] = ($datos[0]->condiciones_en != '') ? '<ul>'.$datos[0]->condiciones_en.'</ul>' : '-' ;
+            $data['objetivo']    = ($datos[0]->objetivo_en != '' ) ? $datos[0]->objetivo_en : '-';
+            $data['novedades']   = ($datos[0]->novedades_en != '' ) ? $datos[0]->novedades_en : '-';
             $data['qty']         = '';
         }else {
             $cate  = '';

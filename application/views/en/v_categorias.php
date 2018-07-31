@@ -103,20 +103,20 @@
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
-                                        <h2 class="js-information__left">Objetivo Comercial</h2>
+                                        <h2 class="js-information__left">Commercial Objetive</h2>
                                     </div>
                                     <p><?php echo $objetivo ?></p>
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
-                                        <h2 class="js-information__left">Novedades</h2>
+                                        <h2 class="js-information__left">What's New</h2>
                                         <img src="<?php echo RUTA_IMG?>promo/new.png" data-toggle="tooltip" data-placement="left" title="Conoce las novedades para este trimestre">
                                     </div>
                                     <p><?php echo $novedades ?></p>
                                 </div>
                                 <div class="js-information">
                                     <div class="js-information__flex">
-                                        <h2 class="js-information__left">T&eacute;rminos y Condiciones</h2>
+                                        <h2 class="js-information__left">Terms and Conditions</h2>
                                     </div>
                                     <p><?php echo $condiciones ?></p>
                                 </div>
@@ -299,7 +299,7 @@
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
-        <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <!-- <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-large" role="document">
                 <div class="modal-content">
                     <div class="mdl-card">
@@ -891,7 +891,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -1047,6 +1047,7 @@
                 
             }
             $(window).load(function() {
+                $('.buttons-excel').css('display', 'none');
                 <?php if($texto != null ) {?>
                     $('#cardTexto').css('display', 'block');
                     $('#textRight').css('display', 'none');
@@ -1061,7 +1062,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+"-categoria.png') no-repeat top center");
+                $('.promocion_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+"-categoria-es.jpg') no-repeat top center");
                 $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
