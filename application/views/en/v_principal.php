@@ -349,7 +349,8 @@
                                     <div class="col-xs-12 form-group mdl-input">
                                         <label>Country</label>
                                         <select class="selectpicker" id="pais" title="Typically your Country">
-                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <?php echo $options ?>
+                                            <!-- <option value="Dominican Republic">Dominican Republic</option>
                                             <option value="Puerto Rico">Puerto Rico</option>
                                             <option value="Panamá">Panam&aacute;</option>
                                             <option value="Costa Rica">Costa Rica</option>
@@ -383,7 +384,7 @@
                                             <option value="Cayman">Cayman</option>
                                             <option value="Jamaica">Jamaica</option>
                                             <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bermuda">Bermuda</option> -->
                                         </select>
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
