@@ -47,7 +47,7 @@
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Value</p>
-                                        <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</a>
+                                        <!-- <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</a>
                                         <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Market Take Over">Aruba Market Take Over</a>
                                         <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</a>
                                         <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Mobility">Aruba Mobility</a>
@@ -56,15 +56,17 @@
                                         <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Simplivity">HPE Simplivity</a>
                                         <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Nimble Promo">Nimble Promo</a>
                                         <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="SAP HANA">SAP HANA</a>
-                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Synergy">Synergy</a>
+                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Synergy">Synergy</a> -->
+                                        <?php echo $combo1 ?>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
-                                        <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="InstaSale">InstaSale</a>
+                                        <!-- <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="InstaSale">InstaSale</a>
                                         <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a>
                                         <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a>
                                         <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Storage Accelerate">Storage Accelerate</a>
-                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Tape Backup Media">Tape Backup Media</a>
+                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Tape Backup Media">Tape Backup Media</a> -->
+                                        <?php echo $combo2 ?>
                                     </div>
                                 </ul>
                             </div>
