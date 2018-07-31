@@ -346,4 +346,48 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+    function recuperarPass(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $user = $this->input->post('usuario');
+            $datosUser = $this->M_solicitud->getDatosUser($user);
+            if(count($datosUser) == 0){
+                $data['msj'] = 'No existe este usuario';
+            }else {
+                $this->enviarEmailPass($user);
+                $data['error'] = EXIT_SUCCESS;
+            }
+        } catch (Exception $e) {
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function enviarEmailPass(){
+        $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {  
+       $this->load->library("email");
+       $respuestas = $this->M_solicitud->getRespUsuario($_SESSION['id_persona']);
+       $configGmail = array('protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'info@marketinghpe.com',
+                            'smtp_pass' => 'sapmktinfo18',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n");    
+       $this->email->initialize($configGmail);
+       $this->email->from('info@sapmarketing.net');
+       $this->email->to($email);
+       $this->email->subject('Merci de votre intérêt pour SAP Business One.');
+       $texto = '';
+        $this->email->message($texto);
+        $this->email->send();
+        $data['error'] = EXIT_SUCCESS;
+      }catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      return json_encode(array_map('utf8_encode', $data));
+    }
 }
