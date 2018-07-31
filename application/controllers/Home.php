@@ -176,12 +176,13 @@ class Home extends CI_Controller {
                                     'pass'       => $passRegister,
                                     'id_capitan' => $datoInsert['Id']);
                 $this->session->set_userdata($session);
-                $this->sendGmail($usuario);
+                //$this->sendGmail($usuario);
                 $data['error'] = EXIT_SUCCESS;
                 $data['msj']   = 'Registro exitoso';
             } else if($usuario == $correo_verifi[0]->Email){
                 $data['msj']   = 'Correo ya registrado';
             }
+            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }

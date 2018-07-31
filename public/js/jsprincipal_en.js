@@ -153,14 +153,14 @@ function registrar() {
 	        data = JSON.parse(data);
 	        console.log(data);
 	        if(data.error == 0){
-	        	/*$('#nombre').val("");
+	        	$('#nombre').val("");
 				$('#passRegister').val("");
 				$('#correo').val("");
 				$('#pais').val("0");
 				$('#empresa').val("");
-				$('.selectpicker').selectpicker('refresh');*/
+				$('.selectpicker').selectpicker('refresh');
 				//toastr.remove();
-				//msj('error', data.msj);
+				msj('error', data.msj);
 	        }else {
 	        	toastr.remove();
 				msj('error', data.msj);
