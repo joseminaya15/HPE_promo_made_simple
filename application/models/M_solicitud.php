@@ -269,4 +269,11 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getDatosUser($user){
+      $sql = "SELECT *
+                  FROM users
+                 WHERE Email LIKE '%".$user."%'";
+      $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

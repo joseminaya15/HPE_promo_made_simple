@@ -263,3 +263,43 @@ function directPromos(id_cates){
 function showSearch(){
 	$('.header--principal').addClass('active');
 }
+function cambiarRecuperar(){
+	$('#divPassword').css('display', 'none');
+	$('#divLogin').css('display', 'none');
+	$('#divForgot').css('display', 'none');
+	$('#divAtras').css('display', 'block');
+	$('#divRecuperar').css('display', 'block');
+}
+function atras(){
+	$('#divPassword').css('display', 'block');
+	$('#divLogin').css('display', 'block');
+	$('#divForgot').css('display', 'block');
+	$('#divAtras').css('display', 'none');
+	$('#divRecuperar').css('display', 'none');
+}
+function recuperar(){
+	var usuario = $('#usuario').val();
+	if(usuario == '' || usuario == null){
+		msj('error', 'Ingrese su correo electrónico');
+		return;
+	}
+	console.log(usuario);
+	$.ajax({
+		data : {usuario : usuario},
+		url  : 'Home/recuperarPass',
+		type : 'POST'
+	}).done(function(data){
+	  try{
+	    data = JSON.parse(data);
+	    console.log(data);
+	    if(data.error == 0){
+	    	//$('#usuario').val("");
+	    }else {
+	    	msj('error', data.msj);
+	    	return;
+	    }
+	  }catch(err){
+	    msj('error',err.message);
+	  }
+	});
+}
