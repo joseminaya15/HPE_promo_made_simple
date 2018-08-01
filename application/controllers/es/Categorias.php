@@ -40,9 +40,15 @@ class Categorias extends CI_Controller {
         $cont  = 0;
         $cont1 = 0;
         $dis   = '';
+        $deal2 = null;
         $cates = $this->session->userdata('id_cates');
         if(count($datos) != 0){
                 foreach ($datos as $key) {
+                    if($key->deal_number != $datos[0]->deal_number){
+                        $deal2 = $key->deal_number;
+                    }else {
+                        $deal2 = null;
+                    }
                     $html .= '<tr>
                                   <td>'.$key->sku.'</td>
                                   <td>'.$key->product_desc.'</td>
@@ -50,6 +56,7 @@ class Categorias extends CI_Controller {
                 }
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
+            $data['deal_number1'] = $deal2 != null ? '<p><span style="margin-left: 120px;">'.$deal2.'</span></p>' : '';
             $data['end_date']    = $datos[0]->fecha_fin;
             if ($pais1 == "6, 7" && $cates == 2) {
                 $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'<li>Esta promoción solo aplica para Ecuador.</li></ul>' : '-' ;

@@ -85,6 +85,7 @@
                             <div class="js-encabezado">
                                 <div class="js-information">
                                     <p><strong>Deal Number:</strong><span><?php echo $deal_number ?></span></p>
+                                    <?php echo $deal_number1 ?>
                                     <p><strong>Fecha inicio:</strong><span><?php echo $start_date ?></span></p>
                                     <p><strong>Fecha fin:</strong><span><?php echo $end_date ?></span></p>
                                 </div>
