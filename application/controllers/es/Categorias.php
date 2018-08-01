@@ -48,11 +48,11 @@ class Categorias extends CI_Controller {
                         $deal2 = $key->deal_number;
                     }else {
                         $deal2 = null;
-                    }
-                    $html .= '<tr>
+                        $html .= '<tr>
                                   <td>'.$key->sku.'</td>
                                   <td>'.$key->product_desc.'</td>
                               </tr>';
+                    }
                 }
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
