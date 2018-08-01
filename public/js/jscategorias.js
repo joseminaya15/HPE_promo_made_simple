@@ -50,6 +50,13 @@ function buscarPromo(datos){
 	    if(data.error == 0){
 	    	$('#promociones').find('tr').html("");
 	    	$('#promociones').append(data.promociones);
+	    	if(texto.length > 0) {
+	    		$('#tableCategoria_paginate').css('display', 'none');
+	    		$('#tableCategoria_info').css('display', 'none');
+	    	} else {
+	    		$('#tableCategoria_paginate').css('display', 'block');
+	    		$('#tableCategoria_info').css('display', 'block');
+	    	}
     		/*$("#tableCategoria").dataTable().fnDestroy();
 	    	if(data.texto == '') {
 	    		$('#tableCategoria').DataTable( {

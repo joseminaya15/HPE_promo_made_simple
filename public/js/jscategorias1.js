@@ -48,27 +48,34 @@ function buscarPromo(datos){
 		try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	$('#promociones').html('');
+	    	$('#promociones').find('tr').html("");
 	    	$('#promociones').append(data.promociones);
-	    	// $("#tableCategoria").dataTable().fnDestroy();
-	    	// if(data.texto == '') {
-	    	// 	$('#tableCategoria').DataTable( {
-      //               searching : false,
-      //               responsive: true,
-      //               dom: 'Bfrtip',
-      //               aLengthMenu : [10],
-      //               buttons: [
-      //                   {
-      //                       extend:'excel',
-      //                       text: 'Exportar a Excel'
-      //                   }
-      //               ],
-      //               language : {
-      //                   info : "Mostrando _TOTAL_ registros",
-      //               }
-      //           });
-      //           $('.buttons-excel').css('display', 'none');
-	    	// }
+	    	if(texto.length > 0) {
+	    		$('#tableCategoria_paginate').css('display', 'none');
+	    		$('#tableCategoria_info').css('display', 'none');
+	    	} else {
+	    		$('#tableCategoria_paginate').css('display', 'block');
+	    		$('#tableCategoria_info').css('display', 'block');
+	    	}
+    		/*$("#tableCategoria").dataTable().fnDestroy();
+	    	if(data.texto == '') {
+	    		$('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [10],
+                    buttons: [
+                        {
+                            extend:'excel',
+                            text: 'Exportar a Excel'
+                        }
+                    ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
+                $('.buttons-excel').css('display', 'none');
+	    	}*/
 	    }else {
 	    	msj('error', data.msj);
 	    	return;
