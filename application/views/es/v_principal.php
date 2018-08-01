@@ -170,21 +170,19 @@
                                         <label for="usuario">Correo</label>
                                         <input type="text" id="usuario" placeholder="Correo electr&oacute;nico" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input"  id="divPassword" style="display: block">
+                                    <div class="col-xs-12 form-group mdl-input js-recuperar">
                                         <label for="password">Contraseña</label>
                                         <input type="password" id="password" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12" style="display: block;" id="divForgot">
+                                    <div class="col-xs-12 js-recuperar">
                                         <a onclick="cambiarRecuperar();">¿Olvidaste tu contrase&ntilde;a?</a>
                                     </div>
-                                    <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()"  style="display: block" id="divLogin">Ingresar</button>
+                                    <div class="col-xs-12 mdl-card__actions text-right js-recuperar">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>
                                     </div>
-                                    <div class="col-xs-12 mdl-card__actions text-right" style="display: none" id="divRecuperar">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recuperar()">Recuperar</button>
-                                    </div>
-                                    <div class="col-xs-12 mdl-card__actions text-right" style="display: none" id="divAtras">
+                                    <div class="col-xs-12 mdl-card__actions text-right" id="divRecuperar" style="display: none;">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="atras()">Retroceder</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="recuperar()">Recuperar</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">

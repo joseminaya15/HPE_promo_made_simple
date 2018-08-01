@@ -299,17 +299,11 @@ function showSearch(){
 	$('.header--principal').addClass('active');
 }
 function cambiarRecuperar(){
-	$('#divPassword').css('display', 'none');
-	$('#divLogin').css('display', 'none');
-	$('#divForgot').css('display', 'none');
-	$('#divAtras').css('display', 'block');
+	$('.js-recuperar').css('display', 'none');
 	$('#divRecuperar').css('display', 'block');
 }
 function atras(){
-	$('#divPassword').css('display', 'block');
-	$('#divLogin').css('display', 'block');
-	$('#divForgot').css('display', 'block');
-	$('#divAtras').css('display', 'none');
+	$('.js-recuperar').css('display', 'block');
 	$('#divRecuperar').css('display', 'none');
 }
 function recuperar(){
