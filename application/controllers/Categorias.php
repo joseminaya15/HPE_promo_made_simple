@@ -95,7 +95,7 @@ class Categorias extends CI_Controller {
             if($texto == null || $texto == ''){
                 $datos = $this->M_solicitud->getDatosProductsByName($this->session->userdata('id_cates'));
             }else {             
-                $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto);
+                $datos = $this->M_solicitud->getDatosBuscadorProducts($this->session->userdata('id_cates'), $texto, 2);
             }
             $cate  = '';
             $html  = '';
@@ -110,7 +110,7 @@ class Categorias extends CI_Controller {
                 }else {
                     foreach ($datos as $key) {
                         $html .= '<tr>
-                                    <td>'.$key->product_id.'</td>
+                                    <td>'.$key->sku.'</td>
                                     <td>'.$key->product_desc.'</td>
                                 </tr>';
                     }
@@ -125,7 +125,7 @@ class Categorias extends CI_Controller {
                     $cate = $datos[0]->name;
                     foreach ($datos as $key) {
                         $html .= '<tr>
-                                      <td>'.$key->product_id.'</td>
+                                      <td>'.$key->sku.'</td>
                                       <td>'.$key->product_desc.'</td>
                                   </tr>';
                     }
