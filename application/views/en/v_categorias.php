@@ -47,25 +47,10 @@
                                 <ul class="dropdown-menu">
                                     <div class="col-sm-6 col-xs-12 dropdown-menu__border p-0">
                                         <p>Value</p>
-                                        <!-- <a id="p11" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="3PAR Avalanche & Store Once">3PAR Avalanche & Store Once</a>
-                                        <a id="p12" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Market Take Over">Aruba Market Take Over</a>
-                                        <a id="p13" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba 3x2 Switches">Aruba 3x2 Switches</a>
-                                        <a id="p14" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Aruba Mobility">Aruba Mobility</a>
-                                        <a id="p8" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Datacenter Networking - ToR">Datacenter Networking - ToR</a>
-                                        <a id="p4" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Pointnext">HPE Pointnext</a>
-                                        <a id="p7" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="HPE Simplivity">HPE Simplivity</a>
-                                        <a id="p15" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Nimble Promo">Nimble Promo</a>
-                                        <a id="p16" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="SAP HANA">SAP HANA</a>
-                                        <a id="p9" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Synergy">Synergy</a> -->
                                         <?php echo $combo1 ?>
                                     </div>
                                     <div class="col-sm-6 col-xs-12 p-0">
                                         <p>Volume</p>
-                                        <!-- <a id="p17" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="InstaSale">InstaSale</a>
-                                        <a id="p1" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Base Promo">Base Promo</a>
-                                        <a id="p2" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Server & Storage Flex Attach">Server & Storage Flex Attach</a>
-                                        <a id="p6" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Storage Accelerate">Storage Accelerate</a>
-                                        <a id="p3" class="mdl-menu__item" onclick="goToCategorias(this.id)" data-id="Tape Backup Media">Tape Backup Media</a> -->
                                         <?php echo $combo2 ?>
                                     </div>
                                 </ul>
@@ -131,17 +116,13 @@
                                 </div>
                                 <div class="js-iquote__right">
                                     <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" style="display: inline-block;">
-                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
+                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click Here.</a></p>
                                 </div>
                             </div>
                             <div class="js-iquote">
                                 <div class="promocion_categoria"></div>
                             </div>
                         </div>
-                        <!-- <div class="col-sm-6 col-xs-12 p-0 text-right" id="textRight">
-                            <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote">
-                            <p class="click_here">Request a quote today. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
-                        </div> -->
                         <div class="col-xs-12 text-center" id="cardTexto" style="display: none">
                             <h4>Coming Soon! In this section you will find the best offers and promotions for a very limited time. Stay tuned!</h4>
                         </div>
@@ -383,7 +364,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+"-categoria-es.jpg') no-repeat top center");
+                $('.promocion_categoria').css("background","url('../HPE_promo_made_simple/public/img/promociones/"+openCategoria+"-categoria-en.png') no-repeat top center");
                 $('.I'+openCategoria).css('display','block');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);

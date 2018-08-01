@@ -50,6 +50,25 @@ function buscarPromo(datos){
 	    if(data.error == 0){
 	    	$('#promociones').html('');
 	    	$('#promociones').append(data.promociones);
+	    	$("#tableCategoria").dataTable().fnDestroy();
+	    	if(data.texto == '') {
+	    		$('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [10],
+                    buttons: [
+                        {
+                            extend:'excel',
+                            text: 'Exportar a Excel'
+                        }
+                    ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
+                $('.buttons-excel').css('display', 'none');
+	    	}
 	    }else {
 	    	msj('error', data.msj);
 	    	return;
@@ -109,6 +128,7 @@ function goToCategorias(id){
 		}
 	});
 }
+<<<<<<< HEAD
 function openModalTerminos(id){
 	var modal = $('#ModalTerminos');
 	modal.find('#E'+id+'Terminos').css("display","block");
@@ -117,3 +137,53 @@ function openModalTerminos(id){
 function triggerBoton(){
 	$(".buttons-excel").trigger( "click" );
 }
+=======
+function abrirModal(){
+	var arrPais = '';
+    $.ajax({
+		url  : 'Categorias/abrirModal',
+		type : 'POST'
+	}).done(function(data){
+		try{
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	console.log(data.pais);
+	        	arrPais = data.pais.split('/');
+	        	if(arrPais.length == 1){
+		        	$('#caribe').html('');
+		        	$('#caribe').append(data.iquote);
+		        	$('#tab-caribe').text(data.pais);
+		        	$('#tab-america').css('display', 'none');
+		        	$('#tab-caribe1').text(data.pais);
+		        	$('#tab-america1').css('display', 'none');
+	        	} else {
+		        	$('#caribe').html('');
+		        	$('#caribe').append(data.iquote);
+		        	$('#america').html('');
+		        	$('#america').append(data.iquote2);
+		        	$('#tab-caribe').text(arrPais[0]);
+		        	$('#tab-america').text(arrPais[1]);
+		        	$('#caribe1').html('');
+		        	$('#caribe1').append(data.iquote);
+		        	$('#america1').html('');
+		        	$('#america1').append(data.iquote2);
+		        	$('#tab-caribe1').text(arrPais[0]);
+		        	$('#tab-america1').text(arrPais[1]);
+	        	}
+	        }else {
+	        	return;
+	        }
+		}catch(err){
+			msj('error',err.message);
+		}
+	});
+}
+function triggerBoton(){
+	$(".buttons-excel").trigger( "click" );
+}
+// function openModalTerminos(id){
+// 	var modal = $('#ModalTerminos');
+// 	modal.find('#E'+id+'Terminos').css("display","block");
+// 	modal.modal('toggle');
+// }
+>>>>>>> 5999a012d53fb4167b2cf5990f40dd5df6c276bc

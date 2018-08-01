@@ -49,7 +49,6 @@ function buscarPromo(datos){
 	    data = JSON.parse(data);
 	    if(data.error == 0){
 	    	$('#promociones').find('tr').html("");
-	    	//$('#promociones').text("");
 	    	$('#promociones').append(data.promociones);
     		/*$("#tableCategoria").dataTable().fnDestroy();
 	    	if(data.texto == '') {
