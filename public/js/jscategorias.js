@@ -48,9 +48,10 @@ function buscarPromo(datos){
 		try{
 	    data = JSON.parse(data);
 	    if(data.error == 0){
-	    	$('#promociones').html('');
+	    	$('#promociones').find('tr').html("");
+	    	//$('#promociones').text("");
 	    	$('#promociones').append(data.promociones);
-    		$("#tableCategoria").dataTable().fnDestroy();
+    		/*$("#tableCategoria").dataTable().fnDestroy();
 	    	if(data.texto == '') {
 	    		$('#tableCategoria').DataTable( {
                     searching : false,
@@ -68,7 +69,7 @@ function buscarPromo(datos){
                     }
                 });
                 $('.buttons-excel').css('display', 'none');
-	    	}
+	    	}*/
 	    }else {
 	    	msj('error', data.msj);
 	    	return;

@@ -15,7 +15,7 @@ class M_solicitud extends  CI_Model{
     }
     function verificarUsuario($user){
         $sql = "SELECT *,
-                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13) ) THEN 'es'
+                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13,22) ) THEN 'es'
                             WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25) ) THEN 'en'
                             ELSE 'es'
                         END AS idioma
@@ -51,19 +51,16 @@ class M_solicitud extends  CI_Model{
     //     $result = $this->db->query($sql, array($id_cate));
     //     return $result->result();
     // }
-    function getDatosBuscadorProducts($id_cate, $texto){
+    function getDatosBuscadorProducts($id_cate, $texto, $prod){
         $sql = "SELECT p.*,
-                       s.name,
                        c.Nombre,
                        DATE_FORMAT(p.start_date, '%d/%m/%Y') AS effect_date,
                        DATE_FORMAT(p.end_date, '%d/%m/%Y') AS fecha_fin
-                  FROM products p,
-                       categorias c,
-                       sub_categorias s
-                 WHERE p.id_sub_cate = s.Id
-                   AND s.id_cate = c.Id
+                  FROM products".$prod." p,
+                       categorias c
+                 WHERE p.id_categoria = c.Id
                    AND c.Id LIKE ?
-                   AND (p.product_id LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
+                   AND (p.sku LIKE '%".$texto."%' OR p.product_desc LIKE '%".$texto."%');";
         $result = $this->db->query($sql, array($id_cate));
         return $result->result();
     }
@@ -188,7 +185,7 @@ class M_solicitud extends  CI_Model{
     }
     function getPaises($idioma){
         if($idioma == 'es'){
-          $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13)';
+          $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13,22)';
         }else {
           $paises = 'WHERE Id NOT IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25)';
         }
