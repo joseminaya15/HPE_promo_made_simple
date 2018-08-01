@@ -53,6 +53,8 @@ class Categorias extends CI_Controller {
             $data['end_date']    = $datos[0]->fecha_fin;
             if ($pais1 == "6, 7" && $cates == 2) {
                 $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'<li>Esta promoción solo aplica para Ecuador.</li></ul>' : '-' ;
+            } else if ($pais1 == 12 || $pais1 == 14 || $pais1 == 18 || $pais1 == 21 || $pais1 == 24 || $pais1 == 25) {
+                $data['condiciones'] = ($datos[0]->condiciones_en != '') ? '<ul>'.$datos[0]->condiciones_en.'</ul>' : '-' ;
             } else {
                 $data['condiciones'] = ($datos[0]->condiciones_es != '') ? '<ul>'.$datos[0]->condiciones_es.'</ul>' : '-' ;    
             }
