@@ -323,7 +323,7 @@ function recuperar(){
 	    data = JSON.parse(data);
 	    console.log(data);
 	    if(data.error == 0){
-	    	//$('#usuario').val("");
+	    	$('#usuario').val("");
 	    }else {
 	    	toastr.remove();
 	    	msj('error', data.msj);

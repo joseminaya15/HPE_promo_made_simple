@@ -114,3 +114,6 @@ function openModalTerminos(id){
 	modal.find('#E'+id+'Terminos').css("display","block");
 	modal.modal('toggle');
 }
+function triggerBoton(){
+	$(".buttons-excel").trigger( "click" );
+}

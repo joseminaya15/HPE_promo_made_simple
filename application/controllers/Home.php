@@ -348,7 +348,7 @@ class Home extends CI_Controller {
             if(count($datosUser) == 0){
                 $data['msj'] = 'No existe este usuario';
             }else {
-                $this->enviarEmailPass($user);
+                $this->enviarEmailPass($user, $datosUser[0]->pass);
                 $data['error'] = EXIT_SUCCESS;
             }
         } catch (Exception $e) {
@@ -356,7 +356,7 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function enviarEmailPass(){
+    function enviarEmailPass($user, $pass){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {  
@@ -371,8 +371,8 @@ class Home extends CI_Controller {
                                 'newline'   => "\r\n");    
             $this->email->initialize($configGmail);
             $this->email->from('info@marketinghpe.com');
-            $this->email->to('jose.minayac15@gmail.com');
-            $this->email->subject('Merci de votre intérêt pour SAP Business One.');
+            $this->email->to('jhonatanibericom@gmail.com');
+            $this->email->subject('Recuperó su contraseña en HPE promo made simple');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
@@ -413,18 +413,18 @@ class Home extends CI_Controller {
                                                     <td style="padding: 20px 0;">
                                                         <table width="360" cellspacing="0" cellpadding="0" border="0" align="center" style="border: solid 1px #ccc;padding: 20px;">
                                                             <tr>
-                                                                <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Usuario</font></td>
-                                                                <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00B388;font-size: 14px;">jose@gmail.com</font></td>
+                                                                <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Usuario:</font></td>
+                                                                <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00B388;font-size: 14px;">'.$user.'</font></td>
                                                             </tr>
                                                             <tr>
-                                                                <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Contrase&ntilde;a</font></td>
-                                                                <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00B388;font-size: 14px;">123</font></td>
+                                                                <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Contrase&ntilde;a:</font></td>
+                                                                <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">'.base64_decode($pass).'</font></td>
                                                             </tr>
                                                         </table>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 20px 0"><a href="http://www.hpepromosmadesimple.com/es/Home" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
+                                                    <td style="text-align: center;padding: 20px 0"><a href="http://www.hpepromosmadesimple.com/Home" target="_blank" style="font-family: arial;color: #00B388;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: center;"><font style="font-family: arial;color: #757575;font-size: 12px;">&copy;Copyright 2018 Hewlett Packard Enterprise Development LP</font></td>
