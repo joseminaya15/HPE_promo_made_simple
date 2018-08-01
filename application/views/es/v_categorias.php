@@ -232,7 +232,7 @@
                 let nameCategoria   = sessionStorage.getItem('NAME_CATEGORIA');
                 let headerCategoria = sessionStorage.getItem('HEADER_CATEGORIA');
                 $('.header_categoria').css("background","url('../public/img/promociones/"+openCategoria+".jpg') no-repeat center center");
-                $('.promocion_categoria').append('<img src="<?php echo RUTA_IMG?>promociones/'+openCategoria+'-categoria-es.jpg">');
+                $('.promocion_categoria').append('<img src="<?php echo RUTA_IMG?>promociones/'+openCategoria+'-categoria-es.png">');
                 $('#namePromocion').text(nameCategoria);
                 $('#nameTerminos').text(nameCategoria);
                 $('.header_promocion').find('#E'+openCategoria).css('display','block');
