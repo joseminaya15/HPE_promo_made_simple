@@ -54,37 +54,39 @@ class Home extends CI_Controller {
         foreach ($relas as $rel) {
             $html1 = '';
             $var   = '';
-            $html .= '<div class="mdl-promociones js-flip">
-                        <div class="js-flip__front">
-                            <div class="mdl-card__title">
-                                <div class="promocion-imagen '.$rel->img.'"></div>
+            if($rel->relacion != 'Value Portfolio'){
+                $html .= '<div class="mdl-promociones js-flip">
+                            <div class="js-flip__front">
+                                <div class="mdl-card__title">
+                                    <div class="promocion-imagen '.$rel->img.'"></div>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
+                                </div>
                             </div>
-                            <div class="mdl-card__supporting-text">
-                                <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
-                            </div>
-                        </div>
-                        <div class="js-flip__back">
-                            <div class="js-categorias">
-                                <h2>'.$rel->relacion.'</h2>
-                                <ul>';
-            foreach ($relas2 as $rels) {
-                if($rels->nom_rel == $rel->relacion){
-                    /*if ( $pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
-                        if ($rels->Nombre == 'Base Promo') {
-                            $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">Promo Licencias</a></li>';
-                        } else {
+                            <div class="js-flip__back">
+                                <div class="js-categorias">
+                                    <h2>'.$rel->relacion.'</h2>
+                                    <ul>';
+                foreach ($relas2 as $rels) {
+                    if($rels->nom_rel == $rel->relacion){
+                        /*if ( $pais1 == 2 || $pais1 == 3 || $pais1 == 4) {
+                            if ($rels->Nombre == 'Base Promo') {
+                                $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">Promo Licencias</a></li>';
+                            } else {
+                                $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                            }
+                        } else {*/
                             $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                        }
-                    } else {*/
-                        $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
-                    //}
-                    $var  = $html1;
+                        //}
+                        $var  = $html1;
+                    }
                 }
-            }
-            $html .= $var.' </ul>
+                $html .= $var.' </ul>
+                                </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>';
+            }
         }
         foreach ($datos as $key) {
             if($key->Id == 6 || $key->Id == 5 || $key->Id == 15){
