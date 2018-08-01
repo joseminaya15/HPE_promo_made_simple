@@ -220,6 +220,8 @@ class M_solicitud extends  CI_Model{
                    AND c.Id = cr.id_cate
               ORDER BY r.Nombre_es DESC, c.orden_2 ASC, c.Id DESC";
         $result = $this->db->query($sql, array($id_pais));
+        /*print_r($this->db->last_query());
+        exit;*/
         return $result->result();
     }
     function getRelacionXCates1(){
