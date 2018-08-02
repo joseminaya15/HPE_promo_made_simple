@@ -144,7 +144,7 @@ class Home extends CI_Controller {
         echo json_encode($data);
     }
     function valid_email($val) {
-        if (!filter_var($val, '/hotmail.com|yahoo.com|gmail.com/')) {
+        if (preg_match('/(hotmail.com|yahoo.com|gmail.com)/', $val)) {
             return true;
         }
         return false;
