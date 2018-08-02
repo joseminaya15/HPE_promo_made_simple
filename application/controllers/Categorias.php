@@ -174,6 +174,7 @@ class Categorias extends CI_Controller {
             $id_pais = $this->session->userdata('id_pais');
             $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais) ;
             $datos   = $this->M_solicitud->getPartners($idpais);
+            $id_cate = $this->session->userdata('id_cates');
             if($id_pais >= 26) {
                 $pais = 'CARIBE';
             } else {
@@ -184,9 +185,13 @@ class Categorias extends CI_Controller {
                     $html .= '<div class="mdl-card__iquote">
                                     <div class="js-mayorista">
                                         <img src="'.RUTA_IMG.'logo/'.$key->img.'">
-                                    </div>
-                                    <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
-                              </div>';
+                                    </div>';
+                    if ($id_cate == 1 || $id_cate == 2) {
+                        $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>';
+                    } else {
+                        $html .= '<a href="'.$key->url.'" target="_blank">Correo</a>';
+                    }
+                    $html .= '</div>';
                 }
             }
             $data['iquote']  = $html;

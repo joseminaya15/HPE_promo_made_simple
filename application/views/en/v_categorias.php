@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="js-iquote__right">
                                     <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" style="display: inline-block;">
-                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote" ">Click Here.</a></p>
+                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote">Click Here.</a></p>
                                 </div>
                             </div>
                             <div class="js-iquote">
@@ -252,7 +252,7 @@
                                         <a href="https://live.hpiquote.net/aspx/Tree.aspx?lid=8933099990886705432" target="_blank">iQuote Tool</a>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>

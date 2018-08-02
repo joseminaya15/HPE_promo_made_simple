@@ -117,19 +117,19 @@ function goToCategorias(id){
 		type : 'POST'
 	}).done(function(data){
 		try{
-	        data = JSON.parse(data);
-	        if(data.error == 0){
-	        	if(openModal && openModal == '1') {
-			        $("#ModalLogin").modal('show');
-			    }
-			    else{
-			        $("#ModalLogin").modal('hide');
-			        sessionStorage.removeItem('OPEN_MODAL');
-			    }
-	        	location.href = 'Categorias';
-	        }else {
-	        	return;
-	        }
+			data = JSON.parse(data);
+			if(data.error == 0){
+				if(openModal && openModal == '1') {
+					$("#ModalLogin").modal('show');
+				}
+				else{
+					$("#ModalLogin").modal('hide');
+					sessionStorage.removeItem('OPEN_MODAL');
+				}
+				location.href = 'Categorias';
+			}else {
+				return;
+			}
 		}catch(err){
 			msj('error',err.message);
 		}
@@ -137,27 +137,27 @@ function goToCategorias(id){
 }
 function abrirModal(){
 	var arrPais = '';
-    $.ajax({
+	$.ajax({
 		url  : 'Categorias/abrirModal',
 		type : 'POST'
 	}).done(function(data){
 		try{
-	        data = JSON.parse(data);
-	        if(data.error == 0){
-	        	console.log(data.pais);
-	        	arrPais = data.pais.split('/');
-	        	console.log(arrPais);
-	        	if(arrPais.length == 1){
-		        	$('#caribe').html('');
-		        	$('#caribe').append(data.iquote);
-		        	$('#tab-caribe').text(data.pais);
-		        	$('#tab-america').css('display', 'none');
-		        	$('#tab-caribe1').text(data.pais);
-		        	$('#tab-america1').css('display', 'none');
-	        	}	
-	        }else {
-	        	return;
-	        }
+			data = JSON.parse(data);
+			if(data.error == 0){
+				console.log(data.pais);
+				arrPais = data.pais.split('/');
+				console.log(arrPais);
+				if(arrPais.length == 1){
+					$('#caribe').html('');
+					$('#caribe').append(data.iquote);
+					$('#tab-caribe').text(data.pais);
+					$('#tab-america').css('display', 'none');
+					$('#tab-caribe1').text(data.pais);
+					$('#tab-america1').css('display', 'none');
+				}	
+			}else {
+				return;
+			}
 		}catch(err){
 			msj('error',err.message);
 		}
