@@ -135,16 +135,6 @@ function goToCategorias(id){
 		}
 	});
 }
-<<<<<<< HEAD
-function openModalTerminos(id){
-	var modal = $('#ModalTerminos');
-	modal.find('#E'+id+'Terminos').css("display","block");
-	modal.modal('toggle');
-}
-function triggerBoton(){
-	$(".buttons-excel").trigger( "click" );
-}
-=======
 function abrirModal(){
 	var arrPais = '';
     $.ajax({
@@ -156,6 +146,7 @@ function abrirModal(){
 	        if(data.error == 0){
 	        	console.log(data.pais);
 	        	arrPais = data.pais.split('/');
+	        	console.log(arrPais);
 	        	if(arrPais.length == 1){
 		        	$('#caribe').html('');
 		        	$('#caribe').append(data.iquote);
@@ -163,20 +154,7 @@ function abrirModal(){
 		        	$('#tab-america').css('display', 'none');
 		        	$('#tab-caribe1').text(data.pais);
 		        	$('#tab-america1').css('display', 'none');
-	        	} else {
-		        	$('#caribe').html('');
-		        	$('#caribe').append(data.iquote);
-		        	$('#america').html('');
-		        	$('#america').append(data.iquote2);
-		        	$('#tab-caribe').text(arrPais[0]);
-		        	$('#tab-america').text(arrPais[1]);
-		        	$('#caribe1').html('');
-		        	$('#caribe1').append(data.iquote);
-		        	$('#america1').html('');
-		        	$('#america1').append(data.iquote2);
-		        	$('#tab-caribe1').text(arrPais[0]);
-		        	$('#tab-america1').text(arrPais[1]);
-	        	}
+	        	}	
 	        }else {
 	        	return;
 	        }
@@ -193,4 +171,3 @@ function triggerBoton(){
 // 	modal.find('#E'+id+'Terminos').css("display","block");
 // 	modal.modal('toggle');
 // }
->>>>>>> 5999a012d53fb4167b2cf5990f40dd5df6c276bc

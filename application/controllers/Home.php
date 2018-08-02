@@ -110,21 +110,26 @@ class Home extends CI_Controller {
                     $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
                     $idpais   = (count($id_pais) == 1) ? $id_pais[0]->Id : ($id_pais[0]->Id.', '.$id_pais[1]->Id);
+                    $reg      = $this->valid_email(explode('@',$username[0]->Email)[1]);
                     if(strtolower($username[0]->Email) == strtolower($usuario)){
-                        if($password == base64_decode($username[0]->pass)){
-                            $session = array('usuario'   => $usuario,
-                                             'tipo_user' => $username[0]->tipo_user,
-                                             'nombre'    => $username[0]->Nombre,
-                                             'id_pais'   => $idpais,
-                                             'Id_user'   => $username[0]->Id,
-                                             'idioma'    => $username[0]->idioma);
-                            $this->session->set_userdata($session);
-                            if($username[0]->tipo_user == TIPO_USER){
-                               $data['redirect'] = 'Home'; 
+                        if( $reg == true) {
+                            $data['mensaje'] = 'Las nuevas políticas de HPE no permiten el ingreso de cuentas gratuitas. Por favor cree una nueva cuenta utilizando un correo corporativo ';
+                        } else {
+                            if($password == base64_decode($username[0]->pass)){
+                                $session = array('usuario'   => $usuario,
+                                                 'tipo_user' => $username[0]->tipo_user,
+                                                 'nombre'    => $username[0]->Nombre,
+                                                 'id_pais'   => $idpais,
+                                                 'Id_user'   => $username[0]->Id,
+                                                 'idioma'    => $username[0]->idioma);
+                                $this->session->set_userdata($session);
+                                if($username[0]->tipo_user == TIPO_USER){
+                                   $data['redirect'] = 'Home'; 
+                                }
+                                $data['error'] = EXIT_SUCCESS;
+                            }else {
+                                $data['pass']  = 'Contraseña incorrecta';
                             }
-                            $data['error'] = EXIT_SUCCESS;
-                        }else {
-                            $data['pass']  = 'Contraseña incorrecta';
                         }
                     } 
                 } else {
@@ -137,6 +142,12 @@ class Home extends CI_Controller {
            $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
+    }
+    function valid_email($val) {
+        if (!filter_var($val, '/hotmail.com|yahoo.com|gmail.com/')) {
+            return true;
+        }
+        return false;
     }
     function registrar(){
         $data['error'] = EXIT_ERROR;

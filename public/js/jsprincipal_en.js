@@ -37,29 +37,33 @@ function ingresar(){
 		type : 'POST'
 	}).done(function(data){
 		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	$('#usuario').val("");
-        	$('#password').val("");
-        	$("#ModalLogin").modal('hide');
-        	location.href = 'Home';
-			sessionStorage.setItem('OPEN_LANGUAGE', '1');
-			$('.menu_header').css('display','flex');
-			$('.search-filter.home').css('display','flex');
-        }else {
-          if(data.pass == null || data.pass == '') {
-          	toastr.remove();
-            msj('error', 'alguno de sus datos son incorrectos');
-          }else {
-          	toastr.remove();
-            msj('error', data.pass);
-          }
-        	return;
-        }
-      }catch(err){
-      	toastr.remove();
-        msj('error',err.message);
-      }
+	        data = JSON.parse(data);
+	        if(data.error == 0){
+	        	$('#usuario').val("");
+	        	$('#password').val("");
+	        	$("#ModalLogin").modal('hide');
+	        	location.href = 'Home';
+				sessionStorage.setItem('OPEN_LANGUAGE', '1');
+				$('.menu_header').css('display','flex');
+				$('.search-filter.home').css('display','flex');
+	        }else {
+	        	if(data.mensaje != '') {
+					$('#cambioCorreo').find('p').text(data.mensaje);
+	        		return;
+				}
+				if(data.pass == null || data.pass == '') {
+					toastr.remove();
+					msj('error', 'alguno de sus datos son incorrectos');
+				}else {
+					toastr.remove();
+					msj('error', data.pass);
+				}
+	        	return;
+	        }
+      	}catch(err){
+      		toastr.remove();
+        	msj('error',err.message);
+      	}
 	});
 }
 function goToCategorias(id){

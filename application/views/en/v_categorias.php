@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="js-iquote__right">
                                     <img class="header_promocion--iquote" src="<?php echo RUTA_IMG?>logo/logo_iquote.png" data-toggle="modal" data-target="#ModalIquote" style="display: inline-block;">
-                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote" onclick="abrirModal()">Click Here.</a></p>
+                                    <p class="click_here">Enter and quote directly through our iQuote tool. <a data-toggle="modal" data-target="#ModalIquote" ">Click Here.</a></p>
                                 </div>
                             </div>
                             <div class="js-iquote">
@@ -169,7 +169,8 @@
                 <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
             </div>
         </footer>
-        <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
+        <!--  NO BORRAR  -->
+        <!-- <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="mdl-card js-modal" style="display: block;">
@@ -193,8 +194,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
+        </div> -->
+        <div class="modal fade" id="ModalIquote" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="mdl-card Ip1 Ip2">
@@ -319,7 +320,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -340,6 +341,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="<?php echo RUTA_JS?>jsprincipal_en.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="<?php echo RUTA_JS?>jscategorias1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {

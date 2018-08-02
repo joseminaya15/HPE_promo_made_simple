@@ -267,15 +267,6 @@
                         <div class="encabezado"></div>
                     </div>
                 </a>
-                <!-- <a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
-                    <div class="js-engage">
-                        <div class="js-engage__left"></div>
-                        <div class="js-engage__right">
-                            <p>Conoce los incentivos que tenemos para ti este trimestre:</span></p>
-                            <img src="<?php echo RUTA_IMG?>promo/logo-engage.png">
-                        </div>
-                    </div>
-                </a> -->
             </div>
             <div class="mdl-container seccion-table" id="tablaCates" style="display: none">
                 <div class="mdl-card mdl-table">
@@ -325,6 +316,9 @@
                                     <div class="col-xs-12 js-recuperar">
                                         <a onclick="cambiarRecuperar();">Forgot your password?</a>
                                     </div>
+                                    <div class="col-xs-12" id="cambioCorreo">
+                                        <p></p>
+                                    </div>
                                     <div class="col-xs-12 mdl-card__actions text-right js-recuperar">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                                     </div>
@@ -350,41 +344,6 @@
                                         <label>Country</label>
                                         <select class="selectpicker" id="pais" title="Typically your Country">
                                             <?php echo $options ?>
-                                            <!-- <option value="Dominican Republic">Dominican Republic</option>
-                                            <option value="Puerto Rico">Puerto Rico</option>
-                                            <option value="Panamá">Panam&aacute;</option>
-                                            <option value="Costa Rica">Costa Rica</option>
-                                            <option value="Guatemala">Guatemala</option>
-                                            <option value="El Salvador">El Salvador</option>
-                                            <option value="Nicaragua">Nicaragua</option>
-                                            <option value="Honduras">Honduras</option>
-                                            <option value="Haiti">Haiti</option>
-                                            <option value="Aruba">Aruba</option>
-                                            <option value="Curacao">Curacao</option>
-                                            <option value="Guyana">Guyana</option>
-                                            <option value="Netherlands Antilles">Netherlands Antilles</option>
-                                            <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
-                                            <option value="St. Maarten">St. Maarten</option>
-                                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-                                            <option value="Suriname">Suriname</option>
-                                            <option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
-                                            <option value="Antigua & Bermuda">Antigua & Bermuda</option>
-                                            <option value="Virgin Islands (British)">Virgin Islands (British)</option>
-                                            <option value="Belize">Belize</option>
-                                            <option value="Turks & Caicos">Turks & Caicos</option>
-                                            <option value="Dominica">Dominica</option>
-                                            <option value="St Lucia">St Lucia</option>
-                                            <option value="Bonaire">Bonaire</option>
-                                            <option value="Martinique">Martinique</option>
-                                            <option value="St Barthelem">St Barthelem</option>
-                                            <option value="Anguilla">Anguilla</option>
-                                            <option value="Grenada">Grenada</option>
-                                            <option value="Bahamas">Bahamas</option>
-                                            <option value="Barbados">Barbados</option>
-                                            <option value="Cayman">Cayman</option>
-                                            <option value="Jamaica">Jamaica</option>
-                                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                            <option value="Bermuda">Bermuda</option> -->
                                         </select>
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
