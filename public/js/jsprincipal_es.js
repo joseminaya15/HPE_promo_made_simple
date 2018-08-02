@@ -36,6 +36,7 @@ function goToCategorias(id){
 	        if(data.error == 0){
 	        	if(openModal && openModal == '1') {
 			        $("#ModalLogin").modal('show');
+					$('#cambioCorreo').find('p').text('');
 			    }
 			    else{
 			        $("#ModalLogin").modal('hide');
@@ -320,7 +321,6 @@ function recuperar(){
 		msj('error', 'Ingrese su correo electrónico');
 		return;
 	}
-	console.log(usuario);
 	$.ajax({
 		data : {usuario : usuario},
 		url  : 'Home/recuperarPass',
@@ -328,7 +328,6 @@ function recuperar(){
 	}).done(function(data){
 	  try{
 	    data = JSON.parse(data);
-	    console.log(data);
 	    if(data.error == 0){
 	    	//$('#usuario').val("");
 	    }else {

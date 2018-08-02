@@ -19,7 +19,6 @@ $('#principal .owl-carousel').owlCarousel({
 function ingresar(){
 	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
-	sessionStorage.setItem('OPEN_MODAL', '1');
 	if(usuario == null || usuario == ''){
 		toastr.remove();
 		msj('error', 'Ingrese su usuario');
@@ -44,6 +43,7 @@ function ingresar(){
 	        	$("#ModalLogin").modal('hide');
 	        	location.href = 'Home';
 				sessionStorage.setItem('OPEN_LANGUAGE', '1');
+				sessionStorage.setItem('OPEN_MODAL', '1');
 				$('.menu_header').css('display','flex');
 				$('.search-filter.home').css('display','flex');
 	        }else {
@@ -87,6 +87,7 @@ function goToCategorias(id){
 			    }
 			    else{
 			        $("#ModalLogin").modal('show');
+					$('#cambioCorreo').find('p').text('');
 			    }
 	        }else {
 	        	return;
@@ -155,7 +156,6 @@ function registrar() {
 	}).done(function(data){
 		try{
 	        data = JSON.parse(data);
-	        console.log(data);
 	        if(data.error == 0){
 	        	$('#nombre').val("");
 				$('#passRegister').val("");
@@ -317,7 +317,6 @@ function recuperar(){
 		msj('error', 'Ingrese su correo electrónico');
 		return;
 	}
-	console.log(usuario);
 	$.ajax({
 		data : {usuario : usuario},
 		url  : 'Home/recuperarPass',
@@ -325,7 +324,6 @@ function recuperar(){
 	}).done(function(data){
 	  try{
 	    data = JSON.parse(data);
-	    console.log(data);
 	    if(data.error == 0){
 	    	$('#usuario').val("");
 	    }else {

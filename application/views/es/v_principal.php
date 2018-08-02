@@ -177,6 +177,9 @@
                                     <div class="col-xs-12 js-recuperar">
                                         <a onclick="cambiarRecuperar();">¿Olvidaste tu contrase&ntilde;a?</a>
                                     </div>
+                                    <div class="col-xs-12" id="cambioCorreo">
+                                        <p></p>
+                                    </div>
                                     <div class="col-xs-12 mdl-card__actions text-right js-recuperar">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Ingresar</button>
                                     </div>
