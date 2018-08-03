@@ -54,7 +54,31 @@ class Home extends CI_Controller {
         foreach ($relas as $rel) {
             $html1 = '';
             $var   = '';
-            if($rel->relacion != 'Value Portfolio'){
+            if ($pais1 == 12 || $pais1 == 13 || $pais1 == 14 || $pais1 == 18 || $pais1 == 21 || $pais1 == 22 || $pais1 == 24 || $pais1 == 25) {
+                $html .= '<div class="mdl-promociones js-flip">
+                            <div class="js-flip__front">
+                                <div class="mdl-card__title">
+                                    <div class="promocion-imagen '.$rel->img.'"></div>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <h2 class="'.$rel->color.'">'.$rel->relacion.'</h2>
+                                </div>
+                            </div>
+                            <div class="js-flip__back">
+                                <div class="js-categorias">
+                                    <h2>'.$rel->relacion.'</h2>
+                                    <ul>';
+                foreach ($relas2 as $rels) {
+                    if($rels->nom_rel == $rel->relacion){
+                        $html1 .= '<li><a id="p'.$rels->Id.'" onclick="goToCategorias(this.id)" data-id="'.$rels->Nombre.'">'.$rels->Nombre.'</a></li>';
+                        $var  = $html1;
+                    }
+                }
+                $html .= $var.' </ul>
+                                </div>
+                            </div>
+                        </div>';
+            } else if ($rel->relacion != 'Value Portfolio') {
                 $html .= '<div class="mdl-promociones js-flip">
                             <div class="js-flip__front">
                                 <div class="mdl-card__title">
@@ -79,6 +103,28 @@ class Home extends CI_Controller {
                             </div>
                         </div>';
             }
+            // }
+        }
+        if ($pais1 == 12 || $pais1 == 13 || $pais1 == 14 || $pais1 == 18 || $pais1 == 21 || $pais1 == 22 || $pais1 == 24 || $pais1 == 25) {
+            $html .= '<a class="mdl-promociones" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                          <div class="mdl-card__title">
+                              <div class="promocion-imagen engage-grow"></div>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                              <h2 class="black" data-id="InstaSale">ENGAGE & GROW</h2>
+                              <div class="encabezado"></div>
+                          </div>
+                      </a>';
+        } else {
+            $html .= '<a class="mdl-promociones js-promocion__engage" href="https://www.hpengageandgrow.com/pages/login.php" target="_blank">
+                          <div class="js-engage">
+                              <div class="js-engage__left"></div>
+                              <div class="js-engage__right">
+                                  <p>Conoce los incentivos que tenemos para ti este trimestre:</span></p>
+                                  <img src="'.RUTA_IMG.'promo/logo-engage.png">
+                              </div>
+                          </div>
+                      </a>';
         }
         foreach ($datos as $key) {
             if($key->Id == 6 || $key->Id == 5 || $key->Id == 15){
