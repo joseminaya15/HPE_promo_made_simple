@@ -18,12 +18,35 @@ class Categorias extends CI_Controller {
         $data['texto']  = '';
         $combo1         = '';
         $combo2         = '';
+        $html3          = '';
+        $cates = $this->session->userdata('id_cates');
         $data['nombre'] = $nombre[0];
         $promos         = $this->M_solicitud->getDatosCategorias($this->session->userdata('Id_user'));
         $idioma         = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'en';
         $pais1   = $this->session->userdata('id_pais');
         $arrPais = explode(',', $pais1);
         $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
+
+        $datos2 = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2, 2);
+        if($cates == 12 || $cates == 14){
+            $datos2 = $this->M_solicitud->getCategoriasValue($this->session->userdata('id_cates'), $pais2, 2);
+        }
+        if(count($datos2) != 0){
+            foreach ($datos2 as $val) {
+                if($cates == 12 || $cates == 14){
+                    $html3 .='<tr>
+                            <td>'.$val->sku.'</td>
+                            <td>'.$val->product_desc.'</td>
+                            <td style="display: none">'.$val->sub_cate.'</td>
+                        </tr>';
+                }else {
+                    $html3 .='<tr>
+                            <td>'.$val->sku.'</td>
+                            <td>'.$val->product_desc.'</td>
+                        </tr>';
+                }
+            }
+        }
         if($this->session->userdata('id_cates') == 10){
             $datos = $this->M_solicitud->getDatosInstaSales();
             if(count($datos) == 0){
@@ -43,7 +66,6 @@ class Categorias extends CI_Controller {
         $cont  = 0;
         $cont1 = 0;
         $dis   = '';
-        $cates = $this->session->userdata('id_cates');
         if(count($datos) != 0){
                 if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12) {
                     $cate = $datos[0]->sub_cate;
@@ -55,17 +77,26 @@ class Categorias extends CI_Controller {
                             $cont = 0;
                         }else {
                             if($cont == 0){
-                                $html .= '<tr>
-                                            <td colspan=2 style="border: none; background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$cate.'</td>
-                                          </tr>';
+                                $html .= '<thead>
+                                            <tr>
+                                                <th colspan="2" style="border: none !important; background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$cate.'</th>
+                                            </tr>
+                                          </thead>';
                                 $cont = 1;
                             }
                         }
+                        $html .='<tbody>
+                                <tr>
+                                    <td>'.$key->sku.'</td>
+                                    <td>'.$key->product_desc.'</td>
+                                </tr>
+                            </tbody>';
+                    }else {
+                        $html .='<tr>
+                                    <td>'.$key->sku.'</td>
+                                    <td>'.$key->product_desc.'</td>
+                                </tr>';
                     }
-                    $html .= ' <tr>
-                                  <td>'.$key->sku.'</td>
-                                  <td>'.$key->product_desc.'</td>
-                              </tr>';
                 }
             $data['start_date']  = $datos[0]->fecha_inicio;
             $data['deal_number'] = count($datos) != 0 ? $datos[0]->deal_number : '-';
@@ -100,6 +131,7 @@ class Categorias extends CI_Controller {
                 $combo1 .= '<a class="mdl-menu__item" onclick="triggerCategoria(&quot;p'.$val->Id.'&quot;)">'.$val->Nombre.'</a>';
             }
         }
+        $data['promociones2'] = $html3;
         $data['combo1']      = $combo1;
         $data['combo2']      = $combo2;
         $data['promociones'] = $html;
