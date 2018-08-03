@@ -188,12 +188,13 @@ class Categorias extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            //4,12,14
             $html    = '';
             $html2   = '';
             $id_pais = $this->session->userdata('id_pais');
-            $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais) ;
-            $datos   = $this->M_solicitud->getPartners($idpais);
+            $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais);
             $id_cate = $this->session->userdata('id_cates');
+            $datos   = $this->M_solicitud->getPartners($idpais, $id_cate);
             if($id_pais >= 26) {
                 $pais = 'CARIBE';
             } else {
