@@ -135,7 +135,7 @@
                                 </a>
                                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">download excel</button>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="display: block;">
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="table-responsive table_categoria">
                                     <table id="tableCategoria" class="table table-striped">
                                         <thead>

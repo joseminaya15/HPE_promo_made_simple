@@ -151,6 +151,27 @@
                                     </table>
                                 </div>
                             </div>
+                            <div id="tableOculta" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="display: none;">
+                                <div class="table-responsive table_categoria">
+                                    <table id="tableCategoriaOculta" class="table table-striped">
+                                        <thead>
+                                            <tr class="tr-header-reporte">
+                                                <?php if($sales == 14 || $sales == 12) { ?>
+                                                <th>Product number ID</th>
+                                                <th>Product Description</th>
+                                                <th style="display: none">Category</th>
+                                                <?php } else { ?>
+                                                <th>Product number ID</th>
+                                                <th>Product Description</th>
+                                                <?php } ?>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="promociones2">
+                                            <?php echo $promociones2 ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,6 +236,7 @@
                 
             }
             $(window).load(function() {
+                $('.odd').css('display', 'none');
                 $('.buttons-excel').css('display', 'none');
                 <?php if($texto != null ) {?>
                     $('#cardTexto').css('display', 'block');
@@ -245,7 +267,7 @@
                 $('[data-toggle="tooltip"]').tooltip();
             });
             $(document).ready(function() {
-                $('#tableCategoria').DataTable( {
+                $('#tableCategoriaOculta').DataTable( {
                     searching : false,
                     responsive: true,
                     dom: 'Bfrtip',
@@ -253,9 +275,21 @@
                     buttons: [
                         {
                             extend:'excel',
-                            text: 'Exportar a Excel'
+                            text: 'Export to Excel'
                         }
                     ],
+                    language : {
+                        info : "Mostrando _TOTAL_ registros",
+                    }
+                });
+            });
+            $(document).ready(function() {
+                $('#tableCategoria').DataTable( {
+                    searching : false,
+                    responsive: true,
+                    dom: 'Bfrtip',
+                    aLengthMenu : [10],
+                    buttons: [],
                     language : {
                         info : "Mostrando _TOTAL_ registros",
                     }
