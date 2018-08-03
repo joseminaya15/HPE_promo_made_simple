@@ -198,7 +198,9 @@ class Categorias extends CI_Controller {
             $pais    = '';
             foreach ($options as $key) {
                 foreach ($idpais as $value) {
-                    if($value == $key->Id){
+                    if($id_pais == 12 || $id_pais == 13 || $id_pais == 14 || $id_pais == 18 || $id_pais == 21 || $id_pais == 22) {
+                        $pais = 'CENTRO AMÉRICA';
+                    } else if($value == $key->Id){
                         $pais .= $key->Nombre.'/';
                     }
                 }
@@ -209,9 +211,16 @@ class Categorias extends CI_Controller {
                     $html .= '<div class="mdl-card__iquote">
                                     <div class="js-mayorista">
                                         <img src="'.RUTA_IMG.'logo/'.$key->img.'">
-                                    </div>
-                                    <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
-                              </div>';
+                                    </div>';
+                    if($id_pais == 12 || $id_pais == 13 || $id_pais == 14 || $id_pais == 18 || $id_pais == 21 || $id_pais == 22) {
+                        if ($id_cate == 1 || $id_cate == 2) {
+                            $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                                          </div>';
+                        } else {
+                            $html .= '<a href="mailto:'.$key->correo.'">'.$key->correo.'</a>
+                                          </div>';
+                        }
+                    }
                 } else {
                     if(explode('/', $pais)[0] == $key->Nombre) {
                         $html .= '<div class="mdl-card__iquote">

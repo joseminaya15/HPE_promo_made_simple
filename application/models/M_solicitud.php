@@ -15,8 +15,8 @@ class M_solicitud extends  CI_Model{
     }
     function verificarUsuario($user){
         $sql = "SELECT *,
-                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13,22) ) THEN 'es'
-                            WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25) ) THEN 'en'
+                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25) ) THEN 'es'
+                            WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25) ) THEN 'en'
                             ELSE 'es'
                         END AS idioma
                   FROM users
@@ -173,21 +173,32 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, array($id_user, $cate));
         return $result->result();
     }
-    function getPartners($id_pais){
+    function getPartners($id_pais, $id_cates = null){
+        $condition = "";
+        if($id_cates == 4 || $id_cates == 12 || $id_cates == 14) {
+            if ($id_pais >= 26) {
+                $condition = "AND pp.partner IN ('Westham', 'Tech Data', 'Ingram Micro')" ;
+            } else if ($id_pais == 18) {
+                $condition = "AND pp.partner IN ('Logistica')" ;
+            } else if($id_pais == 12 || $id_pais == 13 || $id_pais == 14 || $id_pais == 21 || $id_pais == 22 || $id_pais == 24 || $id_pais == 25) {
+                $condition = "AND pp.partner IN ('Westham', 'Tech Data', 'Ingram Micro', 'Logistica')" ;
+            }
+        }
         $sql = "SELECT pp.*,
                        p.Nombre
                   FROM pais_x_partner pp,
                        paises p
                  WHERE pp.id_pais IN ?
-                   AND pp.id_pais = p.Id";
+                   AND pp.id_pais = p.Id 
+                   ".$condition;
         $result = $this->db->query($sql, array($id_pais));
         return $result->result();
     }
     function getPaises($idioma){
         if($idioma == 'es'){
-          $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25,13,22)';
+          $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25)';
         }else {
-          $paises = 'WHERE Id NOT IN (1,2,3,4,6,7,8,9,10,12,14,18,21,24,25)';
+          $paises = 'WHERE Id NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25)';
         }
         $sql = "SELECT * FROM paises ".$paises." ORDER BY Nombre ASC";
         $result = $this->db->query($sql);
@@ -220,8 +231,6 @@ class M_solicitud extends  CI_Model{
                    AND c.Id = cr.id_cate
               ORDER BY r.Nombre_es DESC, c.orden_2 ASC, c.Id DESC";
         $result = $this->db->query($sql, array($id_pais));
-        /*print_r($this->db->last_query());
-        exit;*/
         return $result->result();
     }
     function getRelacionXCates1(){
@@ -252,8 +261,6 @@ class M_solicitud extends  CI_Model{
                    AND c.Id = ?
                    AND pa.Id IN ?";
         $result = $this->db->query($sql, array($id_cates, $id_pais));
-        /*print_r($this->db->last_query());
-        exit;*/
         return $result->result();
     }
     function getCategoriasValue($id_cates, $id_pais, $cate){
@@ -272,8 +279,6 @@ class M_solicitud extends  CI_Model{
                    AND c.Id = ?
                    AND pa.Id IN ?";
         $result = $this->db->query($sql, array($id_cates, $id_pais));
-        /*print_r($this->db->last_query());
-        exit;*/
         return $result->result();
     }
     function searchProductxCatexPais($texto){

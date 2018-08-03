@@ -220,12 +220,13 @@ class Categorias extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            //4,12,14
             $html    = '';
             $html2   = '';
             $id_pais = $this->session->userdata('id_pais');
-            $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais) ;
-            $datos   = $this->M_solicitud->getPartners($idpais);
+            $idpais  = (count(explode(',', $id_pais)) == 1 ) ? array($id_pais) : explode(',', $id_pais);
             $id_cate = $this->session->userdata('id_cates');
+            $datos   = $this->M_solicitud->getPartners($idpais, $id_cate);
             if($id_pais >= 26) {
                 $pais = 'CARIBE';
             } else {
@@ -240,7 +241,7 @@ class Categorias extends CI_Controller {
                     if ($id_cate == 1 || $id_cate == 2) {
                         $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>';
                     } else {
-                        $html .= '<a href="'.$key->url.'" target="_blank">Correo</a>';
+                        $html .= '<a href="mailto:'.$key->correo.'">'.$key->correo.'</a>';
                     }
                     $html .= '</div>';
                 }
