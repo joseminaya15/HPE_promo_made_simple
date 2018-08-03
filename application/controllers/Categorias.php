@@ -208,7 +208,7 @@ class Categorias extends CI_Controller {
                     if ($id_cate == 1 || $id_cate == 2) {
                         $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>';
                     } else {
-                        $html .= '<a href="'.$key->url.'" target="_blank">Correo</a>';
+                        $html .= '<a href="mailto:'.$key->correo.'">'.$key->correo.'</a>';
                     }
                     $html .= '</div>';
                 }
