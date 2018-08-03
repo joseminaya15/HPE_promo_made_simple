@@ -100,6 +100,7 @@ class Home extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
+            $data['mensaje'] = '';
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
             $idioma   = $this->session->userdata('idioma');

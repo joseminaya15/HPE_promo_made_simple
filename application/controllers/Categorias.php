@@ -33,6 +33,9 @@ class Categorias extends CI_Controller {
             }
         }else {
             $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2, 2);
+            if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12){
+                $datos = $this->M_solicitud->getCategoriasValue($this->session->userdata('id_cates'), $pais2, 2);
+            }
         }
         $deal  = $this->M_solicitud->getDealNumber($this->session->userdata('Id_user'), $this->session->userdata('id_cates'));
         $cate  = '';
@@ -42,8 +45,24 @@ class Categorias extends CI_Controller {
         $dis   = '';
         $cates = $this->session->userdata('id_cates');
         if(count($datos) != 0){
+                if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12) {
+                    $cate = $datos[0]->sub_cate;
+                }
                 foreach ($datos as $key) {
-                    $html .= '<tr>
+                    if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12) {
+                        if($cate != $key->sub_cate) {
+                            $cate = $key->sub_cate;
+                            $cont = 0;
+                        }else {
+                            if($cont == 0){
+                                $html .= '<tr>
+                                            <td colspan=2 style="border: none; background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$cate.'</td>
+                                          </tr>';
+                                $cont = 1;
+                            }
+                        }
+                    }
+                    $html .= ' <tr>
                                   <td>'.$key->sku.'</td>
                                   <td>'.$key->product_desc.'</td>
                               </tr>';

@@ -47,7 +47,7 @@ function ingresar(){
 				$('.menu_header').css('display','flex');
 				$('.search-filter.home').css('display','flex');
 	        }else {
-	        	if(data.mensaje != '') {
+	        	if(data.mensaje != '' && data.mensaje != null) {
 					$('#cambioCorreo').find('p').text(data.mensaje);
 	        		return;
 				}
