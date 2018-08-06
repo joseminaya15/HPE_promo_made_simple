@@ -269,6 +269,9 @@ class Categorias extends CI_Controller {
                             $html .= '<a href="mailto:'.$key->correo.'">'.$key->correo.'</a>
                                           </div>';
                         }
+                    } else {
+                        $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                              </div>';
                     }
                 } else {
                     if(explode('/', $pais)[0] == $key->Nombre) {
