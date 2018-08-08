@@ -70,8 +70,6 @@ function goToCategorias(id){
 	var idCategoria  = $("#"+id);
 	var name_cate    = idCategoria.attr('data-id');
 	var openModal    = sessionStorage.getItem('OPEN_MODAL');
-	/*console.log(name_cate);
-	return;*/
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
 	$("#ModalLogin").modal('show');
