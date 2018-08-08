@@ -105,8 +105,10 @@ class Home extends CI_Controller {
             $password = $this->input->post('password');
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
+            $num = count($username) == 2 ? 1 : 0;
+            $paises = count($username) == 2 ? $username[0]->Pais != $username[1]->Pais : 0 == 0;
             if(count($username) != 0){
-                if($username[0]->idioma == 'en'){
+                if($username[$num]->idioma == 'en' && $paises){
                     $arrPais  = explode(' / ', $username[0]->Pais);
                     $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
