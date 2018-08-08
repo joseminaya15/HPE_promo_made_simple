@@ -105,9 +105,9 @@ function cerrarCesion(){
 function verificarDatos(e){
 	buscarPromo('inputSearch');
 }
-function goToCategorias(id){
+function goToCategorias1(id, name){
 	var idCategoria = $("#"+id);
-	var name_cate   = idCategoria.attr('data-id');
+	var name_cate   = /*idCategoria.attr('data-id')*/name;
 	var openModal   = sessionStorage.getItem('OPEN_MODAL');
 	sessionStorage.setItem('OPEN_CATEGORIA', id);
 	sessionStorage.setItem('NAME_CATEGORIA', name_cate);
@@ -135,9 +135,9 @@ function goToCategorias(id){
 		}
 	});
 }
-// function triggerCategoria(id1){
-// 	goToCategorias(id1);
-// }
+function triggerCategoria1(id1, name){
+	goToCategorias1(id1, name);
+}
 function abrirModal(){
 	var arrPais = '';
 	$.ajax({
