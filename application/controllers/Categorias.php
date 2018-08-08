@@ -234,16 +234,21 @@ class Categorias extends CI_Controller {
             }
             foreach ($datos as $key) {
                 if (count(explode(',',$id_pais)) == 1) {
-                    $html .= '<div class="mdl-card__iquote">
+                    if ($id_cate == 1 || $id_cate == 2) {
+                        $html.= '<div class="mdl-card__iquote">
                                     <div class="js-mayorista">
                                         <img src="'.RUTA_IMG.'logo/'.$key->img.'">
-                                    </div>';
-                    if ($id_cate == 1 || $id_cate == 2) {
-                        $html .= '<a href="'.$key->url.'" target="_blank">iQuote Tool</a>';
+                                    </div>
+                                    <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
+                                </div>';
                     } else {
-                        $html .= '<a href="mailto:'.$key->correo.'">'.$key->correo.'</a>';
+                        $html.= '<div class="mdl-card__iquote js-correo">
+                                    <div class="js-mayorista">
+                                        <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                    </div>
+                                    <a href="mailto:'.$key->correo.'">'.$key->correo.'</a>
+                                </div>';
                     }
-                    $html .= '</div>';
                 }
             }
             $data['iquote']  = $html;
