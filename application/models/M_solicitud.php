@@ -16,7 +16,7 @@ class M_solicitud extends  CI_Model{
     function verificarUsuario($user){
         $sql = "SELECT *,
                        CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25) ) THEN 'es'
-                            WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25) ) THEN 'en'
+                            WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25,53) ) THEN 'en'
                             ELSE 'es'
                         END AS idioma
                   FROM users
@@ -198,7 +198,7 @@ class M_solicitud extends  CI_Model{
         if($idioma == 'es'){
           $paises = 'WHERE Id IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25)';
         }else {
-          $paises = 'WHERE Id NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25)';
+          $paises = 'WHERE Id NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25,53,54)';
         }
         $sql = "SELECT * FROM paises ".$paises." ORDER BY Nombre ASC";
         $result = $this->db->query($sql);
