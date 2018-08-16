@@ -105,28 +105,36 @@ class Home extends CI_Controller {
             $password = $this->input->post('password');
             $idioma   = $this->session->userdata('idioma');
             $username = $this->M_solicitud->verificarUsuario($usuario);
-            $num = count($username) == 2 ? 1 : 0;
+            $i = 0;
+            foreach ($username as $key) {
+                if ($key->idioma == 'en') {
+                    $i = $i;
+                    break;
+                } else {
+                    $i++;   
+                }
+            }
             $paises = count($username) == 2 ? $username[0]->Pais != $username[1]->Pais : 0 == 0;
             if(count($username) != 0){
-                if($username[$num]->idioma == 'en' && $paises){
-                    $arrPais  = explode(' / ', $username[0]->Pais);
-                    $pais2    = (count($arrPais) == 1) ? array($username[0]->Pais) : $arrPais ;
+                if($username[$i]->idioma == 'en' && $paises){
+                    $arrPais  = explode(' / ', $username[$i]->Pais);
+                    $pais2    = (count($arrPais) == 1) ? array($username[$i]->Pais) : $arrPais ;
                     $id_pais  = $this->M_solicitud->getIdPais($pais2);
                     $idpais   = (count($id_pais) == 1) ? $id_pais[0]->Id : ($id_pais[0]->Id.', '.$id_pais[1]->Id);
-                    $reg      = $this->valid_email(explode('@',$username[0]->Email)[1]);
-                    if(strtolower($username[0]->Email) == strtolower($usuario)){
+                    $reg      = $this->valid_email(explode('@',$username[$i]->Email)[1]);
+                    if(strtolower($username[$i]->Email) == strtolower($usuario)){
                         if( $reg == true) {
                             $data['mensaje'] = 'Las nuevas políticas de HPE no permiten el ingreso de cuentas gratuitas. Por favor cree una nueva cuenta utilizando un correo corporativo ';
                         } else {
-                            if($password == base64_decode($username[0]->pass)){
+                            if($password == base64_decode($username[$i]->pass)){
                                 $session = array('usuario'   => $usuario,
-                                                 'tipo_user' => $username[0]->tipo_user,
-                                                 'nombre'    => $username[0]->Nombre,
+                                                 'tipo_user' => $username[$i]->tipo_user,
+                                                 'nombre'    => $username[$i]->Nombre,
                                                  'id_pais'   => $idpais,
-                                                 'Id_user'   => $username[0]->Id,
-                                                 'idioma'    => $username[0]->idioma);
+                                                 'Id_user'   => $username[$i]->Id,
+                                                 'idioma'    => $username[$i]->idioma);
                                 $this->session->set_userdata($session);
-                                if($username[0]->tipo_user == TIPO_USER){
+                                if($username[$i]->tipo_user == TIPO_USER){
                                    $data['redirect'] = 'Home'; 
                                 }
                                 $data['error'] = EXIT_SUCCESS;
@@ -166,7 +174,7 @@ class Home extends CI_Controller {
             $pais2         = (count($arrPais) == 1) ? array($pais) : $arrPais ;
             $id_pais       = $this->M_solicitud->getIdPais($pais2);
             $idpais        = (sizeof($id_pais) == 1) ? $id_pais[0]->Id : ($id_pais[0]->Id.', '.$id_pais[1]->Id) ;
-            $correo_verifi = $this->M_solicitud->verificarUsuario($usuario);
+            $correo_verifi = $this->M_solicitud->verificarUsuario($usuario, $pais);
             if(count($correo_verifi) == 0) {
                 $arrayInsert = array('Nombre'    => $nombre,
                                      'Email'     => $usuario,
