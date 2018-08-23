@@ -228,9 +228,9 @@ class Categorias extends CI_Controller {
             $id_cate = $this->session->userdata('id_cates');
             $datos   = $this->M_solicitud->getPartners($idpais, $id_cate);
             if($id_pais >= 26) {
-                $pais = 'CARIBE';
+                $pais = 'CARIBE & CENTRO AMERICA';
             } else {
-                $pais = 'CENTRO AMERICA';
+                $pais = 'CARIBE & CENTRO AMERICA';
             }
             foreach ($datos as $key) {
                 if (count(explode(',',$id_pais)) == 1) {
@@ -242,12 +242,14 @@ class Categorias extends CI_Controller {
                                     <a href="'.$key->url.'" target="_blank">iQuote Tool</a>
                                 </div>';
                     } else {
-                        $html.= '<div class="mdl-card__iquote js-correo">
-                                    <div class="js-mayorista">
-                                        <img src="'.RUTA_IMG.'logo/'.$key->img.'">
-                                    </div>
-                                    <a href="mailto:'.$key->correo.'">'.$key->correo.'</a>
-                                </div>';
+                        if ($key->partner != 'Ingram Micro') {
+                            $html.= '<div class="mdl-card__iquote js-correo">
+                                         <div class="js-mayorista">
+                                             <img src="'.RUTA_IMG.'logo/'.$key->img.'">
+                                         </div>
+                                         <a href="mailto:'.$key->correo.'">'.$key->correo.'</a>
+                                     </div>';
+                        }
                     }
                 }
             }
