@@ -416,6 +416,7 @@
                             text: 'Export to Excel'
                         }
                     ],
+                    "order": [2, "asc"],
                     language : {
                         info : "Mostrando _TOTAL_ registros",
                     }
