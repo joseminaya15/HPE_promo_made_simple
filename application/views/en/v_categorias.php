@@ -163,7 +163,7 @@
                                     <table id="tableCategoriaOculta" class="table table-striped">
                                         <thead>
                                             <tr class="tr-header-reporte">
-                                                <?php if($sales == 14 || $sales == 12) { ?>
+                                                <?php if($sales == 14 || $sales == 12 || $sales == 6 || $sales == 4) { ?>
                                                 <th>Product number ID</th>
                                                 <th>Product Description</th>
                                                 <th style="display: none">Category</th>

@@ -31,7 +31,7 @@ class Categorias extends CI_Controller {
             $pais2   = (count($arrPais) == 1) ? array($pais1) : $arrPais ;
 
             $datos2 = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2, 2);
-            if($cates == 12 || $cates == 14){
+            if($cates == 12 || $cates == 14 || $cates == 6 || $cates == 4){
                 $datos2 = $this->M_solicitud->getCategoriasValue($this->session->userdata('id_cates'), $pais2, 2);
             }
             if(count($datos2) != 0){
@@ -59,7 +59,7 @@ class Categorias extends CI_Controller {
                 }
             }else {
                 $datos = $this->M_solicitud->getCategoriasxPais($this->session->userdata('id_cates'), $pais2, 2);
-                if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12){
+                if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12 || $datos[0]->id_categoria == 6 || $datos[0]->id_categoria == 4){
                     $datos = $this->M_solicitud->getCategoriasValue($this->session->userdata('id_cates'), $pais2, 2);
                 }
             }
@@ -70,17 +70,11 @@ class Categorias extends CI_Controller {
             $cont1 = 0;
             $dis   = '';
             if(count($datos) != 0){
-                    // print_r($datos[0]->id_categoria);
-                    // print_r("       ");
                     if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12 || $datos[0]->id_categoria == 6 || $datos[0]->id_categoria == 4) {
                         $cate = $datos[0]->sub_cate;
                     }
                     foreach ($datos as $key) {
                         if($datos[0]->id_categoria == 14 || $datos[0]->id_categoria == 12 || $datos[0]->id_categoria == 6 || $datos[0]->id_categoria == 4) {
-                    // print_r("ENTRA");
-                    // print_r("       ");
-                    // print_r($cate);
-                    // print_r("       ");
                             if($cate != $key->sub_cate) {
                                 $cate = $key->sub_cate;
                                 $cont = 0;
