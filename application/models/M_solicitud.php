@@ -16,7 +16,7 @@ class M_solicitud extends  CI_Model{
     function verificarUsuario($user, $pais = null){
         $where = ($pais != null) ? "AND Pais like '%".$pais."%' " : ''; 
         $sql = "SELECT *,
-                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25) ) THEN 'es'
+                       CASE WHEN (id_pais IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25,53) ) THEN 'es'
                             WHEN (id_pais NOT IN (1,2,3,4,6,7,8,9,10,12,13,14,18,21,22,24,25,53) ) THEN 'en'
                             ELSE 'es'
                         END AS idioma

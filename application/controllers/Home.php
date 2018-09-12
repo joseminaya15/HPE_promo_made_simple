@@ -190,7 +190,7 @@ class Home extends CI_Controller {
                                     'pass'       => $passRegister,
                                     'id_capitan' => $datoInsert['Id']);
                 $this->session->set_userdata($session);
-                //$this->sendGmail($usuario);
+                $this->sendGmail($usuario);
                 $data['error'] = EXIT_SUCCESS;
                 $data['msj']   = 'Registro exitoso';
             } else if($usuario == $correo_verifi[0]->Email){
@@ -268,7 +268,7 @@ class Home extends CI_Controller {
                             'smtp_host' => 'smtpout.secureserver.net',
                             'smtp_port' => 3535,
                             'smtp_user' => 'info@marketinghpe.com',
-                            'smtp_pass' => 'hpEmSac$18',
+                            'smtp_pass' => 'h#120918Pe',
                             'mailtype'  => 'html',
                             'charset'   => 'utf-8',
                             'newline'   => "\r\n");
@@ -387,7 +387,7 @@ class Home extends CI_Controller {
                                 'smtp_host' => 'smtpout.secureserver.net',
                                 'smtp_port' => 3535,
                                 'smtp_user' => 'info@marketinghpe.com',
-                                'smtp_pass' => 'hpEmSac$18',
+                                'smtp_pass' => 'h#120918Pe',
                                 'mailtype'  => 'html',
                                 'charset'   => 'utf-8',
                                 'newline'   => "\r\n");    
