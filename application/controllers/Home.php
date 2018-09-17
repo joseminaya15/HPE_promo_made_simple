@@ -124,7 +124,7 @@ class Home extends CI_Controller {
                     $reg      = $this->valid_email(explode('@',$username[$i]->Email)[1]);
                     if(strtolower($username[$i]->Email) == strtolower($usuario)){
                         if( $reg == true) {
-                            $data['mensaje'] = 'Las nuevas políticas de HPE no permiten el ingreso de cuentas gratuitas. Por favor cree una nueva cuenta utilizando un correo corporativo ';
+                            $data['mensaje'] = 'The new HPE policies do not allow the entry of free accounts. Please create a new account using a corporate email.';
                         } else {
                             if($password == base64_decode($username[$i]->pass)){
                                 $session = array('usuario'   => $usuario,

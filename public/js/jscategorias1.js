@@ -135,9 +135,6 @@ function goToCategorias1(id, name){
 		}
 	});
 }
-function triggerCategoria1(id1, name){
-	goToCategorias1(id1, name);
-}
 function abrirModal(){
 	var arrPais = '';
 	$.ajax({
@@ -147,7 +144,9 @@ function abrirModal(){
 		try{
 			data = JSON.parse(data);
 			if(data.error == 0){
+				console.log(data.pais);
 				arrPais = data.pais.split('/');
+				console.log(arrPais);
 				if(arrPais.length == 1){
 					$('#caribe').html('');
 					$('#caribe').append(data.iquote);
@@ -172,3 +171,6 @@ function triggerBoton(){
 // 	modal.find('#E'+id+'Terminos').css("display","block");
 // 	modal.modal('toggle');
 // }
+function triggerCategoria1(id1, name){
+	goToCategorias1(id1, name);
+}

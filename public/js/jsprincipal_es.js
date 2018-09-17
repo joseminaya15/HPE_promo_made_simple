@@ -36,6 +36,8 @@ function goToCategorias(id){
 	        if(data.error == 0){
 	        	if(openModal && openModal == '1') {
 			        $("#ModalLogin").modal('show');
+	        		$('#msj').css('display', 'block');
+	        		$('#cambioCorreo').removeClass('bg-success');
 					$('#cambioCorreo').find('p').text('');
 			    }
 			    else{
@@ -105,6 +107,7 @@ function ingresar(){
 				$('.search-filter.home').css('display','flex');
 	        }else {
 	        	if(data.mensaje != '' && data.mensaje != null) {
+	        		$('#msj').css('display', 'none');
 					$('#cambioCorreo').find('p').text(data.mensaje);
 	        		return;
 				}

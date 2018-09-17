@@ -48,6 +48,8 @@ function ingresar(){
 				$('.search-filter.home').css('display','flex');
 	        }else {
 	        	if(data.mensaje != '' && data.mensaje != null) {
+	        		$('#msj').css('display', 'none');
+	        		$('#cambioCorreo').addClass('bg-success');
 					$('#cambioCorreo').find('p').text(data.mensaje);
 	        		return;
 				}
@@ -87,6 +89,8 @@ function goToCategorias(id){
 			    }
 			    else{
 			        $("#ModalLogin").modal('show');
+	        		$('#msj').css('display', 'block');
+	        		$('#cambioCorreo').removeClass('bg-success');
 					$('#cambioCorreo').find('p').text('');
 			    }
 	        }else {

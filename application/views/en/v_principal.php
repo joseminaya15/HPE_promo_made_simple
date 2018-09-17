@@ -316,6 +316,9 @@
                                     <div class="col-xs-12 js-recuperar">
                                         <a onclick="cambiarRecuperar();">Forgot your password?</a>
                                     </div>
+                                    <div class="col-xs-12" id="msj">
+                                        <span>Do not forget that promotions change by country! If you need to see promotions from more than one country, you must create different users (you can create your user with the same email and password)</span>
+                                    </div>
                                     <div class="col-xs-12" id="cambioCorreo">
                                         <p></p>
                                     </div>
@@ -401,6 +404,10 @@
             } else {
             }
             $(window).load(function() {
+                var URLactual = window.location;
+                // if(URLactual['href'] != 'http://www.hpepromosmadesimple.com/Home'){
+                //     location.href = 'http://www.hpepromosmadesimple.com/Home';
+                // }
                 var openLanguage = sessionStorage.getItem('OPEN_LANGUAGE');
                 if(openLanguage && openLanguage == '1') {
                     $("#ModalLanguage").modal('hide');

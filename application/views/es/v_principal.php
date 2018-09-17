@@ -177,6 +177,9 @@
                                     <div class="col-xs-12 js-recuperar">
                                         <a onclick="cambiarRecuperar();">¿Olvidaste tu contrase&ntilde;a?</a>
                                     </div>
+                                    <div class="col-xs-12" id="msj">
+                                        <span> ¡No te olvides que las promociones cambian por país! Si necesitas ver las promociones de más de un país, debes crear distintos usuarios (puedes crear tu usuario con el mismo email y password) </span>
+                                    </div>
                                     <div class="col-xs-12" id="cambioCorreo">
                                         <p></p>
                                     </div>
